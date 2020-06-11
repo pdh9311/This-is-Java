@@ -1,4 +1,4 @@
-package sec03.exam03_checkValueBeforeCasting;
+package sec03.exam01_checkValueBeforeCasting;
 
 public class CheckValueBeforeCasting {
 	public static void main(String[] args) {
