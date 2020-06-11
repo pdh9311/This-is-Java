@@ -1,4 +1,4 @@
-package sec03_ex02_checkOverflowExample;
+package sec04_ex01_checkOverflow;
 
 public class CheckOverflowExample {
 	public static void main(String[] args) {
