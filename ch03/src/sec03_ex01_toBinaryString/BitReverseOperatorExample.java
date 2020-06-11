@@ -1,4 +1,4 @@
-package sec03_exam01_toBinaryString;
+package sec03_ex01_toBinaryString;
 
 public class BitReverseOperatorExample {
 	public static void main(String[] args) {
