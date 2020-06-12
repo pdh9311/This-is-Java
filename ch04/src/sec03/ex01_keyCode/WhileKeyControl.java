@@ -24,9 +24,7 @@ public class WhileKeyControl {
 			} else if (keyCode == 51) {
 				run = false;
 			} 
-			
 		}
-		
 		System.out.println("프로그램 종료");
 	}
 }
