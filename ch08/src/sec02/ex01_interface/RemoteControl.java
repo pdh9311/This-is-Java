@@ -14,9 +14,9 @@ public interface RemoteControl {
 	// 기존 인터페이스를 확장해서 새로운 기능을 추가하기 위해서 사용된다.
 	public default void setMute(boolean mute) {
 		if(mute) {
-			System.out.println("무음 처리합니다.");
+			System.out.println("무음 처리");
 		} else {
-			System.out.println("무음 해제합니다.");
+			System.out.println("무음 해제");
 		}
 	}
 	
