@@ -1,7 +1,7 @@
-package sec07.ex01_instanceof;
+package sec07.ex01_instanceof상속;
 
 public class UseInstanceof {
-	// instanceof 연산자는 매개값의 타입을 확인할 때 주로 사용된다.
+	// instanceof 연산자는 강제 타입변환시 매개값의 타입을 확인할 때 주로 사용된다.(상속,인터페이스)
 	public static void method(Parent parent) {
 		if(parent instanceof Child) {
 			Child child = (Child) parent;
