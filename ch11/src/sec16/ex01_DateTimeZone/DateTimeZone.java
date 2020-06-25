@@ -47,7 +47,6 @@ public class DateTimeZone {
 		Instant instant1 = Instant.now();
 		Thread.sleep(10);
 		Instant instant2 = Instant.now();
-		System.out.println("차이(nano): " + instant1.until(instant2, ChronoUnit.NANOS));
-		
+		System.out.println("차이(nano): " + instant1.until(instant2, ChronoUnit.NANOS));		
 	}
 }
