@@ -20,7 +20,7 @@ public class MainThread {
 		});
 		thread1.start();
 		
-		// 작업 스레드 생성 방법2	- 람다식(함수적)	
+		// 작업 스레드 생성 방법2	- 람다식(함수적 인터페이스인 Runnable의 익명객체)
 		Thread thread2 = new Thread(() -> {
 			for(int i=0;i<5;i++) {
 				System.out.print("띵2 ");
@@ -38,7 +38,7 @@ public class MainThread {
 		Thread thread3 = new Thread(runnableEX);
 		thread3.start();
 
-		// 작업 스레드 생성 방법4 - Thread의 익명객체
+		// 작업 스레드 생성 방법4 - Thread의 익명 자식 객체
 		Thread thread4 = new Thread() {
 			@Override
 			public void run() {
@@ -56,9 +56,12 @@ public class MainThread {
 		};
 		thread4.start();
 		
-		// 작업 스레드 생성 방법5 - Thread의 하위클래스
+		// 작업 스레드 생성 방법5 - Thread의 하위클래스(Thread의 자식 객체)
 		Thread thread5 = new ThreadEX();
 		thread5.start();
+		
+		ThreadEX thread6 = new ThreadEX();
+		thread6.start();
 		
 		// Main 스레드
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
