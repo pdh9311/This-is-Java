@@ -9,7 +9,7 @@ public class ThreadEX extends Thread {
 	@Override
 	public void run() {
 		for(int i=0;i<5;i++) {
-			System.out.print("¶ò5 ");
+			System.out.print("ëµ5 ");
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
