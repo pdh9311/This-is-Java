@@ -14,7 +14,7 @@ public class PropertiesFile {
 		 * URL의 getPath()메소드는 파일의 절대 경로를 String객체로 리턴한다. 
 		 * 만약 다른 패키지에 있다면 구분자(/)를 사용한다. */
 		URL url = PropertiesFile.class.getResource("data/Properties.properties");
-		String path = url.getPath();
+		String path = url.getPath();	// String path = PropertiesFile.class.getResource("data/Properties.properties").getPath();
 		path = URLDecoder.decode(path,"UTF-8");	// 경로에 한글이 있을 경우 한글을 복원한다.
 		System.out.println(path);
 		/* .properties 파일을 읽기 위해서는 Properties객체를 생성하고 load()메소드를 호출할 때 매개값으로 FileReader객체를 받아야 한다. */
@@ -23,6 +23,5 @@ public class PropertiesFile {
 		
 		System.out.println("국적: " + properties.getProperty("contry"));
 		System.out.println("언어: " + properties.getProperty("language"));
-		
 	}
 }
