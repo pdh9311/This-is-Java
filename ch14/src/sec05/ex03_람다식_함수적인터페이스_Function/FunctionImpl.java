@@ -18,6 +18,7 @@ import java.util.function.ToLongFunction;
 public class FunctionImpl {
 	// 함수적인터페이스 XXXFunction의 applyXXX()메소드는 매개값, 리턴값이 있다.
 	public static void main(String[] args) {
+		// Function<T,R> 객체T를 R로 매핑
 		Function<String,String> function = t -> { return t; };
 		String str = function.apply("Function<T>");
 		System.out.println(str);
