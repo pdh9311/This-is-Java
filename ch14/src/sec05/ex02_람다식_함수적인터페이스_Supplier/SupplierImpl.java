@@ -9,6 +9,7 @@ import java.util.function.Supplier;
 public class SupplierImpl {
 	// 함수적인터페이스 XXXSupplier의 getXXX()메소드는 매개값은 없지만 리턴값이 있다.
 	public static void main(String[] args) {
+		// Supplier<T>에서 T는 Supplier가 리턴할 객체의 타입이다.
 		Supplier<String> supplier = () -> { return "Supplier<T>"; };
 		String str = supplier.get();
 		System.out.println(str);
