@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class GetProperty {
 	public static void main(String[] args) {
-		// ½Ã½ºÅÛ ¼Ó¼º ÀĞ±â
+		// ì‹œìŠ¤í…œ ì†ì„± ì½ê¸°
 		String osName = System.getProperty("os.name");
 		String userHome = System.getProperty("user.home");
 		String userName = System.getProperty("user.name");
@@ -14,19 +14,19 @@ public class GetProperty {
 		String javaVersion = System.getProperty("java.version");
 		String javaHome = System.getProperty("java.home");
 		
-		System.out.println("¿î¿µÃ¼Á¦ : " + osName);
-		System.out.println("È¨ µğ·ºÅä¸® : " + userHome);
-		System.out.println("»ç¿ëÀÚ °èÁ¤ : " + userName);
-		System.out.println("ÇöÀç ÀÛ¾÷ÁßÀÎ µğ·ºÅä¸® : " + userDir);
-		System.out.println("µğ·ºÅä¸® ±¸ºĞÀÚ : " + fileSeparator);
-		System.out.println("ÀÚ¹Ù ¹öÀü : " + javaVersion);
-		System.out.println("ÀÚ¹Ù JRE °æ·Î : " + javaHome);
+		System.out.println("ìš´ì˜ì²´ì œ : " + osName);
+		System.out.println("í™ˆ ë””ë ‰í† ë¦¬ : " + userHome);
+		System.out.println("ì‚¬ìš©ì ê³„ì • : " + userName);
+		System.out.println("í˜„ì¬ ì‘ì—…ì¤‘ì¸ ë””ë ‰í† ë¦¬ : " + userDir);
+		System.out.println("ë””ë ‰í† ë¦¬ êµ¬ë¶„ì : " + fileSeparator);
+		System.out.println("ìë°” ë²„ì „ : " + javaVersion);
+		System.out.println("ìë°” JRE ê²½ë¡œ : " + javaHome);
 		
 		System.out.println("======================================");
-		System.out.println("[ key ] value : ¸ğµç System Property");
+		System.out.println("[ key ] value : ëª¨ë“  System Property");
 		System.out.println("--------------------------------------");
 		Properties props = System.getProperties();
-		Set keys = props.keySet();	//keySet() ¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ key¸¸À¸·Î ±¸¼ºµÈ Set°´Ã¼¸¦ ¾ò´Â´Ù.
+		Set keys = props.keySet();	//keySet() ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ keyë§Œìœ¼ë¡œ êµ¬ì„±ëœ Setê°ì²´ë¥¼ ì–»ëŠ”ë‹¤.
 		for(Object objKey : keys) {
 			String key = (String) objKey;
 			String value = System.getProperty(key);
