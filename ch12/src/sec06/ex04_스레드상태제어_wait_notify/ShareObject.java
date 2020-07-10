@@ -1,32 +1,32 @@
-package sec06.ex04_½º·¹µå»óÅÂÁ¦¾î_wait_notify;
+package sec06.ex04_ìŠ¤ë ˆë“œìƒíƒœì œì–´_wait_notify;
 
 public class ShareObject {
 	private String data;
 	
-	// ThreadA°¡ ½ÇÇàÇÒ ¸Ş¼Òµå
+	// ThreadAê°€ ì‹¤í–‰í•  ë©”ì†Œë“œ
 	public synchronized void setData(String data) {
-		// ThreadB°¡ data¸¦ null·Î ¸¸µéÁö ¾Ê¾Ò´Ù¸é(ThreadB°¡ data¸¦ »ç¿ëÇÏÁö ¾Ê¾Ò´Ù¸é) ThreadA´Â ÀÏ½ÃÁ¤Áö»óÅÂ¿¡ ÀÖµµ·Ï ÇÔ.
+		// ThreadBê°€ dataë¥¼ nullë¡œ ë§Œë“¤ì§€ ì•Šì•˜ë‹¤ë©´(ThreadBê°€ dataë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šì•˜ë‹¤ë©´) ThreadAëŠ” ì¼ì‹œì •ì§€ìƒíƒœì— ìˆë„ë¡ í•¨.
 		if(this.data != null) {
 			try { wait(); } catch (InterruptedException e) {}
 		}		
 		
 		this.data = data;
-		System.out.print("¸¸µç µ¥ÀÌÅÍ: " + data + " | ");
-		notify(); // ThreadB¸¦ ½ÇÇà´ë±â»óÅÂ·Î ¸¸µéÁö¸¸ setData()¸Ş¼Òµå°¡ ´Ù ½ÇÇàµÇ±âÀü¿¡´Â ThreadB´Â µ¿±âÈ­·Î ÀÎÇØ shareObj°´Ã¼°¡ Àá°ÜÀÖÀ¸¹Ç·Î ½ÇÇàÇÒ ¼ö ¾øÀ» °ÍÀÌ´Ù.
+		System.out.print("ë§Œë“  ë°ì´í„°: " + data + " | ");
+		notify(); // ThreadBë¥¼ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“¤ì§€ë§Œ setData()ë©”ì†Œë“œê°€ ë‹¤ ì‹¤í–‰ë˜ê¸°ì „ì—ëŠ” ThreadBëŠ” ë™ê¸°í™”ë¡œ ì¸í•´ shareObjê°ì²´ê°€ ì ê²¨ìˆìœ¼ë¯€ë¡œ ì‹¤í–‰í•  ìˆ˜ ì—†ì„ ê²ƒì´ë‹¤.
 		
 	}
 	
-	// ThreadB°¡ ½ÇÇàÇÒ ¸Ş¼Òµå
+	// ThreadBê°€ ì‹¤í–‰í•  ë©”ì†Œë“œ
 	public synchronized String getData() {
-		// ThreadA°¡ data¸¦ ³ÖÁö ¾Ê¾Ò´Ù¸é ThreadB´Â ÀÏ½ÃÁ¤Áö»óÅÂ¿¡ ÀÖµµ·Ï ÇÔ.
+		// ThreadAê°€ dataë¥¼ ë„£ì§€ ì•Šì•˜ë‹¤ë©´ ThreadBëŠ” ì¼ì‹œì •ì§€ìƒíƒœì— ìˆë„ë¡ í•¨.
 		if(this.data == null) {
 			try { wait(); } catch (InterruptedException e) {}	
 		}
 		
 		String readData = data;
-		System.out.println("ÀĞÀº µ¥ÀÌÅÍ : " + readData);
+		System.out.println("ì½ì€ ë°ì´í„° : " + readData);
 		data = null;
-		notify();	// ThreadA¸¦ ½ÇÇà´ë±â»óÅÂ·Î ¸¸µéÁö¸¸ getData()¸Ş¼Òµå°¡ ´Ù ½ÇÇàµÇ±âÀü¿¡´Â ThreadA´Â µ¿±âÈ­·Î ÀÎÇØ shareObj°´Ã¼°¡ Àá°ÜÀÖÀ¸¹Ç·Î ½ÇÇàÇÒ ¼ö ¾øÀ» °ÍÀÌ´Ù.
+		notify();	// ThreadAë¥¼ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“¤ì§€ë§Œ getData()ë©”ì†Œë“œê°€ ë‹¤ ì‹¤í–‰ë˜ê¸°ì „ì—ëŠ” ThreadAëŠ” ë™ê¸°í™”ë¡œ ì¸í•´ shareObjê°ì²´ê°€ ì ê²¨ìˆìœ¼ë¯€ë¡œ ì‹¤í–‰í•  ìˆ˜ ì—†ì„ ê²ƒì´ë‹¤.
 		return readData;
 	}
 	
