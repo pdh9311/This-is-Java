@@ -2,9 +2,9 @@ package sec03.ex01_checkValueBeforeCasting;
 
 public class CheckValueBeforeCasting {
 	public static void main(String[] args) {
-		// °­Á¦ Å¸ÀÔ º¯È¯ È®ÀÎ ÀÛ¾÷
+		// ê°•ì œ íƒ€ì… ë³€í™˜ í™•ì¸ ì‘ì—…
 		// byte(1) < short(2) < int(4) < long(8) < float(4) < double(8)
-		System.out.println("±âº»Å¸ÀÔ : ÃÖ¼Ò°ª ~ ÃÖ´ë°ª");
+		System.out.println("ê¸°ë³¸íƒ€ì… : ìµœì†Œê°’ ~ ìµœëŒ€ê°’");
 		System.out.print("byte : ");
 		System.out.println(Byte.MIN_VALUE + " ~ " + Byte.MAX_VALUE);
 		System.out.print("short : ");
@@ -18,7 +18,7 @@ public class CheckValueBeforeCasting {
 		System.out.print("dobule : ");
 		System.out.println(Double.MIN_VALUE + " ~ " + Double.MAX_VALUE);
 		System.out.println("------------------------------------------------------");
-		// doubleÀ» float,long,int,short,byte·Î º¯È¯
+		// doubleì„ float,long,int,short,byteë¡œ ë³€í™˜
 		// Math.pow(2,n) ~ Math.pow(2,n)-1
 		double d = Math.pow(2,63)-1;
 //		double d = Math.pow(2,31)-1;
@@ -26,35 +26,35 @@ public class CheckValueBeforeCasting {
 //		double d = Math.pow(2,7)-1;
 		// double -> float
 		if( d < Float.MIN_VALUE || d > Float.MAX_VALUE) {
-			System.out.println("Float Å¸ÀÔÀ¸·Î º¯È¯ ÇÒ ¼ö ¾ø½À´Ï´Ù. °ªÀ» ´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä.");
+			System.out.println("Float íƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ê°’ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 		} else {
 			float f = (float) d;
 			System.out.println("Float type : " + f);
 		}
 		// double ->  long
 		if( d < Long.MIN_VALUE || d > Long.MAX_VALUE) {
-			System.out.println("Long Å¸ÀÔÀ¸·Î º¯È¯ ÇÒ ¼ö ¾ø½À´Ï´Ù. °ªÀ» ´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä.");
+			System.out.println("Long íƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ê°’ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 		} else {
 			long l = (long) d;
 			System.out.println("Long type : " + l);
 		}
 		// double -> int
 		if( d < Integer.MIN_VALUE || d > Integer.MAX_VALUE) {
-			System.out.println("Integer Å¸ÀÔÀ¸·Î º¯È¯ ÇÒ ¼ö  ¾ø½À´Ï´Ù. °ªÀ» ´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä.");
+			System.out.println("Integer íƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•  ìˆ˜  ì—†ìŠµë‹ˆë‹¤. ê°’ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 		} else {
 			int i = (int) d;
 			System.out.println("Integer type : " + i);
 		}
 		// double -> short
 		if( d < Short.MIN_VALUE || d > Short.MAX_VALUE) {
-			System.out.println("Short Å¸ÀÔÀ¸·Î º¯È¯ ÇÒ ¼ö ¾ø½À´Ï´Ù. °ªÀ» ´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä.");
+			System.out.println("Short íƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ê°’ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 		} else {
 			short s = (short) d;
 			System.out.println("Short type : " + s);
 		}
 		// double -> byte
 		if( d < Byte.MIN_VALUE || d > Byte.MAX_VALUE) {
-			System.out.println("Byte Å¸ÀÔÀ¸·Î º¯È¯ ÇÒ ¼ö ¾ø½À´Ï´Ù. °ªÀ» ´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä.");
+			System.out.println("Byte íƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ê°’ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 		} else {
 			byte b = (byte) d;
 			System.out.println("Byte type : " + b);
