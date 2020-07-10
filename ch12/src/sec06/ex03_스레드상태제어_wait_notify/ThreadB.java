@@ -1,4 +1,4 @@
-package sec06.ex03_½º·¹µå»óÅÂÁ¦¾î_wait_notify;
+package sec06.ex03_ìŠ¤ë ˆë“œìƒíƒœì œì–´_wait_notify;
 
 public class ThreadB extends Thread {
 	private ShareObject shareObj;

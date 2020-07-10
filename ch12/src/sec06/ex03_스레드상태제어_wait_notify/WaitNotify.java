@@ -1,7 +1,7 @@
-package sec06.ex03_½º·¹µå»óÅÂÁ¦¾î_wait_notify;
+package sec06.ex03_ìŠ¤ë ˆë“œìƒíƒœì œì–´_wait_notify;
 
 public class WaitNotify {
-	// µÎ ½º·¹µå°¡ °øÀ¯°´Ã¼ÀÇ ÇÏ³ªÀÇ ¸Ş¼Òµå¸¦ ¹ø°¥¾Æ ½ÇÇàÇÒ ¶§
+	// ë‘ ìŠ¤ë ˆë“œê°€ ê³µìœ ê°ì²´ì˜ í•˜ë‚˜ì˜ ë©”ì†Œë“œë¥¼ ë²ˆê°ˆì•„ ì‹¤í–‰í•  ë•Œ
 	public static void main(String[] args) {
 		ShareObject shareObj = new ShareObject();
 		

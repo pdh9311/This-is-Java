@@ -1,25 +1,25 @@
-package sec06.ex03_½º·¹µå»óÅÂÁ¦¾î_wait_notify;
+package sec06.ex03_ìŠ¤ë ˆë“œìƒíƒœì œì–´_wait_notify;
 
 public class ShareObject {
 		
 	public synchronized void method() {
 		
-		// notify()¿Í wait()´Â µ¿±âÈ­¸Þ¼Òµå ¶Ç´Â µ¿±âÈ­ ºí·Ï¿¡¼­¸¸ »ç¿ë°¡´ÉÇÏ´Ù.
+		// notify()ì™€ wait()ëŠ” ë™ê¸°í™”ë©”ì†Œë“œ ë˜ëŠ” ë™ê¸°í™” ë¸”ë¡ì—ì„œë§Œ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤.
 		
-		/* notify()´Â ÀÏ½ÃÁ¤Áö»óÅÂ¿¡ ÀÖ´Â Thread¸¦ ÇÏ³ª Ã£¾Æ¼­ ½ÇÇà´ë±â»óÅÂ·Î ¸¸µç´Ù.
-		 * ¸¸¾à ¿©·¯°³ÀÇ ½º·¹µå°¡ ÀÏ½ÃÁ¤Áö»óÅÂ¿¡ ÀÖ´Ù¸é ¾î¶² ½º·¹µå¸¦ Ã£¾Æ ½ÇÇà´ë±â »óÅÂ·Î ¸¸µé±î? ÇÏ´Â ÀÇ¹®À» °¡Áö°Ô µÈ´Ù.
-		 * µû¶ó¼­ notify()´Â ¹Ýµå½Ã µÎ ½º·¹µå°¡ ¹ø°¥¾Æ ½ÇÇàÇÏ´Â È¯°æ¿¡¼­¸¸ »ç¿ëÇÏµµ·Ï ÇÕ´Ï´Ù. */
+		/* notify()ëŠ” ì¼ì‹œì •ì§€ìƒíƒœì— ìžˆëŠ” Threadë¥¼ í•˜ë‚˜ ì°¾ì•„ì„œ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“ ë‹¤.
+		 * ë§Œì•½ ì—¬ëŸ¬ê°œì˜ ìŠ¤ë ˆë“œê°€ ì¼ì‹œì •ì§€ìƒíƒœì— ìžˆë‹¤ë©´ ì–´ë–¤ ìŠ¤ë ˆë“œë¥¼ ì°¾ì•„ ì‹¤í–‰ëŒ€ê¸° ìƒíƒœë¡œ ë§Œë“¤ê¹Œ? í•˜ëŠ” ì˜ë¬¸ì„ ê°€ì§€ê²Œ ëœë‹¤.
+		 * ë”°ë¼ì„œ notify()ëŠ” ë°˜ë“œì‹œ ë‘ ìŠ¤ë ˆë“œê°€ ë²ˆê°ˆì•„ ì‹¤í–‰í•˜ëŠ” í™˜ê²½ì—ì„œë§Œ ì‚¬ìš©í•˜ë„ë¡ í•©ë‹ˆë‹¤. */
 		
-		/* notify() , wait() ¼øÀ¸·Î ½ÇÇàÇØ¾ß ÇÔ!
-		 * 1. ThreadA°¡ method ½ÇÇà : Ãâ·ÂÇÏ°í, ThreadB°¡ ½ÇÇà´ë±â»óÅÂ·Î µÇ¾î ½ÇÇàÇÒ ÁØºñ¸¦ ÇÏÁö¸¸ µ¿±âÈ­(synchronized)¿¡ ÀÇÇØ °øÀ¯°´Ã¼°¡ Àá±ä »óÅÂÀÌ¹Ç·Î method()¸¦ ½ÇÇàÇÒ ¼ö ¾ø°í , ThreadA°¡ ÀÏ½ÃÁ¤Áö»óÅÂ·Î µÈ´Ù.
-		 * 2. ThreadB°¡ method ½ÇÇà : Ãâ·ÂÇÏ°í, ThreadA¸¦ ½ÇÇà´ë±â»óÅÂ·Î ¸¸¾î ½ÇÇàÇÒ ÁØºñ¸¦ ÇÏÁö¸¸ µ¿±âÈ­(synchronized)¿¡ ÀÇÇØ °øÀ¯°´Ã¼°¡ Àá±ä »óÅÂÀÌ¹Ç·Î method()¸¦ ½ÇÇàÇÒ ¼ö ¾ø°í , ThreadB°¡ ÀÏ½ÃÁ¤Áö»óÅÂ·Î µÈ´Ù.
-		 * ... 1¹ø 2¹ø °úÁ¤À» À» ThreadA, ThreadB°¡ ¹ø°¥¾Æ °¡¸é¼­ ½ÇÇàÇÏ°ÔµÈ´Ù. */
+		/* notify() , wait() ìˆœìœ¼ë¡œ ì‹¤í–‰í•´ì•¼ í•¨!
+		 * 1. ThreadAê°€ method ì‹¤í–‰ : ì¶œë ¥í•˜ê³ , ThreadBê°€ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë˜ì–´ ì‹¤í–‰í•  ì¤€ë¹„ë¥¼ í•˜ì§€ë§Œ ë™ê¸°í™”(synchronized)ì— ì˜í•´ ê³µìœ ê°ì²´ê°€ ìž ê¸´ ìƒíƒœì´ë¯€ë¡œ method()ë¥¼ ì‹¤í–‰í•  ìˆ˜ ì—†ê³  , ThreadAê°€ ì¼ì‹œì •ì§€ìƒíƒœë¡œ ëœë‹¤.
+		 * 2. ThreadBê°€ method ì‹¤í–‰ : ì¶œë ¥í•˜ê³ , ThreadAë¥¼ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œì–´ ì‹¤í–‰í•  ì¤€ë¹„ë¥¼ í•˜ì§€ë§Œ ë™ê¸°í™”(synchronized)ì— ì˜í•´ ê³µìœ ê°ì²´ê°€ ìž ê¸´ ìƒíƒœì´ë¯€ë¡œ method()ë¥¼ ì‹¤í–‰í•  ìˆ˜ ì—†ê³  , ThreadBê°€ ì¼ì‹œì •ì§€ìƒíƒœë¡œ ëœë‹¤.
+		 * ... 1ë²ˆ 2ë²ˆ ê³¼ì •ì„ ì„ ThreadA, ThreadBê°€ ë²ˆê°ˆì•„ ê°€ë©´ì„œ ì‹¤í–‰í•˜ê²Œëœë‹¤. */
 		if(Thread.currentThread().getName() == "ThreadA") {
 			System.out.print(Thread.currentThread().getName() + " : ");
 		} else {
 			System.out.println(Thread.currentThread().getName() + " | ");
 		}
-		// 23~28ÁÙÀ» ÁÖ¼®Ã³¸® ÇÒ¶§¿Í ¾ÈÇÒ¶§¸¦ ºñ±³ÇØº¸±â!
+		// 23~28ì¤„ì„ ì£¼ì„ì²˜ë¦¬ í• ë•Œì™€ ì•ˆí• ë•Œë¥¼ ë¹„êµí•´ë³´ê¸°!
 		notify();
 		try {
 			wait();	
