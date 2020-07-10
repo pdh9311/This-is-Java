@@ -9,19 +9,19 @@ public class Equals {
 		Integer o1 = 1000;
 		Integer o2 = 1000;
 		System.out.println(Objects.equals(o1,o2));				//true
-		System.out.println(Objects.equals(null,null));			//µÑ ´Ù null °ªÀ» °¡Áú ¶§ true°¡ ³ª¿Â´Ù.
+		System.out.println(Objects.equals(null,null));			//ë‘˜ ë‹¤ null ê°’ì„ ê°€ì§ˆ ë•Œ trueê°€ ë‚˜ì˜¨ë‹¤.
 		System.out.println(Objects.equals(o1,null));			//false
 		System.out.println(Objects.equals(null,o2));			//false
 		System.out.println(Objects.deepEquals(o1, o2) + "\n");	//true
 		
-		// ¹è¿­ÀÏ °æ¿ì deepEquals()¸Ş¼Òµå¸¦ »ç¿ë.
+		// ë°°ì—´ì¼ ê²½ìš° deepEquals()ë©”ì†Œë“œë¥¼ ì‚¬ìš©.
 		Integer[] arr1 = {1,2};
 		Integer[] arr2 = {1,2};
 		System.out.println(Objects.equals(arr1,arr2));			//false
 		System.out.println(Objects.deepEquals(arr1, arr2));		//true
 		System.out.println(Arrays.deepEquals(arr1, arr2));		//true
 		
-		System.out.println(Objects.deepEquals(null, null));		//µÑ ´Ù null °ªÀ» °¡Áú ¶§ true°¡ ³ª¿Â´Ù.
+		System.out.println(Objects.deepEquals(null, null));		//ë‘˜ ë‹¤ null ê°’ì„ ê°€ì§ˆ ë•Œ trueê°€ ë‚˜ì˜¨ë‹¤.
 		System.out.println(Objects.deepEquals(arr1, null));		//false
 		System.out.println(Objects.deepEquals(null, arr2));		//false
 		
