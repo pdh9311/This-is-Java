@@ -1,19 +1,19 @@
-package sec06.ex05_½º·¹µåÁ¾·á;
+package sec06.ex05_ìŠ¤ë ˆë“œì¢…ë£Œ;
 
 public class ThreadTerminated {
 	public static void main(String[] args) {
-		// stop ÇÃ·¡±×·Î ½º·¹µå Á¾·á
+		// stop í”Œë˜ê·¸ë¡œ ìŠ¤ë ˆë“œ ì¢…ë£Œ
 		ThreadA threadA = new ThreadA();
 		threadA.start();
 		threadA.setStop(true);
 		
-		// interrupt()¸Ş¼Òµå È£Ãâ·Î ¿¹¿Ü¸¦ ¹ß»ı½ÃÄÑ ½º·¹µå Á¾·á
+		// interrupt()ë©”ì†Œë“œ í˜¸ì¶œë¡œ ì˜ˆì™¸ë¥¼ ë°œìƒì‹œì¼œ ìŠ¤ë ˆë“œ ì¢…ë£Œ
 		Thread threadB = new Thread() {
 			@Override
 			public void run() {
 				while(true) {
 					try { Thread.sleep(1); } catch (InterruptedException e) {
-						System.out.println("interrupt()È£Ãâ·Î ÀÎÇÑ ¿¹¿Ü¹ß»ıÀ¸·Î ½º·¹µå Á¾·á");
+						System.out.println("interrupt()í˜¸ì¶œë¡œ ì¸í•œ ì˜ˆì™¸ë°œìƒìœ¼ë¡œ ìŠ¤ë ˆë“œ ì¢…ë£Œ");
 					}
 				}
 			}
@@ -21,13 +21,13 @@ public class ThreadTerminated {
 		threadB.start();
 		threadB.interrupt();
 		
-		// interrupt()¸Ş¼Òµå È£ÃâÀ» Çß´ÂÁö ¾ÈÇß´ÂÁö ½º·¹µåÀÇ Á¤Àû¸Ş¼Òµå·Î È®ÀÎÈÄ Á¾·á
+		// interrupt()ë©”ì†Œë“œ í˜¸ì¶œì„ í–ˆëŠ”ì§€ ì•ˆí–ˆëŠ”ì§€ ìŠ¤ë ˆë“œì˜ ì •ì ë©”ì†Œë“œë¡œ í™•ì¸í›„ ì¢…ë£Œ
 		Thread threadC = new Thread() {
 			@Override
 			public void run() {
 				while(true) {
 					if(Thread.interrupted()) {
-						System.out.println("Thread.interrupted() Á¤Àû¸Ş¼Òµå·Î È®ÀÎ ÈÄ ½º·¹µå Á¾·á");
+						System.out.println("Thread.interrupted() ì •ì ë©”ì†Œë“œë¡œ í™•ì¸ í›„ ìŠ¤ë ˆë“œ ì¢…ë£Œ");
 						break;
 					}
 				}
@@ -36,13 +36,13 @@ public class ThreadTerminated {
 		threadC.start();
 		threadC.interrupt();
 
-		// interrupt()¸Ş¼Òµå È£ÃâÀ» Çß´ÂÁö ¾ÈÇß´ÂÁö ½º·¹µåÀÇ ÀÎ½ºÅÏ½º¸Ş¼Òµå·Î È®ÀÎÈÄ Á¾·á
+		// interrupt()ë©”ì†Œë“œ í˜¸ì¶œì„ í–ˆëŠ”ì§€ ì•ˆí–ˆëŠ”ì§€ ìŠ¤ë ˆë“œì˜ ì¸ìŠ¤í„´ìŠ¤ë©”ì†Œë“œë¡œ í™•ì¸í›„ ì¢…ë£Œ
 		Thread threadD = new Thread() {
 			@Override
 			public void run() {
 				while(true) {
 					if(this.isInterrupted()) {
-						System.out.println("Object.interrupted() ÀÎ½ºÅÏ½º¸Ş¼Òµå·Î È®ÀÎ ÈÄ ½º·¹µå Á¾·á");
+						System.out.println("Object.interrupted() ì¸ìŠ¤í„´ìŠ¤ë©”ì†Œë“œë¡œ í™•ì¸ í›„ ìŠ¤ë ˆë“œ ì¢…ë£Œ");
 						break;
 					}
 				}

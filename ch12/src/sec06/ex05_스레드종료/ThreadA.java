@@ -1,4 +1,4 @@
-package sec06.ex05_½º·¹µåÁ¾·á;
+package sec06.ex05_ìŠ¤ë ˆë“œì¢…ë£Œ;
 
 public class ThreadA extends Thread {
 	private boolean stop = false;
@@ -12,7 +12,7 @@ public class ThreadA extends Thread {
 		while(!stop) {
 			System.out.println(" ");
 		}
-		System.out.println("stop ÇÃ·¡±× ½ÇÇàÀ¸·Î ½º·¹µå Á¾·á");
+		System.out.println("stop í”Œëž˜ê·¸ ì‹¤í–‰ìœ¼ë¡œ ìŠ¤ë ˆë“œ ì¢…ë£Œ");
 	}
 
 }
