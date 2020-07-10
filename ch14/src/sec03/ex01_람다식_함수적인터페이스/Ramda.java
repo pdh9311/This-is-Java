@@ -1,21 +1,21 @@
-package sec03.ex01_¶÷´Ù½Ä_ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º;
+package sec03.ex01_ëŒë‹¤ì‹_í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤;
 
 public class Ramda {
 	public static void main(String[] args) {
-		// ¶÷´Ù½ÄÀº ÀÎÅÍÆäÀÌ½ºÀÇ ÀÍ¸í ±¸Çö Å¬·¡½º¸¦ »ı¼ºÇÏ°í °´Ã¼È­ ÇÑ´Ù.
-		/* ¶÷´Ù½ÄÀÇ ¸Å°³Å¸ÀÔÀº »ı·« °¡´ÉÇÏ°í, ¸Å°³º¯¼ö´Â ÇÏ³ªÀÏ°æ¿ì °ıÈ£()¸¦ »ı·«ÇÒ ¼ö ÀÖ´Ù.
-		 * ¶÷´Ù½Ä¿¡¼­ Áß°ıÈ£{}¿¡ ½ÇÇàÄÚµå°¡ ÇÏ³ªÀÏ °æ¿ì Áß°ıÈ£{}¸¦ »ı·«ÇÒ ¼ö ÀÖ´Ù.
-		 * ¶÷´Ù½Ä¿¡¼­ Áß°ıÈ£{}¿¡ ½ÇÇàÄÚµå°¡ ¸®ÅÏÅ¸ÀÔ¸¸ ÀÛ¼ºµÇ¾îÀÖÀ» °æ¿ì Áß°ıÈ£{}¿Í Return¹®Àº »ı·«ÇÒ ¼ö ÀÖ´Ù. */
+		// ëŒë‹¤ì‹ì€ ì¸í„°í˜ì´ìŠ¤ì˜ ìµëª… êµ¬í˜„ í´ë˜ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ê°ì²´í™” í•œë‹¤.
+		/* ëŒë‹¤ì‹ì˜ ë§¤ê°œíƒ€ì…ì€ ìƒëµ ê°€ëŠ¥í•˜ê³ , ë§¤ê°œë³€ìˆ˜ëŠ” í•˜ë‚˜ì¼ê²½ìš° ê´„í˜¸()ë¥¼ ìƒëµí•  ìˆ˜ ìˆë‹¤.
+		 * ëŒë‹¤ì‹ì—ì„œ ì¤‘ê´„í˜¸{}ì— ì‹¤í–‰ì½”ë“œê°€ í•˜ë‚˜ì¼ ê²½ìš° ì¤‘ê´„í˜¸{}ë¥¼ ìƒëµí•  ìˆ˜ ìˆë‹¤.
+		 * ëŒë‹¤ì‹ì—ì„œ ì¤‘ê´„í˜¸{}ì— ì‹¤í–‰ì½”ë“œê°€ ë¦¬í„´íƒ€ì…ë§Œ ì‘ì„±ë˜ì–´ìˆì„ ê²½ìš° ì¤‘ê´„í˜¸{}ì™€ Returnë¬¸ì€ ìƒëµí•  ìˆ˜ ìˆë‹¤. */
 		
 		 
 		RamdaDefault ramdaDefault; 
 		ramdaDefault= () -> { 
-			String str = "¶÷´Ù½Ä ±âº»";
+			String str = "ëŒë‹¤ì‹ ê¸°ë³¸";
 			System.out.println(str); 
 		};
-		ramdaDefault = () -> { System.out.println("¶÷´Ù½Ä ±âº»"); };
-		ramdaDefault = () -> System.out.println("¶÷´Ù½Ä ±âº»");
-		ramdaDefault.method1();			// ¶÷´Ù½Ä½ÇÇàÀ» À§ÇØ ÀÍ¸í ±¸Çö °´Ã¼ÀÇ ¸Ş¼Òµå¸¦ È£ÃâÇÏ¸é µÈ´Ù.
+		ramdaDefault = () -> { System.out.println("ëŒë‹¤ì‹ ê¸°ë³¸"); };
+		ramdaDefault = () -> System.out.println("ëŒë‹¤ì‹ ê¸°ë³¸");
+		ramdaDefault.method1();			// ëŒë‹¤ì‹ì‹¤í–‰ì„ ìœ„í•´ ìµëª… êµ¬í˜„ ê°ì²´ì˜ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë©´ ëœë‹¤.
 		
 		RamdaParameter ramdaParameter;
 		ramdaParameter = (int x) -> {
@@ -24,13 +24,13 @@ public class Ramda {
 		};
 		ramdaParameter = (x) -> { System.out.println(x*4); };
 		ramdaParameter = x -> System.out.println(x*4);
-		ramdaParameter.method2(311);	// ¶÷´Ù½Ä½ÇÇàÀ» À§ÇØ ÀÍ¸í ±¸Çö °´Ã¼ÀÇ ¸Ş¼Òµå¸¦ È£ÃâÇÏ¸é µÈ´Ù.
+		ramdaParameter.method2(311);	// ëŒë‹¤ì‹ì‹¤í–‰ì„ ìœ„í•´ ìµëª… êµ¬í˜„ ê°ì²´ì˜ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë©´ ëœë‹¤.
 		
 		RamdaReturn ramdaReturn;
 		ramdaReturn = (x,y) -> { return x+y; };
 		ramdaReturn = (x,y) -> x+y;
 		int returnValue = ramdaReturn.method3(12, 33);
-		System.out.println(returnValue);	// ¶÷´Ù½Ä½ÇÇàÀ» À§ÇØ ÀÍ¸í ±¸Çö °´Ã¼ÀÇ ¸Ş¼Òµå¸¦ È£ÃâÇÏ¸é µÈ´Ù.
+		System.out.println(returnValue);	// ëŒë‹¤ì‹ì‹¤í–‰ì„ ìœ„í•´ ìµëª… êµ¬í˜„ ê°ì²´ì˜ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë©´ ëœë‹¤.
 		
 		
 	}
