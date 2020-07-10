@@ -4,11 +4,11 @@ import java.util.TreeSet;
 
 public class ComparatorEX {
 	public static void main(String[] args) {
-		Man m1 = new Man("ÀÏ¹ø³²",1);
-		Man m2 = new Man("ÀÌ¹ø³²",2);
-		Man m3 = new Man("»ï¹ø³²",3);
-		Man m4 = new Man("»ç¹ø³²",4);
-		Man m5 = new Man("¿À¹ø³²",5);
+		Man m1 = new Man("ì¼ë²ˆë‚¨",1);
+		Man m2 = new Man("ì´ë²ˆë‚¨",2);
+		Man m3 = new Man("ì‚¼ë²ˆë‚¨",3);
+		Man m4 = new Man("ì‚¬ë²ˆë‚¨",4);
+		Man m5 = new Man("ì˜¤ë²ˆë‚¨",5);
 		
 		TreeSet<Man> treeSet = new TreeSet<Man>(new AscendingComparator());
 		treeSet.add(m1);
