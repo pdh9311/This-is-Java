@@ -1,4 +1,4 @@
-package sec06.ex01_½º·¹µå»óÅÂÁ¦¾î_yield;
+package sec06.ex01_ìŠ¤ë ˆë“œìƒíƒœì œì–´_yield;
 
 public class YieldMethod {
 	public static void main(String[] args) {
@@ -9,10 +9,10 @@ public class YieldMethod {
 		threadB.start();
 		
 		try {Thread.sleep(2000);} catch (InterruptedException e) {}
-		threadA.work = false;	// ThreadA¸¦ ½ÇÇà ´ë±â »óÅÂ·Î º¸³½´Ù.
+		threadA.work = false;	// ThreadAë¥¼ ì‹¤í–‰ ëŒ€ê¸° ìƒíƒœë¡œ ë³´ë‚¸ë‹¤.
 		
 		try {Thread.sleep(2000);} catch (InterruptedException e) {}
-		threadB.work = false;	// ThreadB¸¦ ½ÇÇà ´ë±â »óÅÂ·Î º¸³½´Ù.
+		threadB.work = false;	// ThreadBë¥¼ ì‹¤í–‰ ëŒ€ê¸° ìƒíƒœë¡œ ë³´ë‚¸ë‹¤.
 		
 		try {Thread.sleep(2000);} catch (InterruptedException e) {}
 		threadA.stop = true;	

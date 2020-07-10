@@ -1,4 +1,4 @@
-package sec06.ex01_½º·¹µå»óÅÂÁ¦¾î_yield;
+package sec06.ex01_ìŠ¤ë ˆë“œìƒíƒœì œì–´_yield;
 
 public class ThreadA extends Thread {
 	public boolean stop = false;
@@ -6,8 +6,8 @@ public class ThreadA extends Thread {
 	
 	@Override
 	public void run() {
-		/* ¸¸¾à¿¡ else{~}°¡ ¾ø´Ù¸é work¸¦ false·Î ¹Ù²Ù¾úÀ»¶§ ¹«ÀÇ¹ÌÇÑ ½ÇÇàÀ» °è¼Ó ¹İº¹ÇÏ°Ô µÈ´Ù. 
-		 * ÀÌ·²¹Ù¿¡ ´Ù¸¥ ½º·¹µå¿¡°Ô ½ÇÇàÀ» ¾çº¸ÇÏ°í ½ÇÇà´ë±â»óÅÂ·Î °¡´Â°ÍÀÌ ÀüÃ¼ ÇÁ·Î±×·¥¼º´É¿¡ µµ¿òÀÌ µÈ´Ù. */
+		/* ë§Œì•½ì— else{~}ê°€ ì—†ë‹¤ë©´ workë¥¼ falseë¡œ ë°”ê¾¸ì—ˆì„ë•Œ ë¬´ì˜ë¯¸í•œ ì‹¤í–‰ì„ ê³„ì† ë°˜ë³µí•˜ê²Œ ëœë‹¤. 
+		 * ì´ëŸ´ë°”ì— ë‹¤ë¥¸ ìŠ¤ë ˆë“œì—ê²Œ ì‹¤í–‰ì„ ì–‘ë³´í•˜ê³  ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ê°€ëŠ”ê²ƒì´ ì „ì²´ í”„ë¡œê·¸ë¨ì„±ëŠ¥ì— ë„ì›€ì´ ëœë‹¤. */
 		while(!stop) {
 			if(work) {
 				try { Thread.sleep(50); } catch (InterruptedException e) {}
