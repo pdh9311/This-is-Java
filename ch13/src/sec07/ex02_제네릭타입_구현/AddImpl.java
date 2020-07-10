@@ -1,21 +1,21 @@
-package sec07.ex02_Á¦³×¸¯Å¸ÀÔ_±¸Çö;
+package sec07.ex02_ì œë„¤ë¦­íƒ€ì…_êµ¬í˜„;
 
-// Á¦³×¸¯ ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½ºµµ Á¦³×¸¯ Å¸ÀÔÀÌ µÈ´Ù.
+// ì œë„¤ë¦­ ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤ë„ ì œë„¤ë¦­ íƒ€ì…ì´ ëœë‹¤.
 public class AddImpl<T> implements Add<T> {
 	private T[] genericArray;
 	
-	// »ı¼ºÀÚÀÇ ¸Å°³°ªÀ¸·Î ¹è¿­ÀÇ ±æÀÌ¸¦ ¹Ş¾Æ¼­ TÅ¸ÀÔÀÇ ¹è¿­ °´Ã¼¸¦ »ı¼ºÇÑ´Ù.
+	// ìƒì„±ìì˜ ë§¤ê°œê°’ìœ¼ë¡œ ë°°ì—´ì˜ ê¸¸ì´ë¥¼ ë°›ì•„ì„œ Tíƒ€ì…ì˜ ë°°ì—´ ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
 	public AddImpl(int capacity) {
 		this.genericArray = (T[]) (new Object[capacity]);
 	}
 	
-	// T¹è¿­ÀÇ indexÀ§Ä¡¿¡ t1°ªÀ» Ãß°¡ÇØÁØ´Ù. 
+	// Të°°ì—´ì˜ indexìœ„ì¹˜ì— t1ê°’ì„ ì¶”ê°€í•´ì¤€ë‹¤. 
 	@Override
 	public void add(T t1, int index) {
 		 this.genericArray[index] = t1;
 	}
 	
-	// T¹è¿­ÀÇ indexÀ§Ä¡¿¡ ÀÖ´Â °ªÀ» ¸®ÅÏ
+	// Të°°ì—´ì˜ indexìœ„ì¹˜ì— ìˆëŠ” ê°’ì„ ë¦¬í„´
 	@Override
 	public T get(int index) {
 		return genericArray[index];
@@ -23,7 +23,7 @@ public class AddImpl<T> implements Add<T> {
 	
 	public static void main(String[] args) {
 		AddImpl<String> addImpl = new AddImpl<String>(10);
-		addImpl.add("È«±æµ¿", 0);
+		addImpl.add("í™ê¸¸ë™", 0);
 		String str =addImpl.get(0);
 		System.out.println(str);
 		

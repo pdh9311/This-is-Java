@@ -1,4 +1,4 @@
-package sec07.ex02_Á¦³×¸¯Å¸ÀÔ_±¸Çö;
+package sec07.ex02_ì œë„¤ë¦­íƒ€ìž…_êµ¬í˜„;
 
 public interface Add<T> {
 	void add(T t1, int index);
