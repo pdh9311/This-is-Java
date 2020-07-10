@@ -2,17 +2,17 @@ package sec05.ex01_Comparable;
 
 import java.util.TreeSet;
 
-/* TreeSet, TreeMapÀº Á¤·ÄÀ» À§ÇØ ComparableÀ» ±¸ÇöÇÑ °´Ã¼¸¦ ¿ä±¸ÇÏ´Âµ¥,
- * Integer,Double,StringÀº ¸ğµÎ Comparable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ°í ÀÖ½À´Ï´Ù.
- * ¸¸¾à »ç¿ëÀÚ Á¤ÀÇ Å¬·¡½º¸¦ TreeSetÀÌ³ª TreeMap¿¡¼­ »ç¿ëÇÏ±â À§ÇØ¼­´Â 
- * »ç¿ëÀÚ Á¤ÀÇ Å¬·¡½º°¡ Comparable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ¿© compareTo()¸Ş¼Òµå¸¦ Á¤ÀÇÇÏ°í ÀÖ¾î¾ß ÇÕ´Ï´Ù. */
+/* TreeSet, TreeMapì€ ì •ë ¬ì„ ìœ„í•´ Comparableì„ êµ¬í˜„í•œ ê°ì²´ë¥¼ ìš”êµ¬í•˜ëŠ”ë°,
+ * Integer,Double,Stringì€ ëª¨ë‘ Comparable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ê³  ìˆìŠµë‹ˆë‹¤.
+ * ë§Œì•½ ì‚¬ìš©ì ì •ì˜ í´ë˜ìŠ¤ë¥¼ TreeSetì´ë‚˜ TreeMapì—ì„œ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” 
+ * ì‚¬ìš©ì ì •ì˜ í´ë˜ìŠ¤ê°€ Comparable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ì—¬ compareTo()ë©”ì†Œë“œë¥¼ ì •ì˜í•˜ê³  ìˆì–´ì•¼ í•©ë‹ˆë‹¤. */
 public class ComparableEX {
 	public static void main(String[] args) {
-		Person p1 = new Person("ÀÏ¹ø»ç¶÷",1);
-		Person p2 = new Person("ÀÌ¹ø»ç¶÷",2);
-		Person p3 = new Person("»ï¹ø»ç¶÷",3);
-		Person p4 = new Person("»ç¹ø»ç¶÷",4);
-		Person p5 = new Person("¿À¹ø»ç¶÷",5);
+		Person p1 = new Person("ì¼ë²ˆì‚¬ëŒ",1);
+		Person p2 = new Person("ì´ë²ˆì‚¬ëŒ",2);
+		Person p3 = new Person("ì‚¼ë²ˆì‚¬ëŒ",3);
+		Person p4 = new Person("ì‚¬ë²ˆì‚¬ëŒ",4);
+		Person p5 = new Person("ì˜¤ë²ˆì‚¬ëŒ",5);
 		
 		TreeSet<Person> treeSet = new TreeSet<Person>();
 		treeSet.add(p1);
