@@ -1,114 +1,114 @@
-package sec07.ex02_String¸Ş¼Òµå;
+package sec07.ex02_Stringë©”ì†Œë“œ;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
-public class String¸Ş¼Òµå {
+public class Stringë©”ì†Œë“œ {
 	public static void main(String[] args) {
-		charValue();		// ¹®ÀÚ ÃßÃâ charAt()
-		equalsValue();		// ¹®ÀÚ¿­ ºñ±³ equals()
-		bytesEncoding();	// ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯ getBytes()
-		searchString();		// Æ÷ÇÔµÈ ¹®ÀÚ¿­ÀÌ ½ÃÀÛµÇ´Â ÀÎµ¦½ºÀÇ À§Ä¡ indexOf() 
-		lengthStr();		// ¹®ÀÚ¿­ ±æÀÌ length()
-		replaceStr();		// ¹®ÀÚ¿­ ´ëÃ¼ replace()
-		subString();		// ¹®ÀÚ¿­ ÃßÃâ substring()
-		alphabet();			// ¾ËÆÄºª ´ë¡¤¼Ò¹®ÀÚ toUpperCase() , toLowerCase()
-		trimStr();			// ¹®ÀÚ¿­ ¾ÕµÚ °ø¹é Á¦°Å trim()
-		valueOfStr();		// ±âº»Å¸ÀÔÀÇ °ªÀ» ¹®ÀÚ¿­·Î º¯È¯ String.valueOf()
-		splitStr();			// ±¸ºĞÀÚ¸¦ ±âÁØÀ¸·Î ¹®ÀÚ¿­À» ºĞ¸® split()
+		charValue();		// ë¬¸ì ì¶”ì¶œ charAt()
+		equalsValue();		// ë¬¸ìì—´ ë¹„êµ equals()
+		bytesEncoding();	// ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜ getBytes()
+		searchString();		// í¬í•¨ëœ ë¬¸ìì—´ì´ ì‹œì‘ë˜ëŠ” ì¸ë±ìŠ¤ì˜ ìœ„ì¹˜ indexOf() 
+		lengthStr();		// ë¬¸ìì—´ ê¸¸ì´ length()
+		replaceStr();		// ë¬¸ìì—´ ëŒ€ì²´ replace()
+		subString();		// ë¬¸ìì—´ ì¶”ì¶œ substring()
+		alphabet();			// ì•ŒíŒŒë²³ ëŒ€Â·ì†Œë¬¸ì toUpperCase() , toLowerCase()
+		trimStr();			// ë¬¸ìì—´ ì•ë’¤ ê³µë°± ì œê±° trim()
+		valueOfStr();		// ê¸°ë³¸íƒ€ì…ì˜ ê°’ì„ ë¬¸ìì—´ë¡œ ë³€í™˜ String.valueOf()
+		splitStr();			// êµ¬ë¶„ìë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë¬¸ìì—´ì„ ë¶„ë¦¬ split()
 	}
 	
 	public static void charValue() {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("ÁÖ¹Îµî·Ï ¹øÈ£ ÀÔ·Â(-Æ÷ÇÔ): " );
+		System.out.print("ì£¼ë¯¼ë“±ë¡ ë²ˆí˜¸ ì…ë ¥(-í¬í•¨): " );
 		String str = scan.nextLine();
-		System.out.println("ÀÔ·ÂÇÑ °ª: "+ str);
+		System.out.println("ì…ë ¥í•œ ê°’: "+ str);
 		
-		// ¹®ÀÚ ÃßÃâ
+		// ë¬¸ì ì¶”ì¶œ
 		char charValue = str.charAt(7);
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ 8¹øÂ° ¹®ÀÚ: " + charValue);
+		System.out.println("ì…ë ¥í•œ ê°’ì˜ 8ë²ˆì§¸ ë¬¸ì: " + charValue);
 	}
 	public static void equalsValue() {
-		// ¹®ÀÚ¿­ ºñ±³
-		// equals()¸Ş¼Ò´Â ¿ø·¡ ObjectÀÇ ¹øÁö¸¦ ºñ±³ÇÏ´Â ¸Ş¼ÒµåÁö¸¸ StringÅ¬·¡½º°¡ ÀçÁ¤ÀÇÇÏ¿© ¹®ÀÚ¿­À» ºñ±³ÇÏµµ·Ï º¯°æÇßÀ½.
-		String str1 = new String("È«±æµ¿");
-		String str2 = new String("È«±æµ¿");
-		String str3 = "È«±æµ¿";
-		String str4 = "È«±æµ¿";
-		System.out.println(str1 == str2);		// °´Ã¼ÀÇ ÂüÁ¶ º¯¼ö¸¦ ºñ±³ÇÏ¹Ç·Î false
-		System.out.println(str1.equals(str2));	// ¹®ÀÚ¿­À» ºñ±³ÇÏ¹Ç·Î true
-		System.out.println(str1 == str3);		// °´Ã¼ÀÇ ÂüÁ¶ º¯¼ö¸¦ ºñ±³ÇÏ¹Ç·Î false
-		System.out.println(str1.equals(str3));	// ¹®ÀÚ¿­À» ºñ±³ÇÏ¹Ç·Î true
-		System.out.println(str3 == str4);		// °´Ã¼ÀÇ ÂüÁ¶ º¯¼ö¸¦ ºñ±³ÇÏ¹Ç·Î true , new ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏÁö ¾Ê¾Ò´Ù¸é °°Àº ¹®ÀÚ¿­ÀÏ °æ¿ì °°Àº °´Ã¼¸¦ ÂüÁ¶ÇÑ´Ù.
-		System.out.println(str3.equals(str4));	// ¹®ÀÚ¿­À» ºñ±³ÇÏ¹Ç·Î true
+		// ë¬¸ìì—´ ë¹„êµ
+		// equals()ë©”ì†ŒëŠ” ì›ë˜ Objectì˜ ë²ˆì§€ë¥¼ ë¹„êµí•˜ëŠ” ë©”ì†Œë“œì§€ë§Œ Stringí´ë˜ìŠ¤ê°€ ì¬ì •ì˜í•˜ì—¬ ë¬¸ìì—´ì„ ë¹„êµí•˜ë„ë¡ ë³€ê²½í–ˆìŒ.
+		String str1 = new String("í™ê¸¸ë™");
+		String str2 = new String("í™ê¸¸ë™");
+		String str3 = "í™ê¸¸ë™";
+		String str4 = "í™ê¸¸ë™";
+		System.out.println(str1 == str2);		// ê°ì²´ì˜ ì°¸ì¡° ë³€ìˆ˜ë¥¼ ë¹„êµí•˜ë¯€ë¡œ false
+		System.out.println(str1.equals(str2));	// ë¬¸ìì—´ì„ ë¹„êµí•˜ë¯€ë¡œ true
+		System.out.println(str1 == str3);		// ê°ì²´ì˜ ì°¸ì¡° ë³€ìˆ˜ë¥¼ ë¹„êµí•˜ë¯€ë¡œ false
+		System.out.println(str1.equals(str3));	// ë¬¸ìì—´ì„ ë¹„êµí•˜ë¯€ë¡œ true
+		System.out.println(str3 == str4);		// ê°ì²´ì˜ ì°¸ì¡° ë³€ìˆ˜ë¥¼ ë¹„êµí•˜ë¯€ë¡œ true , new ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì§€ ì•Šì•˜ë‹¤ë©´ ê°™ì€ ë¬¸ìì—´ì¼ ê²½ìš° ê°™ì€ ê°ì²´ë¥¼ ì°¸ì¡°í•œë‹¤.
+		System.out.println(str3.equals(str4));	// ë¬¸ìì—´ì„ ë¹„êµí•˜ë¯€ë¡œ true
 	}
 	public static void bytesEncoding() {
-		// ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯
-		String str = "¾È³çÇÏ¼¼¿ä";
-		byte[] bytes1 = str.getBytes();			//¹®ÀÚ¿­ ¡æ ¹ÙÀÌÆ®(ÀÎÄÚµù)
+		// ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜
+		String str = "ì•ˆë…•í•˜ì„¸ìš”";
+		byte[] bytes1 = str.getBytes();			//ë¬¸ìì—´ â†’ ë°”ì´íŠ¸(ì¸ì½”ë”©)
 		for(int i=0; i<bytes1.length; i++) {	
 			System.out.print(bytes1[i] + " ");		
 		}
-		str = new String(bytes1);				//¹ÙÀÌÆ® ¡æ ¹®ÀÚ¿­(µğÄÚµù)
+		str = new String(bytes1);				//ë°”ì´íŠ¸ â†’ ë¬¸ìì—´(ë””ì½”ë”©)
 		System.out.println("\n" + str);		
 		
 		try {
-			byte[] bytes2 = str.getBytes("UTF-8");	//¹®ÀÚ¿­ ¡æ ¹ÙÀÌÆ®(ÀÎÄÚµù)
+			byte[] bytes2 = str.getBytes("UTF-8");	//ë¬¸ìì—´ â†’ ë°”ì´íŠ¸(ì¸ì½”ë”©)
 			for(int i=0; i<bytes2.length; i++) {
 				System.out.print(bytes2 + " ");		
 			}
-			str = new String(bytes2,"UTF-8");		//¹ÙÀÌÆ® ¡æ ¹®ÀÚ¿­(µğÄÚµù)
+			str = new String(bytes2,"UTF-8");		//ë°”ì´íŠ¸ â†’ ë¬¸ìì—´(ë””ì½”ë”©)
 			System.out.println("\n" + str);
-			str = new String(bytes2,"EUK-KR");		// µğÄÚµù½Ã ÀÎÄÚµùÇßÀ»¶§¿Í °°Àº ¹®ÀÚ¼ÂÀ¸·Î µğÄÚµùÇØÁÖ¾î¾ßÇÑ´Ù. 
-			System.out.println(str);				// Ãâ·Â ¾ÈµÊ
+			str = new String(bytes2,"EUK-KR");		// ë””ì½”ë”©ì‹œ ì¸ì½”ë”©í–ˆì„ë•Œì™€ ê°™ì€ ë¬¸ìì…‹ìœ¼ë¡œ ë””ì½”ë”©í•´ì£¼ì–´ì•¼í•œë‹¤. 
+			System.out.println(str);				// ì¶œë ¥ ì•ˆë¨
 		} catch (UnsupportedEncodingException e) {}		
 	}
 	public static void searchString() {
-		String str = "indexOf() ¸Ş¼Òµå´Â ¸Å°³°ªÀ¸·Î ÁÖ¾îÁø ¹®ÀÚ¿­ÀÌ ½ÃÀÛµÇ´Â ÀÎµ¦½º¸¦ ¸®ÅÏÇÑ´Ù. Æ÷ÇÔ µÇ¾î ÀÖÁö ¾ÊÀ¸¸é -1À» ¸®ÅÏ";
-		String searchStr = "ÀÚ¹Ù";
+		String str = "indexOf() ë©”ì†Œë“œëŠ” ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ì–´ì§„ ë¬¸ìì—´ì´ ì‹œì‘ë˜ëŠ” ì¸ë±ìŠ¤ë¥¼ ë¦¬í„´í•œë‹¤. í¬í•¨ ë˜ì–´ ìˆì§€ ì•Šìœ¼ë©´ -1ì„ ë¦¬í„´";
+		String searchStr = "ìë°”";
 		int index = str.indexOf(searchStr);	 
 		if( index != -1) { 
-			System.out.println(searchStr +" ¹®ÀÚ¿­ÀÌ ½ÃÀÛµÇ´Â ÀÎµ¦½ºÀÇ À§Ä¡´Â: " + index);
+			System.out.println(searchStr +" ë¬¸ìì—´ì´ ì‹œì‘ë˜ëŠ” ì¸ë±ìŠ¤ì˜ ìœ„ì¹˜ëŠ”: " + index);
 		} else {
-			System.out.println(searchStr + " ¹®ÀÚ¿­ÀÌ Æ÷ÇÔµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.");
+			System.out.println(searchStr + " ë¬¸ìì—´ì´ í¬í•¨ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 	}
 	public static void lengthStr() {
-		String str = "¹è¿­ ±æÀÌ°¡ ¾Æ´Ñ ¹®ÀÚ¿­ ±æÀÌ¸¦ ¾Ë¾Æº¸ÀÚ";
+		String str = "ë°°ì—´ ê¸¸ì´ê°€ ì•„ë‹Œ ë¬¸ìì—´ ê¸¸ì´ë¥¼ ì•Œì•„ë³´ì";
 		int lenStr = str.length();
-		System.out.println("¹®ÀÚ¿­ ±æÀÌ: " + lenStr);
+		System.out.println("ë¬¸ìì—´ ê¸¸ì´: " + lenStr);
 	}
 	public static void replaceStr() {
-		// replace() ¸Ş¼Òµå´Â Ã¹ ¹øÂ° ¸Å°³°ªÀÎ ¹®ÀÚ¿­À» Ã£¾Æ µÎ ¹øÂ° ¸Å°³°ªÀ¸·Î ´ëÄ¡ÇÑ »õ·Î¿î ¹®ÀÚ¿­À» ¸¸µç´Ù.
-		String str ="ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö ¿¬½À";
-		String newStr = str.replace("ÀÚ¹Ù", "JAVA");
+		// replace() ë©”ì†Œë“œëŠ” ì²« ë²ˆì§¸ ë§¤ê°œê°’ì¸ ë¬¸ìì—´ì„ ì°¾ì•„ ë‘ ë²ˆì§¸ ë§¤ê°œê°’ìœ¼ë¡œ ëŒ€ì¹˜í•œ ìƒˆë¡œìš´ ë¬¸ìì—´ì„ ë§Œë“ ë‹¤.
+		String str ="ìë°” í”„ë¡œê·¸ë˜ë° ì—°ìŠµ";
+		String newStr = str.replace("ìë°”", "JAVA");
 		System.out.println(newStr);
 	}
 	public static void subString() {
 		String str = "930311-1234567";
-		String firstToSecond = str.substring(2,6); // Ã¹¹øÂ° ÀÎµ¦½ººÎÅÍ µÎ¹øÂ° ÀÎµ¦½ºÀü±îÁö ¹®ÀÚ¿­·Î ¸¸µç´Ù.
+		String firstToSecond = str.substring(2,6); // ì²«ë²ˆì§¸ ì¸ë±ìŠ¤ë¶€í„° ë‘ë²ˆì§¸ ì¸ë±ìŠ¤ì „ê¹Œì§€ ë¬¸ìì—´ë¡œ ë§Œë“ ë‹¤.
 		System.out.println(firstToSecond);
 		String firstToEnd = str.substring(7);
 		System.out.println(firstToEnd);
 	}
 	public static void alphabet() {
-		// ¿µ¾î·ÎµÈ ¹®ÀÚ¿­ÀÇ ´ë¼Ò¹®ÀÚ¿Í °ü°è¾øÀÌ ºñ±³ÇÒ ¶§ ÁÖ·Î »ç¿ëµÊ.
+		// ì˜ì–´ë¡œëœ ë¬¸ìì—´ì˜ ëŒ€ì†Œë¬¸ìì™€ ê´€ê³„ì—†ì´ ë¹„êµí•  ë•Œ ì£¼ë¡œ ì‚¬ìš©ë¨.
 		String str = "Java Programming";
 		System.out.println(str.toUpperCase());
 		System.out.println(str.toLowerCase());
 	}
 	public static void trimStr() {
-		// trim()Àº ¹®ÀÚ¿­ Áß°£ÀÇ °ø¹éÀº Á¦°ÅÇÏÁö ¾Ê´Â´Ù.
-		String str = "     ¹®ÀÚ¿­  ¾ÕµÚ   °ø¹é    Á¦°Å     ";
+		// trim()ì€ ë¬¸ìì—´ ì¤‘ê°„ì˜ ê³µë°±ì€ ì œê±°í•˜ì§€ ì•ŠëŠ”ë‹¤.
+		String str = "     ë¬¸ìì—´  ì•ë’¤   ê³µë°±    ì œê±°     ";
 		String newStr = str.trim();
 		System.out.println(newStr);
 		
 	}
 	public static void valueOfStr() {
-		// ±âº»Å¸ÀÔÀÇ °ªÀ» ¹®ÀÚ¿­·Î º¯È¯
+		// ê¸°ë³¸íƒ€ì…ì˜ ê°’ì„ ë¬¸ìì—´ë¡œ ë³€í™˜
 		boolean b1 = true;
 		boolean b2 = false;
-		char c = '¾Æ';
+		char c = 'ì•„';
 		int i = 12345;
 		long l = 12445L;
 		double d = 123.123;
@@ -130,8 +130,8 @@ public class String¸Ş¼Òµå {
 		
 	}
 	public static void splitStr() {
-		// split()´Â Á¤±ÔÇ¥Çö½ÄÀ» ±¸ºĞÀÚ·Î ÇØ¼­ ¹®ÀÚ¿­À» ºĞ¸®ÇÑ ÈÄ ¹è¿­¿¡ ÀúÀåÇÏ°í ¸®ÅÏÇÑ´Ù.
-		String str = "È«±æµ¿&È«ÀÏµ¿,È«ÀÌµ¿,È«»ïµ¿-È«»çµ¿";
+		// split()ëŠ” ì •ê·œí‘œí˜„ì‹ì„ êµ¬ë¶„ìë¡œ í•´ì„œ ë¬¸ìì—´ì„ ë¶„ë¦¬í•œ í›„ ë°°ì—´ì— ì €ì¥í•˜ê³  ë¦¬í„´í•œë‹¤.
+		String str = "í™ê¸¸ë™&í™ì¼ë™,í™ì´ë™,í™ì‚¼ë™-í™ì‚¬ë™";
 		String[] arrStr = str.split("&|,|-");
 		for(String strE : arrStr) {
 			System.out.print(strE + " ");
