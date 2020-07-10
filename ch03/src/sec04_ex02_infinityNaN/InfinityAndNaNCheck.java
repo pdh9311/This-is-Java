@@ -15,13 +15,13 @@ public class InfinityAndNaNCheck {
 		System.out.println("---------------");
 		
 		if(Double.isInfinite(z1) || Double.isNaN(z1)) {
-			System.out.println("°ª »êÃâ ºÒ°¡");
+			System.out.println("ê°’ ì‚°ì¶œ ë¶ˆê°€");
 		} else {
 			System.out.println(z1+2);
 		}
 		
 		if(Double.isInfinite(z2) || Double.isNaN(z2)) {
-			System.out.println("°ª »êÃâ ºÒ°¡");
+			System.out.println("ê°’ ì‚°ì¶œ ë¶ˆê°€");
 		} else {
 			System.out.println(z2+2);
 		}

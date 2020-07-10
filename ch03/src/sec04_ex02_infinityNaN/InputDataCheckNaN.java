@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class InputDataCheckNaN {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("NaNÀ» ÀÔ·ÂÇØº¸¼¼¿ä> ");
-		String inputData = scan.next();	//ÀÔ·Â µ¥ÀÌÅÍ "NaN"
+		System.out.print("NaNì„ ì…ë ¥í•´ë³´ì„¸ìš”> ");
+		String inputData = scan.next();	//ì…ë ¥ ë°ì´í„° "NaN"
 		double val = Double.valueOf(inputData);
 		
 		double currentBalance = 10000.0;
@@ -14,7 +14,7 @@ public class InputDataCheckNaN {
 		if(!Double.isNaN(val)) {
 			currentBalance += val;
 		} else {
-			System.out.println("NaNÀÌ ÀÔ·ÂµÇ¾î °ªÀ» Ã³¸®ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("NaNì´ ì…ë ¥ë˜ì–´ ê°’ì„ ì²˜ë¦¬í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		System.out.println(currentBalance);
 		
