@@ -1,0 +1,21 @@
+[ java.io 패키지의 주요 클래스 ]
+===========================================
+File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Console
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+InputStream 		/ OutputStream
+-------------------------------------------
+FileInputStream 	/ FileOutputStream
+DataInputStream 	/ DataOutputStream
+ObjectInputStream 	/ ObjectOutputStream
+-------------------------------------------
+BufferdInputStream	/ BufferedOutputStream
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Reader				/ Writer
+-------------------------------------------
+FileReader			/ FileWriter
+InputStreamReader	/ OutputStreamWriter
+					/ PrintWriter
+BufferedReader		/ BufferedWriter
+-------------------------------------------
