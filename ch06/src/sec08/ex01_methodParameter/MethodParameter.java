@@ -8,8 +8,8 @@ public class MethodParameter {
 		
 	}
 	
-	/*	¸Þ¼ÒµåÀÇ ¸Å°³º¯¼ö¿¡ "..."À» »ç¿ëÇØ¼­ ¼±¾ðÇÏ¸é,
-		¸Þ¼Òµå È£Ãâ ½Ã ³Ñ°ÜÁØ °ªÀÇ ¼ö¿¡ µû¶ó ÀÚµ¿À¸·Î ¹è¿­ÀÌ »ý¼ºµÇ°í ¸Å°³°ªÀ¸·Î »ç¿ëµÈ´Ù. */
+	/*	ë©”ì†Œë“œì˜ ë§¤ê°œë³€ìˆ˜ì— "..."ì„ ì‚¬ìš©í•´ì„œ ì„ ì–¸í•˜ë©´,
+		ë©”ì†Œë“œ í˜¸ì¶œ ì‹œ ë„˜ê²¨ì¤€ ê°’ì˜ ìˆ˜ì— ë”°ë¼ ìžë™ìœ¼ë¡œ ë°°ì—´ì´ ìƒì„±ë˜ê³  ë§¤ê°œê°’ìœ¼ë¡œ ì‚¬ìš©ëœë‹¤. */
 	public static int add(int ... values) {
 		int sum = 0;
 		for(int i=0;i<values.length;i++) {
