@@ -1,26 +1,26 @@
-package sec05.ex06_¶÷´Ù½Ä_andThen_compose;
+package sec05.ex06_ëŒë‹¤ì‹_andThen_compose;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class ConsumerFunctionOperatorDefaultMethod {
 	public static void main(String[] args) {
-		// ConsumerÁ¾·ùÀÇ ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º´Â ¸®ÅÏ°ªÀÌ ¾ø±â¶§¹®¿¡ andThen()¸Ş¼Òµå´Â È£Ãâ ¼ø¼­¸¸ °áÁ¤ÇÑ´Ù.
+		// Consumerì¢…ë¥˜ì˜ í•¨ìˆ˜ì  ì¸í„°í˜ì´ìŠ¤ëŠ” ë¦¬í„´ê°’ì´ ì—†ê¸°ë•Œë¬¸ì— andThen()ë©”ì†Œë“œëŠ” í˜¸ì¶œ ìˆœì„œë§Œ ê²°ì •í•œë‹¤.
 		Consumer<Member> consumer1 = m -> { System.out.println(m.name); };
 		Consumer<Member> consumer2 = m -> { System.out.println(m.age); };
 		Consumer<Member> andThenConsumer = consumer1.andThen(consumer2);
-		andThenConsumer.accept(new Member("È«±æµ¿",99));
+		andThenConsumer.accept(new Member("í™ê¸¸ë™",99));
 		
-		// Function, OperatorÁ¾·ùÀÇ ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º´Â ¸ÕÀú ½ÇÇàÇÑ ÇÔ¼öÀûÀÎÅÍÆäÀÌ½ºÀÇ ¸®ÅÏ°ªÀ» µÎ¹øÂ°·Î ½ÇÇàÇÒ ÇÔ¼öÀûÀÎÅÍÆäÀÌ½ºÀÇ ¸Å°³°ªÀ¸·Î ÁÖ°í ÃÖÁ¾ °á°ú¸¦ ¸®ÅÏÇÑ´Ù.
+		// Function, Operatorì¢…ë¥˜ì˜ í•¨ìˆ˜ì  ì¸í„°í˜ì´ìŠ¤ëŠ” ë¨¼ì € ì‹¤í–‰í•œ í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ì˜ ë¦¬í„´ê°’ì„ ë‘ë²ˆì§¸ë¡œ ì‹¤í–‰í•  í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ì˜ ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ê³  ìµœì¢… ê²°ê³¼ë¥¼ ë¦¬í„´í•œë‹¤.
 		Function<Member,String> fn1 = m -> { return m.name; };
-		Function<String,Integer> fn2 = s -> { return (s == "È«±æµ¿") ? 100 : 0; };
-		// andThen°ú compose´Â ½ÇÇà ¼ø¼­¿¡ Â÷ÀÌ°¡ ÀÖ´Ù.
+		Function<String,Integer> fn2 = s -> { return (s == "í™ê¸¸ë™") ? 100 : 0; };
+		// andThenê³¼ composeëŠ” ì‹¤í–‰ ìˆœì„œì— ì°¨ì´ê°€ ìˆë‹¤.
 		Function<Member,Integer> fn3 = fn1.andThen(fn2);
-		int result1 = fn3.apply(new Member("È«±æµ¿", 99));
+		int result1 = fn3.apply(new Member("í™ê¸¸ë™", 99));
 		System.out.println(result1);
 		
 		Function<Member,Integer> fn4 = fn2.compose(fn1);
-		int result2 = fn4.apply(new Member("È«±æµ¿", 99));
+		int result2 = fn4.apply(new Member("í™ê¸¸ë™", 99));
 		System.out.println(result2);
 		
 	}
