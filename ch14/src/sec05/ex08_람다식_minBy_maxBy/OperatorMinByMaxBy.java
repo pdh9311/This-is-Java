@@ -1,11 +1,11 @@
-package sec05.ex08_¶÷´Ù½Ä_minBy_maxBy;
+package sec05.ex08_ëŒë‹¤ì‹_minBy_maxBy;
 
 import java.util.function.BinaryOperator;
 
 public class OperatorMinByMaxBy {
 	public static void main(String[] args) {
-		/* BinaryOperatorÀÇ Á¤Àû¸Ş¼ÒµåÀÎ minBy(),maxBy()¿¡ ¸Å°³Å¸ÀÔÀ¸·Î ComparatorÀÎÅÍÆäÀÌ½º ÀÍ¸í °´Ã¼¸¦ ³Ö¾îÁÖ°í,
-		 * apply()¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ ¾î´À °ªÀÌ ÃÖ¼Ò,ÃÖ´ëÀÎÁö ¾Ë ¼ö ÀÖ´Ù. */
+		/* BinaryOperatorì˜ ì •ì ë©”ì†Œë“œì¸ minBy(),maxBy()ì— ë§¤ê°œíƒ€ì…ìœ¼ë¡œ Comparatorì¸í„°í˜ì´ìŠ¤ ìµëª… ê°ì²´ë¥¼ ë„£ì–´ì£¼ê³ ,
+		 * apply()ë©”ì†Œë“œë¥¼ ì´ìš©í•´ ì–´ëŠ ê°’ì´ ìµœì†Œ,ìµœëŒ€ì¸ì§€ ì•Œ ìˆ˜ ìˆë‹¤. */
 		BinaryOperator<Integer> binaryOperator = BinaryOperator.minBy( (o1,o2) -> { return Integer.compare(o1, o2);} );
 		System.out.println(binaryOperator.apply(120, 21));
 		
