@@ -1,4 +1,4 @@
-package sec05.ex05_¶÷´Ù½Ä_ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º_Predicate;
+package sec05.ex05_ëŒë‹¤ì‹_í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤_Predicate;
 
 import java.util.function.BiPredicate;
 import java.util.function.DoublePredicate;
@@ -7,7 +7,7 @@ import java.util.function.LongPredicate;
 import java.util.function.Predicate;
 
 public class PredicateImpl {
-	// ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º XXXPredicateÀÇ testXXX()¸Ş¼Òµå´Â ¸Å°³°ªÀÌ ÀÖ°í ¸®ÅÏ°ªÀÌ booleanÀÌ´Ù.
+	// í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ XXXPredicateì˜ testXXX()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’ì´ ìˆê³  ë¦¬í„´ê°’ì´ booleanì´ë‹¤.
 	public static void main(String[] args) {
 		Predicate<String> predicate = t -> { 
 			if(t.equals("0")) {
@@ -54,7 +54,7 @@ public class PredicateImpl {
 			return (t > Integer.MAX_VALUE) ? true : false;
 		};
 		bool = longPredicate.test(1231231231231L);
-		System.out.println("ÇöÀç °ªÀÌ intÃÖ´ë°ª º¸´Ù Å« °ªÀÎ°¡? " + bool);
+		System.out.println("í˜„ì¬ ê°’ì´ intìµœëŒ€ê°’ ë³´ë‹¤ í° ê°’ì¸ê°€? " + bool);
 		
 		
 	}

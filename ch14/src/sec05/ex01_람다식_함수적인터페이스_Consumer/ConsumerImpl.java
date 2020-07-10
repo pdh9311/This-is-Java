@@ -1,4 +1,4 @@
-package sec05.ex01_¶÷´Ù½Ä_ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º_Consumer;
+package sec05.ex01_ëŒë‹¤ì‹_í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤_Consumer;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -11,7 +11,7 @@ import java.util.function.ObjLongConsumer;
 
 public class ConsumerImpl {
 	public static void main(String[] args) {
-		// ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º XXXConsumerÀÇ accept()¸Ş¼Òµå´Â ¸Å°³°ªÀº ÀÖÁö¸¸ ¸®ÅÏ°ªÀº ¾ø´Ù.
+		// í•¨ìˆ˜ì  ì¸í„°í˜ì´ìŠ¤ XXXConsumerì˜ accept()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’ì€ ìˆì§€ë§Œ ë¦¬í„´ê°’ì€ ì—†ë‹¤.
 		Consumer<String> consumer = t -> System.out.println(t);
 		consumer.accept("Consumer<T>");
 		

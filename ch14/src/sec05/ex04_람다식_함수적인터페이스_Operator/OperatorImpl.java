@@ -1,4 +1,4 @@
-package sec05.ex04_¶÷´Ù½Ä_ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º_Operator;
+package sec05.ex04_ëŒë‹¤ì‹_í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤_Operator;
 
 import java.util.function.BinaryOperator;
 import java.util.function.DoubleBinaryOperator;
@@ -10,14 +10,14 @@ import java.util.function.LongUnaryOperator;
 import java.util.function.UnaryOperator;
 
 public class OperatorImpl {
-	// ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º XXXOperatorÀÇ applyXXX()¸Ş¼Òµå´Â ¸Å°³°ª, ¸®ÅÏ°ªÀÌ ÀÖ´Ù.
+	// í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ XXXOperatorì˜ applyXXX()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’, ë¦¬í„´ê°’ì´ ìˆë‹¤.
 	public static void main(String[] args) {
 		BinaryOperator<String> binaryOperator = (t1,t2) -> { return t1+t2; };
-		String str = binaryOperator.apply("½ÃÀÛ 123", "³¡ 456");
+		String str = binaryOperator.apply("ì‹œì‘ 123", "ë 456");
 		System.out.println(str);
 		
 		UnaryOperator<String> unaryOperator = t -> { return t; };
-		str = unaryOperator.apply("À¯³Ê¸® ¿ÀÆÛ·¹ÀÌÅÍ");
+		str = unaryOperator.apply("ìœ ë„ˆë¦¬ ì˜¤í¼ë ˆì´í„°");
 		System.out.println(str);
 		
 		DoubleBinaryOperator doubleBinaryOperator = (d1,d2) -> { return d1+d2; };

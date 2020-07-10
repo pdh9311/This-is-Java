@@ -1,4 +1,4 @@
-package sec05.ex02_¶÷´Ù½Ä_ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º_Supplier;
+package sec05.ex02_ëŒë‹¤ì‹_í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤_Supplier;
 
 import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
@@ -7,9 +7,9 @@ import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 
 public class SupplierImpl {
-	// ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º XXXSupplierÀÇ getXXX()¸Ş¼Òµå´Â ¸Å°³°ªÀº ¾øÁö¸¸ ¸®ÅÏ°ªÀÌ ÀÖ´Ù.
+	// í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ XXXSupplierì˜ getXXX()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’ì€ ì—†ì§€ë§Œ ë¦¬í„´ê°’ì´ ìˆë‹¤.
 	public static void main(String[] args) {
-		// Supplier<T>¿¡¼­ T´Â Supplier°¡ ¸®ÅÏÇÒ °´Ã¼ÀÇ Å¸ÀÔÀÌ´Ù.
+		// Supplier<T>ì—ì„œ TëŠ” Supplierê°€ ë¦¬í„´í•  ê°ì²´ì˜ íƒ€ì…ì´ë‹¤.
 		Supplier<String> supplier = () -> { return "Supplier<T>"; };
 		String str = supplier.get();
 		System.out.println(str);

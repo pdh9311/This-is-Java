@@ -1,4 +1,4 @@
-package sec05.ex03_¶÷´Ù½Ä_ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º_Function;
+package sec05.ex03_ëŒë‹¤ì‹_í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤_Function;
 
 import java.util.function.BiFunction;
 import java.util.function.DoubleFunction;
@@ -16,9 +16,9 @@ import java.util.function.ToLongBiFunction;
 import java.util.function.ToLongFunction;
 
 public class FunctionImpl {
-	// ÇÔ¼öÀûÀÎÅÍÆäÀÌ½º XXXFunctionÀÇ applyXXX()¸Ş¼Òµå´Â ¸Å°³°ª, ¸®ÅÏ°ªÀÌ ÀÖ´Ù.
+	// í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ XXXFunctionì˜ applyXXX()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’, ë¦¬í„´ê°’ì´ ìˆë‹¤.
 	public static void main(String[] args) {
-		// Function<T,R> °´Ã¼T¸¦ R·Î ¸ÅÇÎ
+		// Function<T,R> ê°ì²´Të¥¼ Rë¡œ ë§¤í•‘
 		Function<String,String> function = t -> { return t; };
 		String str = function.apply("Function<T>");
 		System.out.println(str);
@@ -66,13 +66,13 @@ public class FunctionImpl {
 				d1 = Double.parseDouble(t);
 				d2 = Double.parseDouble(u);
 			} catch (NumberFormatException e) {
-				System.out.print("¹®ÀÚ¸¦ Double°ª d1 ¶Ç´Â d2·Î º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù. > ");
+				System.out.print("ë¬¸ìë¥¼ Doubleê°’ d1 ë˜ëŠ” d2ë¡œ ë³€ê²½í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. > ");
 			}
 			return d1 + d2;
 		};
 		Double d1d2Result = toDoubleBiF.applyAsDouble("123.2", "3982.1");
 		System.out.println(d1d2Result);
-		d1d2Result = toDoubleBiF.applyAsDouble("½ÊÁ¡»ç", "ÀÌÁ¡¿À");
+		d1d2Result = toDoubleBiF.applyAsDouble("ì‹­ì ì‚¬", "ì´ì ì˜¤");
 		System.out.println(d1d2Result);
 		
 		ToDoubleFunction<String> toDoubleF = t -> {
@@ -80,13 +80,13 @@ public class FunctionImpl {
 			try {
 				d3 = Double.parseDouble(t);
 			} catch (NumberFormatException e) {
-				System.out.print("¹®ÀÚ¸¦ Double°ª d3·Î º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù. > ");
+				System.out.print("ë¬¸ìë¥¼ Doubleê°’ d3ë¡œ ë³€ê²½í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. > ");
 			}
 			return d3;
 		};
 		Double d3Result = toDoubleF.applyAsDouble("3242.1");
 		System.out.println(d3Result);
-		d3Result = toDoubleF.applyAsDouble("»ïÁ¡1»ç");
+		d3Result = toDoubleF.applyAsDouble("ì‚¼ì 1ì‚¬");
 		System.out.println(d3Result);
 		
 		System.out.println("-------------------------------------------------------------");
@@ -98,13 +98,13 @@ public class FunctionImpl {
 				i1 = Integer.valueOf(t);
 				i2 = Integer.valueOf(u);
 			} catch (NumberFormatException e) {
-				System.out.print("¹®ÀÚ¸¦ int°ª i1 ¶Ç´Â i2·Î ¹Ù²Ü¼ö ¾ø½À´Ï´Ù. > ");
+				System.out.print("ë¬¸ìë¥¼ intê°’ i1 ë˜ëŠ” i2ë¡œ ë°”ê¿€ìˆ˜ ì—†ìŠµë‹ˆë‹¤. > ");
 			}
 			return i1 + i2;
 		};
 		int i1i2Result = toIntBiF.applyAsInt("3", "34");
 		System.out.println(i1i2Result);
-		i1i2Result = toIntBiF.applyAsInt("»ï", "3");
+		i1i2Result = toIntBiF.applyAsInt("ì‚¼", "3");
 		System.out.println(i1i2Result);
 		
 		ToIntFunction<String> toIntF = t -> {
@@ -112,13 +112,13 @@ public class FunctionImpl {
 			try {
 				i3 = Integer.valueOf(t);
 			} catch (NumberFormatException e) {
-				System.out.print("¹®ÀÚ¸¦ int°ª i3À¸·Î ¹Ù²Ü¼ö ¾ø½À´Ï´Ù. > ");
+				System.out.print("ë¬¸ìë¥¼ intê°’ i3ìœ¼ë¡œ ë°”ê¿€ìˆ˜ ì—†ìŠµë‹ˆë‹¤. > ");
 			}
 			return i3;
 		};
 		int i3Result = toIntF.applyAsInt("100");
 		System.out.println(i3Result);
-		i3Result = toIntF.applyAsInt("¹é");
+		i3Result = toIntF.applyAsInt("ë°±");
 		System.out.println(i3Result);
 		
 		System.out.println("-------------------------------------------------------------");
@@ -130,13 +130,13 @@ public class FunctionImpl {
 				l1 = Long.valueOf(t);
 				l2 = Long.valueOf(u);
 			} catch (NumberFormatException e) {
-				System.out.print("¹®ÀÚ¸¦ long°ª l1 ¶Ç´Â l2·Î ¹Ù²Ü¼ö ¾ø½À´Ï´Ù. > ");
+				System.out.print("ë¬¸ìë¥¼ longê°’ l1 ë˜ëŠ” l2ë¡œ ë°”ê¿€ìˆ˜ ì—†ìŠµë‹ˆë‹¤. > ");
 			}
 			return l1 + l2;
 		};
 		long l1l2Result = toLongBiF.applyAsLong("3", "1231231231231");
 		System.out.println(l1l2Result);
-		l1l2Result = toLongBiF.applyAsLong("»ï", "1231231231231");
+		l1l2Result = toLongBiF.applyAsLong("ì‚¼", "1231231231231");
 		System.out.println(l1l2Result);
 		
 		ToLongFunction<String> toLongF = t -> {
@@ -144,13 +144,13 @@ public class FunctionImpl {
 			try {
 				l3 = Long.valueOf(t);
 			} catch (NumberFormatException e) {
-				System.out.print("¹®ÀÚ¸¦ long°ª l3À¸·Î ¹Ù²Ü¼ö ¾ø½À´Ï´Ù. > ");
+				System.out.print("ë¬¸ìë¥¼ longê°’ l3ìœ¼ë¡œ ë°”ê¿€ìˆ˜ ì—†ìŠµë‹ˆë‹¤. > ");
 			}
 			return l3;
 		};
 		long l3Result = toLongF.applyAsLong("1231231231231");
 		System.out.println(l3Result);
-		l3Result = toLongF.applyAsLong("1Á¶4Ãµ¾ï");
+		l3Result = toLongF.applyAsLong("1ì¡°4ì²œì–µ");
 		System.out.println(l3Result);
 		
 		
