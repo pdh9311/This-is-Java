@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class HashCode {
 	public static void main(String[] args) {
-		Student s1 = new Student(1,"È«±æµ¿");
-		Student s2 = new Student(1,"È«±æµ¿");
-		Student s3 = new Student(1,"È«ÀÏÁ¡");
+		Student s1 = new Student(1,"í™ê¸¸ë™");
+		Student s2 = new Student(1,"í™ê¸¸ë™");
+		Student s3 = new Student(1,"í™ì¼ì ");
 		
 		System.out.println(s1.hashCode());
 		System.out.println(s2.hashCode());
 		System.out.println(Objects.hashCode(s1));
 		System.out.println(Objects.hashCode(s2));
-		System.out.println(Objects.hashCode(null));		//nullÀÏ¶§ 0À» ¸®ÅÏÇÑ´Ù.
+		System.out.println(Objects.hashCode(null));		//nullì¼ë•Œ 0ì„ ë¦¬í„´í•œë‹¤.
 		System.out.println(s3.hashCode());
 		System.out.println(Objects.hashCode(s3));
 	}
@@ -28,7 +28,7 @@ public class HashCode {
 		@Override
 		public int hashCode() {
 			/* Objects.hash(Object... values)
-			 * Arrays.hashCode(Object[])¸¦ È£ÃâÇØ¼­ ÇØ½Ã ÄÚµå°ªÀ» ¾ò°í ±× °ªÀ» ¸®ÅÏÇÑ´Ù.*/
+			 * Arrays.hashCode(Object[])ë¥¼ í˜¸ì¶œí•´ì„œ í•´ì‹œ ì½”ë“œê°’ì„ ì–»ê³  ê·¸ ê°’ì„ ë¦¬í„´í•œë‹¤.*/
 			return Objects.hash(sno,name);		
 		}
 		
