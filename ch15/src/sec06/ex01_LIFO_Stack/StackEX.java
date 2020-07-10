@@ -4,22 +4,22 @@ import java.util.Stack;
 
 public class StackEX {
 	public static void main(String[] args) {
-		// StackÀº ÄÃ·º¼Ç ÇÁ·¹ÀÓ¿öÅ©¿¡¼­ LIFOÀÚ·á±¸Á¶¸¦ Á¦°øÇÏ´Â Å¬·¡½ºÀÌ´Ù.(ex. JVMÀÇ ½ºÅÃ¸Ş¸ğ¸®)
+		// Stackì€ ì»¬ë ‰ì…˜ í”„ë ˆì„ì›Œí¬ì—ì„œ LIFOìë£Œêµ¬ì¡°ë¥¼ ì œê³µí•˜ëŠ” í´ë˜ìŠ¤ì´ë‹¤.(ex. JVMì˜ ìŠ¤íƒë©”ëª¨ë¦¬)
 		Stack<String> stack = new Stack<String>();
-		// push()¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ ÁÖ¾îÁø °´Ã¼¸¦ Stack¿¡ ³Ö´Â´Ù.
-		stack.push("1¹ø");
-		stack.push("2¹ø");
-		stack.push("3¹ø");
+		// push()ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ì£¼ì–´ì§„ ê°ì²´ë¥¼ Stackì— ë„£ëŠ”ë‹¤.
+		stack.push("1ë²ˆ");
+		stack.push("2ë²ˆ");
+		stack.push("3ë²ˆ");
 		
 		
 		for(int i=0; i<stack.size();i++) {
-			System.out.print(stack.peek() + " ");	// peek()¸Ş¼Òµå´Â StackÀÇ ¸Ç À§ °´Ã¼¸¦ °¡Á®¿ÀÁö¸¸ Stack¿¡¼­ Á¦°ÅÇÏÁø ¾Ê´Â´Ù.
+			System.out.print(stack.peek() + " ");	// peek()ë©”ì†Œë“œëŠ” Stackì˜ ë§¨ ìœ„ ê°ì²´ë¥¼ ê°€ì ¸ì˜¤ì§€ë§Œ Stackì—ì„œ ì œê±°í•˜ì§„ ì•ŠëŠ”ë‹¤.
 		}
 		
 		System.out.println();
 		
 		while(!stack.isEmpty()) {
-			System.out.print(stack.pop() + " ");	// pop()¸Ş¼Òµå´Â StackÀÇ ¸ÇÀ§ °´Ã¼¸¦ °¡Á®¿À¸ç Stack¿¡¼­ Á¦°ÅÇÑ´Ù.
+			System.out.print(stack.pop() + " ");	// pop()ë©”ì†Œë“œëŠ” Stackì˜ ë§¨ìœ„ ê°ì²´ë¥¼ ê°€ì ¸ì˜¤ë©° Stackì—ì„œ ì œê±°í•œë‹¤.
 		}
 		
 	}

@@ -5,22 +5,22 @@ import java.util.Queue;
 
 public class QueueEX {
 	public static void main(String[] args) {
-		// Queue´Â ÄÃ·º¼Ç ÇÁ·¹ÀÓ¿öÅ©¿¡¼­ FIFOÀÚ·á±¸Á¶¸¦ Á¦°øÇÏ´Â ÀÎÅÍÆäÀÌ½ºÀÌ´Ù.(ex. ½º·¹µåÇ®ÀÇ ÀÛ¾÷Å¥)
-		// LinkedList´Â ListÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ±âµµ ÇßÁö¸¸ QueueÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½ºÀÌ±âµµÇÏ´Ù.
+		// QueueëŠ” ì»¬ë ‰ì…˜ í”„ë ˆì„ì›Œí¬ì—ì„œ FIFOìë£Œêµ¬ì¡°ë¥¼ ì œê³µí•˜ëŠ” ì¸í„°í˜ì´ìŠ¤ì´ë‹¤.(ex. ìŠ¤ë ˆë“œí’€ì˜ ì‘ì—…í)
+		// LinkedListëŠ” Listì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ê¸°ë„ í–ˆì§€ë§Œ Queueì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤ì´ê¸°ë„í•˜ë‹¤.
 		Queue<String> queue = new LinkedList<String>();
-		// offer()¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ ÁÖ¾îÁø °´Ã¼¸¦ Queue¿¡ ³Ö´Â´Ù.
-		queue.offer("1¹ø");
-		queue.offer("2¹ø");
-		queue.offer("3¹ø");
+		// offer()ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ì£¼ì–´ì§„ ê°ì²´ë¥¼ Queueì— ë„£ëŠ”ë‹¤.
+		queue.offer("1ë²ˆ");
+		queue.offer("2ë²ˆ");
+		queue.offer("3ë²ˆ");
 		
 		for(int i=0; i<queue.size(); i++) {
-			System.out.print(queue.peek() + " ");		// peek()¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼ ÇÏ³ª¸¦ °¡Á®¿ÀÁö¸¸, Á¦°ÅÇÏÁö´Â ¾Ê´Â´Ù.
+			System.out.print(queue.peek() + " ");		// peek()ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ê°ì²´ í•˜ë‚˜ë¥¼ ê°€ì ¸ì˜¤ì§€ë§Œ, ì œê±°í•˜ì§€ëŠ” ì•ŠëŠ”ë‹¤.
 		}
 		
 		System.out.println();
 		
 		while(!queue.isEmpty()) {
-			System.out.print(queue.poll() + " ");		// poll()¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼ ÇÏ³ª¸¦ °¡Á®¿À°í, Queue¿¡¼­ Á¦°ÅÇÑ´Ù.
+			System.out.print(queue.poll() + " ");		// poll()ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ê°ì²´ í•˜ë‚˜ë¥¼ ê°€ì ¸ì˜¤ê³ , Queueì—ì„œ ì œê±°í•œë‹¤.
 		}
 		
 	}
