@@ -22,27 +22,27 @@ public class CalendarAbstractClass {
 		System.out.print(day + " ");
 		switch(dow) {
 		case Calendar.MONDAY : 
-			dowStr = "¿ù"; break;
+			dowStr = "ì›”"; break;
 		case Calendar.TUESDAY :
-			dowStr = "È­"; break;
+			dowStr = "í™”"; break;
 		case Calendar.WEDNESDAY : 
-			dowStr = "¼ö"; break;
+			dowStr = "ìˆ˜"; break;
 		case Calendar.THURSDAY : 
-			dowStr = "¸ñ"; break;
+			dowStr = "ëª©"; break;
 		case Calendar.FRIDAY : 
-			dowStr = "±İ"; break;
+			dowStr = "ê¸ˆ"; break;
 		case Calendar.SATURDAY : 
-			dowStr = "Åä"; break;
+			dowStr = "í† "; break;
 		case Calendar.SUNDAY :
-			dowStr = "ÀÏ"; break;
+			dowStr = "ì¼"; break;
 		}
-		System.out.print(dowStr + "¿äÀÏ ");
-		System.out.print(ampm == Calendar.AM ? "¿ÀÀü " : "¿ÀÈÄ ");
+		System.out.print(dowStr + "ìš”ì¼ ");
+		System.out.print(ampm == Calendar.AM ? "ì˜¤ì „ " : "ì˜¤í›„ ");
 		System.out.print(hour + ":");
 		System.out.print(minute + ":");
 		System.out.print(second);
 		
-		// TimeZone.getTimeZone()ÀÇ ¸Å°³°ªÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖ´Â ¹®ÀÚ¿­ ¸ñ·ÏÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù. 
+		// TimeZone.getTimeZone()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ë¬¸ìì—´ ëª©ë¡ì„ í™•ì¸í•  ìˆ˜ ìˆë‹¤. 
 		String[] availableIDs = TimeZone.getAvailableIDs();
 		for(String id : availableIDs) {
 			System.out.println(id);
