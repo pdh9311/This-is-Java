@@ -1,12 +1,12 @@
-package sec05.ex02_instanceofÀÎÅÍÆäÀÌ½º;
+package sec05.ex02_instanceofì¸í„°í˜ì´ìŠ¤;
 
 public class Bus implements Vehicle{
 	@Override
 	public void run() {
-		System.out.println("¹ö½º°¡ ´Ş¸³´Ï´Ù.");
+		System.out.println("ë²„ìŠ¤ê°€ ë‹¬ë¦½ë‹ˆë‹¤.");
 	}
 	
 	public void checkFare() {
-		System.out.println("½ÂÂ÷¿ä±İÀ» È®ÀÎÇÕ´Ï´Ù.");
+		System.out.println("ìŠ¹ì°¨ìš”ê¸ˆì„ í™•ì¸í•©ë‹ˆë‹¤.");
 	}
 }

@@ -1,10 +1,10 @@
-package sec05.ex02_instanceofÀÎÅÍÆäÀÌ½º;
+package sec05.ex02_instanceofì¸í„°í˜ì´ìŠ¤;
 
 public class UseVehicle {
 	public static void main(String[] args) {
 		Vehicle vehicle = new Bus();
 		
-		// instanceof ¿¬»êÀÚ´Â °­Á¦ Å¸ÀÔº¯È¯½Ã ¸Å°³°ªÀÇ Å¸ÀÔÀ» È®ÀÎÇÒ ¶§ ÁÖ·Î »ç¿ëµÈ´Ù.(»ó¼Ó,ÀÎÅÍÆäÀÌ½º)
+		// instanceof ì—°ì‚°ìëŠ” ê°•ì œ íƒ€ì…ë³€í™˜ì‹œ ë§¤ê°œê°’ì˜ íƒ€ì…ì„ í™•ì¸í•  ë•Œ ì£¼ë¡œ ì‚¬ìš©ëœë‹¤.(ìƒì†,ì¸í„°í˜ì´ìŠ¤)
 		if(vehicle instanceof Bus) {
 			Bus bus = (Bus) vehicle;
 			bus.checkFare();

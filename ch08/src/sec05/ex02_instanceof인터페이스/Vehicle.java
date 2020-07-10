@@ -1,4 +1,4 @@
-package sec05.ex02_instanceofÀÎÅÍÆäÀÌ½º;
+package sec05.ex02_instanceofì¸í„°í˜ì´ìŠ¤;
 
 public interface Vehicle {
 	void run();
