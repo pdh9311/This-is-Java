@@ -10,11 +10,11 @@ public class MulitiCatch {
 			double result = value1 + value2;
 			System.out.println(data1 + " + " + data2 + " = " + result);
 		} catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
-			System.out.println("½ÇÇà ¸Å°³°ªÀÇ ¼ö°¡ ºÎÁ·ÇÏ°Å³ª ¼ıÀÚ·Î º¯È¯ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì‹¤í–‰ ë§¤ê°œê°’ì˜ ìˆ˜ê°€ ë¶€ì¡±í•˜ê±°ë‚˜ ìˆ«ìë¡œ ë³€í™˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		} catch (Exception e) {
-			System.out.println("¾Ë ¼ö ¾ø´Â ¿¹¿Ü ¹ß»ı");
+			System.out.println("ì•Œ ìˆ˜ ì—†ëŠ” ì˜ˆì™¸ ë°œìƒ");
 		} finally {
-			System.out.println("´Ù½Ã ½ÇÇàÇÏ¼¼¿ä.");
+			System.out.println("ë‹¤ì‹œ ì‹¤í–‰í•˜ì„¸ìš”.");
 		}
 	}
 }
