@@ -1,27 +1,27 @@
-package sec08.ex01_StreamÃÖÁ¾Ã³¸®_¸ÅÄª;
+package sec08.ex01_Streamìµœì¢…ì²˜ë¦¬_ë§¤ì¹­;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class XXXMatch {
 	public static void main(String[] args) {
-		/* allMatch(),anyMatch(),noneMatch()¸Ş¼Òµå´Â ÃÖÁ¾Ã³¸® ¸Ş¼ÒµåÀÌ¸ç
-		 * ¸Å°³°ªÀ¸·Î ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½ºÀÎ Predicate°¡ µé¾î¿À±â ¶§¹®¿¡ Boolean°ªÀ» ¸®ÅÏÇÑ´Ù. */
+		/* allMatch(),anyMatch(),noneMatch()ë©”ì†Œë“œëŠ” ìµœì¢…ì²˜ë¦¬ ë©”ì†Œë“œì´ë©°
+		 * ë§¤ê°œê°’ìœ¼ë¡œ í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ì¸ Predicateê°€ ë“¤ì–´ì˜¤ê¸° ë•Œë¬¸ì— Booleanê°’ì„ ë¦¬í„´í•œë‹¤. */
 		int[] intArray = {2,4,6};
 		
 		IntStream intStream1 = Arrays.stream(intArray);
 		boolean isTwoTimes = intStream1
 				.allMatch(a -> a%2 == 0);
-		System.out.println((isTwoTimes == true) ? "¸ğµÎ 2ÀÇ ¹è¼öÀÔ´Ï´Ù." : "2ÀÇ ¹è¼ö°¡ ¾Æ´Ñ°ªÀÌ ÀÖ½À´Ï´Ù.");
+		System.out.println((isTwoTimes == true) ? "ëª¨ë‘ 2ì˜ ë°°ìˆ˜ì…ë‹ˆë‹¤." : "2ì˜ ë°°ìˆ˜ê°€ ì•„ë‹Œê°’ì´ ìˆìŠµë‹ˆë‹¤.");
 		
 		IntStream intStream2 = Arrays.stream(intArray);
 		boolean isThreeTimes = intStream2
 				.anyMatch(a -> a%3 == 0);
-		System.out.println((isThreeTimes == true) ? "ÇÑ°³ ÀÌ»óÀÇ 3ÀÇ ¹è¼ö°¡ ÀÖ½À´Ï´Ù." : "3ÀÇ ¹è¼öÀÎ °ªÀÌ ÇÏ³ªµµ ¾ø½À´Ï´Ù.");
+		System.out.println((isThreeTimes == true) ? "í•œê°œ ì´ìƒì˜ 3ì˜ ë°°ìˆ˜ê°€ ìˆìŠµë‹ˆë‹¤." : "3ì˜ ë°°ìˆ˜ì¸ ê°’ì´ í•˜ë‚˜ë„ ì—†ìŠµë‹ˆë‹¤.");
 		
 		IntStream intStream3 = Arrays.stream(intArray);
 		isTwoTimes = intStream3
 				.noneMatch(a -> a%2 == 0);
-		System.out.println((isTwoTimes == true) ? "¸ğµÎ 2ÀÇ ¹è¼ö°¡ ¾Æ´Õ´Ï´Ù." : "ÇÏ³ª ÀÌ»óÀÇ 2ÀÇ ¹è¼öÀÎ °ªÀÌ ÀÖ½À´Ï´Ù.");
+		System.out.println((isTwoTimes == true) ? "ëª¨ë‘ 2ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤." : "í•˜ë‚˜ ì´ìƒì˜ 2ì˜ ë°°ìˆ˜ì¸ ê°’ì´ ìˆìŠµë‹ˆë‹¤.");
 	}
 }
