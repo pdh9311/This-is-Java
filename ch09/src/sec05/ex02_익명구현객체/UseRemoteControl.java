@@ -1,4 +1,4 @@
-package sec05.ex02_ÀÍ¸í±¸Çö°´Ã¼;
+package sec05.ex02_ìµëª…êµ¬í˜„ê°ì²´;
 
 public class UseRemoteControl {
 	public static void main(String[] args) {
@@ -6,16 +6,16 @@ public class UseRemoteControl {
 		anony.field.turnOn();
 		anony.method1();
 		anony.method2(
-			// ÀÍ¸í °´Ã¼ ¸Å°³°ªÀ¸·Î ´ëÀÔ
+			// ìµëª… ê°ì²´ ë§¤ê°œê°’ìœ¼ë¡œ ëŒ€ì…
 			new RemoteControl() {
 				@Override
 				public void turnOn() {
-					System.out.println("SmartTV¸¦ ÄÕ´Ï´Ù.");
+					System.out.println("SmartTVë¥¼ ì¼­ë‹ˆë‹¤.");
 				}
 
 				@Override
 				public void turnOff() {
-					System.out.println("SmartTV¸¦ ²ü´Ï´Ù.");
+					System.out.println("SmartTVë¥¼ ë•ë‹ˆë‹¤.");
 				}
 			}
 		);

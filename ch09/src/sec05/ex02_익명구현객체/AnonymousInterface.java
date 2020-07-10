@@ -1,31 +1,31 @@
-package sec05.ex02_ÀÍ¸í±¸Çö°´Ã¼;
+package sec05.ex02_ìµëª…êµ¬í˜„ê°ì²´;
 
 public class AnonymousInterface {
 	
-	// ÇÊµå ÃÊ±â°ªÀ¸·Î ´ëÀÔ
+	// í•„ë“œ ì´ˆê¸°ê°’ìœ¼ë¡œ ëŒ€ì…
 	RemoteControl field = new RemoteControl() {
 		@Override
 		public void turnOn() {
-			System.out.println("TV¸¦ ÄÕ´Ï´Ù.");
+			System.out.println("TVë¥¼ ì¼­ë‹ˆë‹¤.");
 		}
 
 		@Override
 		public void turnOff() {
-			System.out.println("TV¸¦ ²ü´Ï´Ù.");
+			System.out.println("TVë¥¼ ë•ë‹ˆë‹¤.");
 		}
 	};
 	
-	// ·ÎÄÃ º¯¼ö°ªÀ¸·Î ´ëÀÔ
+	// ë¡œì»¬ ë³€ìˆ˜ê°’ìœ¼ë¡œ ëŒ€ì…
 	void method1() {
 		RemoteControl localVar = new RemoteControl() {
 			@Override
 			public void turnOn() {
-				System.out.println("Audio¸¦ ÄÕ´Ï´Ù.");
+				System.out.println("Audioë¥¼ ì¼­ë‹ˆë‹¤.");
 			}
 
 			@Override
 			public void turnOff() {
-				System.out.println("Audio¸¦ ²ü´Ï´Ù.");
+				System.out.println("Audioë¥¼ ë•ë‹ˆë‹¤.");
 			}
 		};
 		localVar.turnOn();

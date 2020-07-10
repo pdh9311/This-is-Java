@@ -1,4 +1,4 @@
-package sec05.ex02_ÀÍ¸í±¸Çö°´Ã¼;
+package sec05.ex02_ìµëª…êµ¬í˜„ê°ì²´;
 
 public interface RemoteControl {
 	void turnOn();
