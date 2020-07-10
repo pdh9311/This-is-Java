@@ -2,7 +2,7 @@ package sec05.ex04_getenv;
 
 public class Getenv {
 	public static void main(String[] args) {
-		// È¯°æ º¯¼ö ÀĞ±â
+		// í™˜ê²½ ë³€ìˆ˜ ì½ê¸°
 		String javaHome = System.getenv("JAVA_HOME");
 		System.out.println("[JAVA_HOME] "+javaHome);
 	}
