@@ -37,7 +37,7 @@ public class Compare {
 			if(o1.sno < o2.sno) { return -1; }
 			else if(o1.sno == o2.sno) { return 0; }
 			else { return -1; }
-			// return Integer.compare(o1.sno,o2.sno);	// if~else¹® ´ë½Å ´ëÃ¼ °¡´ÉÇÔ.
+			// return Integer.compare(o1.sno,o2.sno);	// if~elseë¬¸ ëŒ€ì‹  ëŒ€ì²´ ê°€ëŠ¥í•¨.
 		}
 		
 	}
