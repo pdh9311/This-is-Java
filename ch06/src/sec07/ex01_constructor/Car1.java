@@ -2,7 +2,7 @@ package sec07.ex01_constructor;
 
 public class Car1 {
 	
-	String company = "Çö´ëÀÚµ¿Â÷";
+	String company = "í˜„ëŒ€ìë™ì°¨";
 	String model;
 	String color;
 	int maxSpeed;
