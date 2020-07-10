@@ -1,6 +1,6 @@
 package sec05.ex01.익명자식객체;
 
-public class AnonymousChild {
+public class AnonymousChild {   
 	// 필드 초기값으로 대입
 	Parent field = new Parent() {
 		void work() {

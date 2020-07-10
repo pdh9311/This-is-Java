@@ -1,6 +1,6 @@
 package sec05.ex01.익명자식객체;
 
-public class UseAnonymousChild {
+public class UseAnonymousChild { 
 	public static void main(String[] args) {
 		AnonymousChild anony = new AnonymousChild();
 		
