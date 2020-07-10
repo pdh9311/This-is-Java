@@ -7,49 +7,49 @@ public class MathClass {
 		double v3 = 3.14;
 		double v4 = -3.14;
 		
-		// Àı´ë°ª
+		// ì ˆëŒ€ê°’
 		int absInt = Math.abs(v1);
 		double absDouble = Math.abs(v4);
 		System.out.println(absInt);
 		System.out.println(absDouble);
 		
-		// ¿Ã¸²°ª
+		// ì˜¬ë¦¼ê°’
 		double ceilVal1 = Math.ceil(v3);
 		double ceilVal2 = Math.ceil(v4);
 		System.out.println(ceilVal1);
-		System.out.println(ceilVal2);	 //-3.14¸¦ ¿Ã¸²ÇÏ¸é -3.0ÀÌµÈ´Ù.
+		System.out.println(ceilVal2);	 //-3.14ë¥¼ ì˜¬ë¦¼í•˜ë©´ -3.0ì´ëœë‹¤.
 		
-		// ¹ö¸²°ª
+		// ë²„ë¦¼ê°’
 		double floorVal1 = Math.floor(v3);
 		double floorVal2 = Math.floor(v4);
 		System.out.println(floorVal1);
 		System.out.println(floorVal2);
 		
-		// ÃÖ´ë°ª
+		// ìµœëŒ€ê°’
 		int maxVal1 = Math.max(v1, v2);
 		double maxVal2 = Math.max(v3, v4);
 		System.out.println(maxVal1);
 		System.out.println(maxVal2);
 		
-		// ÃÖ¼Ò°ª
+		// ìµœì†Œê°’
 		int minVal1 = Math.min(v1, v2);
 		double minVal2 = Math.min(v3, v4);
 		System.out.println(minVal1);
 		System.out.println(minVal2);
 		
-		// ·£´ı°ª ( 0.0¿¡¼­ 1.0 »çÀÌÀÇ °ªÀ» ¸®ÅÏ )
+		// ëœë¤ê°’ ( 0.0ì—ì„œ 1.0 ì‚¬ì´ì˜ ê°’ì„ ë¦¬í„´ )
 		double randVal = Math.random();
 		System.out.println(randVal);
-		int rand45 = (int)(Math.random()*45) +1;	// 1~45»çÀÌÀÇ ·£´ıÇÑ ¼ıÀÚ¸¦ Ãâ·Â
+		int rand45 = (int)(Math.random()*45) +1;	// 1~45ì‚¬ì´ì˜ ëœë¤í•œ ìˆ«ìë¥¼ ì¶œë ¥
 		System.out.println("random45: " + rand45);		
 		
-		// °¡±î¿î Á¤¼öÀÇ ½Ç¼ö°ª
+		// ê°€ê¹Œìš´ ì •ìˆ˜ì˜ ì‹¤ìˆ˜ê°’
 		double rintVal1 = Math.rint(v3);
 		double rintVal2 = Math.rint(v4);
 		System.out.println(rintVal1);
 		System.out.println(rintVal2);
 		
-		// ¹İ¿Ã¸²°ª
+		// ë°˜ì˜¬ë¦¼ê°’
 		double roundVal1 = Math.round(v3);
 		double roundVal2 = Math.round(v4);
 		System.out.println(roundVal1);
