@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class ToString {
 	public static void main(String[] args) {
-		String str = "È«±æµ¿";
+		String str = "í™ê¸¸ë™";
 		
 		System.out.println(Objects.toString(str));
 		System.out.println(Objects.toString(null));
-		System.out.println(Objects.toString(null,"nullÀÌ µé¾îÀÖ½À´Ï´Ù."));
+		System.out.println(Objects.toString(null,"nullì´ ë“¤ì–´ìˆìŠµë‹ˆë‹¤."));
 		
 	}
 }
