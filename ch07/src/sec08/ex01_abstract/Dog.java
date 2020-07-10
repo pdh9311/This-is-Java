@@ -2,10 +2,10 @@ package sec08.ex01_abstract;
 
 public class Dog extends Animal{
 	
-	// Ãß»ó¸Ş¼Òµå ¿À¹ö¶óÀÌµù
+	// ì¶”ìƒë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë”©
 	@Override
 	public void sound() {
-		System.out.println("¸Û¸Û");
+		System.out.println("ë©ë©");
 	}
 	
 }

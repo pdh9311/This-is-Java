@@ -2,10 +2,10 @@ package sec08.ex01_abstract;
 
 public class Cat extends Animal{
 
-	// Ãß»ó¸Ş¼Òµå ¿À¹ö¶óÀÌµù
+	// ì¶”ìƒë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë”©
 	@Override
 	public void sound() {
-		System.out.println("¾ß¿Ë");
+		System.out.println("ì•¼ì˜¹");
 	}
 	
 }

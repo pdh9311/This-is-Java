@@ -2,7 +2,7 @@ package sec08.ex01_abstract;
 
 public class UseAbstract {
 	public static void main(String[] args) {
-		// ´ÙÇü¼º
+		// ë‹¤í˜•ì„±
 		Animal animal = null;
 		
 		animal = new Dog();
@@ -16,7 +16,7 @@ public class UseAbstract {
 		sound(new Dog());
 		sound(new Cat());
 	}
-	// ÀÚµ¿ Å¸ÀÔ º¯È¯
+	// ìë™ íƒ€ì… ë³€í™˜
 	public static void sound(Animal animal) {
 		animal.sound();
 	}
