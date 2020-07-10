@@ -11,35 +11,35 @@ public class ThreadState extends Thread {
 	public void run() {
 		while(true) {
 			
-			Thread.State state = targetThread.getState();	// getState()¸Ş¼Òµå´Â Thread.State ¿­°Å »ó¼ö¸¦ ¸®ÅÏ
+			Thread.State state = targetThread.getState();	// getState()ë©”ì†Œë“œëŠ” Thread.State ì—´ê±° ìƒìˆ˜ë¥¼ ë¦¬í„´
 			
-			System.out.println(targetThread.getName() + " ½º·¹µåÀÇ »óÅÂ : " + state);
+			System.out.println(targetThread.getName() + " ìŠ¤ë ˆë“œì˜ ìƒíƒœ : " + state);
 			
 			if(state == Thread.State.NEW) {		
-				targetThread.start();		// target½º·¹µå»óÅÂ°¡ °´Ã¼°¡ »ı¼ºµÈ »óÅÂ¶ó¸é ½ÇÇà´ë±â»óÅÂ·Î ¸¸µé°Ú´Ù.
+				targetThread.start();		// targetìŠ¤ë ˆë“œìƒíƒœê°€ ê°ì²´ê°€ ìƒì„±ëœ ìƒíƒœë¼ë©´ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“¤ê² ë‹¤.
 			}			
 			if(state == Thread.State.RUNNABLE) {
-				System.out.println(targetThread.getName() + " ½º·¹µå°¡ ½ÇÇà´ë±â»óÅÂÀÔ´Ï´Ù.");
+				System.out.println(targetThread.getName() + " ìŠ¤ë ˆë“œê°€ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœì…ë‹ˆë‹¤.");
 			}
 			
 			if(state == Thread.State.WAITING) {
-				System.out.println(targetThread.getName() + " ½º·¹µå°¡ ´Ù¸¥ ½º·¹µå°¡ ÅëÁöÇÒ ¶§±îÁö ±â´Ù¸®´Â »óÅÂÀÔ´Ï´Ù.");
+				System.out.println(targetThread.getName() + " ìŠ¤ë ˆë“œê°€ ë‹¤ë¥¸ ìŠ¤ë ˆë“œê°€ í†µì§€í•  ë•Œê¹Œì§€ ê¸°ë‹¤ë¦¬ëŠ” ìƒíƒœì…ë‹ˆë‹¤.");
 			}
 			
 			if(state == Thread.State.TIMED_WAITING) {
-				System.out.println(targetThread.getName() + " ½º·¹µå°¡ ÁÖ¾îÁø ½Ã°£µ¿¾È ±â´Ù¸®´Â »óÅÂÀÔ´Ï´Ù.");
+				System.out.println(targetThread.getName() + " ìŠ¤ë ˆë“œê°€ ì£¼ì–´ì§„ ì‹œê°„ë™ì•ˆ ê¸°ë‹¤ë¦¬ëŠ” ìƒíƒœì…ë‹ˆë‹¤.");
 			}
 			
 			if(state == Thread.State.BLOCKED) {
-				System.out.println(targetThread.getName() + " ½º·¹µå°¡ »ç¿ëÇÏ°íÀÚÇÏ´Â °´Ã¼ÀÇ ¶ôÀÌ Ç®¸±¶§±îÁö ±â´Ù¸®´Â »óÅÂÀÔ´Ï´Ù.");
+				System.out.println(targetThread.getName() + " ìŠ¤ë ˆë“œê°€ ì‚¬ìš©í•˜ê³ ìí•˜ëŠ” ê°ì²´ì˜ ë½ì´ í’€ë¦´ë•Œê¹Œì§€ ê¸°ë‹¤ë¦¬ëŠ” ìƒíƒœì…ë‹ˆë‹¤.");
 			}
 			
 			if(state == Thread.State.TERMINATED) {
-				break;	// target½º·¹µå°¡ Á¾·áµÇ¸é »óÅÂ¸¦ È®ÀÎÇÏ´Â ½º·¹µå(ThreadState)µµ Á¾·á
+				break;	// targetìŠ¤ë ˆë“œê°€ ì¢…ë£Œë˜ë©´ ìƒíƒœë¥¼ í™•ì¸í•˜ëŠ” ìŠ¤ë ˆë“œ(ThreadState)ë„ ì¢…ë£Œ
 			}
 			
-			/* ThreadState ½º·¹µå°¡ 0.5ÃÊ¿¡ ÇÑ¹ø¾¿ ½º·¹µå »óÅÂ¸¦ È®ÀÎÇÏ±â À§ÇÔ.
-			 * Thead.sleep();À» ÇÏÁö ¾ÊÀ¸¸é ¾à1/1000ÃÊ¸¶´Ù ½º·¹µåÀÇ »óÅÂ¸¦ È®ÀÎÇÏ°Ô µÈ´Ù.	 */
+			/* ThreadState ìŠ¤ë ˆë“œê°€ 0.5ì´ˆì— í•œë²ˆì”© ìŠ¤ë ˆë“œ ìƒíƒœë¥¼ í™•ì¸í•˜ê¸° ìœ„í•¨.
+			 * Thead.sleep();ì„ í•˜ì§€ ì•Šìœ¼ë©´ ì•½1/1000ì´ˆë§ˆë‹¤ ìŠ¤ë ˆë“œì˜ ìƒíƒœë¥¼ í™•ì¸í•˜ê²Œ ëœë‹¤.	 */
 			try {
 				Thread.sleep(300);		
 			} catch (InterruptedException e) {}
