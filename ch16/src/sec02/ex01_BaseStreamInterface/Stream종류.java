@@ -14,26 +14,26 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-public class StreamÁ¾·ù {
+public class Streamì¢…ë¥˜ {
 	public static int sum1;
 	public static int sum2;
 	
 	public static void main(String[] args) throws Exception {
-		List<Object> list = Arrays.asList("È«±æµ¿","°í±æµ¿","¾çÁÖµ¿","¹éÄ¥µ¿","½Å±âÆò");
+		List<Object> list = Arrays.asList("í™ê¸¸ë™","ê³ ê¸¸ë™","ì–‘ì£¼ë™","ë°±ì¹ ë™","ì‹ ê¸°í‰");
 		Object[] strArr = new Object[10];
-		// ÄÃ·º¼ÇÀ¸·ÎºÎÅÍ Stream ¾ò±â
+		// ì»¬ë ‰ì…˜ìœ¼ë¡œë¶€í„° Stream ì–»ê¸°
 		Stream<Object> stream1 = list.stream();
 		Stream<Object> stream2 = list.parallelStream();
 		
-		//¹è¿­·ÎºÎÅÍ Stream ¾ò±â
-		Stream<Object> stream3 = Arrays.stream(new Object[] {"1¹ø¸»","2¹ø¸»","3¹ø¸»","4¹ø¸»","5¹ø¸»"});
+		//ë°°ì—´ë¡œë¶€í„° Stream ì–»ê¸°
+		Stream<Object> stream3 = Arrays.stream(new Object[] {"1ë²ˆë§","2ë²ˆë§","3ë²ˆë§","4ë²ˆë§","5ë²ˆë§"});
 		IntStream stream4 = Arrays.stream(new int[] {1,2,3,4,5});
 		LongStream stream5 = Arrays.stream(new long[] {1231231231231L,1231233453453L,1123123123123L,12318012387112L});
 		DoubleStream stream6 = Arrays.stream(new double[] {123.13,123.92,123.45,8743.2} );
 		
-		// ¼ıÀÚ ¹üÀ§·ÎºÎÅÍ Stream ¾ò±â
-		/* rangeClosed()¸Ş¼Òµå´Â Ã¹ ¹øÂ° ¸Å°³°ª¿¡¼­ ºÎÅÍ µÎ ¹øÂ° ¸Å°³°ª±îÁö ¼øÂ÷ÀûÀ¸·Î IntStream ¶Ç´Â LongStreamÀ» Á¦°øÇÏÁö¸¸
-		 * range()¸Ş¼Òµå´Â µÎ¹øÂ° ¸Å°³°ªÀ» Æ÷ÇÔÇÏÁö ¾Ê´Â´Ù. */
+		// ìˆ«ì ë²”ìœ„ë¡œë¶€í„° Stream ì–»ê¸°
+		/* rangeClosed()ë©”ì†Œë“œëŠ” ì²« ë²ˆì§¸ ë§¤ê°œê°’ì—ì„œ ë¶€í„° ë‘ ë²ˆì§¸ ë§¤ê°œê°’ê¹Œì§€ ìˆœì°¨ì ìœ¼ë¡œ IntStream ë˜ëŠ” LongStreamì„ ì œê³µí•˜ì§€ë§Œ
+		 * range()ë©”ì†Œë“œëŠ” ë‘ë²ˆì§¸ ë§¤ê°œê°’ì„ í¬í•¨í•˜ì§€ ì•ŠëŠ”ë‹¤. */
 		IntStream stream7 = IntStream.range(1, 100);
 		stream7.forEach(a -> sum1 += a);
 		System.out.println(sum1);
@@ -45,8 +45,8 @@ public class StreamÁ¾·ù {
 		LongStream stream9 = LongStream.range(1, 1000);
 		LongStream stream10 = LongStream.rangeClosed(1, 1000);
 		
-		// ÆÄÀÏ·ÎºÎÅÍ Stream ¾ò±â
-		Path path1 = Paths.get("src\\sec01\\ex01_Stream¹İº¹ÀÚ\\IteratorStream.java");
+		// íŒŒì¼ë¡œë¶€í„° Stream ì–»ê¸°
+		Path path1 = Paths.get("src\\sec01\\ex01_Streamë°˜ë³µì\\IteratorStream.java");
 		Stream<String> stream11 = Files.lines(path1,Charset.defaultCharset());
 		stream11.forEach(System.out :: println);	// s -> System.out.println(s)
 		
@@ -56,7 +56,7 @@ public class StreamÁ¾·ù {
 		Stream<String> stream12 = br.lines();
 		stream12.forEach(System.out :: println);
 		
-		// µğ·ºÅä¸®·ÎºÎÅÍ Stream ¾ò±â
+		// ë””ë ‰í† ë¦¬ë¡œë¶€í„° Stream ì–»ê¸°
 		Path path2 = Paths.get("D:\\SW PDH\\This is Java");
 		Stream<Path> stream13 = Files.list(path2);
 		stream13.forEach( p -> System.out.println(p.getFileName()));
