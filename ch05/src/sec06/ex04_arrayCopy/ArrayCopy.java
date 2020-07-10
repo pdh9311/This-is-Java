@@ -2,14 +2,14 @@ package sec06.ex04_arrayCopy;
 
 public class ArrayCopy {
 	public static void main(String[] args) {
-		// ¹è¿­º¹»ç
+		// ë°°ì—´ë³µì‚¬
 		int[] arr1 = new int[] { 1,2,3};
 		int[] arr2 = new int[5];
 		
 		String[] arr3 = new String[] {"java","jsp","spring" };
 		String[] arr4 = new String[5];
 		
-		// ¹æ¹ý1 for¹® º¹»ç
+		// ë°©ë²•1 forë¬¸ ë³µì‚¬
 		for(int i=0;i<arr1.length;i++) {
 			arr2[i] = arr1[i];
 		}
@@ -18,7 +18,7 @@ public class ArrayCopy {
 		}
 		System.out.println();
 		
-		// ¹æ¹ý2 System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length);
+		// ë°©ë²•2 System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length);
 		System.arraycopy(arr1, 0, arr2, 0, arr1.length);
 		for(int i=0;i<arr2.length;i++) {
 			System.out.print(arr2[i] + "|");
