@@ -1,4 +1,4 @@
-package sec06.ex01_StreamÁß°£Ã³¸®_Á¤·Ä;
+package sec06.ex01_Streamì¤‘ê°„ì²˜ë¦¬_ì •ë ¬;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -10,27 +10,27 @@ public class Sorted {
 	public static void main(String[] args) {
 		IntStream intStream = Arrays.stream(new int[] {32,4523,785,324,890,3524});
 		intStream
-		.sorted()		// ¼ıÀÚ¸¦ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÑ´Ù.
+		.sorted()		// ìˆ«ìë¥¼ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œë‹¤.
 		.forEach(e -> System.out.print(e + " "));
 		
 		System.out.println();
 		
 		List<Student> list1 = Arrays.asList(
-				new Student("¸¸½ÄÀÌ",30),
-				new Student("ºï¹ÌÂ¯",28),
-				new Student("Åä³¢Â¯",25),
-				new Student("ÃÊ¹äÂ¯",29));
-		System.out.print("³ªÀÌ¼ø: ");
+				new Student("ë§Œì‹ì´",30),
+				new Student("ë¸ë¯¸ì§±",28),
+				new Student("í† ë¼ì§±",25),
+				new Student("ì´ˆë°¥ì§±",29));
+		System.out.print("ë‚˜ì´ìˆœ: ");
 		Stream<Student> studentStream =  list1.stream();
 		studentStream
-		// Student¿¡ ComparableÀ» ±¸Çö ÇØµĞ ±âº» ¹æ¹ıÀ¸·Î Á¤·Ä(3°¡Áö ¹æ¹ı)
+		// Studentì— Comparableì„ êµ¬í˜„ í•´ë‘” ê¸°ë³¸ ë°©ë²•ìœ¼ë¡œ ì •ë ¬(3ê°€ì§€ ë°©ë²•)
 		.sorted()	
 		.sorted( (a,b) -> a.compareTo(b))
 		.sorted(Comparator.naturalOrder())
-		// Student¿¡ ComparableÀ» ±¸Çö ÇØµĞ ±âº» ¹æ¹ı°ú ¹İ´ë·Î Á¤·Ä(2°¡Áö ¹æ¹ı)
+		// Studentì— Comparableì„ êµ¬í˜„ í•´ë‘” ê¸°ë³¸ ë°©ë²•ê³¼ ë°˜ëŒ€ë¡œ ì •ë ¬(2ê°€ì§€ ë°©ë²•)
 		.sorted( (a,b) -> b.compareTo(a))
 		.sorted(Comparator.reverseOrder())
-		// Student¿¡ ComparableÀ» ±¸Çö ÇÏÁö¾Ê¾Ò´Ù¸é ¶÷´Ù½ÄÀ¸·Î ÀÍ¸í±¸Çö°´Ã¼¸¦ »ı¼ºÇÏ¸é µÈ´Ù.
+		// Studentì— Comparableì„ êµ¬í˜„ í•˜ì§€ì•Šì•˜ë‹¤ë©´ ëŒë‹¤ì‹ìœ¼ë¡œ ìµëª…êµ¬í˜„ê°ì²´ë¥¼ ìƒì„±í•˜ë©´ ëœë‹¤.
 		.sorted( (a,b) -> {
 			if(a.getAge() < b.getAge()) { return -1; }
 			else if(a.getAge() > b.getAge()) { return 1; }

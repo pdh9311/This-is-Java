@@ -1,12 +1,12 @@
-package sec07.ex01_StreamÁß°£Ã³¸®_ÃÖÁ¾Ã³¸®_·çÇÎ;
+package sec07.ex01_Streamì¤‘ê°„ì²˜ë¦¬_ìµœì¢…ì²˜ë¦¬_ë£¨í•‘;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class Looping {
 	public static void main(String[] args) {
-		/* peek()¸Ş¼Òµå´Â Áß°£Ã³¸®¿¡¼­ ·çÇÎÇÏ´Â ¸Ş¼Òµå·Î½á ÃÖÁ¾Ã³¸® ¸Ş¼Òµå°¡ È£ÃâµÇ±âÀü¿¡´Â ½ÇÇàµÇÁö ¾Ê´Â´Ù.
-		 * forEach()¸Ş¼Òµå´Â ÃÖÁ¾Ã³¸® ¸Ş¼ÒµåÀÌ¹Ç·Î µÚ¿¡ ´Ù¸¥ ÃÖÁ¾Ã³¸® ¸Ş¼Òµå°¡ ¿Ã ¼ö ¾ø´Ù. */
+		/* peek()ë©”ì†Œë“œëŠ” ì¤‘ê°„ì²˜ë¦¬ì—ì„œ ë£¨í•‘í•˜ëŠ” ë©”ì†Œë“œë¡œì¨ ìµœì¢…ì²˜ë¦¬ ë©”ì†Œë“œê°€ í˜¸ì¶œë˜ê¸°ì „ì—ëŠ” ì‹¤í–‰ë˜ì§€ ì•ŠëŠ”ë‹¤.
+		 * forEach()ë©”ì†Œë“œëŠ” ìµœì¢…ì²˜ë¦¬ ë©”ì†Œë“œì´ë¯€ë¡œ ë’¤ì— ë‹¤ë¥¸ ìµœì¢…ì²˜ë¦¬ ë©”ì†Œë“œê°€ ì˜¬ ìˆ˜ ì—†ë‹¤. */
 		int[] intArray = {1,2,3,4,5,6,7,8,9,10};
 		
 		IntStream intStream1 = Arrays.stream(intArray);
@@ -14,7 +14,7 @@ public class Looping {
 				.filter(a-> a%2==0)
 				.peek(a->System.out.print(a + " "))
 				.sum();
-		System.out.println("| 1~10¿¡¼­ 2ÀÇ ¹è¼öÀÇ ÇÕ: " + sum);
+		System.out.println("| 1~10ì—ì„œ 2ì˜ ë°°ìˆ˜ì˜ í•©: " + sum);
 		
 		IntStream intStream2 = Arrays.stream(intArray);
 		intStream2

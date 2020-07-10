@@ -1,4 +1,4 @@
-package sec05.ex01_StreamÁß°£Ã³¸®_Mapping;
+package sec05.ex01_Streamì¤‘ê°„ì²˜ë¦¬_Mapping;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +9,8 @@ import java.util.stream.Stream;
 
 public class FlatMapXXX {
 	public static void main(String[] args) {
-		/* flatMapXXX()¸Ş¼Òµå´Â ¿ä¼Ò¸¦ ´ëÃ¼ÇÏ´Â º¹¼ö °³ÀÇ ¿ä¼Òµé·Î ±¸¼ºµÈ »õ·Î¿î ½ºÆ®¸²À» ¸®ÅÏÇÑ´Ù.
-		 * ¸Å°³°ªÀ¸·Î´Â ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º XXXFunctionÀÌ µé¾î°£´Ù. */
+		/* flatMapXXX()ë©”ì†Œë“œëŠ” ìš”ì†Œë¥¼ ëŒ€ì²´í•˜ëŠ” ë³µìˆ˜ ê°œì˜ ìš”ì†Œë“¤ë¡œ êµ¬ì„±ëœ ìƒˆë¡œìš´ ìŠ¤íŠ¸ë¦¼ì„ ë¦¬í„´í•œë‹¤.
+		 * ë§¤ê°œê°’ìœ¼ë¡œëŠ” í•¨ìˆ˜ì  ì¸í„°í˜ì´ìŠ¤ XXXFunctionì´ ë“¤ì–´ê°„ë‹¤. */
 		List<String> listObj = Arrays.asList("java8 lambda","stream mapping","stream filtering","spring framework","JSP/Servlet");
 		List<String> listInt = Arrays.asList("10, 20, 30", "11, 22, 33" , "30, 40, 80, 9");
 		List<String> listDouble = Arrays.asList("10.0, 20.0, 30.0", "11.1, 22.2, 33.3" , "30.67, 40.7, 80.7, 9.666");
@@ -19,7 +19,7 @@ public class FlatMapXXX {
 		double[] doubleArray = new double[] {1.2,1.3,5.3,1.2,1.4};
 		long[] longArray = new long[] {1231231231231L,2342342342342L,3453453453453L,1231231231231L};
 		
-		// flatMap( T ¡æ Stream<R> )
+		// flatMap( T â†’ Stream<R> )
 		Stream<String> stream = listObj.stream();
 		stream
 		.flatMap(data -> {
@@ -30,7 +30,7 @@ public class FlatMapXXX {
 		})		// .flatMap(data -> Arrays.stream(data.split(" ")))
 		.forEach(e -> System.out.println(e));
 		System.out.println("------------------");
-		// flatMap( int ¡æ IntStream ) 
+		// flatMap( int â†’ IntStream ) 
 		IntStream intStream = Arrays.stream(intArray);
 		intStream
 		.distinct()
@@ -39,7 +39,7 @@ public class FlatMapXXX {
 		
 		System.out.println();
 		
-		// flatMap( double ¡æ doubleStream ) 
+		// flatMap( double â†’ doubleStream ) 
 		DoubleStream doubleStream = Arrays.stream(doubleArray);
 		doubleStream
 		.flatMap(d -> Arrays.stream(new double[] {d*2.3}))
@@ -47,7 +47,7 @@ public class FlatMapXXX {
 		
 		System.out.println();
 		
-		// flatMap( long ¡æ longStream ) 
+		// flatMap( long â†’ longStream ) 
 		LongStream longStream = Arrays.stream(longArray);
 		longStream
 		.flatMap(l -> Arrays.stream(new long[] {l%239}))
@@ -55,7 +55,7 @@ public class FlatMapXXX {
 	
 		System.out.println();
 		
-		// flatMapToInt( T ¡æ IntStream ) 
+		// flatMapToInt( T â†’ IntStream ) 
 		Stream<String> streamInt = listInt.stream();
 		streamInt
 		.flatMapToInt(data -> {
@@ -70,7 +70,7 @@ public class FlatMapXXX {
 		
 		System.out.println();
 		
-		// flatMapToDouble( T ¡æ DoubleStream ) 
+		// flatMapToDouble( T â†’ DoubleStream ) 
 		Stream<String> streamDouble = listDouble.stream();
 		streamDouble
 		.flatMapToDouble(data -> {
@@ -85,7 +85,7 @@ public class FlatMapXXX {
 		
 		System.out.println();
 		
-		// flatMapToLong( T ¡æ LongStream ) 
+		// flatMapToLong( T â†’ LongStream ) 
 		Stream<String> streamLong = listLong.stream();
 		streamLong
 		.flatMapToLong(data -> {

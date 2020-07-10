@@ -1,4 +1,4 @@
-package sec05.ex02_StreamÁß°£Ã³¸®_Mapping;
+package sec05.ex02_Streamì¤‘ê°„ì²˜ë¦¬_Mapping;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.stream.Stream;
 
 public class MapXXX {
 	public static void main(String[] args) {
-		/* mapXXX()¸Ş¼Òµå´Â ¿ä¼Ò¸¦ ´ëÃ¼ÇÏ´Â ¿ä¼Ò·Î ±¸¼ºµÈ »õ·Î¿î ½ºÆ®¸²À» ¸®ÅÏÇÑ´Ù.
-		 * ¸Å°³°ªÀ¸·Î´Â ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º XXXFunction, XXXOperator°¡ µé¾î°£´Ù. */
-		List<String> list = Arrays.asList("È«±æµ¿1","È«±æµ¿2","È«±æµ¿3","È«±æµ¿4");
+		/* mapXXX()ë©”ì†Œë“œëŠ” ìš”ì†Œë¥¼ ëŒ€ì²´í•˜ëŠ” ìš”ì†Œë¡œ êµ¬ì„±ëœ ìƒˆë¡œìš´ ìŠ¤íŠ¸ë¦¼ì„ ë¦¬í„´í•œë‹¤.
+		 * ë§¤ê°œê°’ìœ¼ë¡œëŠ” í•¨ìˆ˜ì  ì¸í„°í˜ì´ìŠ¤ XXXFunction, XXXOperatorê°€ ë“¤ì–´ê°„ë‹¤. */
+		List<String> list = Arrays.asList("í™ê¸¸ë™1","í™ê¸¸ë™2","í™ê¸¸ë™3","í™ê¸¸ë™4");
 		
 		Stream<String> stream1 = list.stream();
 		stream1

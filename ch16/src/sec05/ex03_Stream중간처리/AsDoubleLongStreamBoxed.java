@@ -1,4 +1,4 @@
-package sec05.ex03_StreamÁß°£Ã³¸®;
+package sec05.ex03_Streamì¤‘ê°„ì²˜ë¦¬;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
@@ -13,40 +13,40 @@ public class AsDoubleLongStreamBoxed {
 		
 		IntStream intStream1 = Arrays.stream(intArray);
 		intStream1
-		.asDoubleStream()	// IntStreamÀÇ int¿ä¼Ò¸¦ double¿ä¼Ò·Î ¹Ù²Ù°í DoubleStreamÀ» ¸®ÅÏ
+		.asDoubleStream()	// IntStreamì˜ intìš”ì†Œë¥¼ doubleìš”ì†Œë¡œ ë°”ê¾¸ê³  DoubleStreamì„ ë¦¬í„´
 		.forEach(e -> System.out.print(e+ " "));
 		
 		System.out.println();
 		
 		LongStream longStream1 = Arrays.stream(longArray);
 		longStream1
-		.asDoubleStream()	// LongStreamÀÇ long¿ä¼Ò¸¦ double¿ä¼Ò·Î ¹Ù²Ù°í DoubleStreamÀ» ¸®ÅÏ
+		.asDoubleStream()	// LongStreamì˜ longìš”ì†Œë¥¼ doubleìš”ì†Œë¡œ ë°”ê¾¸ê³  DoubleStreamì„ ë¦¬í„´
 		.forEach(e -> System.out.print(e + " "));
 		
 		System.out.println();
 		
 		IntStream intStream2 = Arrays.stream(intArray);
 		intStream2
-		.asLongStream()	// IntStreamÀÇ int¿ä¼Ò¸¦ long¿ä¼Ò·Î ¹Ù²Ù°í LongStreamÀ» ¸®ÅÏ
+		.asLongStream()	// IntStreamì˜ intìš”ì†Œë¥¼ longìš”ì†Œë¡œ ë°”ê¾¸ê³  LongStreamì„ ë¦¬í„´
 		.forEach(e -> System.out.print(e + " "));
 
 		System.out.println("\n"); 
 
 		IntStream intStream3 = Arrays.stream(intArray);
 		intStream3
-		.boxed()	// Stream<Integer> »ý¼º
+		.boxed()	// Stream<Integer> ìƒì„±
 		.forEach(IntegerObj -> System.out.print(IntegerObj + " "));
 		System.out.println(); 
 		
 		DoubleStream doubleStream = Arrays.stream(doubleArray);
 		doubleStream
-		.boxed()	// Stream<Double> »ý¼º
+		.boxed()	// Stream<Double> ìƒì„±
 		.forEach(DoubleObj -> System.out.print(DoubleObj + " "));
 		System.out.println(); 
 		
 		LongStream longStream2 = Arrays.stream(longArray);
 		longStream2
-		.boxed()	// Stream<Long> »ý¼º
+		.boxed()	// Stream<Long> ìƒì„±
 		.forEach(LongObj -> System.out.print(LongObj + " "));
 		
 		
