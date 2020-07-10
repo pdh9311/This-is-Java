@@ -1,12 +1,12 @@
-package sec06.ex02_½º·¹µå»óÅÂÁ¦¾î_join;
+package sec06.ex02_ìŠ¤ë ˆë“œìƒíƒœì œì–´_join;
 
 public class JoinMethod {
 	public static void main(String[] args) {
 		ThreadA threadA = new ThreadA();
 		threadA.start();
-		/* threadA.join()¸Ş¼Òµå¸¦ ÀÌ¿ëÇÏ¸é threadA°¡ Á¾·áµÉ¶§ ±îÁö main½º·¹µå°¡ ÀÏ½ÃÁ¤Áö»óÅÂ°¡ µÇ°í threadA°¡ Á¾·áµÇ¸é main½º·¹µå°¡ ½ÇÇàµÈ´Ù. 
-		 * threadA.join()¸Ş¼Òµå¸¦ ÀÌ¿ëÇÏÁö ¾Ê¾Ò´Ù¸é threadA°¡ ½ÇÇàµÇ´Â µ¿¾È main½º·¹µåµµ °°ÀÌ ½ÇÇàµÇ±â¶§¹®¿¡ °è»êÀ» ¿Ï·áÇÏ±â ÀüÀÇ °ªÀÌ Ãâ·ÂµÉ ¼ö ÀÖ´Ù. */
+		/* threadA.join()ë©”ì†Œë“œë¥¼ ì´ìš©í•˜ë©´ threadAê°€ ì¢…ë£Œë ë•Œ ê¹Œì§€ mainìŠ¤ë ˆë“œê°€ ì¼ì‹œì •ì§€ìƒíƒœê°€ ë˜ê³  threadAê°€ ì¢…ë£Œë˜ë©´ mainìŠ¤ë ˆë“œê°€ ì‹¤í–‰ëœë‹¤. 
+		 * threadA.join()ë©”ì†Œë“œë¥¼ ì´ìš©í•˜ì§€ ì•Šì•˜ë‹¤ë©´ threadAê°€ ì‹¤í–‰ë˜ëŠ” ë™ì•ˆ mainìŠ¤ë ˆë“œë„ ê°™ì´ ì‹¤í–‰ë˜ê¸°ë•Œë¬¸ì— ê³„ì‚°ì„ ì™„ë£Œí•˜ê¸° ì „ì˜ ê°’ì´ ì¶œë ¥ë  ìˆ˜ ìˆë‹¤. */
 		try { threadA.join(); } catch (InterruptedException e) {}	
-		System.out.println("ÇÕ: " + threadA.sum);
+		System.out.println("í•©: " + threadA.sum);
 	}
 }

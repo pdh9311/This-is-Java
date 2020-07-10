@@ -1,4 +1,4 @@
-package sec06.ex02_½º·¹µå»óÅÂÁ¦¾î_join;
+package sec06.ex02_ìŠ¤ë ˆë“œìƒíƒœì œì–´_join;
 
 public class ThreadA extends Thread {
 	public int sum;
