@@ -7,72 +7,72 @@ public class BoxingUnBoxing {
 		byteObj = new Byte("10");
 		byteObj = Byte.valueOf((byte) 10);
 		byteObj = Byte.valueOf("10");
-		byteObj = 10;		// ÀÚµ¿ ¹Ú½Ì
+		byteObj = 10;		// ìë™ ë°•ì‹±
 		
-		Character charObj = new Character('°¡');
-		charObj = Character.valueOf('°¡');
-		charObj = '°¡';		// ÀÚµ¿ ¹Ú½Ì
+		Character charObj = new Character('ê°€');
+		charObj = Character.valueOf('ê°€');
+		charObj = 'ê°€';		// ìë™ ë°•ì‹±
 		
 		Short shortObj = new Short((short) 10);
 		shortObj = new Short("10");
 		shortObj = Short.valueOf((short) 10);
 		shortObj = Short.valueOf("10");
-		shortObj = 10;		// ÀÚµ¿ ¹Ú½Ì
+		shortObj = 10;		// ìë™ ë°•ì‹±
 		
 		Integer intObj = new Integer(10);
 		intObj = new Integer("10");
 		intObj = Integer.valueOf(10);
 		intObj = Integer.valueOf("10");
-		intObj = 10;		// ÀÚµ¿ ¹Ú½Ì
+		intObj = 10;		// ìë™ ë°•ì‹±
 		
 		Long longObj = new Long(10);
 		longObj = new Long("10");
 		longObj = Long.valueOf(10);
 		longObj = Long.valueOf("10");
-		longObj = 10l;		// ÀÚµ¿ ¹Ú½Ì
+		longObj = 10l;		// ìë™ ë°•ì‹±
 		
 		Float floatObj = new Float(10.0f);
 		floatObj = new Float("10.0f");
 		floatObj = Float.valueOf(10.0f);
 		floatObj = Float.valueOf("10.0f");
-		floatObj = 10.0f;		// ÀÚµ¿ ¹Ú½Ì
+		floatObj = 10.0f;		// ìë™ ë°•ì‹±
 		
 		Double doubleObj = new Double(10.0);
 		doubleObj = new Double("10.0");
 		doubleObj = Double.valueOf(10.0);
 		doubleObj = Double.valueOf("10.0");
-		doubleObj = 10.0;		// ÀÚµ¿ ¹Ú½Ì
+		doubleObj = 10.0;		// ìë™ ë°•ì‹±
 		
 		Boolean boolObj = new Boolean(true);
 		boolObj = new Boolean("true");
 		boolObj = Boolean.valueOf(true);
 		boolObj = Boolean.valueOf("true");
-		boolObj = true;		// ÀÚµ¿ ¹Ú½Ì
+		boolObj = true;		// ìë™ ë°•ì‹±
 		
 		// Unboxing
 		byte byteVal = byteObj.byteValue();
-		byteVal = byteObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		byteVal = byteObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		char charVal = charObj.charValue();
-		charVal = charObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		charVal = charObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		short shortVal = shortObj.shortValue();
-		shortVal = shortObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		shortVal = shortObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		int intVal = intObj.intValue();
-		intVal = intObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		intVal = intObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		long longVal = longObj.longValue();
-		longVal = longObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		longVal = longObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		float floatVal = floatObj.floatValue();
-		floatVal = floatObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		floatVal = floatObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		double doubleVal = doubleObj.doubleValue();
-		doubleVal = doubleObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		doubleVal = doubleObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		boolean boolVal = boolObj.booleanValue();
-		boolVal = boolObj;	// ÀÚµ¿ ¾ğ¹Ú½Ì
+		boolVal = boolObj;	// ìë™ ì–¸ë°•ì‹±
 		
 		System.out.println(byteVal);
 		System.out.println(charVal);
@@ -83,7 +83,7 @@ public class BoxingUnBoxing {
 		System.out.println(doubleVal);
 		System.out.println(boolVal);
 		
-		// ¹®ÀÚ¿­À» ±âº»Å¸ÀÔ °ªÀ¸·Î º¯È¯: Æ÷Àå°´Ã¼.parse+±âº»Å¸ÀÔ
+		// ë¬¸ìì—´ì„ ê¸°ë³¸íƒ€ì… ê°’ìœ¼ë¡œ ë³€í™˜: í¬ì¥ê°ì²´.parse+ê¸°ë³¸íƒ€ì…
 		byteVal = Byte.parseByte("10");
 		shortVal = Short.parseShort("10");
 		intVal = Integer.parseInt("10");
@@ -92,7 +92,7 @@ public class BoxingUnBoxing {
 		doubleVal = Double.parseDouble("10.0");
 		boolVal = Boolean.parseBoolean("true");
 		
-		//Æ÷Àå°ª ºñ±³ ¾î¶°ÇÑ ¹üÀ§¸¦ Á¦¿ÜÇÏ°í´Â == ¶Ç´Â != ·Î °ªÀ» ºñ±³ÇÒ ¼ö ¾øÀ¸¹Ç·Î equals()À» ÀÌ¿ëÇØ¼­ °ªÀ» ºñ±³ÇØ¾ß ¾ÈÀüÇÏ´Ù.
+		//í¬ì¥ê°’ ë¹„êµ ì–´ë– í•œ ë²”ìœ„ë¥¼ ì œì™¸í•˜ê³ ëŠ” == ë˜ëŠ” != ë¡œ ê°’ì„ ë¹„êµí•  ìˆ˜ ì—†ìœ¼ë¯€ë¡œ equals()ì„ ì´ìš©í•´ì„œ ê°’ì„ ë¹„êµí•´ì•¼ ì•ˆì „í•˜ë‹¤.
 		Integer i1 = 300;
 		Integer i2 = 300;
 		System.out.println(i1 == i2);
