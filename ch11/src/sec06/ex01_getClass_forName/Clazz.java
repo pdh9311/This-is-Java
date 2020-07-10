@@ -3,7 +3,7 @@ package sec06.ex01_getClass_forName;
 public class Clazz {
 	public static void main(String[] args) {
 		Car car = new Car();
-		Class clazz1 = car.getClass();	//°´Ã¼¸¦ »ı¼ºÇØ¾ß¸¸ getClass()¸Ş¼Òµå¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+		Class clazz1 = car.getClass();	//ê°ì²´ë¥¼ ìƒì„±í•´ì•¼ë§Œ getClass()ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
 		System.out.println(clazz1.getName());
 		System.out.println(clazz1.getSimpleName());
 		System.out.println(clazz1.getPackage().getName());

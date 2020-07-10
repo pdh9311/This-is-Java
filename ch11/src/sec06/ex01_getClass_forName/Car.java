@@ -4,7 +4,7 @@ public class Car {
 	public int carNumber;
 	public String carName;
 	
-	public Car() { System.out.println("Car °´Ã¼ »ı¼º");}
+	public Car() { System.out.println("Car ê°ì²´ ìƒì„±");}
 	
 	public Car(String carName) {
 		this.carName = carName;
