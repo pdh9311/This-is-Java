@@ -1,14 +1,14 @@
-package sec05.ex01.ÀÍ¸íÀÚ½Ä°´Ã¼_ºñ±³;
+package sec05.ex01.ìµëª…ìì‹ê°ì²´_ë¹„êµ;
 
 public class Child3 extends Parent {
 
 	void study() {
-		System.out.println("°øºÎÇÕ´Ï´Ù.");
+		System.out.println("ê³µë¶€í•©ë‹ˆë‹¤.");
 	}
 	
 	@Override
 	void wake() {
-		System.out.print("8½Ã¿¡ ");
+		System.out.print("8ì‹œì— ");
 		study();
 	}
 	

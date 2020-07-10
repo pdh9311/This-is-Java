@@ -1,4 +1,4 @@
-package sec05.ex01.�͸��ڽİ�ü_��;
+package sec05.ex01.익명자식객체_비교;
 
 public class Child {
 	Child1 field = new Child1();
