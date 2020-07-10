@@ -2,9 +2,9 @@ package sec03.ex01_ThreadPriority;
 
 public class ThreadPriority {
 	public static void main(String[] args) {
-		/* ½ºÄÉÁì¸µ°ú µ¿½Ã¼º, º´·Ä¼º µî¿¡ ÀÇÇØ ½ÇÇà ¼ø¼­°¡ ´Þ¶óÁø´Ù.
-		 * ÇÏ³ªÀÇ ÄÚ¾î¿¡¼­ ¸ðµÎ µ¿½Ã¼ºÀ¸·Î ½ÇÇàµÈ´Ù¸é Thread10ÀÌ °¡Àå »¡¸® ³¡³ª´Â °ÍÀÌ ¸ÂÁö¸¸
-		 * ¸ÖÆ¼ ÄÚ¾î¿¡¼­ º´·Ä¼ºÀ¸·Î ½ÇÇàµÈ´Ù¸é Thread10ÀÌ °¡Àå »¡¸® ³¡³ªÁö ¾ÊÀ» ¼ö ÀÖ´Ù. */
+		/* ìŠ¤ì¼€ì¥´ë§ê³¼ ë™ì‹œì„±, ë³‘ë ¬ì„± ë“±ì— ì˜í•´ ì‹¤í–‰ ìˆœì„œê°€ ë‹¬ë¼ì§„ë‹¤.
+		 * í•˜ë‚˜ì˜ ì½”ì–´ì—ì„œ ëª¨ë‘ ë™ì‹œì„±ìœ¼ë¡œ ì‹¤í–‰ëœë‹¤ë©´ Thread10ì´ ê°€ìž¥ ë¹¨ë¦¬ ëë‚˜ëŠ” ê²ƒì´ ë§žì§€ë§Œ
+		 * ë©€í‹° ì½”ì–´ì—ì„œ ë³‘ë ¬ì„±ìœ¼ë¡œ ì‹¤í–‰ëœë‹¤ë©´ Thread10ì´ ê°€ìž¥ ë¹¨ë¦¬ ëë‚˜ì§€ ì•Šì„ ìˆ˜ ìžˆë‹¤. */
 		for(int i=1;i<=10;i++) {
 			Thread  thread = new ThreadTask("Thread"+i);
 			if(i != 10) {
