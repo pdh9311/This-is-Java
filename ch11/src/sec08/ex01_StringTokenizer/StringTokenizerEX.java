@@ -4,8 +4,8 @@ import java.util.StringTokenizer;
 
 public class StringTokenizerEX {
 	public static void main(String[] args) {
-		// ¹®ÀÚ¿­À» ¾î¶² ÇÏ³ªÀÇ ±¸ºĞÀÚ·Î ºĞ¸®°¡´ÉÇÒ °æ¿ì »ç¿ë
-		String str = "È«±æµ¿/È«ÀÏµ¿/È«ÀÌµ¿";
+		// ë¬¸ìì—´ì„ ì–´ë–¤ í•˜ë‚˜ì˜ êµ¬ë¶„ìë¡œ ë¶„ë¦¬ê°€ëŠ¥í•  ê²½ìš° ì‚¬ìš©
+		String str = "í™ê¸¸ë™/í™ì¼ë™/í™ì´ë™";
 		StringTokenizer st = new StringTokenizer(str,"/");
 		int countTokens = st.countTokens();
 		for(int i=0; i<countTokens; i++) {
@@ -15,8 +15,8 @@ public class StringTokenizerEX {
 		
 		System.out.println();
 		
-		str = "È«±æµ¿ È«ÀÏµ¿ È«ÀÌµ¿";
-		st = new StringTokenizer(str);		// ¸Å°³°ªÀ¸·Î ±¸ºĞÀÚ¸¦ »ı·«ÇÏ¸é ±âº»±¸ºĞÀÚ¸¦ °ø¹éÀ¸·Î °£ÁÖÇÑ´Ù.
+		str = "í™ê¸¸ë™ í™ì¼ë™ í™ì´ë™";
+		st = new StringTokenizer(str);		// ë§¤ê°œê°’ìœ¼ë¡œ êµ¬ë¶„ìë¥¼ ìƒëµí•˜ë©´ ê¸°ë³¸êµ¬ë¶„ìë¥¼ ê³µë°±ìœ¼ë¡œ ê°„ì£¼í•œë‹¤.
 		while(st.hasMoreTokens()) {
 			String token = st.nextToken();
 			System.out.println(token);
