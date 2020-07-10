@@ -1,4 +1,4 @@
-package sec02.ex02_ListÄÃ·º¼Ç_Vector;
+package sec02.ex02_Listì»¬ë ‰ì…˜_Vector;
 
 import java.util.List;
 import java.util.Scanner;
@@ -6,44 +6,44 @@ import java.util.Vector;
 
 public class VectorCollection {
 	public static void main(String[] args) {
-		// Vector´Â µ¿±âÈ­µÈ ¸Ş¼Òµå·Î ±¸¼ºµÇ¾î ÀÖ±â ¶§¹®¿¡ ½º·¹µå°¡ ¾ÈÀü(Thread Safe)ÇÏ´Ù.
+		// VectorëŠ” ë™ê¸°í™”ëœ ë©”ì†Œë“œë¡œ êµ¬ì„±ë˜ì–´ ìˆê¸° ë•Œë¬¸ì— ìŠ¤ë ˆë“œê°€ ì•ˆì „(Thread Safe)í•˜ë‹¤.
 		List<Book> list = new Vector<Book>();
-		list.add(new Book("ÀÌ°ÍÀÌ ÀÚ¹Ù´Ù","½Å¿ë±Ç",1224));
-		list.add(new Book("ÀÚ¹Ù À¥À» ´Ù·ç´Â ±â¼ú","ÀÌº´½Â",1280));
-		list.add(new Book("½±°Ô ¹è¿ì´Â JSP À¥ ÇÁ·Î±×·¡¹Ö","¼Û¹Ì¿µ",636));
-		list.add(new Book("ÄÚµå·Î ¹è¿ì´Â ½ºÇÁ¸µ À¥ ÇÁ·ÎÁ§Æ®","±¸¸Û°¡°Ô ÄÚµù´Ü",760));
-		list.add(new Book("ÀÌ°ÍÀÌ MySQLÀÌ´Ù","¿ìÀç³²",576));
+		list.add(new Book("ì´ê²ƒì´ ìë°”ë‹¤","ì‹ ìš©ê¶Œ",1224));
+		list.add(new Book("ìë°” ì›¹ì„ ë‹¤ë£¨ëŠ” ê¸°ìˆ ","ì´ë³‘ìŠ¹",1280));
+		list.add(new Book("ì‰½ê²Œ ë°°ìš°ëŠ” JSP ì›¹ í”„ë¡œê·¸ë˜ë°","ì†¡ë¯¸ì˜",636));
+		list.add(new Book("ì½”ë“œë¡œ ë°°ìš°ëŠ” ìŠ¤í”„ë§ ì›¹ í”„ë¡œì íŠ¸","êµ¬ë©ê°€ê²Œ ì½”ë”©ë‹¨",760));
+		list.add(new Book("ì´ê²ƒì´ MySQLì´ë‹¤","ìš°ì¬ë‚¨",576));
 		
 		list.remove(2);
 		list.remove(2);
 		
 		for(int i=0; i<list.size(); i++) {
 			Book book = list.get(i);
-			System.out.println(book.name + "(" + book.writer + ", " + book.page + "ÆäÀÌÁö)");
+			System.out.println(book.name + "(" + book.writer + ", " + book.page + "í˜ì´ì§€)");
 		}
 
-		System.out.print("List¸¦ ºñ¿ì½Ã°Ú½À´Ï±î? yes or no ");
+		System.out.print("Listë¥¼ ë¹„ìš°ì‹œê² ìŠµë‹ˆê¹Œ? yes or no ");
 		while(true) {
 			Scanner scan = new Scanner(System.in);
 			String yesNo = scan.next();
 			if(yesNo.equals("yes")) {
 				if(list.isEmpty()) {
-					System.out.println("ÀÌ¹Ì ºñ¾î ÀÖ½À´Ï´Ù.");
+					System.out.println("ì´ë¯¸ ë¹„ì–´ ìˆìŠµë‹ˆë‹¤.");
 				} else {
 					list.clear();
-					System.out.println("ºñ¿ü½À´Ï´Ù.");
+					System.out.println("ë¹„ì› ìŠµë‹ˆë‹¤.");
 				}
 				break;
 			} else if(yesNo.equals("no")){
 				break;
 			}
-			System.out.println("yes ¶Ç´Â no¸¸ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("yes ë˜ëŠ” noë§Œ ì…ë ¥í•˜ì„¸ìš”");
 		}
 		
 		if(!list.isEmpty()) {
 			for(int i=0; i<list.size(); i++) {
 				Book book = list.get(i);
-				System.out.println(book.name + "(" + book.writer + ", " + book.page + "ÆäÀÌÁö)");
+				System.out.println(book.name + "(" + book.writer + ", " + book.page + "í˜ì´ì§€)");
 			}
 		}
 	}

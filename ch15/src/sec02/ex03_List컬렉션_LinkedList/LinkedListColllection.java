@@ -1,4 +1,4 @@
-package sec02.ex03_ListÄÃ·º¼Ç_LinkedList;
+package sec02.ex03_Listì»¬ë ‰ì…˜_LinkedList;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,8 +6,8 @@ import java.util.List;
 
 public class LinkedListColllection {
 	public static void main(String[] args) {
-		/* ³¡¿¡¼­ºÎÅÍ(¼øÂ÷ÀûÀ¸·Î) Ãß°¡/»èÁ¦ÇÏ´Â °Ü¿ì´Â ArrayList°¡ ºü¸£Áö¸¸,
-		 * Áß°£¿¡¼­ Ãß°¡/»èÁ¦ÇÒ °æ¿ì´Â ¾ÕµÚ ¸µÅ© Á¤º¸¸¸ º¯°æÇÏ¸é µÇ´Â LinkedList°¡ ´õ ºü¸£´Ù. */
+		/* ëì—ì„œë¶€í„°(ìˆœì°¨ì ìœ¼ë¡œ) ì¶”ê°€/ì‚­ì œí•˜ëŠ” ê²¨ìš°ëŠ” ArrayListê°€ ë¹ ë¥´ì§€ë§Œ,
+		 * ì¤‘ê°„ì—ì„œ ì¶”ê°€/ì‚­ì œí•  ê²½ìš°ëŠ” ì•ë’¤ ë§í¬ ì •ë³´ë§Œ ë³€ê²½í•˜ë©´ ë˜ëŠ” LinkedListê°€ ë” ë¹ ë¥´ë‹¤. */
 		List<String> list1 = new ArrayList<String>();
 		List<String> list2 = new LinkedList<String>();
 		
@@ -19,7 +19,7 @@ public class LinkedListColllection {
 			list1.add(0,String.valueOf(i));
 		}
 		endTime = System.nanoTime();
-		System.out.println(" ArrayList °É¸°½Ã°£: " + (endTime-startTime));
+		System.out.println(" ArrayList ê±¸ë¦°ì‹œê°„: " + (endTime-startTime));
 		
 		
 		startTime = System.nanoTime();
@@ -27,7 +27,7 @@ public class LinkedListColllection {
 			list2.add(0,String.valueOf(i));
 		}
 		endTime = System.nanoTime();
-		System.out.println("LinkedList °É¸°½Ã°£: " + (endTime-startTime)); 
+		System.out.println("LinkedList ê±¸ë¦°ì‹œê°„: " + (endTime-startTime)); 
 		
 		
 		

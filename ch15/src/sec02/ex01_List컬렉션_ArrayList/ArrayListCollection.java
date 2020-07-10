@@ -1,4 +1,4 @@
-package sec02.ex01_ListÄÃ·º¼Ç_ArrayList;
+package sec02.ex01_Listì»¬ë ‰ì…˜_ArrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,40 +6,40 @@ import java.util.List;
 
 public class ArrayListCollection {
 	public static void main(String[] args) {
-		/* ÀÏ¹İ¹è¿­Àº »ı¼ºÇÒ¶§ Å©±â°¡ °íÁ¤µÇ°í »ç¿ë Áß¿¡ Å©±â¸¦ º¯°æÇÒ ¼ö ¾ø´Ù.
-		 * ÇÏÁö¸¸ List ÀÎÅÍÆäÀÌ½º·Î ±¸ÇöµÈ Å¬·¡½º´Â ÀúÀå¿ë·®À» ÃÊ°úÇÏ¿© °´Ã¼°¡ µé¾î¿Ã °æ¿ì ÀÚµ¿ÀûÀ¸·Î ÀúÀå¿ë·®ÀÌ ´Ã¾î³­´Ù.
-		 * ¶ÇÇÑ, ÃÊ±â¿ë·®Àº 10ÀÌÁö¸¸ »ı¼ºÀÚÀÇ ¸Å°³°ªÀ¸·Î °ªÀ» ³Ö¾î¼­ ÃÊ±â¿ë·®À» ¼³Á¤ÇÒ ¼ö ÀÖ´Ù. */
-		String[] strArr = new String[10];	// ÀÏ¹İ¹è¿­
-		List<String> list = new ArrayList<String>();	// ListÀÎÅÍÆäÀÌ½º·Î ±¸ÇöµÈ ArrayList(ÃÊ±â¿ë·®:10)
-		list = new ArrayList<String>(7);	// »ı¼ºÀÚÀÇ ¸Å°³°ªÀ¸·Î ÃÊ±â¿ë·®À» ¼³Á¤(ÃÊ±â¿ë·®:7)
+		/* ì¼ë°˜ë°°ì—´ì€ ìƒì„±í• ë•Œ í¬ê¸°ê°€ ê³ ì •ë˜ê³  ì‚¬ìš© ì¤‘ì— í¬ê¸°ë¥¼ ë³€ê²½í•  ìˆ˜ ì—†ë‹¤.
+		 * í•˜ì§€ë§Œ List ì¸í„°í˜ì´ìŠ¤ë¡œ êµ¬í˜„ëœ í´ë˜ìŠ¤ëŠ” ì €ì¥ìš©ëŸ‰ì„ ì´ˆê³¼í•˜ì—¬ ê°ì²´ê°€ ë“¤ì–´ì˜¬ ê²½ìš° ìë™ì ìœ¼ë¡œ ì €ì¥ìš©ëŸ‰ì´ ëŠ˜ì–´ë‚œë‹¤.
+		 * ë˜í•œ, ì´ˆê¸°ìš©ëŸ‰ì€ 10ì´ì§€ë§Œ ìƒì„±ìì˜ ë§¤ê°œê°’ìœ¼ë¡œ ê°’ì„ ë„£ì–´ì„œ ì´ˆê¸°ìš©ëŸ‰ì„ ì„¤ì •í•  ìˆ˜ ìˆë‹¤. */
+		String[] strArr = new String[10];	// ì¼ë°˜ë°°ì—´
+		List<String> list = new ArrayList<String>();	// Listì¸í„°í˜ì´ìŠ¤ë¡œ êµ¬í˜„ëœ ArrayList(ì´ˆê¸°ìš©ëŸ‰:10)
+		list = new ArrayList<String>(7);	// ìƒì„±ìì˜ ë§¤ê°œê°’ìœ¼ë¡œ ì´ˆê¸°ìš©ëŸ‰ì„ ì„¤ì •(ì´ˆê¸°ìš©ëŸ‰:7)
 		
-		// ¸Ç³¡¿¡ °´Ã¼¸¦ Ãß°¡
+		// ë§¨ëì— ê°ì²´ë¥¼ ì¶”ê°€
 		list.add("day");
 		list.add("MON");	
 		list.add("THU");
 		list.add("FRI");
 		list.add("SAT");
-		// ÁÖ¾îÁø ÀÎµ¦½º¿¡ °´Ã¼¸¦ »ğÀÔ
+		// ì£¼ì–´ì§„ ì¸ë±ìŠ¤ì— ê°ì²´ë¥¼ ì‚½ì…
 		list.add(1,"TUE"); 
 		list.add(2,"WEN");
-		// ÁÖ¾îÁø ÀÎµ¦½º¿¡ ÀúÀåµÈ °´Ã¼¸¦ ÁÖ¾îÁø °´Ã¼·Î ¹Ù²Ş
+		// ì£¼ì–´ì§„ ì¸ë±ìŠ¤ì— ì €ì¥ëœ ê°ì²´ë¥¼ ì£¼ì–´ì§„ ê°ì²´ë¡œ ë°”ê¿ˆ
 		list.set(0,"SUN");
 		
-		// contains()¸Ş¼ÒµåÀÇ ¸Å°³°ªÀ¸·Î ÁÖ¾îÁø °´Ã¼°¡ ÀúÀåµÇ¾î ÀÖ´ÂÁö ¾Ë ¼ö ÀÖ´Ù.
+		// contains()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ì–´ì§„ ê°ì²´ê°€ ì €ì¥ë˜ì–´ ìˆëŠ”ì§€ ì•Œ ìˆ˜ ìˆë‹¤.
 		if(list.contains("day")) {
-			System.out.println("day°¡ Æ÷ÇÔµÇ¾îÀÖ½À´Ï´Ù.");
+			System.out.println("dayê°€ í¬í•¨ë˜ì–´ìˆìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("day°¡ Æ÷ÇÔµÇ¾îÀÖÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("dayê°€ í¬í•¨ë˜ì–´ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 		
-		// size()¸Ş¼Òµå·Î List¿¡ ÀúÀåµÈ °´Ã¼ÀÇ ¼ö¸¦ ¾Ë ¼ö ÀÖ´Ù.
+		// size()ë©”ì†Œë“œë¡œ Listì— ì €ì¥ëœ ê°ì²´ì˜ ìˆ˜ë¥¼ ì•Œ ìˆ˜ ìˆë‹¤.
 		for(int i=0;i<list.size();i++) {
 			System.out.print("  " + i + "  |");
 		}
 		
 		System.out.println();
 		
-		// isEmpty()¸Ş¼Òµå·Î List¿¡ ÀúÀåµÈ °´Ã¼°¡ ¾ø´ÂÁö È®ÀÎ ÇÒ ¼ö ÀÖ´Ù.
+		// isEmpty()ë©”ì†Œë“œë¡œ Listì— ì €ì¥ëœ ê°ì²´ê°€ ì—†ëŠ”ì§€ í™•ì¸ í•  ìˆ˜ ìˆë‹¤.
 		if(!list.isEmpty()) {
 			for(int i=0; i<list.size(); i++) {
 				System.out.print(" " + list.get(i) + " |");		// 
@@ -48,18 +48,18 @@ public class ArrayListCollection {
 		
 		System.out.println();
 
-		list.remove(3);			// ÀÎµ¦½º·Î °´Ã¼ »èÁ¦
-		list.remove(3);			// ÀÎµ¦½º·Î °´Ã¼ »èÁ¦
-		list.remove("MON");		// ÁÖ¾îÁø °´Ã¼¸¦ »èÁ¦
+		list.remove(3);			// ì¸ë±ìŠ¤ë¡œ ê°ì²´ ì‚­ì œ
+		list.remove(3);			// ì¸ë±ìŠ¤ë¡œ ê°ì²´ ì‚­ì œ
+		list.remove("MON");		// ì£¼ì–´ì§„ ê°ì²´ë¥¼ ì‚­ì œ
 		
 		for(String str : list) {
 			System.out.print(" " + str + " |");
 		}
 		
-		list.clear();		// clear()¸Ş¼Òµå·Î List¿¡ ÀúÀåµÈ ¸ğµç °´Ã¼¸¦ »èÁ¦ ÇÑ´Ù. 
-		if(list.isEmpty()) { System.out.println("\nÀúÀåµÈ °´Ã¼°¡ ¾ø½À´Ï´Ù."); }
+		list.clear();		// clear()ë©”ì†Œë“œë¡œ Listì— ì €ì¥ëœ ëª¨ë“  ê°ì²´ë¥¼ ì‚­ì œ í•œë‹¤. 
+		if(list.isEmpty()) { System.out.println("\nì €ì¥ëœ ê°ì²´ê°€ ì—†ìŠµë‹ˆë‹¤."); }
 		
-		// °íÁ¤µÈ °´Ã¼µé·Î ±¸¼ºµÈ List¸¦ »ı¼ºÇÒ ¶§ Arrays.asList();
+		// ê³ ì •ëœ ê°ì²´ë“¤ë¡œ êµ¬ì„±ëœ Listë¥¼ ìƒì„±í•  ë•Œ Arrays.asList();
 		list = Arrays.asList("HTML","Java","JSP/Servlet");
 		for(String str : list) {
 			System.out.print(" " + str + " |");
