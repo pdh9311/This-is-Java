@@ -1,4 +1,4 @@
-package sec11_ex01_StreamÃÖÁ¾Ã³¸®_¼öÁı;
+package sec11_ex01_Streamìµœì¢…ì²˜ë¦¬_ìˆ˜ì§‘;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,21 +13,21 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import sec11_ex01_StreamÃÖÁ¾Ã³¸®_¼öÁı.Student.Sex;
+import sec11_ex01_Streamìµœì¢…ì²˜ë¦¬_ìˆ˜ì§‘.Student.Sex;
 
 public class Collect {
 	public static void main(String[] args) {
-		/* collect()¸Ş¼Òµå´Â ÇÊ¿äÇÑ ¿ä¼Ò¸¸ ÇÊÅÍ¸µ,¸ÅÇÎÇÑ ÈÄ »õ·Î¿î ÄÃ·º¼Ç¿¡ ´ãÀ» ¼ö ÀÖ°í, ¿ä¼ÒµéÀ» ±×·ìÇÎÇÑ ÈÄ Áı°èÇÒ ¼ö ÀÖ´Ù.
-		 * collect()¸Ş¼ÒµåÀÇ ¸Å°³°ªÀ¸·Î´Â Collector<T,A,R>ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ °´Ã¼°¡ µé¾î¿À¸ç 
-		 * CollectorsÀÇ Á¤Àû¸Ş¼ÒµåµéÀÌ Collector<T,A,R>Å¸ÀÔÀ¸·Î ¸®ÅÏÇÑ´Ù. */
+		/* collect()ë©”ì†Œë“œëŠ” í•„ìš”í•œ ìš”ì†Œë§Œ í•„í„°ë§,ë§¤í•‘í•œ í›„ ìƒˆë¡œìš´ ì»¬ë ‰ì…˜ì— ë‹´ì„ ìˆ˜ ìˆê³ , ìš”ì†Œë“¤ì„ ê·¸ë£¹í•‘í•œ í›„ ì§‘ê³„í•  ìˆ˜ ìˆë‹¤.
+		 * collect()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ìœ¼ë¡œëŠ” Collector<T,A,R>ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ ê°ì²´ê°€ ë“¤ì–´ì˜¤ë©° 
+		 * Collectorsì˜ ì •ì ë©”ì†Œë“œë“¤ì´ Collector<T,A,R>íƒ€ì…ìœ¼ë¡œ ë¦¬í„´í•œë‹¤. */
 		
 		List<Student> list = Arrays.asList(
-				new Student("ºï¹ÌÂ¯",28,Student.Sex.Female,Student.City.Pusan),
-				new Student("¸¸½ÄÂ¯",30,Student.Sex.Male,Student.City.Seoul),
-				new Student("Åä³¢Â¯",25,Student.Sex.Female,Student.City.Seoul),
-				new Student("ÃÊ¹äÂ¯",29,Student.Sex.Male,Student.City.Pusan) );
+				new Student("ë¸ë¯¸ì§±",28,Student.Sex.Female,Student.City.Pusan),
+				new Student("ë§Œì‹ì§±",30,Student.Sex.Male,Student.City.Seoul),
+				new Student("í† ë¼ì§±",25,Student.Sex.Female,Student.City.Seoul),
+				new Student("ì´ˆë°¥ì§±",29,Student.Sex.Male,Student.City.Pusan) );
 		
-		// collect()ÀÇ ¸Å°³°ªÀ¸·Î Collectors.toList() - ÀÚ¼¼ÇÑ ÄÚµå
+		// collect()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Collectors.toList() - ìì„¸í•œ ì½”ë“œ
 		Stream<Student> stream1 = list.stream();
 		Stream<Student> maleStream = stream1.filter(s -> s.getSex() == Student.Sex.Male);
 		Collector<Student, ?, List<Student>> collector1 = Collectors.toList();
@@ -36,13 +36,13 @@ public class Collect {
 		
 		System.out.println();
 		
-		// collect()ÀÇ ¸Å°³°ªÀ¸·Î Collectors.toList() - °£´ÜÇÑ ÄÚµå 
+		// collect()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Collectors.toList() - ê°„ë‹¨í•œ ì½”ë“œ 
 		List<Student> femaleList = list.stream().filter(s -> s.getSex() == Student.Sex.Female).collect(Collectors.toList());
 		femaleList.stream().forEach(s -> System.out.println(s.getName()));
 		
 		System.out.println();
 		
-		// collect()ÀÇ ¸Å°³°ªÀ¸·Î Collectors.toCollection(Supplier) - ÀÚ¼¼ÇÑ ÄÚµå
+		// collect()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Collectors.toCollection(Supplier) - ìì„¸í•œ ì½”ë“œ
 		Stream<Student> stream2 = list.stream();
 		Stream<Student> femaleSeoulStream = stream2.filter(s -> s.getSex() == Student.Sex.Female && s.getCity() == Student.City.Seoul);
 		Supplier<HashSet<Student>> supplier = () -> new HashSet<Student>();
@@ -52,24 +52,24 @@ public class Collect {
 		
 		System.out.println();
 		
-		// collect()ÀÇ ¸Å°³°ªÀ¸·Î Collectors.toCollection(Supplier) - °£´ÜÇÑ ÄÚµå
+		// collect()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Collectors.toCollection(Supplier) - ê°„ë‹¨í•œ ì½”ë“œ
 		ArrayList<Student> seoul28over = list.stream().filter(s -> s.getAge() >= 28 && s.getCity() == Student.City.Seoul ).collect(Collectors.toCollection(() -> new ArrayList<Student>()));
 		seoul28over.stream().forEach(s -> System.out.println(s.getName()));
 		
 		System.out.println();
 		
-		// collect()ÀÇ ¸Å°³°ªÀ¸·Î Collectors.toMap(Function,Fuction) - °£´ÜÇÑ ÄÚµå
+		// collect()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Collectors.toMap(Function,Fuction) - ê°„ë‹¨í•œ ì½”ë“œ
 		Map<Integer,String> map = list.stream().collect(Collectors.toMap(Student :: getAge, Student :: getName));
 		Set<Map.Entry<Integer, String>> entrySet = map.entrySet();
 		Iterator<Map.Entry<Integer, String>> iterator = entrySet.iterator();
 		while(iterator.hasNext()) {
 			Map.Entry<Integer, String> entry = iterator.next();
-			System.out.println(entry.getKey() + "»ì, ÀÌ¸§: " + entry.getValue());
+			System.out.println(entry.getKey() + "ì‚´, ì´ë¦„: " + entry.getValue());
 		}
 		
 		System.out.println();
 		
-		// collect()ÀÇ ¸Å°³°ªÀ¸·Î Collectors.toConcurrentMap(Function,Function) - °£´ÜÇÑ ÄÚµå
+		// collect()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Collectors.toConcurrentMap(Function,Function) - ê°„ë‹¨í•œ ì½”ë“œ
 		ConcurrentMap<String, Sex> concurrentMap = list.parallelStream().collect(Collectors.toConcurrentMap(Student :: getName, Student :: getSex));
 		Set<String> keySet = concurrentMap.keySet();
 		Iterator<String> keyIterator = keySet.iterator();

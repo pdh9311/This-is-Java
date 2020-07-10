@@ -1,4 +1,4 @@
-package sec11_ex01_StreamÃÖÁ¾Ã³¸®_¼öÁı;
+package sec11_ex01_Streamìµœì¢…ì²˜ë¦¬_ìˆ˜ì§‘;
 
 public class Student {
 	public enum Sex { Male, Female }
