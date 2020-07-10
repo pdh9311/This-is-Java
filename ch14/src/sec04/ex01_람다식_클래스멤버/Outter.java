@@ -1,4 +1,4 @@
-package sec04.ex01_¶÷´Ù½Ä_Å¬·¡½º¸â¹ö;
+package sec04.ex01_ëžŒë‹¤ì‹_í´ëž˜ìŠ¤ë©¤ë²„;
 
 public class Outter {
 	public int outterField = 10;
@@ -6,19 +6,19 @@ public class Outter {
 	
 	class Inner {
 		public int innerField = 20;
-		public String field = "30¿À";
+		public String field = "30ì˜¤";
 		
-		/* ¸Þ¼Òµå ³»¿¡¼­ »ý¼ºµÈ ÀÍ¸í °´Ã¼´Â ¸Þ¼Òµå°¡ ³¡³ªµµ Èü ¸Þ¸ð¸®¿¡ Á¸ÀçÇÏ¿© °è¼Ó »ç¿ëÇÒ ¼ö ÀÖÁö¸¸ 
-		 * ¸Þ¼ÒµåÀÇ ¸Å°³º¯¼ö³ª ·ÎÄÃº¯¼ö´Â ¸Þ¼Òµå°¡ ³¡³ª¸é ¸Þ¸ð¸®¿¡¼­ »ç¶óÁö±â ¶§¹®¿¡
-		 * ¸Þ¼Òµå ³»ÀÇ ÀÍ¸í°´Ã¼¿¡¼­ »ç¿ëµÇ´Â ¸Þ¼ÒµåÀÇ ¸Å°³º¯¼ö³ª ·ÎÄÃº¯¼ö´Â finalÆ¯¼ºÀ» °¡Áö¹Ç·Î
-		 * ¾Æ·¡ÀÇ arg¿Í localVal °ªÀ» º¯°æÇÒ ¼ö¾ø´Ù. */
+		/* ë©”ì†Œë“œ ë‚´ì—ì„œ ìƒì„±ëœ ìµëª… ê°ì²´ëŠ” ë©”ì†Œë“œê°€ ëë‚˜ë„ íž™ ë©”ëª¨ë¦¬ì— ì¡´ìž¬í•˜ì—¬ ê³„ì† ì‚¬ìš©í•  ìˆ˜ ìžˆì§€ë§Œ 
+		 * ë©”ì†Œë“œì˜ ë§¤ê°œë³€ìˆ˜ë‚˜ ë¡œì»¬ë³€ìˆ˜ëŠ” ë©”ì†Œë“œê°€ ëë‚˜ë©´ ë©”ëª¨ë¦¬ì—ì„œ ì‚¬ë¼ì§€ê¸° ë•Œë¬¸ì—
+		 * ë©”ì†Œë“œ ë‚´ì˜ ìµëª…ê°ì²´ì—ì„œ ì‚¬ìš©ë˜ëŠ” ë©”ì†Œë“œì˜ ë§¤ê°œë³€ìˆ˜ë‚˜ ë¡œì»¬ë³€ìˆ˜ëŠ” finalíŠ¹ì„±ì„ ê°€ì§€ë¯€ë¡œ
+		 * ì•„ëž˜ì˜ argì™€ localVal ê°’ì„ ë³€ê²½í•  ìˆ˜ì—†ë‹¤. */
 		void method(int arg) {
 			int localVal = 80;
 			//arg = 25;	(x)
 			//localVal = 34; (x)
 			InnerClassInterface ici = () -> {
-				/* ¹Ù±ù Å¬·¡½º¿Í ³»ºÎ Å¬·¡½ºÀÇ ÇÊµå ¸íÀÌ °°À»¶§ ÇÊµå¸íÀ¸·Î È£ÃâÇÏ¸é ³»ºÎÅ¬·¡½ºÀÇ ÇÊµå°¡ È£ÃâµÈ´Ù.
-				 * ¹Ù±ù Å¬·¡½ºÀÇ ÇÊµå¸¦ È£ÃâÇÏ±â À§ÇØ¼­´Â "¹Ù±ùÅ¬·¡½º.this.ÇÊµå¸í"À¸·Î È£ÃâÇØ¾ßÇÑ´Ù. */
+				/* ë°”ê¹¥ í´ëž˜ìŠ¤ì™€ ë‚´ë¶€ í´ëž˜ìŠ¤ì˜ í•„ë“œ ëª…ì´ ê°™ì„ë•Œ í•„ë“œëª…ìœ¼ë¡œ í˜¸ì¶œí•˜ë©´ ë‚´ë¶€í´ëž˜ìŠ¤ì˜ í•„ë“œê°€ í˜¸ì¶œëœë‹¤.
+				 * ë°”ê¹¥ í´ëž˜ìŠ¤ì˜ í•„ë“œë¥¼ í˜¸ì¶œí•˜ê¸° ìœ„í•´ì„œëŠ” "ë°”ê¹¥í´ëž˜ìŠ¤.this.í•„ë“œëª…"ìœ¼ë¡œ í˜¸ì¶œí•´ì•¼í•œë‹¤. */
 				System.out.println("outterField:" + outterField);
 				System.out.println("field: " + Outter.this.field);
 				System.out.println();

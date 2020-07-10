@@ -1,4 +1,4 @@
-package sec04.ex01_¶÷´Ù½Ä_Å¬·¡½º¸â¹ö;
+package sec04.ex01_ëŒë‹¤ì‹_í´ë˜ìŠ¤ë©¤ë²„;
 
 public interface InnerClassInterface {
 	void method();
