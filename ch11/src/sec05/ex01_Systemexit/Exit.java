@@ -2,7 +2,7 @@ package sec05.ex01_Systemexit;
 
 public class Exit {
 	public static void main(String[] args) {
-		//º¸¾È °ü¸®ÀÚ ¼³Á¤
+		//ë³´ì•ˆ ê´€ë¦¬ì ì„¤ì •
 		System.setSecurityManager(new SecurityManager() {
 			@Override
 			public void checkExit(int status) {
