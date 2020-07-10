@@ -2,7 +2,7 @@ package sec03.ex03_continue;
 
 public class Continue {
 	public static void main(String[] args) {
-		System.out.println("1~100 »çÀÌ ¼ıÀÚÁß 3ÀÇ ¹è¼ö´Â Á¦¿ÜÇÏ°í Ãâ·ÂÇÏ½Ã¿ä");
+		System.out.println("1~100 ì‚¬ì´ ìˆ«ìì¤‘ 3ì˜ ë°°ìˆ˜ëŠ” ì œì™¸í•˜ê³  ì¶œë ¥í•˜ì‹œìš”");
 		for(int i=1 ; i<=100 ; i++) {
 			if(i%3 == 0) {
 				continue;
@@ -13,7 +13,7 @@ public class Continue {
 			}
 		}
 		
-		System.out.println("\n1~3 »çÀÌÀÇ 3ÀÇ ¹è¼ö¸¸ Ãâ·ÂÇÏ½Ã¿ä.");
+		System.out.println("\n1~3 ì‚¬ì´ì˜ 3ì˜ ë°°ìˆ˜ë§Œ ì¶œë ¥í•˜ì‹œìš”.");
 		int i = 1;
 		while(i<=100) {
 			if(i%3 == 0) {
