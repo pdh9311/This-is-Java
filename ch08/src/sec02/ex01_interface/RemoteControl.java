@@ -1,28 +1,28 @@
 package sec02.ex01_interface;
 
 public interface RemoteControl {
-	// »ó¼ö (ÄÄÆÄÀÏ °úÁ¤¿¡¼­ ÀÚµ¿À¸·Î public static finalÀÌ ºÙ°ÔµÈ´Ù.)
+	// ìƒìˆ˜ (ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ìë™ìœ¼ë¡œ public static finalì´ ë¶™ê²Œëœë‹¤.)
 	public static final int MAX_VALUE = 100;
 	int MIN_VALUE = 0;
 	
-	// Ãß»ó ¸Ş¼Òµå (ÄÄÆÄÀÏ °úÁ¤¿¡¼­ ÀÚµ¿À¸·Î public abstract°¡ ºÙ°ÔµÈ´Ù.)
+	// ì¶”ìƒ ë©”ì†Œë“œ (ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ìë™ìœ¼ë¡œ public abstractê°€ ë¶™ê²Œëœë‹¤.)
 	public abstract void turnOn();
 	void turnOff();
 	void setVolume(int volume);
 	
-	// µğÆúÆ® ¸Ş¼Òµå (ÄÄÆÄÀÏ °úÁ¤¿¡¼­ ÀÚµ¿À¸·Î publicÀÌ ºÙ°Ô µÈ´Ù.)
-	// ±âÁ¸ ÀÎÅÍÆäÀÌ½º¸¦ È®ÀåÇØ¼­ »õ·Î¿î ±â´ÉÀ» Ãß°¡ÇÏ±â À§ÇØ¼­ »ç¿ëµÈ´Ù.
+	// ë””í´íŠ¸ ë©”ì†Œë“œ (ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ìë™ìœ¼ë¡œ publicì´ ë¶™ê²Œ ëœë‹¤.)
+	// ê¸°ì¡´ ì¸í„°í˜ì´ìŠ¤ë¥¼ í™•ì¥í•´ì„œ ìƒˆë¡œìš´ ê¸°ëŠ¥ì„ ì¶”ê°€í•˜ê¸° ìœ„í•´ì„œ ì‚¬ìš©ëœë‹¤.
 	public default void setMute(boolean mute) {
 		if(mute) {
-			System.out.println("¹«À½ Ã³¸®");
+			System.out.println("ë¬´ìŒ ì²˜ë¦¬");
 		} else {
-			System.out.println("¹«À½ ÇØÁ¦");
+			System.out.println("ë¬´ìŒ í•´ì œ");
 		}
 	}
 	
-	// Á¤Àû ¸Ş¼Òµå (ÄÄÆÄÀÏ °úÁ¤¿¡¼­ ÀÚµ¿À¸·Î publicÀÌ ºÙ°Ô µÈ´Ù.)
-	// ÀÎÅÍÆäÀÌ½º·Î ¹Ù·Î È£ÃâÀÌ °¡´ÉÇÏ´Ù.
+	// ì •ì  ë©”ì†Œë“œ (ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ìë™ìœ¼ë¡œ publicì´ ë¶™ê²Œ ëœë‹¤.)
+	// ì¸í„°í˜ì´ìŠ¤ë¡œ ë°”ë¡œ í˜¸ì¶œì´ ê°€ëŠ¥í•˜ë‹¤.
 	public static void changeBattery() {
-		System.out.println("°ÇÀüÁö¸¦ ±³È¯ÇÕ´Ï´Ù.");
+		System.out.println("ê±´ì „ì§€ë¥¼ êµí™˜í•©ë‹ˆë‹¤.");
 	}
 }
