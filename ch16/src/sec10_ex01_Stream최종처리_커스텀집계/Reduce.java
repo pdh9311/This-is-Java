@@ -1,4 +1,4 @@
-package sec10_ex01_StreamÃÖÁ¾Ã³¸®_Ä¿½ºÅÒÁý°è;
+package sec10_ex01_Streamìµœì¢…ì²˜ë¦¬_ì»¤ìŠ¤í…€ì§‘ê³„;
 
 import java.util.Arrays;
 import java.util.OptionalInt;
@@ -6,16 +6,16 @@ import java.util.stream.IntStream;
 
 public class Reduce {
 	public static void main(String[] args) {
-		/* reduce()¸Þ¼Òµå´Â »ç¿ëÀÚ°¡ ¿øÇÏ´Â ´ë·Î ´Ù¾çÇÑ Áý°è¸¦ ¸¸µé ¼ö ÀÖµµ·Ï ÇÏ±â À§ÇØ Á¦°øµÈ ¸Þ¼ÒµåÀÌ´Ù.
-		 * ¸Å°³°ªÀ¸·Î´Â ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º XXXOperator¸¦ ³Ö¾îÁØ´Ù. */
+		/* reduce()ë©”ì†Œë“œëŠ” ì‚¬ìš©ìžê°€ ì›í•˜ëŠ” ëŒ€ë¡œ ë‹¤ì–‘í•œ ì§‘ê³„ë¥¼ ë§Œë“¤ ìˆ˜ ìžˆë„ë¡ í•˜ê¸° ìœ„í•´ ì œê³µëœ ë©”ì†Œë“œì´ë‹¤.
+		 * ë§¤ê°œê°’ìœ¼ë¡œëŠ” í•¨ìˆ˜í˜• ì¸í„°íŽ˜ì´ìŠ¤ XXXOperatorë¥¼ ë„£ì–´ì¤€ë‹¤. */
 		
-		// reduce()¸Þ¼ÒµåÀÇ ¸Å°³°ªÀÌ 1°³ÀÏ¶§´Â ¸®ÅÏÅ¸ÀÔÀÌ OptionalXXXÀÌ´Ù.
+		// reduce()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ì´ 1ê°œì¼ë•ŒëŠ” ë¦¬í„´íƒ€ìž…ì´ OptionalXXXì´ë‹¤.
 		IntStream intStream1 = Arrays.stream(new int[] {1,2,3});
 		OptionalInt optionalInt1 = intStream1.reduce((a,b) -> a+b);
 		int sum1 = optionalInt1.getAsInt();
 		System.out.println(sum1);
 		
-		// reduce()¸Þ¼ÒµåÀÇ ¸Å°³°ªÀÌ 2°³ÀÏ¶§´Â Ã¹¹øÂ° ¸Å°³°ªÀº ÃÊ±â°ªÀÌ¸ç ¸®ÅÏÅ¸ÀÔÀº int, double, longÀÌ´Ù.
+		// reduce()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ì´ 2ê°œì¼ë•ŒëŠ” ì²«ë²ˆì§¸ ë§¤ê°œê°’ì€ ì´ˆê¸°ê°’ì´ë©° ë¦¬í„´íƒ€ìž…ì€ int, double, longì´ë‹¤.
 		IntStream intStream2 = Arrays.stream(new int[] {1,2,3});
 		int sum2 = intStream2.reduce(10,(a,b)-> {
 			System.out.println("a: " + a +  " b: " + b);
