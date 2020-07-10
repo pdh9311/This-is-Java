@@ -1,29 +1,29 @@
-package sec07.ex01_String»ı¼ºÀÚ;
+package sec07.ex01_Stringìƒì„±ì;
 
 import java.io.IOException;
 
-public class String»ı¼ºÀÚ {
+public class Stringìƒì„±ì {
 	public static void main(String[] args) throws IOException {
 		byte[] bytes = new byte[100];
-		System.out.print("ÀÔ·Â: ");
-		/* System.in.read()´Â Å°º¸µå·Î ÀÔ·ÂÇÑ ³»¿ë(Ä³¸®Áö¸®ÅÏ"\r",¶óÀÎÇÇµå"\n" Æ÷ÇÔ)À» 
-		 * ¸Å°³°ªÀ¸·Î ÁÖ¾îÁø byte¹è¿­¿¡ ÀúÀåÇÏ°í
-		 * ÀĞÀº ¹ÙÀÌÆ®¼ö¸¦ ¸®ÅÏÇÑ´Ù. */
+		System.out.print("ì…ë ¥: ");
+		/* System.in.read()ëŠ” í‚¤ë³´ë“œë¡œ ì…ë ¥í•œ ë‚´ìš©(ìºë¦¬ì§€ë¦¬í„´"\r",ë¼ì¸í”¼ë“œ"\n" í¬í•¨)ì„ 
+		 * ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ì–´ì§„ byteë°°ì—´ì— ì €ì¥í•˜ê³ 
+		 * ì½ì€ ë°”ì´íŠ¸ìˆ˜ë¥¼ ë¦¬í„´í•œë‹¤. */
 		int readByte = System.in.read(bytes);	
 		
-		// byte¹è¿­À» ¹®ÀÚ¿­·Î ¸¸µé¾îÁØ´Ù. 
+		// byteë°°ì—´ì„ ë¬¸ìì—´ë¡œ ë§Œë“¤ì–´ì¤€ë‹¤. 
 		String str = new String(bytes);
 		System.out.println(str);
 		
-		// byte¹è¿­À» ÁöÁ¤ÇÑ ¹®ÀÚ¼ÂÀ¸·Î ¹®ÀÚ¿­À» ¸¸µé¾îÁØ´Ù.
+		// byteë°°ì—´ì„ ì§€ì •í•œ ë¬¸ìì…‹ìœ¼ë¡œ ë¬¸ìì—´ì„ ë§Œë“¤ì–´ì¤€ë‹¤.
 		str = new String(bytes,"UTF-8");
 		System.out.println(str);
 		
-		// byte¹è¿­ÀÇ 0¹øÂ° ÀÎµ¦½º À§Ä¡ºÎÅÍ ÀĞÀº ¹ÙÀÌÆ®¼ö(Ä³¸®Áö¸®ÅÏ°ú ¶óÀÎÇÇµå Á¦¿Ü)¸¸Å­ ¹®ÀÚ¿­À» ¸¸µé¾î ÁØ´Ù.
+		// byteë°°ì—´ì˜ 0ë²ˆì§¸ ì¸ë±ìŠ¤ ìœ„ì¹˜ë¶€í„° ì½ì€ ë°”ì´íŠ¸ìˆ˜(ìºë¦¬ì§€ë¦¬í„´ê³¼ ë¼ì¸í”¼ë“œ ì œì™¸)ë§Œí¼ ë¬¸ìì—´ì„ ë§Œë“¤ì–´ ì¤€ë‹¤.
 		str = new String(bytes,0,readByte-2);
 		System.out.println(str);
 		
-		// byte¹è¿­ÀÇ 0¹øÂ° ÀÎµ¦½º À§Ä¡ºÎÅÍ ÀĞÀº ¹ÙÀÌÆ®¼ö(Ä³¸®Áö¸®ÅÏ°ú ¶óÀÎÇÇµå Á¦¿Ü)¸¸Å­ ÁöÁ¤ÇÑ ¹®ÀÚ¼ÂÀ¸·Î ¹®ÀÚ¿­À» ¸¸µé¾î ÁØ´Ù.
+		// byteë°°ì—´ì˜ 0ë²ˆì§¸ ì¸ë±ìŠ¤ ìœ„ì¹˜ë¶€í„° ì½ì€ ë°”ì´íŠ¸ìˆ˜(ìºë¦¬ì§€ë¦¬í„´ê³¼ ë¼ì¸í”¼ë“œ ì œì™¸)ë§Œí¼ ì§€ì •í•œ ë¬¸ìì…‹ìœ¼ë¡œ ë¬¸ìì—´ì„ ë§Œë“¤ì–´ ì¤€ë‹¤.
 		str = new String(bytes,0,readByte-2,"UTF-8");
 		System.out.println(str);
 		
