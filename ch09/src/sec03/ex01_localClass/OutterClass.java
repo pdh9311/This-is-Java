@@ -1,18 +1,18 @@
 package sec03.ex01_localClass;
 
 public class OutterClass {
-	/* ·ÎÄÃ Å¬·¡½º¸¦ Æ÷ÇÔÇÏ´Â ¸Þ¼Òµå¿¡ ¸Å°³º¯¼ö³ª ·ÎÄÃº¯¼ö°¡ ·ÎÄÃ Å¬·¡½º¿¡¼­ »ç¿ëµÉ ¶§ 
-	 * ÄÄÆÄÀÏ ½Ã ·ÎÄÃ Å¬·¡½º¿¡¼­ »ç¿ëÇÏ´Â ¸Å°³º¯¼ö³ª ·ÎÄÃº¯¼öÀÇ °ªÀ» ·ÎÄÃ Å¬·¡½º ³»ºÎ¿¡ º¹»çÇØ µÎ°í »ç¿ëÇÑ´Ù.
-	 * ÀÌ¶§ ·ÎÄÃ Å¬·¡½º¿¡¼­ »ç¿ëµÈ ¸Å°³º¯¼ö³ª ·ÎÄÃº¯¼ö´Â final Æ¯¼ºÀ» °®´Â´Ù. */
+	/* ë¡œì»¬ í´ëž˜ìŠ¤ë¥¼ í¬í•¨í•˜ëŠ” ë©”ì†Œë“œì— ë§¤ê°œë³€ìˆ˜ë‚˜ ë¡œì»¬ë³€ìˆ˜ê°€ ë¡œì»¬ í´ëž˜ìŠ¤ì—ì„œ ì‚¬ìš©ë  ë•Œ 
+	 * ì»´íŒŒì¼ ì‹œ ë¡œì»¬ í´ëž˜ìŠ¤ì—ì„œ ì‚¬ìš©í•˜ëŠ” ë§¤ê°œë³€ìˆ˜ë‚˜ ë¡œì»¬ë³€ìˆ˜ì˜ ê°’ì„ ë¡œì»¬ í´ëž˜ìŠ¤ ë‚´ë¶€ì— ë³µì‚¬í•´ ë‘ê³  ì‚¬ìš©í•œë‹¤.
+	 * ì´ë•Œ ë¡œì»¬ í´ëž˜ìŠ¤ì—ì„œ ì‚¬ìš©ëœ ë§¤ê°œë³€ìˆ˜ë‚˜ ë¡œì»¬ë³€ìˆ˜ëŠ” final íŠ¹ì„±ì„ ê°–ëŠ”ë‹¤. */
 	public void method1(final int arg1, int arg2) {
 		final int var1 = 1;
 		int var2 = 2;
 		class localClass {
-			// int arg2 = ¸Å°³°ª;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
-			// int var2 = 2;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
+			// int arg2 = ë§¤ê°œê°’;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
+			// int var2 = 2;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
 			void method2() {
-				// int arg1 = ¸Å°³°ª;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
-				// int var1 = 1;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
+				// int arg1 = ë§¤ê°œê°’;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
+				// int var1 = 1;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
 				int result = arg1+arg2+var1+var2;
 			}
 		}
