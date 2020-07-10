@@ -1,6 +1,6 @@
-package sec03.ex02_´ÙÁßÀÎÅÍÆäÀÌ½º±¸ÇöÅ¬·¡½º;
+package sec03.ex02_ë‹¤ì¤‘ì¸í„°í˜ì´ìŠ¤êµ¬í˜„í´ë˜ìŠ¤;
 
 public interface Searchable {
-	// Ãß»ó ¸Ş¼Òµå(ÄÄÆÄÀÏ½Ã public abstract°¡ ºÙ°ÔµÈ´Ù.)
+	// ì¶”ìƒ ë©”ì†Œë“œ(ì»´íŒŒì¼ì‹œ public abstractê°€ ë¶™ê²Œëœë‹¤.)
 	void search(String url);
 }

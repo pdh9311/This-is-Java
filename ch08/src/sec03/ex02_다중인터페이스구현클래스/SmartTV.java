@@ -1,9 +1,9 @@
-package sec03.ex02_´ÙÁßÀÎÅÍÆäÀÌ½º±¸ÇöÅ¬·¡½º;
+package sec03.ex02_ë‹¤ì¤‘ì¸í„°í˜ì´ìŠ¤êµ¬í˜„í´ë˜ìŠ¤;
 
 import sec02.ex01_interface.RemoteControl;
 
-// ´ÙÁß ÀÎÅÍÆäÀÌ½º : implements µÚ¿¡ ","·Î ±¸ºĞÇÏ¿© ¿©·¯°³ÀÇ ÀÎÅÍÆäÀÌ½º¸¦ ÀÛ¼ºÇÒ ¼ö ÀÖ´Ù.
-// ÀÛ¼ºµÈ ÀÎÅÍÆäÀÌ½ºÀÇ Ãß»ó ¸Ş¼Òµå´Â ÀçÁ¤ÀÇ ÇØ¾ßÇÑ´Ù.
+// ë‹¤ì¤‘ ì¸í„°í˜ì´ìŠ¤ : implements ë’¤ì— ","ë¡œ êµ¬ë¶„í•˜ì—¬ ì—¬ëŸ¬ê°œì˜ ì¸í„°í˜ì´ìŠ¤ë¥¼ ì‘ì„±í•  ìˆ˜ ìˆë‹¤.
+// ì‘ì„±ëœ ì¸í„°í˜ì´ìŠ¤ì˜ ì¶”ìƒ ë©”ì†Œë“œëŠ” ì¬ì •ì˜ í•´ì•¼í•œë‹¤.
 public class SmartTV implements RemoteControl, Searchable {
 	@Override
 	public void search(String url) { }
