@@ -2,12 +2,12 @@ package sec05.ex02_Time;
 
 public class Time {
 	public static void main(String[] args) {
-		// ÄÄÇ»ÅÍÀÇ ½Ã°è·Î ºÎÅÍ ÇöÀç ½Ã°£ ÀĞ±â
+		// ì»´í“¨í„°ì˜ ì‹œê³„ë¡œ ë¶€í„° í˜„ì¬ ì‹œê°„ ì½ê¸°
 		long milliTime1 = System.currentTimeMillis();
 		long nanoTime1 = System.nanoTime();
 		
-		System.out.println(milliTime1 + " ¹Ğ¸®¼¼ÄÁµå");
-		System.out.println(nanoTime1 + " ³ª³ë¼¼ÄÁµå");
+		System.out.println(milliTime1 + " ë°€ë¦¬ì„¸ì»¨ë“œ");
+		System.out.println(nanoTime1 + " ë‚˜ë…¸ì„¸ì»¨ë“œ");
 		long sum = 0;
 		for(long i=0;i<1000000;i++) {
 			sum+=i;
@@ -15,12 +15,12 @@ public class Time {
 		
 		long milliTime2 = System.currentTimeMillis();
 		long nanoTime2 = System.nanoTime();
-		System.out.println(milliTime2 + " ¹Ğ¸®¼¼ÄÁµå");
-		System.out.println(nanoTime2 + " ³ª³ë¼¼ÄÁµå");
+		System.out.println(milliTime2 + " ë°€ë¦¬ì„¸ì»¨ë“œ");
+		System.out.println(nanoTime2 + " ë‚˜ë…¸ì„¸ì»¨ë“œ");
 		
-		System.out.println("1ºÎÅÍ 1¹é¸¸±îÁöÀÇ ÇÕ : " + sum);
-		System.out.println("1ºÎÅÍ 1¹é¸¸±îÁö ´õÇÏ´Âµ¥ °É¸° ½Ã°£ : " + (milliTime2-milliTime1) + " ¹Ğ¸®¼¼ÄÁµå");
-		System.out.println("1ºÎÅÍ 1¹é¸¸±îÁö ´õÇÏ´Âµ¥ °É¸° ½Ã°£ : " + (nanoTime2-nanoTime1) + " ³ª³ë¼¼ÄÁµå");
+		System.out.println("1ë¶€í„° 1ë°±ë§Œê¹Œì§€ì˜ í•© : " + sum);
+		System.out.println("1ë¶€í„° 1ë°±ë§Œê¹Œì§€ ë”í•˜ëŠ”ë° ê±¸ë¦° ì‹œê°„ : " + (milliTime2-milliTime1) + " ë°€ë¦¬ì„¸ì»¨ë“œ");
+		System.out.println("1ë¶€í„° 1ë°±ë§Œê¹Œì§€ ë”í•˜ëŠ”ë° ê±¸ë¦° ì‹œê°„ : " + (nanoTime2-nanoTime1) + " ë‚˜ë…¸ì„¸ì»¨ë“œ");
 		
 	}
 }
