@@ -1,4 +1,4 @@
-package sec09.ex05_½º·¹µåÇ®_ResultShare;
+package sec09.ex05_ìŠ¤ë ˆë“œí’€_ResultShare;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,7 +8,7 @@ public class SubmitRunnableResult {
 	public static void main(String[] args) {
 		ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 		
-		// ¿äÃ»ÇÒ ÀÛ¾÷ÀÌ 2°³ÀÌ°í, °øÀ¯°´Ã¼¸¦ ÀÌ¿ëÇØ¼­ °¢ ½º·¹µåÀÇ °á°ú¸¦ Á¶ÇÕÇÒ °ÍÀÌ¹Ç·Î  ÀÍ¸í°´Ã¼·Î »ı¼ºÇÏÁö ¾Ê°í Å¬·¡½º·Î ¸¸µé¾î »ç¿ëÇÑ´Ù.
+		// ìš”ì²­í•  ì‘ì—…ì´ 2ê°œì´ê³ , ê³µìœ ê°ì²´ë¥¼ ì´ìš©í•´ì„œ ê° ìŠ¤ë ˆë“œì˜ ê²°ê³¼ë¥¼ ì¡°í•©í•  ê²ƒì´ë¯€ë¡œ  ìµëª…ê°ì²´ë¡œ ìƒì„±í•˜ì§€ ì•Šê³  í´ë˜ìŠ¤ë¡œ ë§Œë“¤ì–´ ì‚¬ìš©í•œë‹¤.
 		class Task implements Runnable {
 			ResultShare resultShare;
 			
@@ -22,7 +22,7 @@ public class SubmitRunnableResult {
 				for(int i=1; i<=10; i++) {
 					sum += i;
 				}
-				resultShare.addSum(sum);	// ResultShare°´Ã¼¿¡ ÀÛ¾÷ °á°ú ÀúÀå
+				resultShare.addSum(sum);	// ResultShareê°ì²´ì— ì‘ì—… ê²°ê³¼ ì €ì¥
 			}
 		}
 		
@@ -46,7 +46,7 @@ public class SubmitRunnableResult {
 	}
 }
 
-// °øÀ¯ °´Ã¼
+// ê³µìœ  ê°ì²´
 class ResultShare {
 	int accumVal;
 	
