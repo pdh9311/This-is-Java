@@ -1,4 +1,4 @@
-package sec09.ex03_½º·¹µåÇ®_submitÀÇFuture;
+package sec09.ex03_ìŠ¤ë ˆë“œí’€_submitì˜Future;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,36 +10,36 @@ public class SubmitReturn {
 		Runnable runnable = new Runnable() {
 			@Override
 			public void run() {
-				System.out.println("ÀÛ¾÷ Ã³¸®");
+				System.out.println("ì‘ì—… ì²˜ë¦¬");
 			}
 		};
 		
 		Future<?> future = executorService.submit(runnable);
-//		try {future.get();} catch (Exception e1) {} ¸¸¾à¿¡ ÀÌ ÄÚµå°¡ ÀÛ¼ºµÈ´Ù¸é get()¸Ş¼Òµå¸¦ È£ÃâÇÏ¸é¼­ ºí·ÎÅ·µÇ¹Ç·Î "Ã³¸® Áß"Àº Ãâ·ÂµÇÁö ¾ÊÀ» °ÍÀÌ´Ù.	
-		System.out.println(future.isDone() ? "Ã³¸® ¿Ï·á" : "Ã³¸® Áß");
+//		try {future.get();} catch (Exception e1) {} ë§Œì•½ì— ì´ ì½”ë“œê°€ ì‘ì„±ëœë‹¤ë©´ get()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë©´ì„œ ë¸”ë¡œí‚¹ë˜ë¯€ë¡œ "ì²˜ë¦¬ ì¤‘"ì€ ì¶œë ¥ë˜ì§€ ì•Šì„ ê²ƒì´ë‹¤.	
+		System.out.println(future.isDone() ? "ì²˜ë¦¬ ì™„ë£Œ" : "ì²˜ë¦¬ ì¤‘");
 		try { Thread.sleep(10); } catch(Exception e) {}
-		System.out.println(future.isDone() ? "0.01ÃÊÈÄ Ã³¸® ¿Ï·á" : "0.01ÃÊÈÄ Ã³¸® Áß");
+		System.out.println(future.isDone() ? "0.01ì´ˆí›„ ì²˜ë¦¬ ì™„ë£Œ" : "0.01ì´ˆí›„ ì²˜ë¦¬ ì¤‘");
 		
 		
-		/* FutureÀÇ get()¸Ş¼Òµå¸¦ È£ÃâÇÏ¸é ½º·¹µå°¡ ÀÛ¾÷À» ¿Ï·áÇÒ ¶§±îÁö ºí·ÎÅ·µÇ¾ú´Ù°¡ ÀÛ¾÷À» ¿Ï·áÇÏ¸é Ã³¸® °á°ú¸¦ ¸®ÅÏÇÑ´Ù.
-		 * ¿©±â¼­ ºí·ÎÅ·µÉ ¶§ ´Ù¸¥ ÄÚµå¸¦ ½ÇÇàÇÒ ¼ö ¾øÀ¸¹Ç·Î get()¸Ş¼Òµå´Â »õ·Î¿î ½º·¹µåÀÌ°Å³ª ½º·¹µåÇ®ÀÇ ¶Ç´Ù¸¥ ½º·¹µå°¡ µÇ¾î¾ß ÇÑ´Ù. (ex. UIÀÛ¾÷) */
+		/* Futureì˜ get()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë©´ ìŠ¤ë ˆë“œê°€ ì‘ì—…ì„ ì™„ë£Œí•  ë•Œê¹Œì§€ ë¸”ë¡œí‚¹ë˜ì—ˆë‹¤ê°€ ì‘ì—…ì„ ì™„ë£Œí•˜ë©´ ì²˜ë¦¬ ê²°ê³¼ë¥¼ ë¦¬í„´í•œë‹¤.
+		 * ì—¬ê¸°ì„œ ë¸”ë¡œí‚¹ë  ë•Œ ë‹¤ë¥¸ ì½”ë“œë¥¼ ì‹¤í–‰í•  ìˆ˜ ì—†ìœ¼ë¯€ë¡œ get()ë©”ì†Œë“œëŠ” ìƒˆë¡œìš´ ìŠ¤ë ˆë“œì´ê±°ë‚˜ ìŠ¤ë ˆë“œí’€ì˜ ë˜ë‹¤ë¥¸ ìŠ¤ë ˆë“œê°€ ë˜ì–´ì•¼ í•œë‹¤. (ex. UIì‘ì—…) */
 		
-		// »õ·Î¿î ½º·¹µå¿¡¼­ get() È£Ãâ
+		// ìƒˆë¡œìš´ ìŠ¤ë ˆë“œì—ì„œ get() í˜¸ì¶œ
 		new Thread() {
 			@Override
 			public void run() {
 				try { 
-					System.out.println((future.get() == null) ? "ÀÛ¾÷ÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾úÀ½" : "ÀÛ¾÷Ã³¸®¾ÈµÊ");
+					System.out.println((future.get() == null) ? "ì‘ì—…ì´ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì—ˆìŒ" : "ì‘ì—…ì²˜ë¦¬ì•ˆë¨");
 				} catch(Exception e) {};
 			}
 		}.start();
 		
-		// ½º·¹µåÇ®ÀÇ ¶Ç ´Ù¸¥ ½º·¹µå¿¡¼­ get() È£Ãâ
+		// ìŠ¤ë ˆë“œí’€ì˜ ë˜ ë‹¤ë¥¸ ìŠ¤ë ˆë“œì—ì„œ get() í˜¸ì¶œ
 		executorService.submit(new Runnable () {
 			@Override
 			public void run() {
 				try { 
-					System.out.println((future.get() == null) ? "ÀÛ¾÷ÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾úÀ½" : "ÀÛ¾÷Ã³¸®¾ÈµÊ");
+					System.out.println((future.get() == null) ? "ì‘ì—…ì´ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì—ˆìŒ" : "ì‘ì—…ì²˜ë¦¬ì•ˆë¨");
 				} catch(Exception e) {};
 			}
 		});
