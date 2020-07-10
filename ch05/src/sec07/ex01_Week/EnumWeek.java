@@ -22,14 +22,14 @@ public class EnumWeek {
 		}
 		
 		int ampm = now.get(Calendar.AM_PM);
-		String ampmStr = (ampm == 0) ? "¿ÀÀü" : "¿ÀÈÄ";
+		String ampmStr = (ampm == 0) ? "ì˜¤ì „" : "ì˜¤í›„";
 		
 		int hour = now.get(Calendar.HOUR);
 		int minute = now.get(Calendar.MINUTE);
 		int second = now.get(Calendar.SECOND);
-		System.out.println("ÇöÀç ³â/¿ù/ÀÏ/¿äÀÏ/½Ã°£ Àº? \n" + year+"/"+month+"/"+day+"("+dow.name()+") "+ ampmStr+" " + hour+":"+minute+":"+second);
+		System.out.println("í˜„ì¬ ë…„/ì›”/ì¼/ìš”ì¼/ì‹œê°„ ì€? \n" + year+"/"+month+"/"+day+"("+dow.name()+") "+ ampmStr+" " + hour+":"+minute+":"+second);
 
-		System.out.print("\nWeek ¿­°Å : ");
+		System.out.print("\nWeek ì—´ê±° : ");
 		Week[] day7s = Week.values();
 		for(Week day7 : day7s) {
 			System.out.print(day7 + " | ");
