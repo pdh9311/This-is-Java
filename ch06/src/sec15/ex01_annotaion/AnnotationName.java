@@ -6,9 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE, ElementType.FIELD,ElementType.CONSTRUCTOR,ElementType.METHOD,
-		 ElementType.LOCAL_VARIABLE,ElementType.PACKAGE,ElementType.ANNOTATION_TYPE})	//¾î³ëÅ×ÀÌ¼Ç Àû¿ë ´ë»ó	
-@Retention(RetentionPolicy.RUNTIME)		//¾î³ëÅ×ÀÌ¼Ç À¯Áö Á¤Ã¥
+		 ElementType.LOCAL_VARIABLE,ElementType.PACKAGE,ElementType.ANNOTATION_TYPE})	//ì–´ë…¸í…Œì´ì…˜ ì ìš© ëŒ€ìƒ	
+@Retention(RetentionPolicy.RUNTIME)		//ì–´ë…¸í…Œì´ì…˜ ìœ ì§€ ì •ì±…
 public @interface AnnotationName {
-	String value() default "-";		//default ~ »ı·«°¡´É, value´Â ±âº» ¿¤¸®¸ÕÆ® ÀÌ´Ù.
-	int element() default 5;		//default ~ »ı·«°¡´É
+	String value() default "-";		//default ~ ìƒëµê°€ëŠ¥, valueëŠ” ê¸°ë³¸ ì—˜ë¦¬ë¨¼íŠ¸ ì´ë‹¤.
+	int element() default 5;		//default ~ ìƒëµê°€ëŠ¥
 }

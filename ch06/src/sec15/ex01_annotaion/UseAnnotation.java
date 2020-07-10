@@ -4,13 +4,13 @@ import java.lang.reflect.Method;
 
 public class UseAnnotation {
 	public static void main(String[] args) {
-		//getDeclaredMethod(): ¾î³ëÅ×ÀÌ¼ÇÀÌ Àû¿ëµÈ ¸Ş¼ÒµåµéÀ» ¸®ÅÏÇÑ´Ù.
+		//getDeclaredMethod(): ì–´ë…¸í…Œì´ì…˜ì´ ì ìš©ëœ ë©”ì†Œë“œë“¤ì„ ë¦¬í„´í•œë‹¤.
 		Method[] declaredMethods = ApplyAnnotation.class.getDeclaredMethods();
 		
 		for(Method method : declaredMethods) {
-			//isAnnotationPresent(¾î³ëÅ×ÀÌ¼Ç Å¬·¡½º): (¸Ş¼Òµå¿¡)¾î³ëÅ×ÀÌ¼ÇÀÌ Àû¿ëµÇ¾îÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
+			//isAnnotationPresent(ì–´ë…¸í…Œì´ì…˜ í´ë˜ìŠ¤): (ë©”ì†Œë“œì—)ì–´ë…¸í…Œì´ì…˜ì´ ì ìš©ë˜ì–´ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
 			if(method.isAnnotationPresent(AnnotationName.class)) {
-				// getAnnotation(¾î³ëÅ×ÀÌ¼Ç Å¬·¡½º): (¸Ş¼Òµå¿¡)¾î³ëÅ×ÀÌ¼ÇÀÌ Àû¿ëµÇ¾îÀÖÀ¸¸é ¾î³ëÅ×ÀÌ¼ÇÀ» ¸®ÅÏÇÑ´Ù.
+				// getAnnotation(ì–´ë…¸í…Œì´ì…˜ í´ë˜ìŠ¤): (ë©”ì†Œë“œì—)ì–´ë…¸í…Œì´ì…˜ì´ ì ìš©ë˜ì–´ìˆìœ¼ë©´ ì–´ë…¸í…Œì´ì…˜ì„ ë¦¬í„´í•œë‹¤.
 				AnnotationName annotationName = method.getAnnotation(AnnotationName.class);
 				
 				System.out.println("["+method.getName()+"]");
@@ -21,7 +21,7 @@ public class UseAnnotation {
 				System.out.println();
 				
 				try {
-					// ApplyAnnotation °´Ã¼¸¦ »ı¼ºÇÏ°í »ı¼ºµÈ ApplyAnnotation °´Ã¼ÀÇ ¸Ş¼Òµå¸¦ È£ÃâÇÏ´Â ÄÚµå
+					// ApplyAnnotation ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ìƒì„±ëœ ApplyAnnotation ê°ì²´ì˜ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ëŠ” ì½”ë“œ
 					method.invoke(new ApplyAnnotation());
 				} catch (Exception e) {}
 				System.out.println();

@@ -1,18 +1,18 @@
 package sec15.ex01_annotaion;
 
 public class ApplyAnnotation {
-	@AnnotationName		// ¾î³ëÅ×ÀÌ¼ÇÀÇ ±âº» ¿¤¸®¸ÕÆ®ÀÎ valueÀÇ default °ªÀ» °¡Áø´Ù.
+	@AnnotationName		// ì–´ë…¸í…Œì´ì…˜ì˜ ê¸°ë³¸ ì—˜ë¦¬ë¨¼íŠ¸ì¸ valueì˜ default ê°’ì„ ê°€ì§„ë‹¤.
 	public void method1() {
-		System.out.println("½ÇÇà ³»¿ë1");
+		System.out.println("ì‹¤í–‰ ë‚´ìš©1");
 	}
 	
-	@AnnotationName("*")	// ¾î³ëÅ×ÀÌ¼ÇÀÇ valueÀÇ °ªÀ» "*"·Î º¯°æÇÑ´Ù.
+	@AnnotationName("*")	// ì–´ë…¸í…Œì´ì…˜ì˜ valueì˜ ê°’ì„ "*"ë¡œ ë³€ê²½í•œë‹¤.
 	public void method2() {
-		System.out.println("½ÇÇà ³»¿ë2");
+		System.out.println("ì‹¤í–‰ ë‚´ìš©2");
 	}
 	
 	@AnnotationName(value = "#",element = 15)
 	public void method3() {
-		System.out.println("½ÇÇà ³»¿ë3");
+		System.out.println("ì‹¤í–‰ ë‚´ìš©3");
 	}
 }
