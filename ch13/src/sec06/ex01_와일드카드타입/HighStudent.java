@@ -1,4 +1,4 @@
-package sec06.ex01_¿ÍÀÏµåÄ«µåÅ¸ÀÔ;
+package sec06.ex01_ì™€ì¼ë“œì¹´ë“œíƒ€ì…;
 
 public class HighStudent extends Student {
 

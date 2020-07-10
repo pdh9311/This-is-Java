@@ -1,10 +1,10 @@
-package sec06.ex01_¿ÍÀÏµåÄ«µåÅ¸ÀÔ;
+package sec06.ex01_ì™€ì¼ë“œì¹´ë“œíƒ€ì…;
 
 public class Course<T> {
-	private String name;	// °úÁ¤¸í
+	private String name;	// ê³¼ì •ëª…
 	private T[] students;
 	
-	// »ı¼ºÀÚÀÇ ¸Å°³°ªÀ¸·Î °úÁ¤¸í°ú ¼ö°­°¡´É ÀÎ¿ø ¼ö(¹è¿­ÀÇ Å©±â)¸¦ ¹Ş´Â´Ù.
+	// ìƒì„±ìì˜ ë§¤ê°œê°’ìœ¼ë¡œ ê³¼ì •ëª…ê³¼ ìˆ˜ê°•ê°€ëŠ¥ ì¸ì› ìˆ˜(ë°°ì—´ì˜ í¬ê¸°)ë¥¼ ë°›ëŠ”ë‹¤.
 	public Course(String name, int capacity) {
 		this.name = name;
 		this.students = (T[])(new Object[capacity]);
@@ -18,7 +18,7 @@ public class Course<T> {
 		return students;
 	}
 	
-	// °úÁ¤¿¡ ¼ö°­»ıµéÀ» µî·Ï
+	// ê³¼ì •ì— ìˆ˜ê°•ìƒë“¤ì„ ë“±ë¡
 	public void add(T t) {
 		for(int i=0; i<students.length; i++) {
 			if(students[i] == null) {
