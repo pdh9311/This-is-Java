@@ -1,10 +1,10 @@
-package sec04.ex01_ÁßÃ¸ÀÎÅÍÆäÀÌ½º;
+package sec04.ex01_ì¤‘ì²©ì¸í„°í˜ì´ìŠ¤;
 
 public class CallListener implements Button.OnClickListener{
 
 	@Override
 	public void onClick() {
-		System.out.println("ÀüÈ­¸¦ °Ì´Ï´Ù.");
+		System.out.println("ì „í™”ë¥¼ ê²ë‹ˆë‹¤.");
 	}
 	
 }

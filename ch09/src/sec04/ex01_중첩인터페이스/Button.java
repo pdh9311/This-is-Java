@@ -1,20 +1,20 @@
-package sec04.ex01_ÁßÃ¸ÀÎÅÍÆäÀÌ½º;
+package sec04.ex01_ì¤‘ì²©ì¸í„°í˜ì´ìŠ¤;
 
 public class Button {
-	// ÀÎÅÍÆäÀÌ½º ÇÊµå
+	// ì¸í„°í˜ì´ìŠ¤ í•„ë“œ
 	OnClickListener listener;
 	
-	// ÀÎÅÍÆäÀÌ½º ´ÙÇü¼º
+	// ì¸í„°í˜ì´ìŠ¤ ë‹¤í˜•ì„±
 	void setOnClickListener(OnClickListener listener) {
 		this.listener = listener;
 	}
 	
-	// ÀÎÅÍÆäÀÌ½º ±¸Çö
+	// ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„
 	void touch() {
 		listener.onClick();
 	}
 	
-	// ÀÎÅÍÆäÀÌ½º
+	// ì¸í„°í˜ì´ìŠ¤
 	interface OnClickListener {
 		void onClick();
 	}
