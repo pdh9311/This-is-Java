@@ -17,8 +17,8 @@ public class Member implements Cloneable {
 		this.scores = scores;
 	}
 
-	// ObjectÀÇ equals() ¸Ş¼Òµå
-	// equals() ¸Ş¼Òµå¸¦ ÀçÁ¤ÀÇÇÏ¿© id°¡ °°Àº °´Ã¼¸¦ ³í¸®ÀûÀ¸·Î µ¿µîÇÑ °´Ã¼·Î Ãë±ŞÇÑ´Ù.
+	// Objectì˜ equals() ë©”ì†Œë“œ
+	// equals() ë©”ì†Œë“œë¥¼ ì¬ì •ì˜í•˜ì—¬ idê°€ ê°™ì€ ê°ì²´ë¥¼ ë…¼ë¦¬ì ìœ¼ë¡œ ë™ë“±í•œ ê°ì²´ë¡œ ì·¨ê¸‰í•œë‹¤.
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Member) {
@@ -30,50 +30,50 @@ public class Member implements Cloneable {
 		return false;
 	}
 	
-	// ObjectÀÇ hashcode() ¸Ş¼Òµå
-	// hashCode() ¸Ş¼Òµå¸¦ ÀçÁ¤ÀÇÇÏ¿© id°¡ °°À¸¸é ÇØ½ÃÄÚµå¸¦ °°µµ·Ï ÇÑ´Ù.
+	// Objectì˜ hashcode() ë©”ì†Œë“œ
+	// hashCode() ë©”ì†Œë“œë¥¼ ì¬ì •ì˜í•˜ì—¬ idê°€ ê°™ìœ¼ë©´ í•´ì‹œì½”ë“œë¥¼ ê°™ë„ë¡ í•œë‹¤.
 	@Override
 	public int hashCode() {
 		return id.hashCode();
 	}
 	
-	// ObjectÀÇ toString() ¸Ş¼Òµå
+	// Objectì˜ toString() ë©”ì†Œë“œ
 	@Override
 	public String toString() {
-		return "´ç½ÅÀÇ ¾ÆÀÌµğ´Â " + id + "ÀÔ´Ï´Ù.";
+		return "ë‹¹ì‹ ì˜ ì•„ì´ë””ëŠ” " + id + "ì…ë‹ˆë‹¤.";
 	}
 
-	// ObjectÀÇ clone() ¸Ş¼Òµå È£Ãâ [¾èÀº º¹Á¦]
-	/* clone() ¸Ş¼Òµå¸¦ È£ÃâÇÏ±â À§ÇØ¼­ implements CloneableÀ» ÇØÁÖ¾î¾ß ÇÑ´Ù.
-	       ¶ÇÇÑ clone() ¸Ş¼Òµå´Â CloneNotSupportedException¿¹¿Ü°¡ ¹ß»ıÇÏ¹Ç·Î ¿¹¿ÜÃ³¸®¸¦ ÇØÁÖ¾î¾ß ÇÑ´Ù. */
-	// clone() ¸Ş¼Òµå´Â ¸®ÅÏÅ¸ÀÔÀÌ ObjectÀÌ¹Ç·Î Å¸ÀÔº¯È¯ÀÌ ÇÊ¿äÇÏ´Ù.
+	// Objectì˜ clone() ë©”ì†Œë“œ í˜¸ì¶œ [ì–•ì€ ë³µì œ]
+	/* clone() ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ê¸° ìœ„í•´ì„œ implements Cloneableì„ í•´ì£¼ì–´ì•¼ í•œë‹¤.
+	       ë˜í•œ clone() ë©”ì†Œë“œëŠ” CloneNotSupportedExceptionì˜ˆì™¸ê°€ ë°œìƒí•˜ë¯€ë¡œ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•´ì£¼ì–´ì•¼ í•œë‹¤. */
+	// clone() ë©”ì†Œë“œëŠ” ë¦¬í„´íƒ€ì…ì´ Objectì´ë¯€ë¡œ íƒ€ì…ë³€í™˜ì´ í•„ìš”í•˜ë‹¤.
 	public Member getMember() {
 		Member cloned = null;
 		try {
-			cloned = (Member) clone();		// ¾Æ·¡ÀÇ ÀçÁ¤ÀÇµÈ clone()¸Ş¼Òµå¸¦ È£ÃâÇÏ¹Ç·Î½á [±íÀº º¹Á¦]¸¦ ÇÏ°Ô µÈ´Ù.
+			cloned = (Member) clone();		// ì•„ë˜ì˜ ì¬ì •ì˜ëœ clone()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë¯€ë¡œì¨ [ê¹Šì€ ë³µì œ]ë¥¼ í•˜ê²Œ ëœë‹¤.
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
 		return cloned;
 	}
-	// ObjectÀÇ clone() ¸Ş¼Òµå ÀçÁ¤ÀÇ [±íÀº º¹Á¦]
+	// Objectì˜ clone() ë©”ì†Œë“œ ì¬ì •ì˜ [ê¹Šì€ ë³µì œ]
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		// ¸ÕÀú ¾èÀº º¹»ç·Î id¸¦ º¹Á¦ÇÑ´Ù.
-		/* clone()À» ÀçÁ¤ÀÇ Çß±â ¶§¹®¿¡  clone()À¸·Î È£ÃâÇÏ¸é Àç±ÍÈ£ÃâµÇ¾î ¹ö·Á¼­ ¹«ÇÑ È£ÃâÇÏ°Ô µÇ°í StackOverflowError°¡ ¹ß»ıÇÏ¹Ç·Î
-		 * super.¸¦ ºÙ¿©¼­ clone()À» È£ÃâÇØ¾ßÇÑ´Ù. */
+		// ë¨¼ì € ì–•ì€ ë³µì‚¬ë¡œ idë¥¼ ë³µì œí•œë‹¤.
+		/* clone()ì„ ì¬ì •ì˜ í–ˆê¸° ë•Œë¬¸ì—  clone()ìœ¼ë¡œ í˜¸ì¶œí•˜ë©´ ì¬ê·€í˜¸ì¶œë˜ì–´ ë²„ë ¤ì„œ ë¬´í•œ í˜¸ì¶œí•˜ê²Œ ë˜ê³  StackOverflowErrorê°€ ë°œìƒí•˜ë¯€ë¡œ
+		 * super.ë¥¼ ë¶™ì—¬ì„œ clone()ì„ í˜¸ì¶œí•´ì•¼í•œë‹¤. */
 		Member cloned = (Member) super.clone();		
-		// jobÀ» ±íÀº º¹Á¦ÇÑ´Ù.
+		// jobì„ ê¹Šì€ ë³µì œí•œë‹¤.
 		cloned.job = new String(this.job);
-		// scores¸¦ ±íÀº º¹Á¦ÇÑ´Ù.
+		// scoresë¥¼ ê¹Šì€ ë³µì œí•œë‹¤.
 		cloned.scores = Arrays.copyOf(this.scores, this.scores.length);
 		return cloned;
 	}
 
-	// ObjectÀÇ finalize() ¸Ş¼Òµå
+	// Objectì˜ finalize() ë©”ì†Œë“œ
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println(id + "ÀÎ °´Ã¼ÀÇ finalize()°¡ ½ÇÇàµÊ");
+		System.out.println(id + "ì¸ ê°ì²´ì˜ finalize()ê°€ ì‹¤í–‰ë¨");
 	}
 	
 	

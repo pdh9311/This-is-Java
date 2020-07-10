@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class UseMember {
 	public static void main(String[] args) {
-		Member m1 = new Member("È«±æµ¿");
-		Member m2 = new Member("½Ã¶ó¼Ò´Ï");
-		Member m3 = new Member("È«±æµ¿");
+		Member m1 = new Member("í™ê¸¸ë™");
+		Member m2 = new Member("ì‹œë¼ì†Œë‹ˆ");
+		Member m3 = new Member("í™ê¸¸ë™");
 		
 		System.out.println(m1.equals(m2));
 		System.out.println(m1.equals(m3));
@@ -14,40 +14,40 @@ public class UseMember {
 		System.out.println(m1.hashCode());
 		System.out.println(m2.hashCode());
 		System.out.println(m3.hashCode());
-		System.out.println("È«±æµ¿".hashCode());
+		System.out.println("í™ê¸¸ë™".hashCode());
 		System.out.println("----------------------------");
 		System.out.println(m1.toString());
 		System.out.println(m2.toString());
 		System.out.println(m3.toString());
 		System.out.println("----------------------------");
 		Object obj = new Object();
-		System.out.println(obj.toString());		// Å¬·¡½º¸í@16Áø¼öÇØ½ÃÄÚµå
+		System.out.println(obj.toString());		// í´ë˜ìŠ¤ëª…@16ì§„ìˆ˜í•´ì‹œì½”ë“œ
 		Date date = new Date();
-		System.out.println(date.toString());	// DateÅ¬·¡½º°¡ ÀçÁ¤ÀÇÇÑ toString()¸Ş¼Òµå¸¦ Ãâ·Â
+		System.out.println(date.toString());	// Dateí´ë˜ìŠ¤ê°€ ì¬ì •ì˜í•œ toString()ë©”ì†Œë“œë¥¼ ì¶œë ¥
 		System.out.println("----------------------------");
 		
-		/* ½Å·ÚÇÏÁö ¾Ê´Â ¿µ¿ª¿¡¼­ ¿øº» °´Ã¼·Î ÀÛ¾÷ÇÒ °æ¿ì µ¥ÀÌÅÍ°¡ ÈÑ¼ÕµÉ ¼ö ÀÖ±â ¶§¹®¿¡ 
-		 * °´Ã¼¸¦ º¹Á¦ÇÏ¿© »ç¿ëÇÏ´Â °ÍÀÌ ÁÁ´Ù. */
-		Member originalMember = new Member("±èµÎÇÑ","ÇÁ·Î°ÔÀÌ¸Ó",new int[] {90,87});
-		System.out.print("¿øº»°´Ã¼ ¾ÆÀÌµğ: " + originalMember.id + " | ");
-		System.out.print("¿øº»°´Ã¼ job: " + originalMember.job + " | ");
-		System.out.print("¿øº»°´Ã¼ Á¡¼ö: " + originalMember.scores[0] + "," + originalMember.scores[1] + "\n" );
+		/* ì‹ ë¢°í•˜ì§€ ì•ŠëŠ” ì˜ì—­ì—ì„œ ì›ë³¸ ê°ì²´ë¡œ ì‘ì—…í•  ê²½ìš° ë°ì´í„°ê°€ í›¼ì†ë  ìˆ˜ ìˆê¸° ë•Œë¬¸ì— 
+		 * ê°ì²´ë¥¼ ë³µì œí•˜ì—¬ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ì¢‹ë‹¤. */
+		Member originalMember = new Member("ê¹€ë‘í•œ","í”„ë¡œê²Œì´ë¨¸",new int[] {90,87});
+		System.out.print("ì›ë³¸ê°ì²´ ì•„ì´ë””: " + originalMember.id + " | ");
+		System.out.print("ì›ë³¸ê°ì²´ job: " + originalMember.job + " | ");
+		System.out.print("ì›ë³¸ê°ì²´ ì ìˆ˜: " + originalMember.scores[0] + "," + originalMember.scores[1] + "\n" );
 		
 		Member clonedMember = originalMember.getMember();
-		clonedMember.id = "±¸¸¶Àû";
-		clonedMember.job = "ÇÁ·Î±×·¡¸Ó";
+		clonedMember.id = "êµ¬ë§ˆì ";
+		clonedMember.job = "í”„ë¡œê·¸ë˜ë¨¸";
 		clonedMember.scores[0] =20;
-		System.out.print("º¹Á¦°´Ã¼ ¾ÆÀÌµğ: " + clonedMember.id + " | ");
-		System.out.print("º¹Á¦°´Ã¼ job: " + clonedMember.job + " | ");
-		System.out.print("º¹Á¦°´Ã¼ Á¡¼ö: " + clonedMember.scores[0] + "," + clonedMember.scores[1] + "\n" );
+		System.out.print("ë³µì œê°ì²´ ì•„ì´ë””: " + clonedMember.id + " | ");
+		System.out.print("ë³µì œê°ì²´ job: " + clonedMember.job + " | ");
+		System.out.print("ë³µì œê°ì²´ ì ìˆ˜: " + clonedMember.scores[0] + "," + clonedMember.scores[1] + "\n" );
 
 		System.out.println("----------------------------");
 		Member member = null;
 		for(int i=0;i<10;i++) {
-			// °´Ã¼¸¦ »ı¼ºÇÏ°í ¹Ù·Î ¾²·¹±â(null)·Î ¸¸µé¾ú´Ù.
+			// ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ë°”ë¡œ ì“°ë ˆê¸°(null)ë¡œ ë§Œë“¤ì—ˆë‹¤.
 			member = new Member("id" + i);	
 			member = null;
-			System.gc();	// JVM¿¡°Ô Garbage Collector¸¦ °¡±ŞÀû »¡¸® ½ÇÇàÇÏµµ·Ï ¿äÃ».
+			System.gc();	// JVMì—ê²Œ Garbage Collectorë¥¼ ê°€ê¸‰ì  ë¹¨ë¦¬ ì‹¤í–‰í•˜ë„ë¡ ìš”ì²­.
 		}
 		
 		
