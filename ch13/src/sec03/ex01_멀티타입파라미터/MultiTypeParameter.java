@@ -1,4 +1,4 @@
-package sec03.ex01_¸ÖÆ¼Å¸ÀÔÆÄ¶ó¹ÌÅÍ;
+package sec03.ex01_ë©€í‹°íƒ€ì…íŒŒë¼ë¯¸í„°;
 
 public class MultiTypeParameter<K,M> {
 	private K kind;
@@ -23,13 +23,13 @@ public class MultiTypeParameter<K,M> {
 	public static void main(String[] args) {
 		MultiTypeParameter<TV,String> samsungTV = new MultiTypeParameter<TV,String>();
 		samsungTV.setKind(new TV());
-		samsungTV.setModel("»ï¼º");
+		samsungTV.setModel("ì‚¼ì„±");
 		TV tv = samsungTV.getKind();
 		String tvName = samsungTV.getModel();
 		
 		MultiTypeParameter<Car,String> HyundaiCar = new MultiTypeParameter<Car,String>();
 		HyundaiCar.setKind(new Car());
-		HyundaiCar.setModel("Çö´ë");
+		HyundaiCar.setModel("í˜„ëŒ€");
 		Car car = HyundaiCar.getKind();
 		String carName = HyundaiCar.getModel();
 	}
