@@ -1,4 +1,4 @@
-package sec06.ex01_¸Ş¼ÒµåÂüÁ¶_»ı¼ºÀÚÂüÁ¶;
+package sec06.ex01_ë©”ì†Œë“œì°¸ì¡°_ìƒì„±ìì°¸ì¡°;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -7,35 +7,35 @@ import java.util.function.ToIntBiFunction;
 
 public class MethodReferences {
 	public static void main(String[] args) {
-		// ¸Ş¼Òµå¡¤»ı¼ºÀÚ ÂüÁ¶´Â ¶÷´Ù½Ä¿¡¼­ ´Ü¼øÈ÷ ¸Ş¼Òµå¸¦ È£Ãâ ÇÏ¿© ¸®ÅÏÇÏ°Å³ª °´Ã¼¸¦ »ı¼ºÇÏ¿© ¸®ÅÏÇÒ¶§ »ç¿ëµÈ´Ù. 
+		// ë©”ì†Œë“œÂ·ìƒì„±ì ì°¸ì¡°ëŠ” ëŒë‹¤ì‹ì—ì„œ ë‹¨ìˆœíˆ ë©”ì†Œë“œë¥¼ í˜¸ì¶œ í•˜ì—¬ ë¦¬í„´í•˜ê±°ë‚˜ ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ë¦¬í„´í• ë•Œ ì‚¬ìš©ëœë‹¤. 
 		
-		// Á¤Àû¸Ş¼Òµå ÂüÁ¶
+		// ì •ì ë©”ì†Œë“œ ì°¸ì¡°
 		Supplier<String> supplier = Calculate :: staticMethod;		// supplier = () -> { return Calculate.staticMethod(); };
 		System.out.println(supplier.get());
 		
-		// ÀÎ½ºÅÏ½º¸Ş¼Òµå ÂüÁ¶
+		// ì¸ìŠ¤í„´ìŠ¤ë©”ì†Œë“œ ì°¸ì¡°
 		Calculate calculate = new Calculate();
 		supplier = calculate :: instanceMethod;		// supplier = () -> { return calculate.instanceMethod(); };
 		System.out.println(supplier.get());
 		
-		// ¶÷´Ù½ÄÀÇ ¸Å°³ º¯¼öÀÇ ¸Ş¼Òµå ÂüÁ¶
+		// ëŒë‹¤ì‹ì˜ ë§¤ê°œ ë³€ìˆ˜ì˜ ë©”ì†Œë“œ ì°¸ì¡°
 		ToIntBiFunction<String, String> toIntBiFunction = String :: compareToIgnoreCase;	// toIntBiFunction = (a,b) -> { return a.compareToIgnoreCase(b); };
 		String str1 = "A";
 		String str2 = "a";
 		int result = toIntBiFunction.applyAsInt(str1,str2);
 		if(result < 0) { 
-			System.out.println(str1 + " ÀÌ »çÀü¼øÀ¸·Î ¸ÕÀú ¿É´Ï´Ù.");
+			System.out.println(str1 + " ì´ ì‚¬ì „ìˆœìœ¼ë¡œ ë¨¼ì € ì˜µë‹ˆë‹¤.");
 		} else if( result > 0) {
-			System.out.println(str1 + " ÀÌ »çÀü ¼øÀ¸·Î ³ªÁß¿¡ ¿É´Ï´Ù.");
+			System.out.println(str1 + " ì´ ì‚¬ì „ ìˆœìœ¼ë¡œ ë‚˜ì¤‘ì— ì˜µë‹ˆë‹¤.");
 		} else {
-			System.out.println(str1 + "°ú " + str2 + "´Â µ¿ÀÏÇÑ ¹®ÀÚ¿­ ÀÔ´Ï´Ù.");
+			System.out.println(str1 + "ê³¼ " + str2 + "ëŠ” ë™ì¼í•œ ë¬¸ìì—´ ì…ë‹ˆë‹¤.");
 		}	
 
-		// ´Ü¼øÈ÷ °´Ã¼¸¦ »ı¼ºÇÏ°í ¸®ÅÏÇÏµµ·Ï ±¸¼ºµÈ ¶÷´Ù½ÄÀº »ı¼ºÀÚ ÂüÁ¶·Î ´ëÄ¡ÇÒ ¼ö ÀÖ´Ù.
-		// »ı¼ºÀÚ°¡ ¿À¹ö·ÎµùµÇ¾î ¿©·¯°³ÀÏ °æ¿ì , ÄÄÆÄÀÏ·¯´Â ÇÔ¼öÀûÀÎÅÍÆäÀÌ½ºÀÇ Ãß»ó¸Ş¼Òµå¿Í µ¿ÀÏÇÑ ¸Å°³º¯¼öÅ¸ÀÔ°ú °³¼ö¸¦ °¡Áö°í ÀÖ´Â »ı¼ºÀÚ¸¦ Ã£¾Æ ½ÇÇàÇÔ.
+		// ë‹¨ìˆœíˆ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ë¦¬í„´í•˜ë„ë¡ êµ¬ì„±ëœ ëŒë‹¤ì‹ì€ ìƒì„±ì ì°¸ì¡°ë¡œ ëŒ€ì¹˜í•  ìˆ˜ ìˆë‹¤.
+		// ìƒì„±ìê°€ ì˜¤ë²„ë¡œë”©ë˜ì–´ ì—¬ëŸ¬ê°œì¼ ê²½ìš° , ì»´íŒŒì¼ëŸ¬ëŠ” í•¨ìˆ˜ì ì¸í„°í˜ì´ìŠ¤ì˜ ì¶”ìƒë©”ì†Œë“œì™€ ë™ì¼í•œ ë§¤ê°œë³€ìˆ˜íƒ€ì…ê³¼ ê°œìˆ˜ë¥¼ ê°€ì§€ê³  ìˆëŠ” ìƒì„±ìë¥¼ ì°¾ì•„ ì‹¤í–‰í•¨.
 		BiFunction<Integer, Integer, Calculate> biFunction = Calculate :: new;		// biFunction = (a,b) -> { return new Calculate(a,b); };
 		Calculate calc = biFunction.apply(10, 20);
-		System.out.println("CalculateÀÇ x: " +calc.x + ", CalculateÀÇ y: " +calc.y);
+		System.out.println("Calculateì˜ x: " +calc.x + ", Calculateì˜ y: " +calc.y);
 		
 	}
 }
@@ -52,11 +52,11 @@ class Calculate {
 	}
 	
 	static String staticMethod() {
-		return "Á¤Àû¸Ş¼Òµå";
+		return "ì •ì ë©”ì†Œë“œ";
 	}
 	
 	String instanceMethod() {
-		return "ÀÎ½ºÅÏ½º¸Ş¼Òµå";
+		return "ì¸ìŠ¤í„´ìŠ¤ë©”ì†Œë“œ";
 	}
 	
 	String alphabet() {
