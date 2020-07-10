@@ -16,8 +16,8 @@ import java.util.Vector;
 
 public class ListSetMap {
 	public static void main(String[] args) {
-		/* List¿Í SetÀº °´Ã¼¸¦ Ãß°¡, »èÁ¦, °Ë»öÇÏ´Â ¹æ¹ı¿¡ ¸¹Àº °øÅëÁ¡ÀÌ ÀÖ±â ¶§¹®¿¡
-		 * List ÀÎÅÍÆäÀÌ½º¿Í Set ÀÎÅÍÆäÀÌ½º ÀÇ °øÅëµÈ ¸Ş¼Òµåµé¸¸ ¸ğ¾Æ Collection ÀÎÅÍÆäÀÌ½º·Î Á¤ÀÇÇØ µÎ°í ÀÖ´Ù. */
+		/* Listì™€ Setì€ ê°ì²´ë¥¼ ì¶”ê°€, ì‚­ì œ, ê²€ìƒ‰í•˜ëŠ” ë°©ë²•ì— ë§ì€ ê³µí†µì ì´ ìˆê¸° ë•Œë¬¸ì—
+		 * List ì¸í„°í˜ì´ìŠ¤ì™€ Set ì¸í„°í˜ì´ìŠ¤ ì˜ ê³µí†µëœ ë©”ì†Œë“œë“¤ë§Œ ëª¨ì•„ Collection ì¸í„°í˜ì´ìŠ¤ë¡œ ì •ì˜í•´ ë‘ê³  ìˆë‹¤. */
 		Collection<Object> collectionArrayList = new ArrayList<>();
 		Collection<Object> collectionVector = new Vector<>();
 		Collection<Object> collectionLinkedList = new LinkedList<>();
@@ -25,15 +25,15 @@ public class ListSetMap {
 		Collection<Object> collectionTreeSet = new TreeSet<>();
 		
 		List<Object> arrayList = new ArrayList<>();
-		List<Object> vector = new Vector<>();				// µ¿±âÈ­µÈ ¸Ş¼Òµå·Î ±¸¼ºµÇ¾î ÀÖ¾î ¸ÖÆ¼ ½º·¹µåÈ¯°æ¿¡¼­ ¾ÈÀüÇÏ´Ù.
+		List<Object> vector = new Vector<>();				// ë™ê¸°í™”ëœ ë©”ì†Œë“œë¡œ êµ¬ì„±ë˜ì–´ ìˆì–´ ë©€í‹° ìŠ¤ë ˆë“œí™˜ê²½ì—ì„œ ì•ˆì „í•˜ë‹¤.
 		List<Object> linkedList = new LinkedList<>();		
 		
 		Set<Object> hashSet = new HashSet<>();
-		Set<Object> treeSet = new TreeSet<>();				// °Ë»ö ±â´ÉÀ» °­È­½ÃÅ² ÄÃ·º¼Ç
+		Set<Object> treeSet = new TreeSet<>();				// ê²€ìƒ‰ ê¸°ëŠ¥ì„ ê°•í™”ì‹œí‚¨ ì»¬ë ‰ì…˜
 		
 		Map<Object,Object> hashMap = new HashMap<>();
-		Map<Object,Object> hashtable = new Hashtable<>();	// µ¿±âÈ­µÈ ¸Ş¼Òµå·Î ±¸¼ºµÇ¾î ÀÖ¾î ¸ÖÆ¼ ½º·¹µåÈ¯°æ¿¡¼­ ¾ÈÀüÇÏ´Ù.
-		Map<Object,Object> treeMap = new TreeMap<>();		// °Ë»ö ±â´ÉÀ» °­È­½ÃÅ² ÄÃ·º¼Ç
-		Properties properties = new Properties(); 			// Properties´Â HashtableÀÇ ÇÏÀ§Å¬·¡½ºÀÌ¸ç Å°¿Í °ªÀ» StringÅ¸ÀÔÀ¸·Î Á¦ÇÑÇÑ ÄÃ·º¼ÇÀÌ´Ù.	
+		Map<Object,Object> hashtable = new Hashtable<>();	// ë™ê¸°í™”ëœ ë©”ì†Œë“œë¡œ êµ¬ì„±ë˜ì–´ ìˆì–´ ë©€í‹° ìŠ¤ë ˆë“œí™˜ê²½ì—ì„œ ì•ˆì „í•˜ë‹¤.
+		Map<Object,Object> treeMap = new TreeMap<>();		// ê²€ìƒ‰ ê¸°ëŠ¥ì„ ê°•í™”ì‹œí‚¨ ì»¬ë ‰ì…˜
+		Properties properties = new Properties(); 			// PropertiesëŠ” Hashtableì˜ í•˜ìœ„í´ë˜ìŠ¤ì´ë©° í‚¤ì™€ ê°’ì„ Stringíƒ€ì…ìœ¼ë¡œ ì œí•œí•œ ì»¬ë ‰ì…˜ì´ë‹¤.	
 	}
 }
