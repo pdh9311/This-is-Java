@@ -1,4 +1,4 @@
-package sec02.ex01_Á¦³×¸¯Å¸ÀÔ;
+package sec02.ex01_ì œë„¤ë¦­íƒ€ì…;
 
 public class GenericType<T> {
 	private T t;
@@ -12,9 +12,9 @@ public class GenericType<T> {
 	}
 	
 	public static void main(String[] args) {
-		// Á¦³×¸¯ Å¸ÀÔÀ¸·Î Å¬·¡½º¸¦ ¸¸µå¹Ç·Î½á Å¸ÀÔº¯È¯ÀÌ ¹ß»ıÇÏÁö ¾Ê±â ¶§¹®¿¡ ÀüÃ¼ ÇÁ·Î±×·¥ ¼º´É¿¡ ÁÁÀº °á°ú¸¦ °¡Á®¿Â´Ù.
+		// ì œë„¤ë¦­ íƒ€ì…ìœ¼ë¡œ í´ë˜ìŠ¤ë¥¼ ë§Œë“œë¯€ë¡œì¨ íƒ€ì…ë³€í™˜ì´ ë°œìƒí•˜ì§€ ì•Šê¸° ë•Œë¬¸ì— ì „ì²´ í”„ë¡œê·¸ë¨ ì„±ëŠ¥ì— ì¢‹ì€ ê²°ê³¼ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
 		GenericType<String> genericType = new GenericType<String>();
-		genericType.setT("Å×½ºÆ®");
+		genericType.setT("í…ŒìŠ¤íŠ¸");
 		String str = genericType.getT();
 		System.out.println(str);
 	}

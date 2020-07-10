@@ -1,4 +1,4 @@
-package sec02.ex01_Á¦³×¸¯Å¸ÀÔ;
+package sec02.ex01_ì œë„¤ë¦­íƒ€ì…;
 
 public class ObjectType {
 	private Object object;
@@ -12,10 +12,10 @@ public class ObjectType {
 	}
 	
 	public static void main(String[] args) {
-		// ÃÖ»óÀ§ Å¬·¡½ºÀÎ ObjectÅ¸ÀÔÀ» »ç¿ëÇÏ¹Ç¸ğ½á ¸ğµç °´Ã¼¸¦ ÀúÀåÇÒ ¼ö ÀÖÁö¸¸ ºó¹øÇÑ Å¸ÀÔº¯È¯À¸·Î ÀÎÇØ ÀüÃ¼ ÇÁ·Î±×·¥ ¼º´É¿¡ ÁÁÁö ¸øÇÑ °á°ú¸¦ °¡Á®¿Ã ¼ö ÀÖ´Ù.
+		// ìµœìƒìœ„ í´ë˜ìŠ¤ì¸ Objectíƒ€ì…ì„ ì‚¬ìš©í•˜ë¯€ëª¨ì¨ ëª¨ë“  ê°ì²´ë¥¼ ì €ì¥í•  ìˆ˜ ìˆì§€ë§Œ ë¹ˆë²ˆí•œ íƒ€ì…ë³€í™˜ìœ¼ë¡œ ì¸í•´ ì „ì²´ í”„ë¡œê·¸ë¨ ì„±ëŠ¥ì— ì¢‹ì§€ ëª»í•œ ê²°ê³¼ë¥¼ ê°€ì ¸ì˜¬ ìˆ˜ ìˆë‹¤.
 		ObjectType objType = new ObjectType();
-		objType.setObject(new Apple());				// Apple°´Ã¼°¡ Object·Î ÀÚµ¿ Å¸ÀÔ º¯È¯ µÈ´Ù.
-		Apple apple = (Apple)objType.getObject();	// Object°´Ã¼°¡ Apple·Î °­Á¦ Å¸ÀÔ º¯È¯ µÈ´Ù.	
+		objType.setObject(new Apple());				// Appleê°ì²´ê°€ Objectë¡œ ìë™ íƒ€ì… ë³€í™˜ ëœë‹¤.
+		Apple apple = (Apple)objType.getObject();	// Objectê°ì²´ê°€ Appleë¡œ ê°•ì œ íƒ€ì… ë³€í™˜ ëœë‹¤.	
 	}
 	
 }
