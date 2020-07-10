@@ -8,23 +8,23 @@ public class ArraysSort {
 		Arrays.sort(arr1);
 		System.out.println(Arrays.toString(arr1));
 		
-		String[] arr2 = {"È«±âµ¿","È«ÀÏµ¿","È«ÀÌµ¿","È«»ïµ¿","È«»çµ¿"};
+		String[] arr2 = {"í™ê¸°ë™","í™ì¼ë™","í™ì´ë™","í™ì‚¼ë™","í™ì‚¬ë™"};
 		Arrays.sort(arr2);
 		System.out.println(Arrays.toString(arr2));
 		
-		Member m1 = new Member("¹Úµ¿Çö");
-		Member m2 = new Member("¹Ú¼­Çö");
-		Member m3 = new Member("¹Ú³²Çö");
-		Member m4 = new Member("¹ÚºÏÇö");
+		Member m1 = new Member("ë°•ë™í˜„");
+		Member m2 = new Member("ë°•ì„œí˜„");
+		Member m3 = new Member("ë°•ë‚¨í˜„");
+		Member m4 = new Member("ë°•ë¶í˜„");
 		Member[] ms = {m1,m2,m3,m4};
 		Arrays.sort(ms);		
 		for(Member m : ms) {
 			System.out.print(m.name + "  ");
 		}
 		
-		// ¹è¿­ °Ë»ö   Arrays.binarySearch(¹è¿­,Ã£À»°ª);
+		// ë°°ì—´ ê²€ìƒ‰   Arrays.binarySearch(ë°°ì—´,ì°¾ì„ê°’);
 		int index = Arrays.binarySearch(arr1, 93);
-		System.out.println("\nÃ£Àº ÀÎµ¦½º: " + index);
+		System.out.println("\nì°¾ì€ ì¸ë±ìŠ¤: " + index);
 		
 		
 		
@@ -35,7 +35,7 @@ public class ArraysSort {
 	
 }
 
-//»ç¿ëÀÚ°¡ Á¤ÀÇÇÑ Å¬·¡½º¸¦ Á¤·ÄÇÒ°æ¿ì¿¡´Â »ç¿ëÀÚ ÁöÁ¤ Å¬·¡½º°¡ ComparableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇØ¾ß Á¤·ÄÀÌ °¡´ÉÇÏ´Ù.
+//ì‚¬ìš©ìê°€ ì •ì˜í•œ í´ë˜ìŠ¤ë¥¼ ì •ë ¬í• ê²½ìš°ì—ëŠ” ì‚¬ìš©ì ì§€ì • í´ë˜ìŠ¤ê°€ Comparableì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•´ì•¼ ì •ë ¬ì´ ê°€ëŠ¥í•˜ë‹¤.
 class Member implements Comparable<Member> {
 	String name;
 	
@@ -43,10 +43,10 @@ class Member implements Comparable<Member> {
 		this.name = name;
 	}
 
-	/* A.compareTo(B)¿¡¼­ ¿À¸§Â÷¼øÀÏ °æ¿ì
-	 * A°¡ Bº¸´Ù ³·À» °æ¿ì À½¼ö¸¦ ¸®ÅÏ 
-	 * A°¡ Bº¸´Ù ³ôÀ» °æ¿ì ¾ç¼ö¸¦ ¸®ÅÏ
-	 * A¿Í B°¡ °°À» °æ¿ì 0À» ¸®ÅÏ
+	/* A.compareTo(B)ì—ì„œ ì˜¤ë¦„ì°¨ìˆœì¼ ê²½ìš°
+	 * Aê°€ Bë³´ë‹¤ ë‚®ì„ ê²½ìš° ìŒìˆ˜ë¥¼ ë¦¬í„´ 
+	 * Aê°€ Bë³´ë‹¤ ë†’ì„ ê²½ìš° ì–‘ìˆ˜ë¥¼ ë¦¬í„´
+	 * Aì™€ Bê°€ ê°™ì„ ê²½ìš° 0ì„ ë¦¬í„´
 	 */
 	@Override
 	public int compareTo(Member o) {
