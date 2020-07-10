@@ -1,4 +1,4 @@
-package sec03.ex02_ÁßÃ¸Å¬·¡½ºthis;
+package sec03.ex02_ì¤‘ì²©í´ë˜ìŠ¤this;
 
 public class OutterClass {
 	String field = "Outter-filed";
@@ -6,7 +6,7 @@ public class OutterClass {
 	void method() {
 		System.out.println("Outter-method");
 	}
-	// ÀÎ½ºÅÏ½º ¸â¹ö Å¬·¡½º
+	// ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ í´ë˜ìŠ¤
 	class LocalClass {
 		String field = "Local-field";
 	

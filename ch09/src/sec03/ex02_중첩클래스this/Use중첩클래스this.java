@@ -1,6 +1,6 @@
-package sec03.ex02_ÁßÃ¸Å¬·¡½ºthis;
+package sec03.ex02_ì¤‘ì²©í´ë˜ìŠ¤this;
 
-public class UseÁßÃ¸Å¬·¡½ºthis {
+public class Useì¤‘ì²©í´ë˜ìŠ¤this {
 	public static void main(String[] args) {
 		OutterClass oc = new OutterClass();
 		OutterClass.LocalClass lc = oc.new LocalClass();
