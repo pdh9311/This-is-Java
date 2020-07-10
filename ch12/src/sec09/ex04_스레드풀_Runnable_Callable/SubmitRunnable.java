@@ -1,4 +1,4 @@
-package sec09.ex04_½º·¹µåÇ®_Runnable_Callable;
+package sec09.ex04_ìŠ¤ë ˆë“œí’€_Runnable_Callable;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,7 +8,7 @@ public class SubmitRunnable {
 	public static void main(String[] args) {
 		ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 		
-		System.out.println("[ÀÛ¾÷ Ã³¸® ¿äÃ»]");
+		System.out.println("[ì‘ì—… ì²˜ë¦¬ ìš”ì²­]");
 		Runnable runnable = new Runnable() {
 			@Override
 			public void run() {
@@ -16,17 +16,17 @@ public class SubmitRunnable {
 				for(int i=1; i<=10; i++) {
 					sum += i;
 				}
-				System.out.println("[Ã³¸® °á°ú] " + sum);
+				System.out.println("[ì²˜ë¦¬ ê²°ê³¼] " + sum);
 			}
 		};
 		
-		Future<?> future = executorService.submit(runnable);	// ÀÛ¾÷Å¥¿¡ Ã³¸®ÇÒ ÀÛ¾÷À» ³Ö¾îÁØ´Ù.
+		Future<?> future = executorService.submit(runnable);	// ì‘ì—…íì— ì²˜ë¦¬í•  ì‘ì—…ì„ ë„£ì–´ì¤€ë‹¤.
 		
 		try {
-			future.get();	// ÀÛ¾÷ÀÌ ¿Ï·áµÉ¶§ ±îÁö ºí·ÎÅ·µÈ´Ù(±â´Ù·ÁÁØ´Ù).
-			System.out.println("[ÀÛ¾÷ Ã³¸® ¿Ï·á]");
+			future.get();	// ì‘ì—…ì´ ì™„ë£Œë ë•Œ ê¹Œì§€ ë¸”ë¡œí‚¹ëœë‹¤(ê¸°ë‹¤ë ¤ì¤€ë‹¤).
+			System.out.println("[ì‘ì—… ì²˜ë¦¬ ì™„ë£Œ]");
 		} catch (Exception e) {
-			System.out.println("[½ÇÇà ¿¹¿Ü ¹ß»ı] " + e.getMessage());
+			System.out.println("[ì‹¤í–‰ ì˜ˆì™¸ ë°œìƒ] " + e.getMessage());
 		}
 		
 		executorService.shutdown();
