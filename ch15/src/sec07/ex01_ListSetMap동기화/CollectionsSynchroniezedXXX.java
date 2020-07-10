@@ -1,4 +1,4 @@
-package sec07.ex01_ListSetMapµ¿±âÈ­;
+package sec07.ex01_ListSetMapë™ê¸°í™”;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,8 +10,8 @@ import java.util.Set;
 
 public class CollectionsSynchroniezedXXX {
 	public static void main(String[] args) {
-		/* °æ¿ì¿¡ µû¶ó¼­ ArrayList, HashSet, HashMapÀ» ½Ì±Û ½º·¹µå È¯°æ¿¡¼­ »ç¿ëÇÏ´Ù°¡ ¸ÖÆ¼½º·¹µå È¯°æÀ¸·Î Àü´ŞÇÒ ÇÊ¿ä°¡ ÀÖÀ» °ÍÀÌ´Ù.
-		 * ÀÌ¶§ Collections¿¡ Á¤Àû¸Ş¼ÒµåÀÎ synchronizedXXX()¸Ş¼Òµå¿¡ ¸Å°³°ªÀ¸·Î ºñµ¿±âÈ­µÈ ÄÃ·º¼ÇÀ» ³Ö¾îÁÖ¸é µ¿±âÈ­µÈ ÄÃ·º¼ÇÀ» ¸®ÅÏÇØÁØ´Ù. */
+		/* ê²½ìš°ì— ë”°ë¼ì„œ ArrayList, HashSet, HashMapì„ ì‹±ê¸€ ìŠ¤ë ˆë“œ í™˜ê²½ì—ì„œ ì‚¬ìš©í•˜ë‹¤ê°€ ë©€í‹°ìŠ¤ë ˆë“œ í™˜ê²½ìœ¼ë¡œ ì „ë‹¬í•  í•„ìš”ê°€ ìˆì„ ê²ƒì´ë‹¤.
+		 * ì´ë•Œ Collectionsì— ì •ì ë©”ì†Œë“œì¸ synchronizedXXX()ë©”ì†Œë“œì— ë§¤ê°œê°’ìœ¼ë¡œ ë¹„ë™ê¸°í™”ëœ ì»¬ë ‰ì…˜ì„ ë„£ì–´ì£¼ë©´ ë™ê¸°í™”ëœ ì»¬ë ‰ì…˜ì„ ë¦¬í„´í•´ì¤€ë‹¤. */
 		
 		List<Object> list = Collections.synchronizedList(new ArrayList<Object>());
 		
