@@ -1,26 +1,26 @@
-package sec05.ex01.ÀÍ¸íÀÚ½Ä°´Ã¼;
+package sec05.ex01.ìµëª…ìì‹ê°ì²´;
 
 public class UseAnonymousChild {
 	public static void main(String[] args) {
 		AnonymousChild anony = new AnonymousChild();
 		
-		// ÀÍ¸í °´Ã¼ ÇÊµå »ç¿ë
+		// ìµëª… ê°ì²´ í•„ë“œ ì‚¬ìš©
 		anony.field.wake();
 		
-		// ÀÍ¸í °´Ã¼ ·ÎÄÃ º¯¼ö »ç¿ë
+		// ìµëª… ê°ì²´ ë¡œì»¬ ë³€ìˆ˜ ì‚¬ìš©
 		anony.method1();
 		
-		// ÀÍ¸í °´Ã¼ ¸Å°³°ª »ç¿ë
+		// ìµëª… ê°ì²´ ë§¤ê°œê°’ ì‚¬ìš©
 		anony.method2(
-			// ÀÍ¸í °´Ã¼ ¸Å°³°ªÀ¸·Î ´ëÀÔ
+			// ìµëª… ê°ì²´ ë§¤ê°œê°’ìœ¼ë¡œ ëŒ€ì…
 			new Parent() {
 				void study() {
-					System.out.println("°øºÎÇÕ´Ï´Ù.");
+					System.out.println("ê³µë¶€í•©ë‹ˆë‹¤.");
 				}
 	
 				@Override
 				void wake() {
-					System.out.print("3½Ã¿¡ ");
+					System.out.print("3ì‹œì— ");
 					study();
 				}
 			}

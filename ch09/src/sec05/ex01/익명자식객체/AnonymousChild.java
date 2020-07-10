@@ -1,29 +1,29 @@
-package sec05.ex01.ÀÍ¸íÀÚ½Ä°´Ã¼;
+package sec05.ex01.ìµëª…ìì‹ê°ì²´;
 
 public class AnonymousChild {
-	// ÇÊµå ÃÊ±â°ªÀ¸·Î ´ëÀÔ
+	// í•„ë“œ ì´ˆê¸°ê°’ìœ¼ë¡œ ëŒ€ì…
 	Parent field = new Parent() {
 		void work() {
-			System.out.println("Ãâ±ÙÇÕ´Ï´Ù.");
+			System.out.println("ì¶œê·¼í•©ë‹ˆë‹¤.");
 		}
 
 		@Override
 		void wake() {
-			System.out.print("6½Ã¿¡ ÀÏ¾î³ª¼­ ");
+			System.out.print("6ì‹œì— ì¼ì–´ë‚˜ì„œ ");
 			work();
 		}
 	};
 	
-	//·ÎÄÃ º¯¼ö°ªÀ¸·Î ´ëÀÔ
+	//ë¡œì»¬ ë³€ìˆ˜ê°’ìœ¼ë¡œ ëŒ€ì…
 	void method1() {
 		Parent localVar = new Parent() {
 			void walk() {
-				System.out.println("»êÃ¥ÇÕ´Ï´Ù.");
+				System.out.println("ì‚°ì±…í•©ë‹ˆë‹¤.");
 			}
 
 			@Override
 			void wake() {
-				System.out.print("1½Ã¿¡ ");
+				System.out.print("1ì‹œì— ");
 				walk();
 			}
 		};
