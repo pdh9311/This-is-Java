@@ -13,10 +13,10 @@ public class MainStringArrayArgument {
 	}
 }
 /* 
-	Run ¡æ Run Configurations
-	[Main]ÅÇ¿¡¼­ [Project]¿Í [Main Class]¸¦ È®ÀÎ
-	[Arguments]ÅÇ¿¡¼­ [Program arguments]ÀÔ·Â¶õ¿¡ "10 20"À» ÀÔ·ÂÇÑ´Ù.
-	[Run]¹öÆ°À» Å¬¸¯
+	Run â†’ Run Configurations
+	[Main]íƒ­ì—ì„œ [Project]ì™€ [Main Class]ë¥¼ í™•ì¸
+	[Arguments]íƒ­ì—ì„œ [Program arguments]ì…ë ¥ë€ì— "10 20"ì„ ì…ë ¥í•œë‹¤.
+	[Run]ë²„íŠ¼ì„ í´ë¦­
 	
-	¸í·ÉÇÁ·ÒÇÁÆ®¿¡¼­ java MainStringArrayArgument 10 20À¸·Î ÀÔ·ÂÇÑ °Í°ú °°´Ù. 
+	ëª…ë ¹í”„ë¡¬í”„íŠ¸ì—ì„œ java MainStringArrayArgument 10 20ìœ¼ë¡œ ì…ë ¥í•œ ê²ƒê³¼ ê°™ë‹¤. 
 */
