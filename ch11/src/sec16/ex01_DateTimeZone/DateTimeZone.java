@@ -11,42 +11,42 @@ import java.time.temporal.ChronoUnit;
 
 public class DateTimeZone {
 	public static void main(String[] args) throws InterruptedException {
-		// ³¯Â¥ ¾ò±â
-		LocalDate localDate = LocalDate.of(2081, 3, 23);	// Á÷Á¢ ÁöÁ¤ °¡´É
+		// ë‚ ì§œ ì–»ê¸°
+		LocalDate localDate = LocalDate.of(2081, 3, 23);	// ì§ì ‘ ì§€ì • ê°€ëŠ¥
 		System.out.println(localDate);
 		localDate = LocalDate.now();
 		System.out.println(localDate);
 
 		System.out.println(localDate.getYear() + "-" + localDate.getMonthValue() + "-" + localDate.getDayOfMonth() + "(" + localDate.getDayOfWeek() + ")");
-		System.out.println("ÀÌ¹ø ³âÀÌ À±³âÀÎ°¡¿ä ?" + localDate.isLeapYear() + "\n");
+		System.out.println("ì´ë²ˆ ë…„ì´ ìœ¤ë…„ì¸ê°€ìš” ?" + localDate.isLeapYear() + "\n");
 		
-		// ½Ã°£ ¾ò±â
-		LocalTime localTime = LocalTime.of(1, 33, 23);		// Á÷Á¢ ÁöÁ¤ °¡´É	
+		// ì‹œê°„ ì–»ê¸°
+		LocalTime localTime = LocalTime.of(1, 33, 23);		// ì§ì ‘ ì§€ì • ê°€ëŠ¥	
 		System.out.println(localTime);
 		localTime = LocalTime.now();
 		System.out.println(localTime);
 		
 		System.out.println(localTime.getHour() + ":" + localTime.getMinute() + ":" + localTime.getSecond() + "\n");
 		
-		// ³¯Â¥¿Í ½Ã°£ ¾ò±â
-		LocalDateTime localDateTime = LocalDateTime.of(1993, 3, 11, 1, 22, 34);		// Á÷Á¢ ÁöÁ¤ °¡´É
+		// ë‚ ì§œì™€ ì‹œê°„ ì–»ê¸°
+		LocalDateTime localDateTime = LocalDateTime.of(1993, 3, 11, 1, 22, 34);		// ì§ì ‘ ì§€ì • ê°€ëŠ¥
 		System.out.println(localDateTime);
 		
 		localDateTime = LocalDateTime.now();
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy³â MM¿ù ddÀÏ E¿äÀÏ a HH½Ã mmºĞ ssÃÊ");	// ³¯Â¥¿Í ½Ã°£À» »ç¿ëÀÚ ÁöÁ¤ Çü½ÄÀ¸·Î~ 	 
-		String now = localDateTime.format(dateTimeFormatter);		// ³¯Â¥¿Í ½Ã°£À» ¹®ÀÚ¿­ Çü½ÄÀ¸·Î º¯È¯	
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyë…„ MMì›” ddì¼ Eìš”ì¼ a HHì‹œ mmë¶„ ssì´ˆ");	// ë‚ ì§œì™€ ì‹œê°„ì„ ì‚¬ìš©ì ì§€ì • í˜•ì‹ìœ¼ë¡œ~ 	 
+		String now = localDateTime.format(dateTimeFormatter);		// ë‚ ì§œì™€ ì‹œê°„ì„ ë¬¸ìì—´ í˜•ì‹ìœ¼ë¡œ ë³€í™˜	
 		System.out.println(now + "\n");
 		
-		// ÇùÁ¤ ¼¼°è½Ã¿Í ½Ã°£Á¸
+		// í˜‘ì • ì„¸ê³„ì‹œì™€ ì‹œê°„ì¡´
 		ZonedDateTime utcDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
-		System.out.println("ÇùÁ¤ ¼¼°è½Ã: " + utcDateTime);
+		System.out.println("í˜‘ì • ì„¸ê³„ì‹œ: " + utcDateTime);
 		ZonedDateTime newyorkDateTime = ZonedDateTime.now(ZoneId.of("America/New_York"));
-		System.out.println("´º¿å ½Ã°£Á¸: " + newyorkDateTime +"\n");
+		System.out.println("ë‰´ìš• ì‹œê°„ì¡´: " + newyorkDateTime +"\n");
 		
-		// Æ¯Á¤ ½ÃÁ¡ÀÇ Å¸ÀÓ½ºÅÆÇÁ ¾ò±â
+		// íŠ¹ì • ì‹œì ì˜ íƒ€ì„ìŠ¤íƒ¬í”„ ì–»ê¸°
 		Instant instant1 = Instant.now();
 		Thread.sleep(10);
 		Instant instant2 = Instant.now();
-		System.out.println("Â÷ÀÌ(nano): " + instant1.until(instant2, ChronoUnit.NANOS));		
+		System.out.println("ì°¨ì´(nano): " + instant1.until(instant2, ChronoUnit.NANOS));		
 	}
 }
