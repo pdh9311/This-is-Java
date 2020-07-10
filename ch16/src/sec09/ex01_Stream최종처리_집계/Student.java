@@ -1,4 +1,4 @@
-package sec09.ex01_StreamÃÖÁ¾Ã³¸®_Áı°è;
+package sec09.ex01_Streamìµœì¢…ì²˜ë¦¬_ì§‘ê³„;
 
 public class Student {
 	private String name;

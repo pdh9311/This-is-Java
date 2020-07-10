@@ -1,4 +1,4 @@
-package sec09.ex01_StreamÃÖÁ¾Ã³¸®_Áı°è;
+package sec09.ex01_Streamìµœì¢…ì²˜ë¦¬_ì§‘ê³„;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,36 +10,36 @@ import java.util.stream.Stream;
 
 public class Aggregate {
 	public static void main(String[] args) {
-		/* ±âº» Áı°è ¸Ş¼Òµå·Î´Â count(), findFirst(), max(), min(), average(), sum()ÀÌ ÀÖ´Ù.
-		 * OptionalXXXÅ¬·¡½º´Â °ª ±â¹İ Å¬·¡½ºÀÌ¸ç, get(), getAsInt(), getAsDouble(), getAsLong() ¸Ş¼Òµå·Î È£ÃâÇÒ ¼ö ÀÖ´Ù. */
+		/* ê¸°ë³¸ ì§‘ê³„ ë©”ì†Œë“œë¡œëŠ” count(), findFirst(), max(), min(), average(), sum()ì´ ìˆë‹¤.
+		 * OptionalXXXí´ë˜ìŠ¤ëŠ” ê°’ ê¸°ë°˜ í´ë˜ìŠ¤ì´ë©°, get(), getAsInt(), getAsDouble(), getAsLong() ë©”ì†Œë“œë¡œ í˜¸ì¶œí•  ìˆ˜ ìˆë‹¤. */
 		int[] intArray = {1,2,3,4,5,6,7,8,9};
 		
 		IntStream intStream1 = Arrays.stream(intArray);
 		long count = intStream1.filter(a -> a%2 ==0).count();
-		System.out.println("2ÀÇ ¹è¼ö °³¼ö: " + count);
+		System.out.println("2ì˜ ë°°ìˆ˜ ê°œìˆ˜: " + count);
 		
 		IntStream intStream2 = Arrays.stream(intArray);
 		OptionalInt optionalInt1 = intStream2.filter(a -> a%6 == 0).findFirst();
-		System.out.println("6ÀÇ ¹è¼öÀÎ Ã¹¹øÂ° °ª: " + optionalInt1.getAsInt());
+		System.out.println("6ì˜ ë°°ìˆ˜ì¸ ì²«ë²ˆì§¸ ê°’: " + optionalInt1.getAsInt());
 		
 		IntStream intStream3 = Arrays.stream(intArray);
 		OptionalInt optionalInt2 = intStream3.max();
-		System.out.println("ÃÖ´ë°ª: " + optionalInt2.getAsInt());
+		System.out.println("ìµœëŒ€ê°’: " + optionalInt2.getAsInt());
 		
 		IntStream intStream4 = Arrays.stream(intArray);
 		OptionalInt optionalInt3 = intStream4.min();
-		System.out.println("ÃÖ¼Ò°ª: " + optionalInt3.getAsInt());
+		System.out.println("ìµœì†Œê°’: " + optionalInt3.getAsInt());
 		
 		IntStream intStream5 = Arrays.stream(intArray);
 		OptionalDouble optionalDouble = intStream5.average();
-		System.out.println("Æò±Õ°ª: " + optionalDouble.getAsDouble());
+		System.out.println("í‰ê· ê°’: " + optionalDouble.getAsDouble());
 		
 		IntStream intStream6 = Arrays.stream(intArray);
 		int sum = intStream6.sum();
-		System.out.println("ÃÑÇÕ: " + sum);
+		System.out.println("ì´í•©: " + sum);
 		
-		// °´Ã¼ÀÇ ÃÖ´ë¡¤ÃÖ¼Ò °ªÀ» ±¸ÇÒ¶§´Â max(),min()ÀÇ ¸Å°³°ªÀ¸·Î ComparatorÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ °´Ã¼¸¦ ³Ö¾îÁÖ¸é µÈ´Ù.
-		List<Student> list = Arrays.asList(new Student("¸¸½ÄÂ¯",30), new Student("ºï¹ÌÂ¯",28),new Student("ÃÊ¹äÂ¯",30),new Student("Åä³¢Â¯",25));
+		// ê°ì²´ì˜ ìµœëŒ€Â·ìµœì†Œ ê°’ì„ êµ¬í• ë•ŒëŠ” max(),min()ì˜ ë§¤ê°œê°’ìœ¼ë¡œ Comparatorì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ ê°ì²´ë¥¼ ë„£ì–´ì£¼ë©´ ëœë‹¤.
+		List<Student> list = Arrays.asList(new Student("ë§Œì‹ì§±",30), new Student("ë¸ë¯¸ì§±",28),new Student("ì´ˆë°¥ì§±",30),new Student("í† ë¼ì§±",25));
 		Stream<Student> stream1 = list.stream();
 		Optional<Student> optionalStudent1 = stream1.max(new StudentSort());
 		System.out.println(optionalStudent1.get().getName());
