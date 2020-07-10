@@ -5,19 +5,19 @@ public class BitReverseOperatorExample {
 		int v1 = 10;
 		int v2 = ~v1;
 		int v3 = ~v1 + 1;
-		System.out.println(toBinaryString(v1) + " (½ÊÁø¼ö: "+ v1 + ")"); 
-		System.out.println(toBinaryString(v2) + " (½ÊÁø¼ö: "+ v2 + ")"); 
-		System.out.println(toBinaryString(v3) + " (½ÊÁø¼ö: "+ v3 + ")");
+		System.out.println(toBinaryString(v1) + " (ì‹­ì§„ìˆ˜: "+ v1 + ")"); 
+		System.out.println(toBinaryString(v2) + " (ì‹­ì§„ìˆ˜: "+ v2 + ")"); 
+		System.out.println(toBinaryString(v3) + " (ì‹­ì§„ìˆ˜: "+ v3 + ")");
 		System.out.println();
 		
 		int v4 = -10;
 		int v5 = ~v4;
 		int v6 = ~v4 + 1;
-		System.out.println(toBinaryString(v1) + " (½ÊÁø¼ö: "+ v4 + ")"); 
-		System.out.println(toBinaryString(v2) + " (½ÊÁø¼ö: "+ v5 + ")"); 
-		System.out.println(toBinaryString(v3) + " (½ÊÁø¼ö: "+ v6 + ")");
+		System.out.println(toBinaryString(v1) + " (ì‹­ì§„ìˆ˜: "+ v4 + ")"); 
+		System.out.println(toBinaryString(v2) + " (ì‹­ì§„ìˆ˜: "+ v5 + ")"); 
+		System.out.println(toBinaryString(v3) + " (ì‹­ì§„ìˆ˜: "+ v6 + ")");
 	}
-	// Á¤¼ö°ªÀ» ÃÑ 32ºñÆ®ÀÇ ÀÌÁø ¹®ÀÚ¿­·Î ¸®ÅÏÇÏ´Â Integer.toBinaryString() ¸Ş¼Òµå
+	// ì •ìˆ˜ê°’ì„ ì´ 32ë¹„íŠ¸ì˜ ì´ì§„ ë¬¸ìì—´ë¡œ ë¦¬í„´í•˜ëŠ” Integer.toBinaryString() ë©”ì†Œë“œ
 	public static String toBinaryString(int value) {
 		String str = Integer.toBinaryString(value);
 		while(str.length() < 32) {
