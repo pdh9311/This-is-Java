@@ -1,4 +1,4 @@
-package sec09.ex01_½º·¹µåÇ®_»ý¼º¹×Á¾·á;
+package sec09.ex01_ìŠ¤ë ˆë“œí’€_ìƒì„±ë°ì¢…ë£Œ;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,35 +8,35 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadPool {
 	public static void main(String[] args) {
-		/** [ ½º·¹µåÇ® »ý¼º ¹æ¹ý1 ] */ 
-		/* 1°³ ÀÌ»óÀÇ ½º·¹µå°¡ Ãß°¡µÇ¾úÀ» °æ¿ì 
-		 * 60ÃÊ µ¿¾È Ãß°£µÈ ½º·¹µå°¡ ¾Æ¹« ÀÛ¾÷À» ÇÏÁö ¾ÊÀ¸¸é Ãß°¡µÈ ½º·¹µå¸¦ Á¾·áÇÏ°í Ç®¿¡¼­ Á¦°ÅÇÑ´Ù. */
+		/** [ ìŠ¤ë ˆë“œí’€ ìƒì„± ë°©ë²•1 ] */ 
+		/* 1ê°œ ì´ìƒì˜ ìŠ¤ë ˆë“œê°€ ì¶”ê°€ë˜ì—ˆì„ ê²½ìš° 
+		 * 60ì´ˆ ë™ì•ˆ ì¶”ê°„ëœ ìŠ¤ë ˆë“œê°€ ì•„ë¬´ ìž‘ì—…ì„ í•˜ì§€ ì•Šìœ¼ë©´ ì¶”ê°€ëœ ìŠ¤ë ˆë“œë¥¼ ì¢…ë£Œí•˜ê³  í’€ì—ì„œ ì œê±°í•œë‹¤. */
 		ExecutorService executorService1 = Executors.newCachedThreadPool();
 		
-		/**  [ ½º·¹µåÇ® »ý¼º ¹æ¹ý2 ] */
-		/* ½º·¹µå°¡ ÀÛ¾÷À» Ã³¸®ÇÏ°í ¾Ê°í ³î°í ÀÖ´õ¶óµµ ½º·¹µå °³¼ö°¡ ÁÙÁö ¾Ê´Â´Ù. */
+		/**  [ ìŠ¤ë ˆë“œí’€ ìƒì„± ë°©ë²•2 ] */
+		/* ìŠ¤ë ˆë“œê°€ ìž‘ì—…ì„ ì²˜ë¦¬í•˜ê³  ì•Šê³  ë†€ê³  ìžˆë”ë¼ë„ ìŠ¤ë ˆë“œ ê°œìˆ˜ê°€ ì¤„ì§€ ì•ŠëŠ”ë‹¤. */
 		ExecutorService executorService2 = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 		
-		/** [ ½º·¹µåÇ® »ý¼º ¹æ¹ý3 ] */
-		/* ÃÖ¼Ò 3°³ÀÇ ½º·¹µå°¡ À¯ÁöµÇ¸ç, 
-		 * ÃÖ´ë 100°³ÀÇ ½º·¹µå°¡ »ý¼º µÉ ¼ö ÀÖ°í, 
-		 * 3°³ÀÇ ½º·¹µå¸¦ Á¦¿ÜÇÑ ³ª¸ÓÁö Ãß°¡µÈ ½º·¹µå°¡ 120ÃÊ µ¿¾È ³î°í ÀÖÀ» °æ¿ì ÇØ´ç ½º·¹µå¸¦ Á¦°ÅÇØ¼­ ½º·¹µå ¼ö¸¦ °ü¸®ÇÑ´Ù. 
-		 * ³î°í ÀÖ´Â ½Ã°£ ´ÜÀ§
-		 * ÀÛ¾÷ Å¥*/
-		// newCashedThreadPool(),newFixedThreadPool()¸Þ¼Òµå´Â ³»ºÎÀûÀ¸·Î ThreadPoolExecutor°´Ã¼¸¦ »ý¼ºÇØ¼­ ExecutorService¸¦ ¸®ÅÏÇÑ´Ù.
+		/** [ ìŠ¤ë ˆë“œí’€ ìƒì„± ë°©ë²•3 ] */
+		/* ìµœì†Œ 3ê°œì˜ ìŠ¤ë ˆë“œê°€ ìœ ì§€ë˜ë©°, 
+		 * ìµœëŒ€ 100ê°œì˜ ìŠ¤ë ˆë“œê°€ ìƒì„± ë  ìˆ˜ ìžˆê³ , 
+		 * 3ê°œì˜ ìŠ¤ë ˆë“œë¥¼ ì œì™¸í•œ ë‚˜ë¨¸ì§€ ì¶”ê°€ëœ ìŠ¤ë ˆë“œê°€ 120ì´ˆ ë™ì•ˆ ë†€ê³  ìžˆì„ ê²½ìš° í•´ë‹¹ ìŠ¤ë ˆë“œë¥¼ ì œê±°í•´ì„œ ìŠ¤ë ˆë“œ ìˆ˜ë¥¼ ê´€ë¦¬í•œë‹¤. 
+		 * ë†€ê³  ìžˆëŠ” ì‹œê°„ ë‹¨ìœ„
+		 * ìž‘ì—… í*/
+		// newCashedThreadPool(),newFixedThreadPool()ë©”ì†Œë“œëŠ” ë‚´ë¶€ì ìœ¼ë¡œ ThreadPoolExecutorê°ì²´ë¥¼ ìƒì„±í•´ì„œ ExecutorServiceë¥¼ ë¦¬í„´í•œë‹¤.
 		ExecutorService executorService3 = new ThreadPoolExecutor(3, 100, 120L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
 		
-		/** [ ½º·¹µåÇ® Á¾·á ¹æ¹ý1 ] */
-		/* ÇöÀç Ã³¸®ÁßÀÎ ÀÛ¾÷ »Ó¸¸ ¾Æ´Ï¶ó ÀÛ¾÷Å¥¿¡ ´ë±âÇÏ°í ÀÖ´Â ¸ðµç ÀÛ¾÷À» Ã³¸®ÇÑ µÚ¿¡ ½º·¹µåÇ®À» Á¾·á½ÃÅ²´Ù. */
+		/** [ ìŠ¤ë ˆë“œí’€ ì¢…ë£Œ ë°©ë²•1 ] */
+		/* í˜„ìž¬ ì²˜ë¦¬ì¤‘ì¸ ìž‘ì—… ë¿ë§Œ ì•„ë‹ˆë¼ ìž‘ì—…íì— ëŒ€ê¸°í•˜ê³  ìžˆëŠ” ëª¨ë“  ìž‘ì—…ì„ ì²˜ë¦¬í•œ ë’¤ì— ìŠ¤ë ˆë“œí’€ì„ ì¢…ë£Œì‹œí‚¨ë‹¤. */
 		executorService1.shutdown();
 		
-		/** [ ½º·¹µåÇ® Á¾·á ¹æ¹ý2 ] */
-		/* ³²¾Æ ÀÖ´Â ÀÛ¾÷°ú »ó°ü¾øÀÌ interruptÇØ¼­ °­Á¦·Î ½º·¹µåÇ®À» Á¾·á½ÃÅ²´Ù. */
+		/** [ ìŠ¤ë ˆë“œí’€ ì¢…ë£Œ ë°©ë²•2 ] */
+		/* ë‚¨ì•„ ìžˆëŠ” ìž‘ì—…ê³¼ ìƒê´€ì—†ì´ interruptí•´ì„œ ê°•ì œë¡œ ìŠ¤ë ˆë“œí’€ì„ ì¢…ë£Œì‹œí‚¨ë‹¤. */
 		executorService2.shutdownNow();
 		
-		/** [ ½º·¹µåÇ® Á¾·á ¹æ¹ý3 ] */
-		/* ¸ðµç ÀÛ¾÷ Ã³¸®¸¦ ½Ã°£ ³»¿¡ ¿Ï·áÇÏ¸é true¸¦ ¸®ÅÏÇÏ°í,
-		 * ¿Ï·áÇÏÁö ¸øÇÏ¸é ÀÛ¾÷Ã³¸®ÁßÀÎ ½º·¹µå¸¦ interruptÇÏ°í false¸¦ ¸®ÅÏÇÑ´Ù. */
+		/** [ ìŠ¤ë ˆë“œí’€ ì¢…ë£Œ ë°©ë²•3 ] */
+		/* ëª¨ë“  ìž‘ì—… ì²˜ë¦¬ë¥¼ ì‹œê°„ ë‚´ì— ì™„ë£Œí•˜ë©´ trueë¥¼ ë¦¬í„´í•˜ê³ ,
+		 * ì™„ë£Œí•˜ì§€ ëª»í•˜ë©´ ìž‘ì—…ì²˜ë¦¬ì¤‘ì¸ ìŠ¤ë ˆë“œë¥¼ interruptí•˜ê³  falseë¥¼ ë¦¬í„´í•œë‹¤. */
 		try {
 			executorService3.awaitTermination(10, TimeUnit.SECONDS);
 		} catch (InterruptedException e) {}
