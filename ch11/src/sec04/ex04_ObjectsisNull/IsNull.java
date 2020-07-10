@@ -4,27 +4,27 @@ import java.util.Objects;
 
 public class IsNull {
 	public static void main(String[] args) {
-		System.out.println(Objects.isNull(null));	//nullÀÌ ¸Â´ÂÁö ÆÇ´Ü
-		System.out.println(Objects.nonNull(null));	//nullÀÌ ¾Æ´ÑÁö ÆÇ´Ü
+		System.out.println(Objects.isNull(null));	//nullì´ ë§ëŠ”ì§€ íŒë‹¨
+		System.out.println(Objects.nonNull(null));	//nullì´ ì•„ë‹Œì§€ íŒë‹¨
 		
-		String str = "È«±æµ¿";
-		System.out.println(Objects.requireNonNull(str));	//null°ªÀÌ ¾Æ´Ï¸é °ªÀ» ¸®ÅÏÇÔ.
+		String str = "í™ê¸¸ë™";
+		System.out.println(Objects.requireNonNull(str));	//nullê°’ì´ ì•„ë‹ˆë©´ ê°’ì„ ë¦¬í„´í•¨.
 		
 		try {
-			Objects.requireNonNull(null);		// null°ªÀÌ µé¾î°¡¸é NullPointerException¿¹¿Ü¸¦ ¹ß»ı½ÃÅ´
+			Objects.requireNonNull(null);		// nullê°’ì´ ë“¤ì–´ê°€ë©´ NullPointerExceptionì˜ˆì™¸ë¥¼ ë°œìƒì‹œí‚´
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			Objects.requireNonNull(null, "null°ªÀÌ µé¾îÀÖ½À´Ï´Ù.");	// null°ªÀÌ µé¾î°¡¸é NullPointerException¿¹¿Ü¸¦ ¹ß»ı½ÃÅ´
+			Objects.requireNonNull(null, "nullê°’ì´ ë“¤ì–´ìˆìŠµë‹ˆë‹¤.");	// nullê°’ì´ ë“¤ì–´ê°€ë©´ NullPointerExceptionì˜ˆì™¸ë¥¼ ë°œìƒì‹œí‚´
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			//Supplier ±¸Çö °´Ã¼·Î ¶÷´Ù½ÄÀ» ´ëÀÔ
-			Objects.requireNonNull(null, ()->"nullÀÌ µé¾îÀÖ¾î¿ä~!");	// null°ªÀÌ µé¾î°¡¸é NullPointerException¿¹¿Ü¸¦ ¹ß»ı½ÃÅ´			
+			//Supplier êµ¬í˜„ ê°ì²´ë¡œ ëŒë‹¤ì‹ì„ ëŒ€ì…
+			Objects.requireNonNull(null, ()->"nullì´ ë“¤ì–´ìˆì–´ìš”~!");	// nullê°’ì´ ë“¤ì–´ê°€ë©´ NullPointerExceptionì˜ˆì™¸ë¥¼ ë°œìƒì‹œí‚´			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
