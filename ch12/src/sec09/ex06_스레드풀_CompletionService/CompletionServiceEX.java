@@ -1,4 +1,4 @@
-package sec09.ex06_½º·¹µåÇ®_CompletionService;
+package sec09.ex06_ìŠ¤ë ˆë“œí’€_CompletionService;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletionService;
@@ -11,7 +11,7 @@ public class CompletionServiceEX {
 	public static void main(String[] args) {
 		ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 		
-		// ÀÛ¾÷ ¿Ï·á ¼øÀ¸·Î °á°ú¸¦ °¡Á®¿À±â À§ÇØ¼­ executorService°´Ã¼¸¦ ¸Å°³°ªÀ¸·Î ³Ñ°ÜÁÖ°í completionService°´Ã¼¸¦ ¹Ş¾Æ¿Â´Ù.
+		// ì‘ì—… ì™„ë£Œ ìˆœìœ¼ë¡œ ê²°ê³¼ë¥¼ ê°€ì ¸ì˜¤ê¸° ìœ„í•´ì„œ executorServiceê°ì²´ë¥¼ ë§¤ê°œê°’ìœ¼ë¡œ ë„˜ê²¨ì£¼ê³  completionServiceê°ì²´ë¥¼ ë°›ì•„ì˜¨ë‹¤.
 		CompletionService<Integer> completionService = new ExecutorCompletionService<Integer>(executorService);
 		
 		completionService.submit(new Callable<Integer>() {
@@ -47,15 +47,15 @@ public class CompletionServiceEX {
 			}
 		});
 		
-		// take()°¡ ½ÇÇàµÇ¸é ºí·ÎÅ·µÇ¾î ´Ù¸¥ ÄÚµå°¡ ½ÇÇàµÇÁö ¾ÊÀ¸¹Ç·Î »õ·Î¿î ½º·¹µå³ª ½º·¹µåÇ®ÀÇ ¶Ç ´Ù¸¥ ½º·¹µå·Î ½ÇÇà½ÃÄÑÁÖ¾î¾ß ÇÑ´Ù.
-		System.out.println("[Ã³¸® ¿Ï·áµÈ ÀÛ¾÷ È®ÀÎ]");
+		// take()ê°€ ì‹¤í–‰ë˜ë©´ ë¸”ë¡œí‚¹ë˜ì–´ ë‹¤ë¥¸ ì½”ë“œê°€ ì‹¤í–‰ë˜ì§€ ì•Šìœ¼ë¯€ë¡œ ìƒˆë¡œìš´ ìŠ¤ë ˆë“œë‚˜ ìŠ¤ë ˆë“œí’€ì˜ ë˜ ë‹¤ë¥¸ ìŠ¤ë ˆë“œë¡œ ì‹¤í–‰ì‹œì¼œì£¼ì–´ì•¼ í•œë‹¤.
+		System.out.println("[ì²˜ë¦¬ ì™„ë£Œëœ ì‘ì—… í™•ì¸]");
 		executorService.submit(new Runnable() {
 			@Override
 			public void run() {
 				while(true) {
 					try {
 						Future<Integer> future = completionService.take();	 
-						int value = future.get();	// ¿©±â¼­ get()Àº ºí·ÎÅ· µÇÁö ¾Ê°í ¹Ù·Î ÀÛ¾÷ °á°ú¸¦ ¸®ÅÏÇÑ´Ù.
+						int value = future.get();	// ì—¬ê¸°ì„œ get()ì€ ë¸”ë¡œí‚¹ ë˜ì§€ ì•Šê³  ë°”ë¡œ ì‘ì—… ê²°ê³¼ë¥¼ ë¦¬í„´í•œë‹¤.
 						System.out.println(value);
 					} catch (Exception e) {
 						break;

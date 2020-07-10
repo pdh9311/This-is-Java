@@ -1,4 +1,4 @@
-package sec09.ex06_½º·¹µåÇ®_CompletionService;
+package sec09.ex06_ìŠ¤ë ˆë“œí’€_CompletionService;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
