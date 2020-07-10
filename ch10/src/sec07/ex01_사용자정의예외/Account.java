@@ -1,4 +1,4 @@
-package sec07.ex01_»ç¿ëÀÚÁ¤ÀÇ¿¹¿Ü;
+package sec07.ex01_ì‚¬ìš©ìì •ì˜ì˜ˆì™¸;
 
 public class Account {
 	private long balance;
@@ -8,14 +8,14 @@ public class Account {
 	public long getBalance() {
 		return balance;
 	}
-	// ¿¹±İ	
+	// ì˜ˆê¸ˆ	
 	public void deposit(int money) {
 		balance += money;
 	}
-	// Ãâ±İ
+	// ì¶œê¸ˆ
 	public void withdraw(int money) throws BalanceInsufficientException	 {
 		if(balance < money) {
-			throw new BalanceInsufficientException("ÀÜ°íºÎÁ·: " + (money-balance) + " ¸ğÀÚ¶÷");
+			throw new BalanceInsufficientException("ì”ê³ ë¶€ì¡±: " + (money-balance) + " ëª¨ìëŒ");
 		}
 		balance -= money;
 	}

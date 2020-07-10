@@ -1,4 +1,4 @@
-package sec07.ex01_»ç¿ëÀÚÁ¤ÀÇ¿¹¿Ü;
+package sec07.ex01_ì‚¬ìš©ìì •ì˜ì˜ˆì™¸;
 
 import java.io.PrintStream;
 
@@ -7,7 +7,7 @@ public class UseAccount {
 		Account account = new Account();
 		
 		account.deposit(100000);
-		System.out.println("¿¹±İ¾× : " + account.getBalance());
+		System.out.println("ì˜ˆê¸ˆì•¡ : " + account.getBalance());
 		
 		try {
 			account.withdraw(110000);

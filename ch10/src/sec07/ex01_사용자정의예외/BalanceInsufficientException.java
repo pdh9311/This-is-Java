@@ -1,13 +1,13 @@
-package sec07.ex01_»ç¿ëÀÚÁ¤ÀÇ¿¹¿Ü;
+package sec07.ex01_ì‚¬ìš©ìì •ì˜ì˜ˆì™¸;
 
-// extends Exception : ÀÏ¹İ ¿¹¿Ü
-// extends RuntimeException : ½ÇÇà ¿¹¿Ü
+// extends Exception : ì¼ë°˜ ì˜ˆì™¸
+// extends RuntimeException : ì‹¤í–‰ ì˜ˆì™¸
 public class BalanceInsufficientException extends Exception {
 	
-	// ±âº» »ı¼ºÀÚ
+	// ê¸°ë³¸ ìƒì„±ì
 	public BalanceInsufficientException() { }
 	
-	// ¿¹¿Ü ¹ß»ı ¿øÀÎ(¿¹¿Ü ¸Ş½ÃÁö)À» Àü´ŞÇÏ±â À§ÇØ String Å¸ÀÔÀÇ ¸Å°´ º¯¼ö¸¦ °®´Â »ı¼ºÀÚ
+	// ì˜ˆì™¸ ë°œìƒ ì›ì¸(ì˜ˆì™¸ ë©”ì‹œì§€)ì„ ì „ë‹¬í•˜ê¸° ìœ„í•´ String íƒ€ì…ì˜ ë§¤ê° ë³€ìˆ˜ë¥¼ ê°–ëŠ” ìƒì„±ì
 	public BalanceInsufficientException (String message) {
 		super(message);
 	}
