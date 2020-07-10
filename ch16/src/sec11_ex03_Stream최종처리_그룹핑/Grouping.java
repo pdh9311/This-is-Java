@@ -1,4 +1,4 @@
-package sec11_ex03_StreamÃÖÁ¾Ã³¸®_±×·ìÇÎ;
+package sec11_ex03_Streamìµœì¢…ì²˜ë¦¬_ê·¸ë£¹í•‘;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,18 +12,18 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import sec11_ex01_StreamÃÖÁ¾Ã³¸®_¼öÁı.Student;
+import sec11_ex01_Streamìµœì¢…ì²˜ë¦¬_ìˆ˜ì§‘.Student;
 
 public class Grouping {
 	public static void main(String[] args) {
 		List<Student> list = Arrays.asList(
-				new Student("ºï¹ÌÂ¯",28,Student.Sex.Female,Student.City.Pusan),
-				new Student("¸¸½ÄÂ¯",30,Student.Sex.Male,Student.City.Seoul),
-				new Student("Åä³¢Â¯",25,Student.Sex.Female,Student.City.Seoul),
-				new Student("ÃÊ¹äÂ¯",29,Student.Sex.Male,Student.City.Pusan) );
+				new Student("ë¸ë¯¸ì§±",28,Student.Sex.Female,Student.City.Pusan),
+				new Student("ë§Œì‹ì§±",30,Student.Sex.Male,Student.City.Seoul),
+				new Student("í† ë¼ì§±",25,Student.Sex.Female,Student.City.Seoul),
+				new Student("ì´ˆë°¥ì§±",29,Student.Sex.Male,Student.City.Pusan) );
 		
-		/** groupingBy(Function<T,K> classifier)¸Ş¼Òµå 
-		 * 	¡æ Collector<T,?,Map<K,List<T>>>¸®ÅÏ: T¸¦ K·Î ¸ÅÇÎÇÏ°í KÅ°¿¡ ÀúÀåµÈ List¿¡ T¸¦ ÀúÀåÇÑ Map »ı¼º  - ÀÚ¼¼ÇÑ ÄÚµå*/
+		/** groupingBy(Function<T,K> classifier)ë©”ì†Œë“œ 
+		 * 	â†’ Collector<T,?,Map<K,List<T>>>ë¦¬í„´: Të¥¼ Kë¡œ ë§¤í•‘í•˜ê³  Kí‚¤ì— ì €ì¥ëœ Listì— Të¥¼ ì €ì¥í•œ Map ìƒì„±  - ìì„¸í•œ ì½”ë“œ*/
 		Stream<Student> stream1 = list.stream();
 		Function<Student,Student.Sex> classifier1 = s -> s.getSex();
 		Collector<Student,?,Map<Student.Sex,List<Student>>> collector = Collectors.groupingBy(classifier1);
@@ -33,20 +33,20 @@ public class Grouping {
 		
 		System.out.println("\n");
 		
-		/** groupingBy(Function<T,K> classifier)¸Ş¼Òµå 
-		 * 	¡æ Collector<T,?,Map<K,List<T>>>¸®ÅÏ: T¸¦ K·Î ¸ÅÇÎÇÏ°í KÅ°¿¡ ÀúÀåµÈ List¿¡ T¸¦ ÀúÀåÇÑ Map »ı¼º  - °£´ÜÇÑ ÄÚµå*/
+		/** groupingBy(Function<T,K> classifier)ë©”ì†Œë“œ 
+		 * 	â†’ Collector<T,?,Map<K,List<T>>>ë¦¬í„´: Të¥¼ Kë¡œ ë§¤í•‘í•˜ê³  Kí‚¤ì— ì €ì¥ëœ Listì— Të¥¼ ì €ì¥í•œ Map ìƒì„±  - ê°„ë‹¨í•œ ì½”ë“œ*/
 		Map<Student.City,List<Student>> map2 = list.stream().collect(Collectors.groupingBy(Student :: getCity));
 		
 		map2.get(Student.City.Seoul).stream().forEach(e -> System.out.print(e.getName() + " "));
 		
 		System.out.println("\n");
 		
-		/** groupingBy(Function<T,K> classifier, Collector<T,A,D> collector)¸Ş¼Òµå
-		 * 	¡æ Collector<T,?,Map<K,D>>¸®ÅÏ: T¸¦ K·Î ¸ÅÇÎÇÏ°í KÅ°¿¡ ÀúÀåµÈ D°´Ã¼¿¡ T¸¦ ´©ÀûÇÑ Map »ı¼º - ÀÚ¼¼ÇÑ ÄÚµå */ 
+		/** groupingBy(Function<T,K> classifier, Collector<T,A,D> collector)ë©”ì†Œë“œ
+		 * 	â†’ Collector<T,?,Map<K,D>>ë¦¬í„´: Të¥¼ Kë¡œ ë§¤í•‘í•˜ê³  Kí‚¤ì— ì €ì¥ëœ Dê°ì²´ì— Të¥¼ ëˆ„ì í•œ Map ìƒì„± - ìì„¸í•œ ì½”ë“œ */ 
 		Stream<Student> stream2 = list.stream();
 		Function<Student,Student.City> classifier2 = Student :: getCity;	// Function<T,K>
 			/** mapping(Function<T,U> mapper, Collector<U,A,R> collector)
-			 * 	¡æ Collector<T,?,R>¸®ÅÏ: T·Î ¸ÅÇÎÇÑ ÈÄ, U¸¦ R¿¡ ¼öÁı */
+			 * 	â†’ Collector<T,?,R>ë¦¬í„´: Të¡œ ë§¤í•‘í•œ í›„, Uë¥¼ Rì— ìˆ˜ì§‘ */
 		Function<Student,String> mapper1 = Student :: getName;	/// Function<T,U>
 		Collector<String,?,List<String>> collector1 = Collectors.toList();	/// Collector<U,A,R>
 		Collector<Student,?,List<String>> collector2 = Collectors.mapping(mapper1, collector1); 	/// Collector<T,?,R>
@@ -58,8 +58,8 @@ public class Grouping {
 		
 		System.out.println("\n");
 		
-		/** groupingBy(Function<T,K> classifier, Collector<T,A,D> collector)¸Ş¼Òµå 
-		 * 	¡æ Collector<T,?,Map<K,D>>¸®ÅÏ: T¸¦ K·Î ¸ÅÇÎÇÏ°í KÅ°¿¡ ÀúÀåµÈ D°´Ã¼¿¡ T¸¦ ´©ÀûÇÑ Map »ı¼º - °£´ÜÇÑ ÄÚµå */ 
+		/** groupingBy(Function<T,K> classifier, Collector<T,A,D> collector)ë©”ì†Œë“œ 
+		 * 	â†’ Collector<T,?,Map<K,D>>ë¦¬í„´: Të¥¼ Kë¡œ ë§¤í•‘í•˜ê³  Kí‚¤ì— ì €ì¥ëœ Dê°ì²´ì— Të¥¼ ëˆ„ì í•œ Map ìƒì„± - ê°„ë‹¨í•œ ì½”ë“œ */ 
 		Map<Student.Sex,List<Integer>> map4 = list.stream()
 			.collect(
 					Collectors.groupingBy(
@@ -72,8 +72,8 @@ public class Grouping {
 		
 		System.out.println("\n");
 		
-		/** groupingBy(Function<T,K> classifier, Supplier<Map<K,D>> mapFactory, Collector<T,A,D> collector)¸Ş¼Òµå 
-		 * 	¡æ Collector<T,?,Map<K,D>>¸®ÅÏ: T¸¦ K·Î ¸ÅÇÎÇÏ°í Supplier°¡ Á¦°øÇÏ´Â Map¿¡¼­ KÅ°°¡ ÀúÀåµÈ D°´Ã¼¿¡ T¸¦ ´©Àû - ÀÚ¼¼ÇÑ ÄÚµå  */
+		/** groupingBy(Function<T,K> classifier, Supplier<Map<K,D>> mapFactory, Collector<T,A,D> collector)ë©”ì†Œë“œ 
+		 * 	â†’ Collector<T,?,Map<K,D>>ë¦¬í„´: Të¥¼ Kë¡œ ë§¤í•‘í•˜ê³  Supplierê°€ ì œê³µí•˜ëŠ” Mapì—ì„œ Kí‚¤ê°€ ì €ì¥ëœ Dê°ì²´ì— Të¥¼ ëˆ„ì  - ìì„¸í•œ ì½”ë“œ  */
 		Stream<Student> stream3 = list.stream();
 		Function<Student,Student.City> classifier3 = Student :: getCity;		//Function<T,K>
 		Supplier<Map<Student.City,List<String>>> supplier = HashMap :: new;		// Supplier<Map<K,D>>
@@ -89,8 +89,8 @@ public class Grouping {
 		
 		System.out.println("\n");
 
-		/** groupingBy(Function<T,K> classifier, Supplier<Map<K,D>> mapFactory, Collector<T,A,D> collector)¸Ş¼Òµå 
-		 * 	¡æ Collector<T,?,Map<K,D>>¸®ÅÏ: T¸¦ K·Î ¸ÅÇÎÇÏ°í Supplier°¡ Á¦°øÇÏ´Â Map¿¡¼­ KÅ°°¡ ÀúÀåµÈ D°´Ã¼¿¡ T¸¦ ´©Àû - °£´ÜÇÑ ÄÚµå */
+		/** groupingBy(Function<T,K> classifier, Supplier<Map<K,D>> mapFactory, Collector<T,A,D> collector)ë©”ì†Œë“œ 
+		 * 	â†’ Collector<T,?,Map<K,D>>ë¦¬í„´: Të¥¼ Kë¡œ ë§¤í•‘í•˜ê³  Supplierê°€ ì œê³µí•˜ëŠ” Mapì—ì„œ Kí‚¤ê°€ ì €ì¥ëœ Dê°ì²´ì— Të¥¼ ëˆ„ì  - ê°„ë‹¨í•œ ì½”ë“œ */
 		Map<Student.City,List<String>> map6 = list.stream()
 				.collect(
 						Collectors.groupingBy(
@@ -105,8 +105,8 @@ public class Grouping {
 		
 		System.out.println("\n");
 		
-			/** averagingDouble(ToDobuleFunction<T> mapper)¸Ş¼Òµå 
-			 * 	¡æ Collector<T,?,Double>¸®ÅÏ : T¸¦ Double·Î ¸ÅÇÎÇÑ ÈÄ DoubleÀÇ Æò±Õ°ªÀ» »êÃâ - ÀÚ¼¼ÇÑ ÄÚµå*/
+			/** averagingDouble(ToDobuleFunction<T> mapper)ë©”ì†Œë“œ 
+			 * 	â†’ Collector<T,?,Double>ë¦¬í„´ : Të¥¼ Doubleë¡œ ë§¤í•‘í•œ í›„ Doubleì˜ í‰ê· ê°’ì„ ì‚°ì¶œ - ìì„¸í•œ ì½”ë“œ*/
 		Stream<Student> stream4 = list.stream();
 		Function<Student,Student.City> classifier4 = Student :: getCity;
 		
@@ -117,13 +117,13 @@ public class Grouping {
 		
 		Map<Student.City,Double> map7 = stream4.collect(collector8);
 		
-		System.out.println("ºÎ»ê ³ªÀÌÆò±Õ: " + map7.get(Student.City.Pusan));
-		System.out.println("¼­¿ï ³ªÀÌÆò±Õ: " + map7.get(Student.City.Seoul));
+		System.out.println("ë¶€ì‚° ë‚˜ì´í‰ê· : " + map7.get(Student.City.Pusan));
+		System.out.println("ì„œìš¸ ë‚˜ì´í‰ê· : " + map7.get(Student.City.Seoul));
 		
 		System.out.println();
 		
-			/** averagingDouble(ToDobuleFunction<T> mapper)¸Ş¼Òµå 
-			 * 	¡æ Collector<T,?,Double>¸®ÅÏ : T¸¦ Double·Î ¸ÅÇÎÇÑ ÈÄ DoubleÀÇ Æò±Õ°ªÀ» »êÃâ - °£´ÜÇÑ ÄÚµå*/
+			/** averagingDouble(ToDobuleFunction<T> mapper)ë©”ì†Œë“œ 
+			 * 	â†’ Collector<T,?,Double>ë¦¬í„´ : Të¥¼ Doubleë¡œ ë§¤í•‘í•œ í›„ Doubleì˜ í‰ê· ê°’ì„ ì‚°ì¶œ - ê°„ë‹¨í•œ ì½”ë“œ*/
 		Map<Student.City,Double> map8 = list.stream()
 				.collect(
 						Collectors.groupingBy(
@@ -132,13 +132,13 @@ public class Grouping {
 						)
 						
 				);
-		System.out.println("ºÎ»ê ³ªÀÌÆò±Õ: " + map8.get(Student.City.Pusan));
-		System.out.println("¼­¿ï ³ªÀÌÆò±Õ: " + map8.get(Student.City.Seoul));
+		System.out.println("ë¶€ì‚° ë‚˜ì´í‰ê· : " + map8.get(Student.City.Pusan));
+		System.out.println("ì„œìš¸ ë‚˜ì´í‰ê· : " + map8.get(Student.City.Seoul));
 		
 		System.out.println();
 		
-			/** joining(CharSequence delimiter)¸Ş¼Òµå 
-			 * 	¡æ Collector<CharSequence,?,String>¸®ÅÏ: CharSequence¸¦ ±¸ºĞÀÚ·Î ¿¬°áÇÑ StringÀ» »êÃâ - °£´ÜÇÑ ÄÚµå */
+			/** joining(CharSequence delimiter)ë©”ì†Œë“œ 
+			 * 	â†’ Collector<CharSequence,?,String>ë¦¬í„´: CharSequenceë¥¼ êµ¬ë¶„ìë¡œ ì—°ê²°í•œ Stringì„ ì‚°ì¶œ - ê°„ë‹¨í•œ ì½”ë“œ */
 		Map<Student.Sex,String> map9 = list.stream()
 				.collect(
 						Collectors.groupingBy(
@@ -149,8 +149,8 @@ public class Grouping {
 								)
 						)
 				);
-		System.out.println("³²ÀÚ: " + map9.get(Student.Sex.Male));
-		System.out.println("¿©ÀÚ: " + map9.get(Student.Sex.Female));
+		System.out.println("ë‚¨ì: " + map9.get(Student.Sex.Male));
+		System.out.println("ì—¬ì: " + map9.get(Student.Sex.Female));
 		
 	}
 }
