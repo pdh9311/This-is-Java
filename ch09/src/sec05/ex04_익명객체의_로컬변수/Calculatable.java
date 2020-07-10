@@ -1,4 +1,4 @@
-package sec05.ex04_ÀÍ¸í°´Ã¼ÀÇ_·ÎÄÃº¯¼ö;
+package sec05.ex04_ìµëª…ê°ì²´ì˜_ë¡œì»¬ë³€ìˆ˜;
 
 public interface Calculatable {
 	int sum();

@@ -1,4 +1,4 @@
-package sec05.ex04_ÀÍ¸í°´Ã¼ÀÇ_·ÎÄÃº¯¼ö;
+package sec05.ex04_ìµëª…ê°ì²´ì˜_ë¡œì»¬ë³€ìˆ˜;
 
 public class AnonymousLocalVar {
 	private int field;
@@ -10,12 +10,12 @@ public class AnonymousLocalVar {
 		field = 10;
 		
 		Calculatable calc = new Calculatable() {
-			// int arg2 = ¸Å°³°ª;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
-			// int var2 = 0;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
+			// int arg2 = ë§¤ê°œê°’;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
+			// int var2 = 0;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
 			@Override
 			public int sum() {
-				// int arg1 = ¸Å°³°ª;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
-				// int var1 = 0;	(ÄÄÆÄÀÏ½Ã º¹»çµÊ)
+				// int arg1 = ë§¤ê°œê°’;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
+				// int var1 = 0;	(ì»´íŒŒì¼ì‹œ ë³µì‚¬ë¨)
 				int result = field+arg1+arg2+var1+var2; 
 				return result;
 			}
