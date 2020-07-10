@@ -1,4 +1,4 @@
-package sec05.ex01_ÀÚµ¿¸®¼Ò½º´İ±â;
+package sec05.ex01_ìë™ë¦¬ì†ŒìŠ¤ë‹«ê¸°;
 
 public class FileInputStream implements AutoCloseable {
 	private String file;
@@ -8,12 +8,12 @@ public class FileInputStream implements AutoCloseable {
 	}
 	
 	public void read() {
-		System.out.println(file + "À» ÀĞ½À´Ï´Ù.");
+		System.out.println(file + "ì„ ì½ìŠµë‹ˆë‹¤.");
 	}
 	
 	@Override
 	public void close() throws Exception {
-		System.out.println(file + "À» ´İ½À´Ï´Ù.");
+		System.out.println(file + "ì„ ë‹«ìŠµë‹ˆë‹¤.");
 	}
 	
 }

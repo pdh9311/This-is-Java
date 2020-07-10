@@ -1,15 +1,15 @@
-package sec05.ex01_ÀÚµ¿¸®¼Ò½º´İ±â;
+package sec05.ex01_ìë™ë¦¬ì†ŒìŠ¤ë‹«ê¸°;
 
 public class UseTryWithResource {
 	public static void main(String[] args) {
 		try(FileInputStream fis = new FileInputStream("file.txt")){
 			fis.read();
-			throw new Exception();	// °­Á¦ ¿¹¿Ü ¹ß»ı
+			throw new Exception();	// ê°•ì œ ì˜ˆì™¸ ë°œìƒ
 		} catch(Exception e) {
-			System.out.println("¿¹¿Ü Ã³¸® ÄÚµå°¡ ½ÇÇàµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì˜ˆì™¸ ì²˜ë¦¬ ì½”ë“œê°€ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		}
 	}
 }
-/*	try-with-resources¸¦ »ç¿ëÇÏ±â À§ÇØ¼­´Â AutoCloseable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ°í ÀÖ¾î¾ß ÇÏ°í,
- * 	tryºí·ÏÀÌ Á¤»óÀûÀ¸·Î ½ÇÇàÀ» ¿Ï·áÇß°Å³ª µµÁß¿¡ ¿¹¿Ü°¡ ¹ß»ıÇÏ°Ô µÇ¸é ÀÚµ¿À¸·Î FileInputStreamÀÇ close() ¸Ş¼Òµå°¡ È£ÃâµÈ´Ù.
- * 	¿¹¿Ü°¡ ¹ß»ıÇß´Ù¸é ¿ì¼± close()·Î ¸®¼Ò½º¸¦ ´İ°í catchºí·ÏÀ» ½ÇÇàÇÑ´Ù.	*/
+/*	try-with-resourcesë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” AutoCloseable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ê³  ìˆì–´ì•¼ í•˜ê³ ,
+ * 	tryë¸”ë¡ì´ ì •ìƒì ìœ¼ë¡œ ì‹¤í–‰ì„ ì™„ë£Œí–ˆê±°ë‚˜ ë„ì¤‘ì— ì˜ˆì™¸ê°€ ë°œìƒí•˜ê²Œ ë˜ë©´ ìë™ìœ¼ë¡œ FileInputStreamì˜ close() ë©”ì†Œë“œê°€ í˜¸ì¶œëœë‹¤.
+ * 	ì˜ˆì™¸ê°€ ë°œìƒí–ˆë‹¤ë©´ ìš°ì„  close()ë¡œ ë¦¬ì†ŒìŠ¤ë¥¼ ë‹«ê³  catchë¸”ë¡ì„ ì‹¤í–‰í•œë‹¤.	*/
