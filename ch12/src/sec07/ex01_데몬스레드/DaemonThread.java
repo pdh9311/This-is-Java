@@ -1,4 +1,4 @@
-package sec07.ex01_µ¥¸ó½º·¹µå;
+package sec07.ex01_ë°ëª¬ìŠ¤ë ˆë“œ;
 
 public class DaemonThread {
 	public static void main(String[] args) {
@@ -7,14 +7,14 @@ public class DaemonThread {
 			public void run() {
 				for(int i=0;i<1;i++) {
 					if(this.isDaemon()) {
-						System.out.println("µ¥¸ó½º·¹µå ÀÌ¿ëÁßÀÔ´Ï´Ù.");
+						System.out.println("ë°ëª¬ìŠ¤ë ˆë“œ ì´ìš©ì¤‘ì…ë‹ˆë‹¤.");
 					}
 				}
 				while(true) {
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {}
-					System.out.println("ÀÚµ¿ ÀúÀå ÇÕ´Ï´Ù.");
+					System.out.println("ìë™ ì €ì¥ í•©ë‹ˆë‹¤.");
 				}
 			}
 		};
@@ -28,6 +28,6 @@ public class DaemonThread {
 		for(int i=1; i<=1000; i++) {
 			sum += i;
 		}
-		System.out.println("1~1000 ÇÕ:" + sum);
+		System.out.println("1~1000 í•©:" + sum);
 	}
 }
