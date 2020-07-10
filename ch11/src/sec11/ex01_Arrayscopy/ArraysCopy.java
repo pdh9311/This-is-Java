@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class ArraysCopy {
 	public static void main(String[] args) {
 		char[] arr1 = {'J','A','V','A'};
-		// ¹è¿­ º¹»ç ¹æ¹ı1
+		// ë°°ì—´ ë³µì‚¬ ë°©ë²•1
 		char[] arr2 = Arrays.copyOf(arr1, arr1.length);
 		System.out.println(Arrays.toString(arr2));
 
-		// ¹è¿­ º¹»ç ¹æ¹ı2
+		// ë°°ì—´ ë³µì‚¬ ë°©ë²•2
 		arr2 = Arrays.copyOfRange(arr1, 0, 3);
 		System.out.println(Arrays.toString(arr2));
 
-		// ¹è¿­ º¹»ç ¹æ¹ı3
+		// ë°°ì—´ ë³µì‚¬ ë°©ë²•3
 		arr2 = new char[arr1.length];
 		System.arraycopy(arr1, 0, arr2, 0, arr1.length);
 		System.out.println(Arrays.toString(arr2));
@@ -23,7 +23,7 @@ public class ArraysCopy {
 		}
 		
 		int[][] array1 = { {1,2}, {3,4} };
-		// ¾èÀº ¹è¿­ º¹»ç
+		// ì–•ì€ ë°°ì—´ ë³µì‚¬
 		int[][] cloned1 = Arrays.copyOf(array1, array1.length);
 		System.out.println("array1: " + array1);
 		System.out.println("cloned1: " + cloned1);
@@ -37,8 +37,8 @@ public class ArraysCopy {
 		System.out.print(cloned1[0][0] + "" + cloned1[0][1]+ "" + cloned1[1][0] + "" + cloned1[1][1]+"\n");
 		System.out.println(Arrays.deepEquals(array1, cloned1)+"\n");
 		
-		// ±íÀº ¹è¿­ º¹»ç
-		System.out.println("[±íÀº ¹è¿­ º¹»ç]");
+		// ê¹Šì€ ë°°ì—´ ë³µì‚¬
+		System.out.println("[ê¹Šì€ ë°°ì—´ ë³µì‚¬]");
 		cloned1[0] = Arrays.copyOf(array1[0], array1[0].length);
 		cloned1[1] = Arrays.copyOf(array1[1], array1[1].length);
 		
