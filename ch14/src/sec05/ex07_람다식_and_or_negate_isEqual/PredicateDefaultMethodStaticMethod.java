@@ -1,4 +1,4 @@
-package sec05.ex07_¶÷´Ù½Ä_and_or_negate_isEqual;
+package sec05.ex07_ëŒë‹¤ì‹_and_or_negate_isEqual;
 
 import java.util.function.Predicate;
 
@@ -8,21 +8,21 @@ public class PredicateDefaultMethodStaticMethod {
 		Predicate<Integer> predicate2 = t -> {return t%3 == 0;};
 		Predicate<Integer> predicate12 = predicate1.and(predicate2);
 		boolean result = predicate12.test(9);
-		System.out.println("9´Â 2¿Í 3ÀÇ ¹è¼öÀÎ°¡? " + result);
+		System.out.println("9ëŠ” 2ì™€ 3ì˜ ë°°ìˆ˜ì¸ê°€? " + result);
 		
 		predicate12 = predicate1.or(predicate2);
 		result = predicate12.test(9);
-		System.out.println("9´Â 2¶Ç´Â 3ÀÇ ¹è¼öÀÎ°¡? " + result);
+		System.out.println("9ëŠ” 2ë˜ëŠ” 3ì˜ ë°°ìˆ˜ì¸ê°€? " + result);
 		
 		predicate12 = predicate1.negate();
 		result = predicate12.test(9);
-		System.out.println("9´Â 2ÀÇ ¹è¼ö°¡ ¾Æ´Ñ°¡ ¡¤ È¦¼öÀÎ°¡? " + result);
+		System.out.println("9ëŠ” 2ì˜ ë°°ìˆ˜ê°€ ì•„ë‹Œê°€ Â· í™€ìˆ˜ì¸ê°€? " + result);
 		
 		predicate12 = predicate2.negate();
 		result = predicate12.test(9);
-		System.out.println("9´Â 3ÀÇ ¹è¼ö°¡ ¾Æ´Ñ°¡ ¡¤ Â¦¼öÀÎ°¡? " + result);
+		System.out.println("9ëŠ” 3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹Œê°€ Â· ì§ìˆ˜ì¸ê°€? " + result);
 		
-		// Predicate.isEqual()´Â Á¤Àû¸Ş¼Òµå·Î¼­ ¸Å°³°ª°ú  test()¸Ş¼ÒµåÀÇ ¸Å°ªÀÇ µ¿µîºñ±³¸¦ ÇÑ´Ù.
+		// Predicate.isEqual()ëŠ” ì •ì ë©”ì†Œë“œë¡œì„œ ë§¤ê°œê°’ê³¼  test()ë©”ì†Œë“œì˜ ë§¤ê°’ì˜ ë™ë“±ë¹„êµë¥¼ í•œë‹¤.
 		Predicate<String> predicate  = Predicate.isEqual(null);
 		boolean bool = predicate.test(null);
 		System.out.println(bool);
