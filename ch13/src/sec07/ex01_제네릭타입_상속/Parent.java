@@ -1,4 +1,4 @@
-package sec07.ex01_Á¦³×¸¯Å¸ÀÔ_»ó¼Ó;
+package sec07.ex01_ì œë„¤ë¦­íƒ€ì…_ìƒì†;
 
 public class Parent<K,M> {
 	private K kind;
@@ -27,7 +27,7 @@ public class Parent<K,M> {
 	}
 }
 
-//Á¦³×¸¯À» »ó¼Ó ¹Ş´Â ÀÚ½ÄÅ¬·¡½º´Â Á¦³×¸¯ Å¸ÀÔÀ» Ãß°¡ÀûÀ¸·Î ´õ °¡Áú ¼ö ÀÖ´Ù.
+//ì œë„¤ë¦­ì„ ìƒì† ë°›ëŠ” ìì‹í´ë˜ìŠ¤ëŠ” ì œë„¤ë¦­ íƒ€ì…ì„ ì¶”ê°€ì ìœ¼ë¡œ ë” ê°€ì§ˆ ìˆ˜ ìˆë‹¤.
 class Child<K,M,C> extends Parent<K,M> {
 	private C company;
 
