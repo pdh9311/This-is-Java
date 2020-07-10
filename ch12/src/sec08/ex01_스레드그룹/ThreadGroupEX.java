@@ -1,15 +1,15 @@
-package sec08.ex01_½º·¹µå±×·ì;
+package sec08.ex01_ìŠ¤ë ˆë“œê·¸ë£¹;
 
 import java.util.Map;
 import java.util.Set;
 
 public class ThreadGroupEX {
 	public static void main(String[] args) {
-		// ½º·¹µå ±×·ì »ı¼º
+		// ìŠ¤ë ˆë“œ ê·¸ë£¹ ìƒì„±
 		ThreadGroup tg = new ThreadGroup("tg");
 		ThreadGroup threadG = new ThreadGroup("ThreadG");
 		
-		// tg½º·¹µå ±×·ìÀÇ ÇÏÀ§ ½º·¹µå·Î test½º·¹µå¸¦ »ı¼º
+		// tgìŠ¤ë ˆë“œ ê·¸ë£¹ì˜ í•˜ìœ„ ìŠ¤ë ˆë“œë¡œ testìŠ¤ë ˆë“œë¥¼ ìƒì„±
 		Thread test = new Thread(tg,"test") {
 			@Override
 			public void run() {
@@ -24,27 +24,27 @@ public class ThreadGroupEX {
 		thread1.start();
 		thread2.start();
 		
-		// ½º·¹µå ±×·ì ÀÌ¸§ ¾ò±â
+		// ìŠ¤ë ˆë“œ ê·¸ë£¹ ì´ë¦„ ì–»ê¸°
 		ThreadGroup group = Thread.currentThread().getThreadGroup();
 		String groupName = group.getName();
 		System.out.println(groupName);
 		
-		// ÇÁ·Î¼¼½º ³»¿¡¼­ ½ÇÇàÁßÀÎ ¸ğµç ½º·¹µå¿¡ ´ëÇÑ Á¤º¸ ¾ò±â
+		// í”„ë¡œì„¸ìŠ¤ ë‚´ì—ì„œ ì‹¤í–‰ì¤‘ì¸ ëª¨ë“  ìŠ¤ë ˆë“œì— ëŒ€í•œ ì •ë³´ ì–»ê¸°
 		Map<Thread,StackTraceElement[]> map = Thread.getAllStackTraces();
 		Set<Thread> threads = map.keySet();
 		for(Thread thread : threads) {
-			System.out.println("¼Ò¼Ó ±×·ì¸í: " + thread.getThreadGroup().getName() 
-					+ ", ½º·¹µå¸í: " + thread.getName() 
-					+ ((thread.isDaemon()) ? "(µ¥¸ó)" : "(ÁÖ)") );
+			System.out.println("ì†Œì† ê·¸ë£¹ëª…: " + thread.getThreadGroup().getName() 
+					+ ", ìŠ¤ë ˆë“œëª…: " + thread.getName() 
+					+ ((thread.isDaemon()) ? "(ë°ëª¬)" : "(ì£¼)") );
 		}
 		
-		/* ½º·¹µå±×·ìÀ¸·Î interrupt()¸Ş¼Òµå¸¦ È£ÃâÇÏ¹Ç·Î½á 
-		 * ½º·¹µå±×·ì¿¡ Æ÷ÇÔµÈ ¸ğµç ½º·¹µå°¡ ³»ºÎÀûÀ¸·Î interrupt()¸Ş¼Òµå¸¦ È£ÃâÇÏ°Ô µÈ´Ù. */
+		/* ìŠ¤ë ˆë“œê·¸ë£¹ìœ¼ë¡œ interrupt()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë¯€ë¡œì¨ 
+		 * ìŠ¤ë ˆë“œê·¸ë£¹ì— í¬í•¨ëœ ëª¨ë“  ìŠ¤ë ˆë“œê°€ ë‚´ë¶€ì ìœ¼ë¡œ interrupt()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ê²Œ ëœë‹¤. */
 		threadG.interrupt();	
 		
-		/* "list()´Â ½º·¹µå±×·ìÀÇ Á¤º¸¸¦ Ãâ·ÂÇØÁØ´Ù."
-		 * ThreadGroup [±×·ì¸í, ÃÖ´ë¿ì¼±¼øÀ§]
-		 * 		 Thread [½º·¹µå¸í, ¿ì¼±¼øÀ§, ¼Ò¼Ó ±×·ì¸í]	 */
+		/* "list()ëŠ” ìŠ¤ë ˆë“œê·¸ë£¹ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•´ì¤€ë‹¤."
+		 * ThreadGroup [ê·¸ë£¹ëª…, ìµœëŒ€ìš°ì„ ìˆœìœ„]
+		 * 		 Thread [ìŠ¤ë ˆë“œëª…, ìš°ì„ ìˆœìœ„, ì†Œì† ê·¸ë£¹ëª…]	 */
 		Thread.currentThread().getThreadGroup().list();
 	}
 }

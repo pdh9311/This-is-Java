@@ -1,9 +1,9 @@
-package sec08.ex01_½º·¹µå±×·ì;
+package sec08.ex01_ìŠ¤ë ˆë“œê·¸ë£¹;
 
 public class MyThread extends Thread {
 	
 	public MyThread(ThreadGroup threadGroup, String threadName) {
-		super(threadGroup,threadName);	// ThreadÅ¬·¡½ºÀÇ Thread(ThreadGroup, String) »ı¼ºÀÚ¿¡ °ªÀ» ´ëÀÔ
+		super(threadGroup,threadName);	// Threadí´ë˜ìŠ¤ì˜ Thread(ThreadGroup, String) ìƒì„±ìì— ê°’ì„ ëŒ€ì…
 	}
 	
 	@Override
@@ -16,7 +16,7 @@ public class MyThread extends Thread {
 				break;
 			}
 		}
-		System.out.println(getName() + " Á¾·á");
+		System.out.println(getName() + " ì¢…ë£Œ");
 	}
 
 }
