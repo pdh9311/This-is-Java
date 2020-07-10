@@ -1,4 +1,4 @@
-package sec07.ex01_instanceof»ó¼Ó;
+package sec07.ex01_instanceofìƒì†;
 
 public class Child extends Parent{
 

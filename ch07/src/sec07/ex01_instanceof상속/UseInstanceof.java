@@ -1,13 +1,13 @@
-package sec07.ex01_instanceof»ó¼Ó;
+package sec07.ex01_instanceofìƒì†;
 
 public class UseInstanceof {
-	// instanceof ¿¬»êÀÚ´Â °­Á¦ Å¸ÀÔº¯È¯½Ã ¸Å°³°ªÀÇ Å¸ÀÔÀ» È®ÀÎÇÒ ¶§ ÁÖ·Î »ç¿ëµÈ´Ù.(»ó¼Ó,ÀÎÅÍÆäÀÌ½º)
+	// instanceof ì—°ì‚°ìëŠ” ê°•ì œ íƒ€ì…ë³€í™˜ì‹œ ë§¤ê°œê°’ì˜ íƒ€ì…ì„ í™•ì¸í•  ë•Œ ì£¼ë¡œ ì‚¬ìš©ëœë‹¤.(ìƒì†,ì¸í„°í˜ì´ìŠ¤)
 	public static void method(Parent parent) {
 		if(parent instanceof Child) {
 			Child child = (Child) parent;
-			System.out.println("Child Å¸ÀÔÀ¸·Î º¯È¯ °¡´É");
+			System.out.println("Child íƒ€ì…ìœ¼ë¡œ ë³€í™˜ ê°€ëŠ¥");
 		} else {
-			System.out.println("Child Å¸ÀÔÀ¸·Î º¯È¯ ºÒ°¡´É");
+			System.out.println("Child íƒ€ì…ìœ¼ë¡œ ë³€í™˜ ë¶ˆê°€ëŠ¥");
 		}
 	}
 	public static void main(String[] args) {
