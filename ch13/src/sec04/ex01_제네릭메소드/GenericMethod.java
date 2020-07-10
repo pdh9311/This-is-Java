@@ -1,4 +1,4 @@
-package sec04.ex01_Á¦³×¸¯¸Ş¼Òµå;
+package sec04.ex01_ì œë„¤ë¦­ë©”ì†Œë“œ;
 
 public class GenericMethod<T> {
 	private T t;
@@ -11,14 +11,14 @@ public class GenericMethod<T> {
 		this.t = t;
 	}
 
-	// 	<Å¸ÀÔÆÄ¶ó¹ÌÅÍ,...> ¸®ÅÏÅ¸ÀÔ Á¦³×¸¯¸Ş¼Òµå¸í(¸Å°³Å¸ÀÔ) -1
+	// 	<íƒ€ì…íŒŒë¼ë¯¸í„°,...> ë¦¬í„´íƒ€ì… ì œë„¤ë¦­ë©”ì†Œë“œëª…(ë§¤ê°œíƒ€ì…) -1
 	public static <T> GenericMethod<T> genericMethod(T t) {
 		GenericMethod<T> genericMethod = new GenericMethod<T>();
 		genericMethod.setT(t);
 		return genericMethod;
 	}
 	
-	// 	<Å¸ÀÔÆÄ¶ó¹ÌÅÍ,...> ¸®ÅÏÅ¸ÀÔ Á¦³×¸¯¸Ş¼Òµå¸í(¸Å°³Å¸ÀÔ) -2
+	// 	<íƒ€ì…íŒŒë¼ë¯¸í„°,...> ë¦¬í„´íƒ€ì… ì œë„¤ë¦­ë©”ì†Œë“œëª…(ë§¤ê°œíƒ€ì…) -2
 	 public static <T> boolean test(T t) {
 		 if(t.getClass().getSimpleName().equals("Integer")) {
 			 return true;
@@ -27,16 +27,16 @@ public class GenericMethod<T> {
 		 }
 	 }
 	 
-	 // <Å¸ÀÔÆÄ¶ó¹ÌÅÍ,...> ¸®ÅÏÅ¸ÀÔ Á¦³×¸¯¸Ş¼Òµå¸í(¸Å°³Å¸ÀÔ) -3
+	 // <íƒ€ì…íŒŒë¼ë¯¸í„°,...> ë¦¬í„´íƒ€ì… ì œë„¤ë¦­ë©”ì†Œë“œëª…(ë§¤ê°œíƒ€ì…) -3
 	 public static <K,V> boolean compare(Pair<K,V> p1, Pair<K,V> p2) {
 		 boolean boolA = p1.getK().equals(p2.getK());
 		 boolean boolB = p1.getV().equals(p2.getV());
 		 return boolA && boolB;
 	 }
 	 
-	 // <Å¸ÀÔÆÄ¶ó¹ÌÅÍ,...> ¸®ÅÏÅ¸ÀÔ Á¦³×¸¯¸Ş¼Òµå¸í(¸Å°³Å¸ÀÔ) -4
-	 /* Å¸ÀÔ ÆÄ¸®¹ÌÅÍ¸¦ Á¦ÇÑÇÒ¶§ extends µÚ¿¡ »óÀ§ Å¬·¡½º³ª ÀÎÅÍÆäÀÌ½º¸¦ ¸í½ÃÇÒ ¼ö ÀÖ°í, 
-	  * {}¿¡¼­´Â »óÀ§ Å¸ÀÔÀÇ ÇÊµå³ª ¸Ş¼Òµå¸¸ »ç¿ë °¡´ÉÇÏ´Ù. */
+	 // <íƒ€ì…íŒŒë¼ë¯¸í„°,...> ë¦¬í„´íƒ€ì… ì œë„¤ë¦­ë©”ì†Œë“œëª…(ë§¤ê°œíƒ€ì…) -4
+	 /* íƒ€ì… íŒŒë¦¬ë¯¸í„°ë¥¼ ì œí•œí• ë•Œ extends ë’¤ì— ìƒìœ„ í´ë˜ìŠ¤ë‚˜ ì¸í„°í˜ì´ìŠ¤ë¥¼ ëª…ì‹œí•  ìˆ˜ ìˆê³ , 
+	  * {}ì—ì„œëŠ” ìƒìœ„ íƒ€ì…ì˜ í•„ë“œë‚˜ ë©”ì†Œë“œë§Œ ì‚¬ìš© ê°€ëŠ¥í•˜ë‹¤. */
 	 public static <T extends Number> int compareNum(T t1, T t2) {
 		 double d1 = t1.doubleValue();
 		 double d2 = t2.doubleValue();
@@ -44,29 +44,29 @@ public class GenericMethod<T> {
 	 }
 	
 	public static void main(String[] args) {
-		GenericMethod<Integer> genericM1 = GenericMethod.<Integer>genericMethod(100);	// Å¸ÀÔ ÆÄ¶ó¹ÌÅÍ¸¦ ¸í½ÃÀûÀ¸·Î Integer ÁöÁ¤
+		GenericMethod<Integer> genericM1 = GenericMethod.<Integer>genericMethod(100);	// íƒ€ì… íŒŒë¼ë¯¸í„°ë¥¼ ëª…ì‹œì ìœ¼ë¡œ Integer ì§€ì •
 		Integer intValue = genericM1.getT();
 		System.out.println(intValue);
 		
-		GenericMethod<String> genericM2 = GenericMethod.genericMethod("È«±æµ¿");			// Å¸ÀÔ ÆÄ¶ó¹ÌÅÍ¸¦ StringÀ¸·Î ÃßÁ¤
+		GenericMethod<String> genericM2 = GenericMethod.genericMethod("í™ê¸¸ë™");			// íƒ€ì… íŒŒë¼ë¯¸í„°ë¥¼ Stringìœ¼ë¡œ ì¶”ì •
 		String str = genericM2.getT();
 		System.out.println(str);
 		
 		System.out.println(GenericMethod.test(1122));
 		System.out.println(GenericMethod.test("test") + "\n");
 		
-		Pair<Integer,String> p1 = new Pair<>(1, "È«±æµ¿");
-		Pair<Integer,String> p2 = new Pair<>(1, "È«±æµ¿");
+		Pair<Integer,String> p1 = new Pair<>(1, "í™ê¸¸ë™");
+		Pair<Integer,String> p2 = new Pair<>(1, "í™ê¸¸ë™");
 		boolean p1p2Result = GenericMethod.compare(p1, p2);
-		System.out.println(p1p2Result ? "³í¸®ÀûÀ¸·Î µ¿µîÇÑ °´Ã¼" : "³í¸®ÀûÀ¸·Î µ¿µîÇÏÁö¾ÊÀº °´Ã¼");
+		System.out.println(p1p2Result ? "ë…¼ë¦¬ì ìœ¼ë¡œ ë™ë“±í•œ ê°ì²´" : "ë…¼ë¦¬ì ìœ¼ë¡œ ë™ë“±í•˜ì§€ì•Šì€ ê°ì²´");
 		
 		Pair<Integer,Integer> p3 = new Pair<>(1, 213);
 		Pair<Integer,Integer> p4 = new Pair<>(1, 123);
 		boolean p3p4Result = GenericMethod.compare(p3, p4);
-		System.out.println(p3p4Result ? "³í¸®ÀûÀ¸·Î µ¿µîÇÑ °´Ã¼" : "³í¸®ÀûÀ¸·Î µ¿µîÇÏÁö¾ÊÀº °´Ã¼");
+		System.out.println(p3p4Result ? "ë…¼ë¦¬ì ìœ¼ë¡œ ë™ë“±í•œ ê°ì²´" : "ë…¼ë¦¬ì ìœ¼ë¡œ ë™ë“±í•˜ì§€ì•Šì€ ê°ì²´");
 		
-		System.out.println(GenericMethod.compareNum(123, 1324));	// Integer·Î ÀÚµ¿ Boxing µÈ´Ù.
-		System.out.println(GenericMethod.compareNum(123.43, 1324)); // Double·Î ÀÚµ¿ Boxing µÈ´Ù.
+		System.out.println(GenericMethod.compareNum(123, 1324));	// Integerë¡œ ìë™ Boxing ëœë‹¤.
+		System.out.println(GenericMethod.compareNum(123.43, 1324)); // Doubleë¡œ ìë™ Boxing ëœë‹¤.
 	}
 	
 }
