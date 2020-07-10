@@ -1,11 +1,11 @@
-package sec03.ex01_ÀÍ¸í±¸Çö°´Ã¼;
+package sec03.ex01_ìµëª…êµ¬í˜„ê°ì²´;
 
 import sec02.ex01_interface.RemoteControl;
 
 public class UseRemoteControl {
 	public static void main(String[] args) {
-		// ÀÍ¸í ±¸Çö °´Ã¼
-		// ÀÍ¸í ±¸Çö °´Ã¼´Â ÄÄÆÄÀÏÈÄ Å¬·¡½ºÆÄÀÏÀÌ ¸¸µé¾îÁú¶§ "UseRemoteControl$1.class"¿Í °°ÀÌ $¿Í ¼ıÀÚ°¡ ºÙ°ÔµÈ´Ù.
+		// ìµëª… êµ¬í˜„ ê°ì²´
+		// ìµëª… êµ¬í˜„ ê°ì²´ëŠ” ì»´íŒŒì¼í›„ í´ë˜ìŠ¤íŒŒì¼ì´ ë§Œë“¤ì–´ì§ˆë•Œ "UseRemoteControl$1.class"ì™€ ê°™ì´ $ì™€ ìˆ«ìê°€ ë¶™ê²Œëœë‹¤.
 		RemoteControl rc = new RemoteControl() {
 			@Override
 			public void turnOn() { }
