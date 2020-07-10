@@ -9,22 +9,22 @@ public class WhileKeyControl {
 		while(run) {
 			if(keyCode != 13 && keyCode != 10) {
 				System.out.println("--------------------");
-				System.out.println("1.Áõ¼Ó | 2.°¨¼Ó | 3.ÁßÁö");
+				System.out.println("1.ì¦ì† | 2.ê°ì† | 3.ì¤‘ì§€");
 				System.out.println("--------------------");
-				System.out.print("¼±ÅÃ: ");
+				System.out.print("ì„ íƒ: ");
 			}
 			keyCode = System.in.read();
 			
 			if(keyCode == 49) {
 				speed++;
-				System.out.println("ÇöÀç ¼Óµµ : " + speed + "km/h");
+				System.out.println("í˜„ì¬ ì†ë„ : " + speed + "km/h");
 			} else if (keyCode == 50) { 
 				speed--;
-				System.out.println("ÇöÀç ¼Óµµ : " + speed + "km/h");
+				System.out.println("í˜„ì¬ ì†ë„ : " + speed + "km/h");
 			} else if (keyCode == 51) {
 				run = false;
 			} 
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 }
