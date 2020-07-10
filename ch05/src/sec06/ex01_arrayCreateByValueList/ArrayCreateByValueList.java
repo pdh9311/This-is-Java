@@ -3,7 +3,7 @@ package sec06.ex01_arrayCreateByValueList;
 public class ArrayCreateByValueList {
 	public static void main(String[] args) {
 		int sum = add(new int[] { 83, 90, 87 } );
-		System.out.println("ÃÑÇÕ : " + sum);
+		System.out.println("í•© : " + sum);
 	}
 	
 	public static int add(int[] scores) {
