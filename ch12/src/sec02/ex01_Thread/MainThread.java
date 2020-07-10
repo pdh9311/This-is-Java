@@ -4,12 +4,12 @@ import java.awt.Toolkit;
 
 public class MainThread {
 	public static void main(String[] args) {
-		// ÀÛ¾÷ ½º·¹µå »ı¼º ¹æ¹ı1 - Runnable ÀÍ¸í°´Ã¼
+		// ì‘ì—… ìŠ¤ë ˆë“œ ìƒì„± ë°©ë²•1 - Runnable ìµëª…ê°ì²´
 		Thread thread1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
 				for(int i=0;i<5;i++) {
-					System.out.print("¶ò1 ");
+					System.out.print("ëµ1 ");
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -20,10 +20,10 @@ public class MainThread {
 		});
 		thread1.start();
 		
-		// ÀÛ¾÷ ½º·¹µå »ı¼º ¹æ¹ı2	- ¶÷´Ù½Ä(ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½ºÀÎ RunnableÀÇ ÀÍ¸í°´Ã¼)
+		// ì‘ì—… ìŠ¤ë ˆë“œ ìƒì„± ë°©ë²•2	- ëŒë‹¤ì‹(í•¨ìˆ˜ì  ì¸í„°í˜ì´ìŠ¤ì¸ Runnableì˜ ìµëª…ê°ì²´)
 		Thread thread2 = new Thread(() -> {
 			for(int i=0;i<5;i++) {
-				System.out.print("¶ò2 ");
+				System.out.print("ëµ2 ");
 				try {
 					Thread.sleep(500);
 				} catch (InterruptedException e) {
@@ -33,17 +33,17 @@ public class MainThread {
 		});
 		thread2.start();
 		
-		// ÀÛ¾÷ ½º·¹µå »ı¼º ¹æ¹ı3 - Runnable±¸Çö Å¬·¡½º¸¦ ¾²·¹µåÀÇ ¸Å°³°ªÀ¸·Î ´ëÀÔ
+		// ì‘ì—… ìŠ¤ë ˆë“œ ìƒì„± ë°©ë²•3 - Runnableêµ¬í˜„ í´ë˜ìŠ¤ë¥¼ ì“°ë ˆë“œì˜ ë§¤ê°œê°’ìœ¼ë¡œ ëŒ€ì…
 		Runnable runnableEX = new RunnableEX();
 		Thread thread3 = new Thread(runnableEX);
 		thread3.start();
 
-		// ÀÛ¾÷ ½º·¹µå »ı¼º ¹æ¹ı4 - ThreadÀÇ ÀÍ¸í ÀÚ½Ä °´Ã¼
+		// ì‘ì—… ìŠ¤ë ˆë“œ ìƒì„± ë°©ë²•4 - Threadì˜ ìµëª… ìì‹ ê°ì²´
 		Thread thread4 = new Thread() {
 			@Override
 			public void run() {
 				for(int i=0;i<5;i++) {
-					System.out.print("¶ò4 ");
+					System.out.print("ëµ4 ");
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -56,14 +56,14 @@ public class MainThread {
 		};
 		thread4.start();
 		
-		// ÀÛ¾÷ ½º·¹µå »ı¼º ¹æ¹ı5 - ThreadÀÇ ÇÏÀ§Å¬·¡½º(ThreadÀÇ ÀÚ½Ä °´Ã¼)
+		// ì‘ì—… ìŠ¤ë ˆë“œ ìƒì„± ë°©ë²•5 - Threadì˜ í•˜ìœ„í´ë˜ìŠ¤(Threadì˜ ìì‹ ê°ì²´)
 		Thread thread5 = new ThreadEX();
 		thread5.start();
 		
 		ThreadEX thread6 = new ThreadEX();
 		thread6.start();
 		
-		// Main ½º·¹µå
+		// Main ìŠ¤ë ˆë“œ
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		for(int i=0;i<5;i++) {
 			toolkit.beep();
@@ -74,11 +74,11 @@ public class MainThread {
 			}
 		}
 		
-		/* setName()°ú getName()Àº ThreadÀÇ ÀÎ½ºÅÏ½º ¸Ş¼Òµå·Î½á ¾²·¹µåÀÇ ÀÌ¸§À» ÁöÁ¤ÇÏ°í ºÒ·¯¿Ã ¼ö ÀÖ´Ù.
-		 * µû¶ó¼­ RunnableÀ» ±¸ÇöÇÑ Å¬·¡½º¿¡¼­´Â setName()°ú getName()À» »ç¿ëÇÒ ¼ö ¾ø´Ù.
-		 * ÀÍ¸í°´Ã¼´Â »ı¼ºÀÚ¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù.
-		 * ¶÷´Ù½ÄÀ¸·Î ÀÛ¼ºÇÒ °æ¿ì ÇÔ¼öÀûÀÎ Æ¯¼ºÀ» ÀÌ¿ëÇØ thread¸¦ ½ÇÇàÇÏ±â¶§¹®¿¡ ¶÷´Ù½ÄÀ» ½ÇÇàÇÒ ÄÚµå¿¡ setName(), getName()À» »ç¿ëÇÒ ¼ö ¾ø´Ù.  */
-		Thread mainThread = Thread.currentThread();		// ÀÌ ÄÚµå¸¦ ½ÇÇàÇÏ´Â Thread°´Ã¼¸¦ ¾òÀ½.
+		/* setName()ê³¼ getName()ì€ Threadì˜ ì¸ìŠ¤í„´ìŠ¤ ë©”ì†Œë“œë¡œì¨ ì“°ë ˆë“œì˜ ì´ë¦„ì„ ì§€ì •í•˜ê³  ë¶ˆëŸ¬ì˜¬ ìˆ˜ ìˆë‹¤.
+		 * ë”°ë¼ì„œ Runnableì„ êµ¬í˜„í•œ í´ë˜ìŠ¤ì—ì„œëŠ” setName()ê³¼ getName()ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+		 * ìµëª…ê°ì²´ëŠ” ìƒì„±ìë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+		 * ëŒë‹¤ì‹ìœ¼ë¡œ ì‘ì„±í•  ê²½ìš° í•¨ìˆ˜ì ì¸ íŠ¹ì„±ì„ ì´ìš©í•´ threadë¥¼ ì‹¤í–‰í•˜ê¸°ë•Œë¬¸ì— ëŒë‹¤ì‹ì„ ì‹¤í–‰í•  ì½”ë“œì— setName(), getName()ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.  */
+		Thread mainThread = Thread.currentThread();		// ì´ ì½”ë“œë¥¼ ì‹¤í–‰í•˜ëŠ” Threadê°ì²´ë¥¼ ì–»ìŒ.
 		mainThread.setName("MainThread");
 		String mainThreadName = mainThread.getName(); 
 		thread1.setName("Thread1");
