@@ -5,9 +5,9 @@ public class UseSingleton {
 		Singleton obj1 = Singleton.getInstance();
 		Singleton obj2 = Singleton.getInstance();
 		if(obj1 == obj2) {
-			System.out.println("°°Àº °´Ã¼ ÀÔ´Ï´Ù.");
+			System.out.println("ê°™ì€ ê°ì²´ ì…ë‹ˆë‹¤.");
 		} else {
-			System.out.println("´Ù¸¥ °´Ã¼ ÀÔ´Ï´Ù.");
+			System.out.println("ë‹¤ë¥¸ ê°ì²´ ì…ë‹ˆë‹¤.");
 		}
 	}
 }
