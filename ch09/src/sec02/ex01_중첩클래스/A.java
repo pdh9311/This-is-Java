@@ -1,17 +1,17 @@
-package sec02.ex01_ÁßÃ¸Å¬·¡½º;
+package sec02.ex01_ì¤‘ì²©í´ë˜ìŠ¤;
 
-// ¹Ù±ù Å¬·¡½º
+// ë°”ê¹¥ í´ë˜ìŠ¤
 public class A {
-	A() {System.out.println("A °´Ã¼ »ı¼º");}
-	// ÀÎ½ºÅÏ½º ¸â¹ö Å¬·¡½º
+	A() {System.out.println("A ê°ì²´ ìƒì„±");}
+	// ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ í´ë˜ìŠ¤
 	class B { 
-		B() {System.out.println("B °´Ã¼ »ı¼º");}
+		B() {System.out.println("B ê°ì²´ ìƒì„±");}
 		int field1;
 		void method1() {}
 	}
-	// Á¤Àû ¸â¹ö Å¬·¡½º
+	// ì •ì  ë©¤ë²„ í´ë˜ìŠ¤
 	static class C { 
-		C() {System.out.println("C °´Ã¼ »ı¼º");}
+		C() {System.out.println("C ê°ì²´ ìƒì„±");}
 		int field1;
 		static int field2;
 		void method1() {}
@@ -19,24 +19,24 @@ public class A {
 	}
 	
 	void method() {
-		// ·ÎÄÃ Å¬·¡½º ¡æ ÁÖ·Î ºñµ¿±â Ã³¸®¸¦ À§ÇØ ½º·¹µå °´Ã¼¸¦ ¸¸µé¶§ »ç¿ë
+		// ë¡œì»¬ í´ë˜ìŠ¤ â†’ ì£¼ë¡œ ë¹„ë™ê¸° ì²˜ë¦¬ë¥¼ ìœ„í•´ ìŠ¤ë ˆë“œ ê°ì²´ë¥¼ ë§Œë“¤ë•Œ ì‚¬ìš©
 		class D extends Thread {
-			D() {System.out.println("D °´Ã¼ »ı¼º");}
+			D() {System.out.println("D ê°ì²´ ìƒì„±");}
 			int field1;
 			void method1() {}
 			
 			@Override
 			public void run() {
 				for(int i=0; i<10; i++) {
-					System.out.print("D ½º·¹µå ½ÃÀÛ |");
+					System.out.print("D ìŠ¤ë ˆë“œ ì‹œì‘ |");
 				}
 			}
 		}
 		D d = new D();
 		d.field1 = 3;
 		d.method1();
-		d.start();	// ½º·¹µå °´Ã¼´Â ¸Ş¼Òµå°¡ ³¡³ª´õ¶óµµ Èü ¸Ş¸ğ¸®¿¡ Á¸ÀçÇÒ ¼ö ÀÖ°í °è¼Ó ½ÇÇà¹®À» ½ÇÇà½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.
-		System.out.println("method() ³¡!");
+		d.start();	// ìŠ¤ë ˆë“œ ê°ì²´ëŠ” ë©”ì†Œë“œê°€ ëë‚˜ë”ë¼ë„ í™ ë©”ëª¨ë¦¬ì— ì¡´ì¬í•  ìˆ˜ ìˆê³  ê³„ì† ì‹¤í–‰ë¬¸ì„ ì‹¤í–‰ì‹œí‚¬ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+		System.out.println("method() ë!");
 	}
 
 }
