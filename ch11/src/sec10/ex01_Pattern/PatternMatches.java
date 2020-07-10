@@ -7,13 +7,13 @@ public class PatternMatches {
 		String regExp = "(010|02)-\\d{3,4}-\\d{4}";
 		String phone = "010-6381-0086";
 		boolean result = Pattern.matches(regExp, phone);
-		String str = result ? "Á¤±Ô½Ä°ú ÀÏÄ¡" : "Á¤±Ô½Ä°ú ºÒÀÏÄ¡"	;
+		String str = result ? "ì •ê·œì‹ê³¼ ì¼ì¹˜" : "ì •ê·œì‹ê³¼ ë¶ˆì¼ì¹˜"	;
 		System.out.println(str);
 		
 		regExp = "\\w+@\\w+\\.\\w+(\\.\\w+)?";
 		String email = "pdh6381@naver.com";
 		result = Pattern.matches(regExp, email);
-		str = result ? "Á¤±Ô½Ä°ú ÀÏÄ¡" : "Á¤±Ô½Ä°ú ºÒÀÏÄ¡";
+		str = result ? "ì •ê·œì‹ê³¼ ì¼ì¹˜" : "ì •ê·œì‹ê³¼ ë¶ˆì¼ì¹˜";
 		System.out.println(str);
 	}
 }
