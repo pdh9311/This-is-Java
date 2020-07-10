@@ -1,4 +1,4 @@
-package sec08.ex01_º´·ÄÃ³¸®ÄÃ·º¼Ç;
+package sec08.ex01_ë³‘ë ¬ì²˜ë¦¬ì»¬ë ‰ì…˜;
 
 import java.util.Map;
 import java.util.Queue;
@@ -7,11 +7,11 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ConcurrentXXX {
 	public static void main(String[] args) {
-		/* µ¿±âÈ­ ÄÃ·º¼ÇÀº ¸ÖÆ¼ ½º·¹µå È¯°æ¿¡¼­ ÇÏ³ªÀÇ ½º·¹µå°¡ ¿ä¼Ò¸¦ ¾ÈÀüÇÏ°Ô Ã³¸®ÇÏµµ·Ï µµ¿ÍÁÖÁö¸¸, ÀüÃ¼ ¿ä¼Ò¸¦ ºü¸£°Ô Ã³¸®ÇÏÁö´Â ¸øÇÑ´Ù.
-		 * ÇÏ³ªÀÇ ½º·¹µå°¡ ¿ä¼Ò¸¦ Ã³¸®ÇÒ ¶§ ÀüÃ¼ Àá±ÝÀÌ ¹ß»ýÇÏ¿© ´Ù¸¥ ½º·¹µå´Â ´ë±â »óÅÂ°¡ µÇ±â ¶§¹®¿¡ ¸ÖÆ¼ ½º·¹µå°¡ º´·ÄÀûÀ¸·Î ÄÃ·º¼ÇÀÇ ¿ä¼Ò¸¦ Ã³¸®ÇÒ ¼ö ¾ø´Ù.
-		 * ConcurrentHashMap Å¬·¡½º¸¦ »ç¿ëÇÏ¸é ºÎºÐÀá±ÝÀ» »ç¿ëÇÏ±â ¶§¹®¿¡ ½º·¹µå¿¡ ¾ÈÀüÇÏ´Ù.
-		 * ConcurrentLinkedQueue Å¬·¡½º´Â ¶ô-ÇÁ¸® ¾Ë°í¸®ÁòÀ» ±¸ÇöÇÑ Å¬·¡½º·Î¼­ ¿©·¯°³ÀÇ ½º·¹µå°¡ µ¿½Ã¿¡ Á¢±ÙÇÒ °æ¿ì,
-		 * Àá±ÝÀ» »ç¿ëÇÏÁö ¾Ê°íµµ ÃÖ¼ÒÇÑ ÇÏ³ªÀÇ ½º·¹µå°¡ ¾ÈÀüÇÏ°Ô ¿ä¼Ò¸¦ ÀúÀåÇÏ°Å³ª ¾òµµ·Ï ÇØÁØ´Ù. */
+		/* ë™ê¸°í™” ì»¬ë ‰ì…˜ì€ ë©€í‹° ìŠ¤ë ˆë“œ í™˜ê²½ì—ì„œ í•˜ë‚˜ì˜ ìŠ¤ë ˆë“œê°€ ìš”ì†Œë¥¼ ì•ˆì „í•˜ê²Œ ì²˜ë¦¬í•˜ë„ë¡ ë„ì™€ì£¼ì§€ë§Œ, ì „ì²´ ìš”ì†Œë¥¼ ë¹ ë¥´ê²Œ ì²˜ë¦¬í•˜ì§€ëŠ” ëª»í•œë‹¤.
+		 * í•˜ë‚˜ì˜ ìŠ¤ë ˆë“œê°€ ìš”ì†Œë¥¼ ì²˜ë¦¬í•  ë•Œ ì „ì²´ ìž ê¸ˆì´ ë°œìƒí•˜ì—¬ ë‹¤ë¥¸ ìŠ¤ë ˆë“œëŠ” ëŒ€ê¸° ìƒíƒœê°€ ë˜ê¸° ë•Œë¬¸ì— ë©€í‹° ìŠ¤ë ˆë“œê°€ ë³‘ë ¬ì ìœ¼ë¡œ ì»¬ë ‰ì…˜ì˜ ìš”ì†Œë¥¼ ì²˜ë¦¬í•  ìˆ˜ ì—†ë‹¤.
+		 * ConcurrentHashMap í´ëž˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ë©´ ë¶€ë¶„ìž ê¸ˆì„ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì— ìŠ¤ë ˆë“œì— ì•ˆì „í•˜ë‹¤.
+		 * ConcurrentLinkedQueue í´ëž˜ìŠ¤ëŠ” ë½-í”„ë¦¬ ì•Œê³ ë¦¬ì¦˜ì„ êµ¬í˜„í•œ í´ëž˜ìŠ¤ë¡œì„œ ì—¬ëŸ¬ê°œì˜ ìŠ¤ë ˆë“œê°€ ë™ì‹œì— ì ‘ê·¼í•  ê²½ìš°,
+		 * ìž ê¸ˆì„ ì‚¬ìš©í•˜ì§€ ì•Šê³ ë„ ìµœì†Œí•œ í•˜ë‚˜ì˜ ìŠ¤ë ˆë“œê°€ ì•ˆì „í•˜ê²Œ ìš”ì†Œë¥¼ ì €ìž¥í•˜ê±°ë‚˜ ì–»ë„ë¡ í•´ì¤€ë‹¤. */
 
 		Map<Object,Object> map = new ConcurrentHashMap<Object,Object>();
 		
