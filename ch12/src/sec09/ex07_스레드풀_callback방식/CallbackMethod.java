@@ -1,4 +1,4 @@
-package sec09.ex07_½º·¹µåÇ®_callback¹æ½Ä;
+package sec09.ex07_ìŠ¤ë ˆë“œí’€_callbackë°©ì‹;
 
 import java.nio.channels.CompletionHandler;
 import java.util.concurrent.ExecutorService;
@@ -36,7 +36,7 @@ public class CallbackMethod {
 			@Override
 			public void run() {
 				try {
-					int result  = Integer.parseInt("»ï");
+					int result  = Integer.parseInt("ì‚¼");
 					callback.completed(result, null);
 				} catch (NumberFormatException e) {
 					callback.failed(e, null);

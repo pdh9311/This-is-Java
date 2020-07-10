@@ -1,4 +1,4 @@
-package sec09.ex07_½º·¹µåÇ®_callback¹æ½Ä;
+package sec09.ex07_ìŠ¤ë ˆë“œí’€_callbackë°©ì‹;
 
 import java.nio.channels.CompletionHandler;
 import java.util.concurrent.ExecutorService;
@@ -9,12 +9,12 @@ public class CallbackEX {
 	private CompletionHandler<Integer, Void> completionHandler = new CompletionHandler<Integer, Void>() {
 		@Override
 		public void completed(Integer result, Void attachment) {
-			System.out.println("CompeltinoHandler ¡æ completed: " + result);
+			System.out.println("CompeltinoHandler â†’ completed: " + result);
 		}
 
 		@Override
 		public void failed(Throwable exc, Void attachment) {
-			System.out.println("completionHandler ¡æ failed: " + exc.toString());
+			System.out.println("completionHandler â†’ failed: " + exc.toString());
 		}
 	};
 	
@@ -45,7 +45,7 @@ public class CallbackEX {
 	public static void main(String[] args) {
 		CallbackEX callback = new CallbackEX();
 		callback.doWork("3");
-		callback.doWork("»ï");
+		callback.doWork("ì‚¼");
 		callback.finish();
 	}
 	
