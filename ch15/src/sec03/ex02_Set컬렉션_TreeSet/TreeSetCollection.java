@@ -1,4 +1,4 @@
-package sec03.ex02_SetÄÃ·º¼Ç_TreeSet;
+package sec03.ex02_Setì»¬ë ‰ì…˜_TreeSet;
 
 import java.util.Iterator;
 import java.util.NavigableSet;
@@ -6,54 +6,54 @@ import java.util.TreeSet;
 
 public class TreeSetCollection {
 	public static void main(String[] args) {
-		/* TreeSet°´Ã¼¸¦ SetÀÎÅÍÆäÀÌ½ºÅ¸ÀÔÀ¸·Î ÇÒ ¼ö ÀÖÁö¸¸ TreeSetÀÇ ¸Ş¼Òµå¸¦ »ç¿ëÇÏ±â À§ÇØ TreeSetÅ¸ÀÔÀ¸·Î ÇØÁÖ¾ú´Ù.
-		 * TreeSet¿¡ °´Ã¼¸¦ ÀúÀåÇÏ¸é ÀÚµ¿À¸·Î ¿À¸§Â÷¼ø Á¤·ÄµÈ´Ù. */
+		/* TreeSetê°ì²´ë¥¼ Setì¸í„°í˜ì´ìŠ¤íƒ€ì…ìœ¼ë¡œ í•  ìˆ˜ ìˆì§€ë§Œ TreeSetì˜ ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ TreeSetíƒ€ì…ìœ¼ë¡œ í•´ì£¼ì—ˆë‹¤.
+		 * TreeSetì— ê°ì²´ë¥¼ ì €ì¥í•˜ë©´ ìë™ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ëœë‹¤. */
 		TreeSet<Integer> treeSet = new TreeSet<Integer>();
 		for(int i=0; i<100; i=i+4) {
 			treeSet.add(i);
 		}
 		
-		System.out.println("°¡Àå ³·Àº °´Ã¼: " + treeSet.first());
-		System.out.println("°¡Àå ³ôÀº °´Ã¼: " + treeSet.last());
-		System.out.println("º¸´Ù ³·Àº °´Ã¼: " + treeSet.lower(20));
-		System.out.println("º¸´Ù ³ôÀº °´Ã¼: " + treeSet.higher(44));
-		System.out.println("ÁÖ¾îÁø °´Ã¼°¡ ¾øÀ»°æ¿ì º¸´Ù ³·Àº °´Ã¼: " + treeSet.floor(20));
-		System.out.println("ÁÖ¾îÁø °´Ã¼°¡ ¾øÀ»°æ¿ì º¸´Ù ³ôÀº °´Ã¼: " + treeSet.ceiling(44));
-		System.out.println("°¡Àå ³·Àº °´Ã¼¸¦ ²¨³»°í ÄÃ·º¼Ç¿¡¼­ Á¦°Å: " + treeSet.pollFirst());
-		System.out.println("°¡Àå ³ôÀº °´Ã¼¸¦ ²¨³»°í ÄÃ·º¼Ç¿¡¼­ Á¦°Å: " + treeSet.pollLast());
+		System.out.println("ê°€ì¥ ë‚®ì€ ê°ì²´: " + treeSet.first());
+		System.out.println("ê°€ì¥ ë†’ì€ ê°ì²´: " + treeSet.last());
+		System.out.println("ë³´ë‹¤ ë‚®ì€ ê°ì²´: " + treeSet.lower(20));
+		System.out.println("ë³´ë‹¤ ë†’ì€ ê°ì²´: " + treeSet.higher(44));
+		System.out.println("ì£¼ì–´ì§„ ê°ì²´ê°€ ì—†ì„ê²½ìš° ë³´ë‹¤ ë‚®ì€ ê°ì²´: " + treeSet.floor(20));
+		System.out.println("ì£¼ì–´ì§„ ê°ì²´ê°€ ì—†ì„ê²½ìš° ë³´ë‹¤ ë†’ì€ ê°ì²´: " + treeSet.ceiling(44));
+		System.out.println("ê°€ì¥ ë‚®ì€ ê°ì²´ë¥¼ êº¼ë‚´ê³  ì»¬ë ‰ì…˜ì—ì„œ ì œê±°: " + treeSet.pollFirst());
+		System.out.println("ê°€ì¥ ë†’ì€ ê°ì²´ë¥¼ êº¼ë‚´ê³  ì»¬ë ‰ì…˜ì—ì„œ ì œê±°: " + treeSet.pollLast());
 		
-		System.out.print("[³»¸²Â÷¼øÀ¸·Î Á¤·Ä] ");
-		Iterator<Integer> iterator = treeSet.descendingIterator(); 	// ³»¸²Â÷¼øÀ¸·Î Á¤·ÄµÈ Iterator¸¦ ¸®ÅÏ
+		System.out.print("[ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
+		Iterator<Integer> iterator = treeSet.descendingIterator(); 	// ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ëœ Iteratorë¥¼ ë¦¬í„´
 		while(iterator.hasNext()) {
 			int value  = iterator.next();
 			System.out.print(value + " | ");
 		}
 		
-		System.out.print("\n[³»¸²Â÷¼øÀ¸·Î Á¤·Ä] ");
+		System.out.print("\n[ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
 		NavigableSet<Integer> navigable = treeSet.descendingSet();
 		for(int value : navigable) {
 			System.out.print(value + " | ");
 		}
 
-		System.out.print("\n[¿À¸§Â÷¼øÀ¸·Î Á¤·Ä] ");
-		navigable = treeSet.descendingSet().descendingSet();	// descendingSet()¸Ş¼Òµå¸¦ µÎ ¹ø Àû¿ëÇÏ¸é ¿À¸§Â÷¼øÀÌ µÈ´Ù.
+		System.out.print("\n[ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
+		navigable = treeSet.descendingSet().descendingSet();	// descendingSet()ë©”ì†Œë“œë¥¼ ë‘ ë²ˆ ì ìš©í•˜ë©´ ì˜¤ë¦„ì°¨ìˆœì´ ëœë‹¤.
 		for(int value : navigable) {
 			System.out.print(value + " | ");
 		}
 		
-		System.out.print("\n[ÁÖ¾îÁø °´Ã¼ º¸´Ù ³·°Å³ª °°Àº °´Ã¼µé] ");
+		System.out.print("\n[ì£¼ì–´ì§„ ê°ì²´ ë³´ë‹¤ ë‚®ê±°ë‚˜ ê°™ì€ ê°ì²´ë“¤] ");
 		NavigableSet<Integer> headSet = navigable.headSet(88, true);	
 		for(int value : headSet) {
 			System.out.print(value + " | ");
 		}
 		
-		System.out.print("\n[ÁÖ¾îÁø °´Ã¼ º¸´Ù ³ôÀº °´Ã¼µé] ");
+		System.out.print("\n[ì£¼ì–´ì§„ ê°ì²´ ë³´ë‹¤ ë†’ì€ ê°ì²´ë“¤] ");
 		NavigableSet<Integer> tailSet = navigable.tailSet(60, false);
 		for(int value : tailSet) {
 			System.out.print(value + " | ");
 		}
 		
-		System.out.print("\n[½ÃÀÛ°ú ³¡À¸·Î ÁÖ¾îÁø °´Ã¼ »çÀÌÀÇ °´Ã¼µé] ");
+		System.out.print("\n[ì‹œì‘ê³¼ ëìœ¼ë¡œ ì£¼ì–´ì§„ ê°ì²´ ì‚¬ì´ì˜ ê°ì²´ë“¤] ");
 		NavigableSet<Integer> subSet = navigable.subSet(5,false,60, true);
 		for(int value : subSet) {
 			System.out.print(value + " | ");
