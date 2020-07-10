@@ -9,24 +9,24 @@ import sec06.ex01_getClass_forName.Car;
 public class Reflection {
 	public static void main(String[] args) {
 		try {
-			//Å¬·¡½º °´Ã¼ »ı¼º
+			//í´ë˜ìŠ¤ ê°ì²´ ìƒì„±
 			Class clazz = Class.forName("sec06.ex01_getClass_forName.Car");
-			//Å¬·¢½ºÀÇ ÀÎ½ºÅÏ½º »ı¼º (new ¿¬»êÀÚ¸¦ »ç¿ëÇÏÁö ¾Ê°í µ¿ÀûÀ¸·Î °´Ã¼ »ı¼º)
+			//í´ë™ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± (new ì—°ì‚°ìë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³  ë™ì ìœ¼ë¡œ ê°ì²´ ìƒì„±)
 			Car carobj = (Car)clazz.newInstance();
-			carobj.carName = "¶÷º¸¸£±â´Ï";
+			carobj.carName = "ëŒë³´ë¥´ê¸°ë‹ˆ";
 			System.out.println(carobj.carName + "\n");
 			
-			System.out.println("[Å¬·¡½º ÀÌ¸§]");
+			System.out.println("[í´ë˜ìŠ¤ ì´ë¦„]");
 			System.out.println(clazz.getName()+ "\n");
 			
-			System.out.println("[ÇÊµå Á¤º¸]");
+			System.out.println("[í•„ë“œ ì •ë³´]");
 			Field[] fields = clazz.getDeclaredFields();
 			for(Field field : fields) {
 				System.out.print(field.getType().getSimpleName() + " ");
 				System.out.println(field.getName());
 			}
 			
-			System.out.println("\n[»ı¼ºÀÚ Á¤º¸]");
+			System.out.println("\n[ìƒì„±ì ì •ë³´]");
 			Constructor[] constructors = clazz.getDeclaredConstructors();
 			for(Constructor constructor : constructors) {
 				System.out.print(constructor.getName() + "(");
@@ -35,7 +35,7 @@ public class Reflection {
 				System.out.println(")");
 			}
 			
-			System.out.println("\n[¸Ş¼Òµå Á¤º¸]");
+			System.out.println("\n[ë©”ì†Œë“œ ì •ë³´]");
 			Method[] methods = clazz.getDeclaredMethods();
 			for(Method method : methods) {
 				System.out.print(method.getName() + "(");
@@ -48,7 +48,7 @@ public class Reflection {
 			e.printStackTrace();
 		}
 	}
-	// ¸Å°³º¯¼ö Á¤º¸ 
+	// ë§¤ê°œë³€ìˆ˜ ì •ë³´ 
 	private static void printParameters(Class[] parameters) {
 		for(int i=0; i<parameters.length; i++) {
 			System.out.print(parameters[i].getName());
