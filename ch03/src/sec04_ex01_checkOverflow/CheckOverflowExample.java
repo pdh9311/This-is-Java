@@ -6,18 +6,18 @@ public class CheckOverflowExample {
 			int result = safeAdd(2000000000,2000000000);
 			System.out.println(result);
 		} catch (ArithmeticException e) {
-			System.out.println("¿À¹öÇÃ·Î¿ì°¡ ¹ß»ıÇÏ¿© Á¤È®ÇÏ°Ô °è»ê ÇÒ ¼ö ¾øÀ½");
+			System.out.println("ì˜¤ë²„í”Œë¡œìš°ê°€ ë°œìƒí•˜ì—¬ ì •í™•í•˜ê²Œ ê³„ì‚° í•  ìˆ˜ ì—†ìŒ");
 		}
 	}
 	
 	public static int safeAdd(int left,int right) {
 		if(right>0) {
 			if(left > (Integer.MAX_VALUE-right)) {
-				throw new ArithmeticException("¿À¹öÇÃ·Î¿ì ¹ß»ı");
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš° ë°œìƒ");
 			}
 		} else {
 			if(left< (Integer.MIN_VALUE-right)) {
-				throw new ArithmeticException("¿À¹öÇÃ·Î¿ì ¹ß»ı");
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš° ë°œìƒ");
 			}
 		}
 		return left + right;
