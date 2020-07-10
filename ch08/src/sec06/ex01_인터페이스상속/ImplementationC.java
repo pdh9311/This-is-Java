@@ -1,20 +1,20 @@
-package sec06.ex01_ÀÎÅÍÆäÀÌ½º»ó¼Ó;
+package sec06.ex01_ì¸í„°í˜ì´ìŠ¤ìƒì†;
 
 public class ImplementationC implements InterfaceC {
 
 	@Override
 	public void methodA() {
-		System.out.println("interfaceAÀÇ methodA");
+		System.out.println("interfaceAì˜ methodA");
 	}
 
 	@Override
 	public void methodB() {
-		System.out.println("interfaceBÀÇ methodB");
+		System.out.println("interfaceBì˜ methodB");
 	}
 
 	@Override
 	public void methodC() {
-		System.out.println("interfaceCÀÇ methodC");
+		System.out.println("interfaceCì˜ methodC");
 	}
 	
 }

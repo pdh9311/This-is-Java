@@ -1,4 +1,4 @@
-package sec06.ex01_ÀÎÅÍÆäÀÌ½º»ó¼Ó;
+package sec06.ex01_ì¸í„°í˜ì´ìŠ¤ìƒì†;
 
 public interface InterfaceB extends InterfaceA {
 	void methodB();
