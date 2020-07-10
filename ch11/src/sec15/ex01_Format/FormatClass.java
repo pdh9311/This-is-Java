@@ -7,28 +7,28 @@ import java.util.Date;
 
 public class FormatClass {
 	public static void main(String[] args) {
-		// ¼ıÀÚ Çü½Ä Å¬·¡½º DecimalForamt
+		// ìˆ«ì í˜•ì‹ í´ë˜ìŠ¤ DecimalForamt
 		DecimalFormat df = new DecimalFormat("+#,##0.0;-#,##0.0");
 		String result = df.format(1123234.23123);
 		System.out.println(result);
 		result = df.format(-12312.123123);
 		System.out.println(result);
 		
-		// ³¯Â¥ Çü½Ä Å¬·¡½º SimpleDateFormat
+		// ë‚ ì§œ í˜•ì‹ í´ë˜ìŠ¤ SimpleDateFormat
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd(E) HH:mm:ss");
 		String now = sdf.format(new Date());
 		System.out.println(now);
 		
-		// ¸Å°³º¯¼öÈ­µÈ ¹®ÀÚ¿­ Çü½Ä Å¬·¢½º MessageFormat
+		// ë§¤ê°œë³€ìˆ˜í™”ëœ ë¬¸ìì—´ í˜•ì‹ í´ë™ìŠ¤ MessageFormat
 		String id = "java";
-		String name = "È«±æµ¿";
+		String name = "í™ê¸¸ë™";
 		String tel = "010-1234-1234";
-		String text = "È¸¿øID: {0} \nÈ¸¿øÀÌ¸§:{1} \nÀüÈ­¹øÈ£:{2}";
+		String text = "íšŒì›ID: {0} \níšŒì›ì´ë¦„:{1} \nì „í™”ë²ˆí˜¸:{2}";
 		String textComplete = MessageFormat.format(text,id,name,tel);
 		System.out.println(textComplete);
 		
 		String sql = "insert into member values({0},{1},{2})";
-		Object[] arguments = {"'java'","'È«±æµ¿'","'010-1234-1234'"};
+		Object[] arguments = {"'java'","'í™ê¸¸ë™'","'010-1234-1234'"};
 		String sqlComplete = MessageFormat.format(sql, arguments);
 		System.out.println(sqlComplete);
 	}
