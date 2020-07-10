@@ -2,7 +2,7 @@ package sec03.ex02_labelBreak;
 
 public class BreakOutter {
 	public static void main(String[] args) {
-		System.out.println("g°¡ º¸ÀÌ¸é ÇÁ·Î±×·¥ÀÌ Á¾·á µË´Ï´Ù.");
+		System.out.println("gê°€ ë³´ì´ë©´ í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œ ë©ë‹ˆë‹¤.");
 		Outter: for(char upper='A' ; upper <= 'Z' ; upper++) {
 			for(char lower='a';lower<='z';lower++) {
 				System.out.println(upper + "-" + lower);
@@ -11,6 +11,6 @@ public class BreakOutter {
 				}
 			}
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 }
