@@ -1,4 +1,4 @@
-package sec09.ex02_OptionalXXXÅ¬·¡½º;
+package sec09.ex02_OptionalXXXí´ë˜ìŠ¤;
 
 import java.util.Arrays;
 import java.util.OptionalDouble;
@@ -6,29 +6,29 @@ import java.util.stream.IntStream;
 
 public class OptionalXXX {
 	public static void main(String[] args) {
-		/* ±âº»Áı°è ¸Ş¼Òµå¸¦ »ç¿ëÇÒ¶§ Stream¿¡ ¿ä¼Ò°¡ ¾øÀ¸¸é NoSuchElementExceptionÀÌ ¹ß»ıÇÑ´Ù.
-		 * ÀÌ¸¦ ¿¹¹æÇÏ±â À§ÇØ Áı°è°ªÀÌ Á¸ÀçÇÏ´ÂÁö È®ÀÎ, Á¸ÀçÇÏÁö ¾ÊÀ»°æ¿ì µğÆúÆ®°ªÀ» ¼³Á¤, Áı°è°ªÀÌ Á¸ÀçÇÒ¶§¸¸ Ã³¸®ÇÏ´Â Consumer µî·ÏÀÇ ¼¼ °¡Áö ¹æ¹ıÀ» ¿¹¹æÇÒ ¼ö ÀÖ´Ù. */
+		/* ê¸°ë³¸ì§‘ê³„ ë©”ì†Œë“œë¥¼ ì‚¬ìš©í• ë•Œ Streamì— ìš”ì†Œê°€ ì—†ìœ¼ë©´ NoSuchElementExceptionì´ ë°œìƒí•œë‹¤.
+		 * ì´ë¥¼ ì˜ˆë°©í•˜ê¸° ìœ„í•´ ì§‘ê³„ê°’ì´ ì¡´ì¬í•˜ëŠ”ì§€ í™•ì¸, ì¡´ì¬í•˜ì§€ ì•Šì„ê²½ìš° ë””í´íŠ¸ê°’ì„ ì„¤ì •, ì§‘ê³„ê°’ì´ ì¡´ì¬í• ë•Œë§Œ ì²˜ë¦¬í•˜ëŠ” Consumer ë“±ë¡ì˜ ì„¸ ê°€ì§€ ë°©ë²•ì„ ì˜ˆë°©í•  ìˆ˜ ìˆë‹¤. */
 		
-		// isPresent()¸Ş¼Òµå´Â Áı°è°ªÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ°í Boolean°ªÀ» ¸®ÅÏÇÑ´Ù.
+		// isPresent()ë©”ì†Œë“œëŠ” ì§‘ê³„ê°’ì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê³  Booleanê°’ì„ ë¦¬í„´í•œë‹¤.
 		IntStream intStream1 = Arrays.stream(new int[] {});
 		OptionalDouble optionalDouble1 = intStream1.average();
 		if(optionalDouble1.isPresent()) {
-			System.out.println("Æò±Õ: " + optionalDouble1.getAsDouble());
+			System.out.println("í‰ê· : " + optionalDouble1.getAsDouble());
 		}else { 
-			System.out.println("Æò±Õ: 0.0");
+			System.out.println("í‰ê· : 0.0");
 		}
 
-		// orElse()¸Ş¼Òµå´Â Áı°è°ªÀÌ ¾øÀ¸¸é µğÆúÆ®°ªÀ» ¸Å°³°ªÀ¸·Î ¼³Á¤ÇÑ´Ù.
+		// orElse()ë©”ì†Œë“œëŠ” ì§‘ê³„ê°’ì´ ì—†ìœ¼ë©´ ë””í´íŠ¸ê°’ì„ ë§¤ê°œê°’ìœ¼ë¡œ ì„¤ì •í•œë‹¤.
 		IntStream intStream2 = Arrays.stream(new int[] {});
 		OptionalDouble optionalDouble2 = intStream2.average();
 		double avg = optionalDouble2.orElse(0.0);
-		System.out.println("Æò±Õ: " + avg);
+		System.out.println("í‰ê· : " + avg);
 		
-		// ifPresent()¸Ş¼Òµå´Â Áı°è°ªÀÌ ÀÖÀ¸¸é ¸Å°³°ªÀ¸·Î ÇÔ¼öÇü ÀÎÅÍÆäÀÌ½º Consumer¸¦ Ã³¸®ÇÑ´Ù.
+		// ifPresent()ë©”ì†Œë“œëŠ” ì§‘ê³„ê°’ì´ ìˆìœ¼ë©´ ë§¤ê°œê°’ìœ¼ë¡œ í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ Consumerë¥¼ ì²˜ë¦¬í•œë‹¤.
 		IntStream intStream3 = Arrays.stream(new int[] {});
 //		IntStream intStream3 = Arrays.stream(new int[] {1,2,2,34,5,2});
 		intStream3
 		.average()
-		.ifPresent(a -> System.out.println("Æò±Õ: " + a));
+		.ifPresent(a -> System.out.println("í‰ê· : " + a));
 	}
 }
