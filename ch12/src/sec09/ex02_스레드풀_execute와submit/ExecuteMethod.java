@@ -1,4 +1,4 @@
-package sec09.ex02_½º·¹µåÇ®_execute¿Ísubmit;
+package sec09.ex02_ìŠ¤ë ˆë“œí’€_executeì™€submit;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,16 +14,16 @@ public class ExecuteMethod {
 				public void run() {
 					ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) executorService;
 					
-					System.out.println("[ÃÑ ½º·¹µå °³¼ö : " + threadPoolExecutor.getPoolSize() + "] " + 
-										"ÀÛ¾÷ ½º·¹µå ÀÌ¸§ : " + Thread.currentThread().getName() );
+					System.out.println("[ì´ ìŠ¤ë ˆë“œ ê°œìˆ˜ : " + threadPoolExecutor.getPoolSize() + "] " + 
+										"ì‘ì—… ìŠ¤ë ˆë“œ ì´ë¦„ : " + Thread.currentThread().getName() );
 					
-					int value = Integer.parseInt("»ï");		// ¿¹¿Ü ¹ß»ı
+					int value = Integer.parseInt("ì‚¼");		// ì˜ˆì™¸ ë°œìƒ
 					
 				}
 			};
 			
-			/* execute()´Â ÀÛ¾÷ Ã³¸® µµÁß ¿¹¿Ü°¡ ¹ß»ıÇÏ¸é ÇØ´ç ½º·¹µå¸¦ Á¦°ÅÇÏ°í »õ·Î¿î ½º·¹µå¸¦ »ı¼ºÇÏ±â ¶§¹®¿¡ 
-			 * ½º·¹µåÀÇ ÀÌ¸§ÀÌ 10¹ø ±îÁö ¿Ã¶ó°¡´Â °ÍÀ» º¼ ¼ö ÀÖ´Ù. */
+			/* execute()ëŠ” ì‘ì—… ì²˜ë¦¬ ë„ì¤‘ ì˜ˆì™¸ê°€ ë°œìƒí•˜ë©´ í•´ë‹¹ ìŠ¤ë ˆë“œë¥¼ ì œê±°í•˜ê³  ìƒˆë¡œìš´ ìŠ¤ë ˆë“œë¥¼ ìƒì„±í•˜ê¸° ë•Œë¬¸ì— 
+			 * ìŠ¤ë ˆë“œì˜ ì´ë¦„ì´ 10ë²ˆ ê¹Œì§€ ì˜¬ë¼ê°€ëŠ” ê²ƒì„ ë³¼ ìˆ˜ ìˆë‹¤. */
 			executorService.execute(runnable);
 			Thread.sleep(10);
 		}
