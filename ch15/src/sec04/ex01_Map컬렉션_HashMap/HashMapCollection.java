@@ -1,4 +1,4 @@
-package sec04.ex01_MapÄÃ·º¼Ç_HashMap;
+package sec04.ex01_Mapì»¬ë ‰ì…˜_HashMap;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -8,61 +8,61 @@ import java.util.Set;
 
 public class HashMapCollection {
 	public static void main(String[] args) {
-		/* MapÄÃ·º¼ÇÀº key¿Í value·Î ±¸¼ºµÈ Entry°´Ã¼¸¦ ÀúÀåÇÑ´Ù. key´Â Áßº¹ÀúÀå µÉ¼ö ¾ø°í, value´Â Áßº¹ÀúÀåÇÒ ¼ö ÀÖ´Ù.
-		 * ¸¸¾à µ¿ÀÏÇÑ key·Î ÀúÀåÇÏ¸é ±âÁ¸ÀÇ °ªÀº ¾ø¾îÁö°í »õ·Î¿î °ªÀ¸·Î ´ëÃ¼µÈ´Ù.
-		 * HashtableÀÇ key´Â Áßº¹ÀúÀåµÇ¸é ¾ÈµÇ¹Ç·Î hashCode()¿Í equals()¸¦ ÀÌ¿ëÇØ¼­ µ¿µî°´Ã¼ÀÎÁö È®ÀÎÇÑ´Ù. 
-		 * HashtableÀº µ¿±âÈ­µÈ ¸Ş¼Òµå·Î ±¸¼ºµÇ¾î ÀÖ¾î¼­ ¸ÖÆ¼ ½º·¹µå°¡ µ¿½Ã¿¡ ¸Ş¼Òµå¸¦ ½ÇÇàÇÒ ¼ö ¾ø´Ù.*/
+		/* Mapì»¬ë ‰ì…˜ì€ keyì™€ valueë¡œ êµ¬ì„±ëœ Entryê°ì²´ë¥¼ ì €ì¥í•œë‹¤. keyëŠ” ì¤‘ë³µì €ì¥ ë ìˆ˜ ì—†ê³ , valueëŠ” ì¤‘ë³µì €ì¥í•  ìˆ˜ ìˆë‹¤.
+		 * ë§Œì•½ ë™ì¼í•œ keyë¡œ ì €ì¥í•˜ë©´ ê¸°ì¡´ì˜ ê°’ì€ ì—†ì–´ì§€ê³  ìƒˆë¡œìš´ ê°’ìœ¼ë¡œ ëŒ€ì²´ëœë‹¤.
+		 * Hashtableì˜ keyëŠ” ì¤‘ë³µì €ì¥ë˜ë©´ ì•ˆë˜ë¯€ë¡œ hashCode()ì™€ equals()ë¥¼ ì´ìš©í•´ì„œ ë™ë“±ê°ì²´ì¸ì§€ í™•ì¸í•œë‹¤. 
+		 * Hashtableì€ ë™ê¸°í™”ëœ ë©”ì†Œë“œë¡œ êµ¬ì„±ë˜ì–´ ìˆì–´ì„œ ë©€í‹° ìŠ¤ë ˆë“œê°€ ë™ì‹œì— ë©”ì†Œë“œë¥¼ ì‹¤í–‰í•  ìˆ˜ ì—†ë‹¤.*/
 		Map<String,Integer> map = new HashMap<String,Integer>();
-		// MapÄÃ·º¼Ç¿¡ Entry°´Ã¼¸¦ ÀúÀåÇÏ±â À§ÇØ¼­ put()¸Ş¼Òµå¸¦ »ç¿ëÇÏ¸ç Áßº¹µÇÁö ¾Ê´Â key´Â nullÀ» ¸®ÅÏÇÏ°í, Áßº¹ÀÎ key´Â ´ëÃ¼µÇ±âÀüÀÇ °ªÀ» ¸®ÅÏÇÑ´Ù.
-		map.put("ÀÏ", 1);
-		map.put("ÀÌ", 2);
-		map.put("»ï", 3);
-		map.put("»ç", 4);
-		map.put("¿À", 5);
-		map.put("À°", 6);
-		map.put("Ä¥", 7);
-		map.put("ÆÈ", 8);
-		Integer v = map.put("±¸", 10);
+		// Mapì»¬ë ‰ì…˜ì— Entryê°ì²´ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•´ì„œ put()ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•˜ë©° ì¤‘ë³µë˜ì§€ ì•ŠëŠ” keyëŠ” nullì„ ë¦¬í„´í•˜ê³ , ì¤‘ë³µì¸ keyëŠ” ëŒ€ì²´ë˜ê¸°ì „ì˜ ê°’ì„ ë¦¬í„´í•œë‹¤.
+		map.put("ì¼", 1);
+		map.put("ì´", 2);
+		map.put("ì‚¼", 3);
+		map.put("ì‚¬", 4);
+		map.put("ì˜¤", 5);
+		map.put("ìœ¡", 6);
+		map.put("ì¹ ", 7);
+		map.put("íŒ”", 8);
+		Integer v = map.put("êµ¬", 10);
 		System.out.println(v);
-		v = map.put("±¸", 9);		// Áßº¹µÇ´Â key·Î ÀúÀå½Ã »õ·Î¿î value°ªÀ¸·Î ´ëÃ¼µÈ´Ù.
+		v = map.put("êµ¬", 9);		// ì¤‘ë³µë˜ëŠ” keyë¡œ ì €ì¥ì‹œ ìƒˆë¡œìš´ valueê°’ìœ¼ë¡œ ëŒ€ì²´ëœë‹¤.
 		System.out.println(v);
 		
-		// containsKey()¸Ş¼Òµå´Â ÁÖ¾îÁø ¸Å°³°ª°ú °°Àº key°¡ ÀÖ´ÂÁö È®ÀÎÇÑ´Ù. 
-		if(map.containsKey("»ç")) {
-			System.out.println("MapÀÇ key°ªÀ¸·Î \"»ç\"°¡ ÀÖ½À´Ï´Ù.");
+		// containsKey()ë©”ì†Œë“œëŠ” ì£¼ì–´ì§„ ë§¤ê°œê°’ê³¼ ê°™ì€ keyê°€ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤. 
+		if(map.containsKey("ì‚¬")) {
+			System.out.println("Mapì˜ keyê°’ìœ¼ë¡œ \"ì‚¬\"ê°€ ìˆìŠµë‹ˆë‹¤.");
 		}
-		// containsValue()¸Ş¼Òµå´Â ÁÖ¾îÁø ¸Å°³°ª°ú °°Àº value°¡ ÀÖ´ÂÁö È®ÀÎÇÑ´Ù. 
+		// containsValue()ë©”ì†Œë“œëŠ” ì£¼ì–´ì§„ ë§¤ê°œê°’ê³¼ ê°™ì€ valueê°€ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤. 
 		if(map.containsValue(3)) {
-			System.out.println("MapÀÇ value°ªÀ¸·Î 3ÀÌ ÀÖ½À´Ï´Ù.");
+			System.out.println("Mapì˜ valueê°’ìœ¼ë¡œ 3ì´ ìˆìŠµë‹ˆë‹¤.");
 		}
 
-		if(!map.isEmpty()) {	// isEmpty()¸Ş¼Òµå´Â MapÄÃ·º¼ÇÀÌ ºñ¾îÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
-			System.out.println("ÇöÀç ÃÑ Entry°´Ã¼ÀÇ ¼ö: " + map.size());	// MapÄÃ·º¼Ç¿¡ ÀúÀåµÇ¾îÀÖ´Â Entry°´Ã¼ÀÇ ÃÑ ¼ö¸¦ ¾Ë ¼ö ÀÖ´Ù.
+		if(!map.isEmpty()) {	// isEmpty()ë©”ì†Œë“œëŠ” Mapì»¬ë ‰ì…˜ì´ ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
+			System.out.println("í˜„ì¬ ì´ Entryê°ì²´ì˜ ìˆ˜: " + map.size());	// Mapì»¬ë ‰ì…˜ì— ì €ì¥ë˜ì–´ìˆëŠ” Entryê°ì²´ì˜ ì´ ìˆ˜ë¥¼ ì•Œ ìˆ˜ ìˆë‹¤.
 			
-			System.out.print("[°´Ã¼ °ü¸® ¹æ¹ı 1] ");
-			Set<Map.Entry<String,Integer>>	entrySet = map.entrySet();	// entrySet()¸Ş¼Òµå´Â ¸ğµç Map.Entry°´Ã¼¸¦ SetÄÃ·º¼Ç¿¡ ´ã¾ÆÁØ´Ù.
+			System.out.print("[ê°ì²´ ê´€ë¦¬ ë°©ë²• 1] ");
+			Set<Map.Entry<String,Integer>>	entrySet = map.entrySet();	// entrySet()ë©”ì†Œë“œëŠ” ëª¨ë“  Map.Entryê°ì²´ë¥¼ Setì»¬ë ‰ì…˜ì— ë‹´ì•„ì¤€ë‹¤.
 			Iterator<Map.Entry<String,Integer>> entryIterator = entrySet.iterator();
 			while(entryIterator.hasNext()) {
 				Map.Entry<String, Integer> entry = entryIterator.next();
-				String key = entry.getKey();		// getKey()¸Ş¼Òµå´Â EntryÀÇ key°ªÀ» °¡Á®¿Â´Ù.
-				Integer value = entry.getValue();	// getValue()¸Ş¼Òµå´Â EntryÀÇ value°ªÀ» °¡Á®¿Â´Ù.
+				String key = entry.getKey();		// getKey()ë©”ì†Œë“œëŠ” Entryì˜ keyê°’ì„ ê°€ì ¸ì˜¨ë‹¤.
+				Integer value = entry.getValue();	// getValue()ë©”ì†Œë“œëŠ” Entryì˜ valueê°’ì„ ê°€ì ¸ì˜¨ë‹¤.
 				System.out.print(key + ": " + value + " |");
 			}
 			System.out.println();
-			map.remove("Ä¥");	// MapÀÇ remove()¸Ş¼Òµå´Â ÁÖ¾îÁø ¸Å°³°ª°ú °°Àº keyÀÇ Entry°´Ã¼¸¦ Á¦°ÅÇÑ´Ù.
+			map.remove("ì¹ ");	// Mapì˜ remove()ë©”ì†Œë“œëŠ” ì£¼ì–´ì§„ ë§¤ê°œê°’ê³¼ ê°™ì€ keyì˜ Entryê°ì²´ë¥¼ ì œê±°í•œë‹¤.
 			
-			System.out.print("[°´Ã¼ °ü¸® ¹æ¹ı 2] ");
-			Set<String> keySet = map.keySet();		// keySet()¸Ş¼Òµå´Â ¸ğµç key°ªÀ» SetÄÃ·º¼Ç¿¡ ´ã¾ÆÁØ´Ù.
+			System.out.print("[ê°ì²´ ê´€ë¦¬ ë°©ë²• 2] ");
+			Set<String> keySet = map.keySet();		// keySet()ë©”ì†Œë“œëŠ” ëª¨ë“  keyê°’ì„ Setì»¬ë ‰ì…˜ì— ë‹´ì•„ì¤€ë‹¤.
 			Iterator<String> keyIterator = keySet.iterator();	
 			while(keyIterator.hasNext()) {
 				String key = keyIterator.next();
-				Integer value = map.get(key);		// get()¸Ş¼Òµå´Â ÁÖ¾îÁø ¸Å°³°ª°ú °°Àº key¸¦ °¡Áø EntryÀÇ value°ªÀ» °¡Á®¿Â´Ù.
+				Integer value = map.get(key);		// get()ë©”ì†Œë“œëŠ” ì£¼ì–´ì§„ ë§¤ê°œê°’ê³¼ ê°™ì€ keyë¥¼ ê°€ì§„ Entryì˜ valueê°’ì„ ê°€ì ¸ì˜¨ë‹¤.
 				System.out.print(key + ": " + value + " |");
 			}
 			System.out.println();
 			
-			System.out.print("[EntryÀÇ value°ª¸¸ ÃßÃâ] ");
-			Collection<Integer> values = map.values();		// values()¸Ş¼Òµå´Â ¸ğµç value°ªÀ» Collection¿¡ ´ã¾ÆÁØ´Ù.
+			System.out.print("[Entryì˜ valueê°’ë§Œ ì¶”ì¶œ] ");
+			Collection<Integer> values = map.values();		// values()ë©”ì†Œë“œëŠ” ëª¨ë“  valueê°’ì„ Collectionì— ë‹´ì•„ì¤€ë‹¤.
 			Iterator<Integer> valueIterator = values.iterator();
 			while(valueIterator.hasNext()) {
 				System.out.print(valueIterator.next() + " |");
@@ -70,7 +70,7 @@ public class HashMapCollection {
 			System.out.println(); 
 		
 		}
-		map.clear();	// clear()¸Ş¼Òµå´Â ¸ğµç Entry°´Ã¼¸¦ Á¦°ÅÇÑ´Ù.
-		System.out.println("ÇöÀç ÃÑ Entry°´Ã¼ÀÇ ¼ö: " + map.size());
+		map.clear();	// clear()ë©”ì†Œë“œëŠ” ëª¨ë“  Entryê°ì²´ë¥¼ ì œê±°í•œë‹¤.
+		System.out.println("í˜„ì¬ ì´ Entryê°ì²´ì˜ ìˆ˜: " + map.size());
 	}
 }

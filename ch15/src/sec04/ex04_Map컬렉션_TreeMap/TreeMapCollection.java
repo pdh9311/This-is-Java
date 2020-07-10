@@ -1,4 +1,4 @@
-package sec04.ex04_MapÄÃ·º¼Ç_TreeMap;
+package sec04.ex04_Mapì»¬ë ‰ì…˜_TreeMap;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -9,44 +9,44 @@ import java.util.TreeMap;
 
 public class TreeMapCollection {
 	public static void main(String[] args) {
-		/* TreeMap°´Ã¼¸¦ MapÀÎÅÍÆäÀÌ½ºÅ¸ÀÔÀ¸·Î ÇÒ ¼ö ÀÖÁö¸¸ TreeMapÀÇ ¸Ş¼Òµå¸¦ »ç¿ëÇÏ±â À§ÇØ TreeMapÅ¸ÀÔÀ¸·Î ÇØÁÖ¾ú´Ù.
-		 * TreeMap¿¡ °´Ã¼¸¦ ÀúÀåÇÏ¸é ÀÚµ¿À¸·Î EntryÀÇ key°ªÀ» ±âÁØÀ¸·Î ¿À¸§Â÷¼ø Á¤·ÄµÈ´Ù. */
+		/* TreeMapê°ì²´ë¥¼ Mapì¸í„°í˜ì´ìŠ¤íƒ€ì…ìœ¼ë¡œ í•  ìˆ˜ ìˆì§€ë§Œ TreeMapì˜ ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ TreeMapíƒ€ì…ìœ¼ë¡œ í•´ì£¼ì—ˆë‹¤.
+		 * TreeMapì— ê°ì²´ë¥¼ ì €ì¥í•˜ë©´ ìë™ìœ¼ë¡œ Entryì˜ keyê°’ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ëœë‹¤. */
 		TreeMap<Integer,Integer> treeMap = new TreeMap<Integer,Integer>();
 		for(int i=0; i<100; i=i+3) {
 			treeMap.put(i, i*3/7*22);
 		}
 
-		System.out.println("°¡Àå ³·Àº Entry°´Ã¼: " + treeMap.firstEntry());
-		System.out.println("°¡Àå ³ôÀº Entry°´Ã¼: " + treeMap.lastEntry());
-		System.out.println("º¸´Ù ³·Àº Entry°´Ã¼: " + treeMap.lowerEntry(21));
-		System.out.println("º¸´Ù ³ôÀº Entry°´Ã¼: " + treeMap.higherEntry(33));
-		System.out.println("ÁÖ¾îÁø °´Ã¼°¡ ¾øÀ»°æ¿ì º¸´Ù ³·Àº Entry°´Ã¼: " + treeMap.floorEntry(21));
-		System.out.println("ÁÖ¾îÁø °´Ã¼°¡ ¾øÀ»°æ¿ì º¸´Ù ³ôÀº Entry°´Ã¼: " + treeMap.ceilingEntry(33));
-		System.out.println("°¡Àå ³·Àº Entry°´Ã¼¸¦ ²¨³»°í ÄÃ·º¼Ç¿¡¼­ Á¦°Å: " + treeMap.pollFirstEntry());
-		System.out.println("°¡Àå ³ôÀº Entry°´Ã¼¸¦ ²¨³»°í ÄÃ·º¼Ç¿¡¼­ Á¦°Å: " + treeMap.pollLastEntry());
-		// descendingKeySet(), descendingMap() ¸Ş¼Òµå µÑ ´Ù ¸Ş¼Òµå¸¦ µÎ ¹ø Àû¿ëÇÏ¸é ¿À¸§Â÷¼øÀÌ µÈ´Ù. 
-		System.out.print("[³»¸²Â÷¼øÀ¸·Î Á¤·Ä] ");
+		System.out.println("ê°€ì¥ ë‚®ì€ Entryê°ì²´: " + treeMap.firstEntry());
+		System.out.println("ê°€ì¥ ë†’ì€ Entryê°ì²´: " + treeMap.lastEntry());
+		System.out.println("ë³´ë‹¤ ë‚®ì€ Entryê°ì²´: " + treeMap.lowerEntry(21));
+		System.out.println("ë³´ë‹¤ ë†’ì€ Entryê°ì²´: " + treeMap.higherEntry(33));
+		System.out.println("ì£¼ì–´ì§„ ê°ì²´ê°€ ì—†ì„ê²½ìš° ë³´ë‹¤ ë‚®ì€ Entryê°ì²´: " + treeMap.floorEntry(21));
+		System.out.println("ì£¼ì–´ì§„ ê°ì²´ê°€ ì—†ì„ê²½ìš° ë³´ë‹¤ ë†’ì€ Entryê°ì²´: " + treeMap.ceilingEntry(33));
+		System.out.println("ê°€ì¥ ë‚®ì€ Entryê°ì²´ë¥¼ êº¼ë‚´ê³  ì»¬ë ‰ì…˜ì—ì„œ ì œê±°: " + treeMap.pollFirstEntry());
+		System.out.println("ê°€ì¥ ë†’ì€ Entryê°ì²´ë¥¼ êº¼ë‚´ê³  ì»¬ë ‰ì…˜ì—ì„œ ì œê±°: " + treeMap.pollLastEntry());
+		// descendingKeySet(), descendingMap() ë©”ì†Œë“œ ë‘˜ ë‹¤ ë©”ì†Œë“œë¥¼ ë‘ ë²ˆ ì ìš©í•˜ë©´ ì˜¤ë¦„ì°¨ìˆœì´ ëœë‹¤. 
+		System.out.print("[ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
 		NavigableSet<Integer> navigableSet = treeMap.descendingKeySet();
 		for(int key : navigableSet) {
 			System.out.print(key + "," + treeMap.get(key) + "|");
 		}
 		
-		System.out.print("\n[¿À¸§Â÷¼øÀ¸·Î Á¤·Ä] ");
+		System.out.print("\n[ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
 		navigableSet = treeMap.descendingKeySet().descendingSet();
 		for(int key : navigableSet) {
 			System.out.print(key + "," + treeMap.get(key) + "|");
 		}
 
-		System.out.println("\n[³»¸²Â÷¼øÀ¸·Î Á¤·Ä] ");
+		System.out.println("\n[ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
 		NavigableMap<Integer,Integer> navigableMap = treeMap.descendingMap();
 		Set<Map.Entry<Integer,Integer>> navigableEntrySet = navigableMap.entrySet();
-		// ¹æ¹ı1
+		// ë°©ë²•1
 		for(Map.Entry<Integer, Integer> entry : navigableEntrySet) {
 			System.out.print("("+entry.getKey()+","+entry.getValue()+")");
 		}
 		
 		System.out.println();
-		// ¹æ¹ı2
+		// ë°©ë²•2
 		Iterator<Map.Entry<Integer,Integer>> navigableIterator = navigableEntrySet.iterator();
 		while(navigableIterator.hasNext()) {
 			Map.Entry<Integer, Integer> entry = navigableIterator.next();
@@ -55,9 +55,9 @@ public class TreeMapCollection {
 			System.out.print("("+key+","+value+")");
 		}
 		
-		System.out.println("\n[¿À¸§Â÷¼øÀ¸·Î Á¤·Ä] ");
+		System.out.println("\n[ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬] ");
 		navigableMap = treeMap.descendingMap().descendingMap();
-		// ¹æ¹ı3
+		// ë°©ë²•3
 		Set<Integer> navigableKeySet = navigableMap.keySet();
 		for(int key : navigableKeySet) {
 			System.out.print("(" + key + "," +navigableMap.get(key)+")");

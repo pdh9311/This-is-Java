@@ -1,27 +1,27 @@
-package sec04.ex03_MapÄÃ·º¼Ç_Properties;
+package sec04.ex03_Mapì»¬ë ‰ì…˜_Properties;
 
 import java.io.FileReader;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.Properties;
 
-/* (~.properties)ÆÄÀÏÀº key = value ·Î ±¸¼ºµÇ¾î ÀÖÀ¸¸ç ISO 8859-1¹®ÀÚ¼ÂÀ¸·Î ÀúÀåµÈ´Ù.
- * Á÷Á¢ Ç¥ÇöÇÒ ¼ö ¾ø´Â ÇÑ±ÛÀº À¯´ÏÄÚµå(Unicode)·Î ÀÚµ¿º¯È¯µÈ´Ù. */
+/* (~.properties)íŒŒì¼ì€ key = value ë¡œ êµ¬ì„±ë˜ì–´ ìˆìœ¼ë©° ISO 8859-1ë¬¸ìì…‹ìœ¼ë¡œ ì €ì¥ëœë‹¤.
+ * ì§ì ‘ í‘œí˜„í•  ìˆ˜ ì—†ëŠ” í•œê¸€ì€ ìœ ë‹ˆì½”ë“œ(Unicode)ë¡œ ìë™ë³€í™˜ëœë‹¤. */
 public class PropertiesFile {
 	public static void main(String[] args) throws Exception {
-		// Properties´Â HashtableÀÇ ÇÏÀ§Å¬·¡½ºÀÌ±â ¶§¹®¿¡ HashtableÀÇ ¸ğµç Æ¯Â¡À» °¡Áö°í ÀÖ´Ù.
-		/* getResource()¸Ş¼Òµå´Â ¸Å°³°ªÀ¸·Î ÁÖ¾îÁø ÆÄÀÏÀÇ »ó´ë °æ·Î¸¦ URL°´Ã¼·Î ¸®ÅÏÇÏ°í,
-		 * URLÀÇ getPath()¸Ş¼Òµå´Â ÆÄÀÏÀÇ Àı´ë °æ·Î¸¦ String°´Ã¼·Î ¸®ÅÏÇÑ´Ù. 
-		 * ¸¸¾à ´Ù¸¥ ÆĞÅ°Áö¿¡ ÀÖ´Ù¸é ±¸ºĞÀÚ(/)¸¦ »ç¿ëÇÑ´Ù. */
+		// PropertiesëŠ” Hashtableì˜ í•˜ìœ„í´ë˜ìŠ¤ì´ê¸° ë•Œë¬¸ì— Hashtableì˜ ëª¨ë“  íŠ¹ì§•ì„ ê°€ì§€ê³  ìˆë‹¤.
+		/* getResource()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ì–´ì§„ íŒŒì¼ì˜ ìƒëŒ€ ê²½ë¡œë¥¼ URLê°ì²´ë¡œ ë¦¬í„´í•˜ê³ ,
+		 * URLì˜ getPath()ë©”ì†Œë“œëŠ” íŒŒì¼ì˜ ì ˆëŒ€ ê²½ë¡œë¥¼ Stringê°ì²´ë¡œ ë¦¬í„´í•œë‹¤. 
+		 * ë§Œì•½ ë‹¤ë¥¸ íŒ¨í‚¤ì§€ì— ìˆë‹¤ë©´ êµ¬ë¶„ì(/)ë¥¼ ì‚¬ìš©í•œë‹¤. */
 		URL url = PropertiesFile.class.getResource("data/Properties.properties");
 		String path = url.getPath();	// String path = PropertiesFile.class.getResource("data/Properties.properties").getPath();
-		path = URLDecoder.decode(path,"UTF-8");	// °æ·Î¿¡ ÇÑ±ÛÀÌ ÀÖÀ» °æ¿ì ÇÑ±ÛÀ» º¹¿øÇÑ´Ù.
+		path = URLDecoder.decode(path,"UTF-8");	// ê²½ë¡œì— í•œê¸€ì´ ìˆì„ ê²½ìš° í•œê¸€ì„ ë³µì›í•œë‹¤.
 		System.out.println(path);
-		/* .properties ÆÄÀÏÀ» ÀĞ±â À§ÇØ¼­´Â Properties°´Ã¼¸¦ »ı¼ºÇÏ°í load()¸Ş¼Òµå¸¦ È£ÃâÇÒ ¶§ ¸Å°³°ªÀ¸·Î FileReader°´Ã¼¸¦ ¹Ş¾Æ¾ß ÇÑ´Ù. */
+		/* .properties íŒŒì¼ì„ ì½ê¸° ìœ„í•´ì„œëŠ” Propertiesê°ì²´ë¥¼ ìƒì„±í•˜ê³  load()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•  ë•Œ ë§¤ê°œê°’ìœ¼ë¡œ FileReaderê°ì²´ë¥¼ ë°›ì•„ì•¼ í•œë‹¤. */
 		Properties properties = new Properties();
 		properties.load(new FileReader(path));
 		
-		System.out.println("±¹Àû: " + properties.getProperty("contry"));
-		System.out.println("¾ğ¾î: " + properties.getProperty("language"));
+		System.out.println("êµ­ì : " + properties.getProperty("contry"));
+		System.out.println("ì–¸ì–´: " + properties.getProperty("language"));
 	}
 }

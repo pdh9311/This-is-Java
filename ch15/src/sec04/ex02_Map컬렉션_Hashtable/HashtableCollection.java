@@ -1,35 +1,35 @@
-package sec04.ex02_MapÄÃ·º¼Ç_Hashtable;
+package sec04.ex02_Mapì»¬ë ‰ì…˜_Hashtable;
 
 import java.util.*;
 
 public class HashtableCollection {
 	public static void main(String[] args) {
-		// HashtableÀº µ¿±âÈ­µÈ ¸Ş¼Òµå·Î ±¸¼ºµÇ¾î ÀÖ±â ¶§¹®¿¡ ½º·¹µå°¡ ¾ÈÀü(Thread Safe)ÇÏ´Ù.
+		// Hashtableì€ ë™ê¸°í™”ëœ ë©”ì†Œë“œë¡œ êµ¬ì„±ë˜ì–´ ìˆê¸° ë•Œë¬¸ì— ìŠ¤ë ˆë“œê°€ ì•ˆì „(Thread Safe)í•˜ë‹¤.
 		Map<String,Integer> map = new Hashtable<String,Integer>();
-		map.put("ÀÏ", 1);
-		map.put("ÀÌ", 2);
-		map.put("»ï", 3);
-		map.put("»ç", 4);
-		map.put("¿À", 5);
-		map.put("À°", 6);
-		map.put("Ä¥", 7);
-		map.put("ÆÈ", 8);
-		Integer v = map.put("±¸", 10);
+		map.put("ì¼", 1);
+		map.put("ì´", 2);
+		map.put("ì‚¼", 3);
+		map.put("ì‚¬", 4);
+		map.put("ì˜¤", 5);
+		map.put("ìœ¡", 6);
+		map.put("ì¹ ", 7);
+		map.put("íŒ”", 8);
+		Integer v = map.put("êµ¬", 10);
 		System.out.println(v);
-		v = map.put("±¸", 9);	
+		v = map.put("êµ¬", 9);	
 		System.out.println(v);
 		
-		if(map.containsKey("»ç")) {
-			System.out.println("MapÀÇ key°ªÀ¸·Î \"»ç\"°¡ ÀÖ½À´Ï´Ù.");
+		if(map.containsKey("ì‚¬")) {
+			System.out.println("Mapì˜ keyê°’ìœ¼ë¡œ \"ì‚¬\"ê°€ ìˆìŠµë‹ˆë‹¤.");
 		}
 		if(map.containsValue(3)) {
-			System.out.println("MapÀÇ value°ªÀ¸·Î 3ÀÌ ÀÖ½À´Ï´Ù.");
+			System.out.println("Mapì˜ valueê°’ìœ¼ë¡œ 3ì´ ìˆìŠµë‹ˆë‹¤.");
 		}
 
 		if(!map.isEmpty()) {	
-			System.out.println("ÇöÀç ÃÑ Entry°´Ã¼ÀÇ ¼ö: " + map.size());
+			System.out.println("í˜„ì¬ ì´ Entryê°ì²´ì˜ ìˆ˜: " + map.size());
 			
-			System.out.print("[°´Ã¼ °ü¸® ¹æ¹ı 1] ");
+			System.out.print("[ê°ì²´ ê´€ë¦¬ ë°©ë²• 1] ");
 			Set<Map.Entry<String,Integer>>	entrySet = map.entrySet();	
 			Iterator<Map.Entry<String,Integer>> entryIterator = entrySet.iterator();
 			while(entryIterator.hasNext()) {
@@ -39,9 +39,9 @@ public class HashtableCollection {
 				System.out.print(key + ": " + value + " |");
 			}
 			System.out.println();
-			map.remove("Ä¥");	
+			map.remove("ì¹ ");	
 			
-			System.out.print("[°´Ã¼ °ü¸® ¹æ¹ı 2] ");
+			System.out.print("[ê°ì²´ ê´€ë¦¬ ë°©ë²• 2] ");
 			Set<String> keySet = map.keySet();		
 			Iterator<String> keyIterator = keySet.iterator();	
 			while(keyIterator.hasNext()) {
@@ -51,7 +51,7 @@ public class HashtableCollection {
 			}
 			System.out.println();
 			
-			System.out.print("[EntryÀÇ value°ª¸¸ ÃßÃâ] ");
+			System.out.print("[Entryì˜ valueê°’ë§Œ ì¶”ì¶œ] ");
 			Collection<Integer> values = map.values();		
 			Iterator<Integer> valueIterator = values.iterator();
 			while(valueIterator.hasNext()) {
@@ -61,6 +61,6 @@ public class HashtableCollection {
 		
 		}
 		map.clear();	
-		System.out.println("ÇöÀç ÃÑ Entry°´Ã¼ÀÇ ¼ö: " + map.size());
+		System.out.println("í˜„ì¬ ì´ Entryê°ì²´ì˜ ìˆ˜: " + map.size());
 	}
 }
