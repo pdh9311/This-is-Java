@@ -1,24 +1,24 @@
-package sec05.ex03_UIÀÌº¥Æ®Ã³¸®;
+package sec05.ex03_UIì´ë²¤íŠ¸ì²˜ë¦¬;
 
 public class Window {
-	// ÇÊµå
+	// í•„ë“œ
 	Button button1 = new Button();
 	Button button2 = new Button();
 	
 	Button.OnClickListener listener = new Button.OnClickListener() {
 		@Override
 		public void onClick() {
-			System.out.println("ÀüÈ­¸¦ °Ì´Ï´Ù.");
+			System.out.println("ì „í™”ë¥¼ ê²ë‹ˆë‹¤.");
 		}
 	};
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	Window() {
 		button1.setOnClickListener(listener);
 		button2.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick() {
-				System.out.println("¸Ş½ÃÁö¸¦ º¸³À´Ï´Ù.");
+				System.out.println("ë©”ì‹œì§€ë¥¼ ë³´ëƒ…ë‹ˆë‹¤.");
 			}
 		});
 	}

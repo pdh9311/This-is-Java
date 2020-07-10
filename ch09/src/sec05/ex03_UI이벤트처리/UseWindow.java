@@ -1,4 +1,4 @@
-package sec05.ex03_UI�̺�Ʈó��;
+package sec05.ex03_UI이벤트처리;
 
 public class UseWindow {
 	public static void main(String[] args) {
