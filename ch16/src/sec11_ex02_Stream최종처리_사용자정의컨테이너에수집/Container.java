@@ -1,11 +1,11 @@
-package sec11_ex02_StreamÃÖÁ¾Ã³¸®_»ç¿ëÀÚÁ¤ÀÇÄÁÅ×ÀÌ³Ê¿¡¼öÁı;
+package sec11_ex02_Streamìµœì¢…ì²˜ë¦¬_ì‚¬ìš©ìì •ì˜ì»¨í…Œì´ë„ˆì—ìˆ˜ì§‘;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import sec11_ex01_StreamÃÖÁ¾Ã³¸®_¼öÁı.Student;
+import sec11_ex01_Streamìµœì¢…ì²˜ë¦¬_ìˆ˜ì§‘.Student;
 
-// º¸Åë ÀÚ¹Ù¿¡¼­ ÄÁÅ×ÀÌ³Ê¶ó ÇÏ¸é °´Ã¼¸¦ ÀúÀåÇÏ´Â °´Ã¼¸¦ ¸»ÇÑ´Ù.
+// ë³´í†µ ìë°”ì—ì„œ ì»¨í…Œì´ë„ˆë¼ í•˜ë©´ ê°ì²´ë¥¼ ì €ì¥í•˜ëŠ” ê°ì²´ë¥¼ ë§í•œë‹¤.
 public class Container {
 	
 	private List<Student> list;
@@ -17,15 +17,15 @@ public class Container {
 
 	public List<Student> getList() { return list; }
 	
-	// ¿ä¼Ò¸¦ ¼öÁıÇÏ´Â ¸Ş¼Òµå
+	// ìš”ì†Œë¥¼ ìˆ˜ì§‘í•˜ëŠ” ë©”ì†Œë“œ
 	public void accumulate(Student student) {
 		list.add(student);
 		System.out.println("[" + Thread.currentThread().getName() + "] accumulate()");
 	}
 	
-	// º´·ÄÃ³¸®½Ã ¼­·Î ´Ù¸¥ Container°´Ã¼¸¦ °áÇÕÇÏ´Â ¸Ş¼Òµå
+	// ë³‘ë ¬ì²˜ë¦¬ì‹œ ì„œë¡œ ë‹¤ë¥¸ Containerê°ì²´ë¥¼ ê²°í•©í•˜ëŠ” ë©”ì†Œë“œ
 	public void combine(Container other) {
-		list.addAll(other.getList());	// addAll()¸Ş¼Òµå´Â ¸Å°³°ªÀ¸·Î Àü´ŞµÈ ÄÃ·º¼ÇÀÇ ¸ğµç ¿ä¼Ò¸¦ ¸®½ºÆ®¿¡ Ãß°¡ÇÕ´Ï´Ù. 
+		list.addAll(other.getList());	// addAll()ë©”ì†Œë“œëŠ” ë§¤ê°œê°’ìœ¼ë¡œ ì „ë‹¬ëœ ì»¬ë ‰ì…˜ì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€í•©ë‹ˆë‹¤. 
 		System.out.println("[" + Thread.currentThread().getName() + "] combine()");
 	}
 }

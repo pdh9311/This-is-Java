@@ -1,4 +1,4 @@
-package sec11_ex02_StreamÃÖÁ¾Ã³¸®_»ç¿ëÀÚÁ¤ÀÇÄÁÅ×ÀÌ³Ê¿¡¼öÁı;
+package sec11_ex02_Streamìµœì¢…ì²˜ë¦¬_ì‚¬ìš©ìì •ì˜ì»¨í…Œì´ë„ˆì—ìˆ˜ì§‘;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,23 +6,23 @@ import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import sec11_ex01_StreamÃÖÁ¾Ã³¸®_¼öÁı.Student;
+import sec11_ex01_Streamìµœì¢…ì²˜ë¦¬_ìˆ˜ì§‘.Student;
 
 public class ContainedObj {
 	public static void main(String[] args) {
-		// List, Set, Map°ú °°Àº ÄÃ·º¼ÇÀÌ ¾Æ´Ï¶ó »ç¿ëÀÚ ÄÁÅ×ÀÌ³Ê °´Ã¼¿¡ ¼öÁı
+		// List, Set, Mapê³¼ ê°™ì€ ì»¬ë ‰ì…˜ì´ ì•„ë‹ˆë¼ ì‚¬ìš©ì ì»¨í…Œì´ë„ˆ ê°ì²´ì— ìˆ˜ì§‘
 		List<Student> list = Arrays.asList(
-				new Student("ºï¹ÌÂ¯",28,Student.Sex.Female,Student.City.Pusan),
-				new Student("¸¸½ÄÂ¯",30,Student.Sex.Male,Student.City.Seoul),
-				new Student("Åä³¢Â¯",25,Student.Sex.Female,Student.City.Seoul),
-				new Student("ÃÊ¹äÂ¯",29,Student.Sex.Male,Student.City.Pusan) );
+				new Student("ë¸ë¯¸ì§±",28,Student.Sex.Female,Student.City.Pusan),
+				new Student("ë§Œì‹ì§±",30,Student.Sex.Male,Student.City.Seoul),
+				new Student("í† ë¼ì§±",25,Student.Sex.Female,Student.City.Seoul),
+				new Student("ì´ˆë°¥ì§±",29,Student.Sex.Male,Student.City.Pusan) );
 		
-		// collect()¸Ş¼ÒµåÀÇ ¸Å°³°ªÀ¸·Î Supplier,BiConsumer, BiConsumer - ÀÚ¼¼ÇÑ ÄÚµå
+		// collect()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ìœ¼ë¡œ Supplier,BiConsumer, BiConsumer - ìì„¸í•œ ì½”ë“œ
 		Stream<Student> stream1 = list.stream();
 		Stream<Student> maleStream = stream1.filter(s -> s.getSex() == Student.Sex.Male);
-		Supplier<Container> supplier = Container :: new;						// Ã¹¹øÂ° Supplier´Â ¿ä¼ÒµéÀÌ ¼öÁıµÉ ÄÁÅ×ÀÌ³Ê °´Ã¼¸¦ »ı¼ºÇÏ´Â ¿ªÇÒÀ» ÇÑ´Ù.
-		BiConsumer<Container, Student> accumulator = (c,s) -> c.accumulate(s);	// ContainerÀÇ accumulate()¸Ş¼Òµå·Î Student¸¦ ¼öÁıÇÏ´Â BiConsuemer¸¦ ¾ò´Â´Ù. 
-		BiConsumer<Container, Container> combiner = (c1,c2) -> c1.combine(c2);	// º´·ÄÃ³¸®½ºÆ®¸²À» »ç¿ëÇÒ¶§ ´Ù¸¥ Contianer¿Í °áÇÕÇÒ ¸ñÀûÀ¸·Î ½ÇÇàµÇÁö¸¸ ¼øÂ÷Ã³¸®¶óµµ ¸Å°³°ªÀ¸·Î ³Ö¾îÁÖ±âÀ§ÇØ BiConsuemr¸¦ »ı¼ºÇÒ ÇÊ¿ä°¡ ÀÖ´Ù. 
+		Supplier<Container> supplier = Container :: new;						// ì²«ë²ˆì§¸ SupplierëŠ” ìš”ì†Œë“¤ì´ ìˆ˜ì§‘ë  ì»¨í…Œì´ë„ˆ ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ” ì—­í• ì„ í•œë‹¤.
+		BiConsumer<Container, Student> accumulator = (c,s) -> c.accumulate(s);	// Containerì˜ accumulate()ë©”ì†Œë“œë¡œ Studentë¥¼ ìˆ˜ì§‘í•˜ëŠ” BiConsuemerë¥¼ ì–»ëŠ”ë‹¤. 
+		BiConsumer<Container, Container> combiner = (c1,c2) -> c1.combine(c2);	// ë³‘ë ¬ì²˜ë¦¬ìŠ¤íŠ¸ë¦¼ì„ ì‚¬ìš©í• ë•Œ ë‹¤ë¥¸ Contianerì™€ ê²°í•©í•  ëª©ì ìœ¼ë¡œ ì‹¤í–‰ë˜ì§€ë§Œ ìˆœì°¨ì²˜ë¦¬ë¼ë„ ë§¤ê°œê°’ìœ¼ë¡œ ë„£ì–´ì£¼ê¸°ìœ„í•´ BiConsuemrë¥¼ ìƒì„±í•  í•„ìš”ê°€ ìˆë‹¤. 
 		Container container1 = maleStream.collect(supplier, accumulator, combiner);
 		
 		List<Student> maleList = container1.getList();
@@ -30,11 +30,11 @@ public class ContainedObj {
 		
 		System.out.println("\n");	try {Thread.sleep(1000);} catch(Exception e) {}
 		
-		// collect()¸Ş¼ÒµåÀÇ ¸Å°³°ªÀ¸·Î Supplier,BiConsumer, BiConsumer - °£´ÜÇÑ ÄÚµå
-		/* ÄõµåÄÚ¾îCPU¿¡¼­ ½ÇÇàµÇ±â¶§¹®¿¡ 4°³ÀÇ ¼­ºê¿ä¼Ò·Î ³ª´²Áö°í, 4°³ÀÇ ½º·¹µå°¡ º´·ÄÃ³¸®ÇÑ´Ù.
-		 * °¢ ½º·¹µå´Â ¼­ºê¿ä¼Ò¸¦ ¼öÁıÇØ¾ßÇÏ¹Ç·Î 4°³ÀÇ Container°´Ã¼¸¦ »ı¼ºÇÏ±â À§ÇØ collect()¸Ş¼ÒµåÀÇ Ã¹¹øÂ° ¸Å°³°ªÀÎ ContainerÀÇ »ı¼ºÀÚ¸¦ 4¹ø ½ÇÇàÇÑ´Ù.
-		 * ±×¸®°í ¼öÁıÇÒ ¼ö ÀÖ´Â ¸¸Å­ accumulate()¸Ş¼Òµå¸¦ ½ÇÇàÇÏ°ÔµÇ°í
-		 * ¼­ºê¿ä¼Ò¸¦ °áÇÕÇÏ±â À§ÇØ combine()¸Ş¼Òµå°¡ 3¹ø ½ÇÇàÇÏ°Ô µÈ´Ù. */
+		// collect()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ìœ¼ë¡œ Supplier,BiConsumer, BiConsumer - ê°„ë‹¨í•œ ì½”ë“œ
+		/* ì¿¼ë“œì½”ì–´CPUì—ì„œ ì‹¤í–‰ë˜ê¸°ë•Œë¬¸ì— 4ê°œì˜ ì„œë¸Œìš”ì†Œë¡œ ë‚˜ëˆ ì§€ê³ , 4ê°œì˜ ìŠ¤ë ˆë“œê°€ ë³‘ë ¬ì²˜ë¦¬í•œë‹¤.
+		 * ê° ìŠ¤ë ˆë“œëŠ” ì„œë¸Œìš”ì†Œë¥¼ ìˆ˜ì§‘í•´ì•¼í•˜ë¯€ë¡œ 4ê°œì˜ Containerê°ì²´ë¥¼ ìƒì„±í•˜ê¸° ìœ„í•´ collect()ë©”ì†Œë“œì˜ ì²«ë²ˆì§¸ ë§¤ê°œê°’ì¸ Containerì˜ ìƒì„±ìë¥¼ 4ë²ˆ ì‹¤í–‰í•œë‹¤.
+		 * ê·¸ë¦¬ê³  ìˆ˜ì§‘í•  ìˆ˜ ìˆëŠ” ë§Œí¼ accumulate()ë©”ì†Œë“œë¥¼ ì‹¤í–‰í•˜ê²Œë˜ê³ 
+		 * ì„œë¸Œìš”ì†Œë¥¼ ê²°í•©í•˜ê¸° ìœ„í•´ combine()ë©”ì†Œë“œê°€ 3ë²ˆ ì‹¤í–‰í•˜ê²Œ ëœë‹¤. */
 		Container container2 = list.parallelStream()
 		.filter(s-> s.getCity() == Student.City.Seoul)
 		.collect(
@@ -47,8 +47,8 @@ public class ContainedObj {
 		
 		System.out.println("\n");	try {Thread.sleep(1000);} catch(Exception e) {}
 		
-		// collect()¸Ş¼ÒµåÀÇ ¸Å°³°ªÀ¸·Î Supplier,BiConsumer, BiConsumer - °£´ÜÇÑ ÄÚµå(ÂüÁ¶)
-		/* parallel()¸Ş¼Òµå´Â ¼øÂ÷ Ã³¸® ½ºÆ®¸²À» º´·Ä Ã³¸® ½ºÆ®¸²À¸·Î º¯È¯ÇØÁØ´Ù. */
+		// collect()ë©”ì†Œë“œì˜ ë§¤ê°œê°’ìœ¼ë¡œ Supplier,BiConsumer, BiConsumer - ê°„ë‹¨í•œ ì½”ë“œ(ì°¸ì¡°)
+		/* parallel()ë©”ì†Œë“œëŠ” ìˆœì°¨ ì²˜ë¦¬ ìŠ¤íŠ¸ë¦¼ì„ ë³‘ë ¬ ì²˜ë¦¬ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ë³€í™˜í•´ì¤€ë‹¤. */
 		Container container3 = list.stream().parallel().filter(s->s.getAge() > 26).collect(Container :: new , Container :: accumulate, Container :: combine);
 		List<Student> twoeightList = container3.getList();
 		twoeightList.stream().forEach(s -> System.out.print("[3]" + s.getName() + " "));
