@@ -15,6 +15,21 @@ public class FormatClass {
 		System.out.println(result);
 		
 		// 날짜 형식 클래스 SimpleDateFormat
+		/* y : 년								
+		 * M : 월	
+		 * d : 일 
+		 * D : 월 구분없는 일(1~365)
+		 * E : 요일
+		 * a : 오전/오후
+		 * w : 년의 몇 번째 주
+		 * W : 월읠 몇 번째 주
+		 * **************************
+		 * H : 시(0~23)
+		 * h : 시(1~12)
+		 * m : 분 
+		 * s : 초
+		 * S : 밀리세컨드(1/1000초)
+		 */
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd(E) HH:mm:ss");
 		String now = sdf.format(new Date());
 		System.out.println(now);
